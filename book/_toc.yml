@@ -1,7 +1,16 @@
 - file: intro
+
+- header: Header Chapter 1
+- file: content
+
+- header: Header Chapter 2
 - file: content
   sections:
     - file: markdown
     - file: notebooks
-- file: syntax
+
+- header: Header Chapter 3
 - file: content/chapter3/lds_examples
+
+- title: GitHub repository
+  url: https://github.com/champsproject/lagrangian_descriptors
