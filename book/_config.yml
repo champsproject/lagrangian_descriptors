@@ -9,9 +9,9 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/champsproject/lagrangian_descriptors  # Online location of your book
-  book_path                 : lagrangian_descriptors  # Optional path to your book, relative to the repository root
-  branch                    : master  # Which branch of the repository should be used when creating links (optional)
+  url                       : "https://github.com/champsproject/lagrangian_descriptors"  # Online location of your book
+  book_path                 : "book"  # Optional path to your book, relative to the repository root
+  branch                    : "master"  # Which branch of the repository should be used when creating links (optional)
 
 launch_buttons:
-  binderhub_url: "https://mybinder.org/v2/gh/champsproject/lagrangian_descriptors/master"  # The URL for your BinderHub
+  binderhub_url: "https://mybinder.org/v2/gh/champsproject/lagrangian_descriptors/master?filepath=book%2Fcontent"  # The URL for your BinderHub (e.g., https://mybinder.org)
