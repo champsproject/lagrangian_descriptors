@@ -4,3 +4,4 @@
     - file: markdown
     - file: notebooks
 - file: syntax
+- file: content/chapter3/lds_examples
