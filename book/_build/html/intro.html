@@ -25,13 +25,13 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/mystnb.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown files" href="markdown.html" />
+    <link rel="next" title="The Setting: Hamiltonian Dynamics on Phase Space" href="content/chapter1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -70,22 +70,28 @@
     <a href="#">Authors</a>
   </li>
 <li class="navbar-special">
-<p class="margin-caption">Header Chapter 1</p>
+<p class="margin-caption">Chapter 1</p>
 </li>
   <li class="">
-    <a href="markdown.html">Markdown files</a>
+    <a href="content/chapter1.html">The Setting: Hamiltonian Dynamics on Phase Space</a>
   </li>
 <li class="navbar-special">
-<p class="margin-caption">Header Chapter 2</p>
+<p class="margin-caption">Chapter 2</p>
 </li>
   <li class="">
-    <a href="notebooks.html">Content with notebooks</a>
+    <a href="content/chapter2_1.html">The Hyperbolic setting</a>
   </li>
 <li class="navbar-special">
-<p class="margin-caption">Header Chapter 3</p>
+<p class="margin-caption">Chapter 3</p>
 </li>
   <li class="">
-    <a href="content/chapter3/lds_examples.html">Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems</a>
+    <a href="content/chapter3.html">The Method of Lagrangian Descriptors</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Examples</p>
+</li>
+  <li class="">
+    <a href="content/examples.html">Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems</a>
   </li>
   <li class="">
     <a href="https://github.com/champsproject/lagrangian_descriptors">GitHub repository<i class="fas fa-external-link-alt"></i></a>
@@ -113,40 +119,63 @@
     </div>
     <div class="col pl-2 topbar-main">
         
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="_sources/intro.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
-            
-        </div>
-
-        <!-- Edit this page -->
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
         
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
-        
+
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#" class="nav-link">Authors</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#contributing" class="nav-link">Contributing</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#copyright-and-license" class="nav-link">Copyright and License</a>
+        </li>
     
     </ul>
 </nav>
@@ -171,12 +200,14 @@ Makrina Agaoglou, Broncio Aguilar-Sanjuan, Victor Jose García-Garrido, Francisc
 </div>
 <div class="section" id="contributing">
 <h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
-<p>Guidelines on how to contribute to this package can be found  <code class="xref any docutils literal notranslate"><span class="pre">here</span></code> along with the code of conduct <code class="xref any docutils literal notranslate"><span class="pre">here</span></code> for engaging with the fellow contributors.</p>
+<p>Guidelines on how to contribute to this package can be found  <span class="xref myst">here</span> along with the code of conduct <span class="xref myst">here</span> for engaging with the fellow contributors.</p>
 </div>
 <div class="section" id="copyright-and-license">
 <h1>Copyright and License<a class="headerlink" href="#copyright-and-license" title="Permalink to this headline">¶</a></h1>
 <p>Copyright 2020</p>
-<p>All content is under Creative Commons Attribution <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode.txt">CC-BY 4.0</a> and all the python scripts are under <code class="xref any docutils literal notranslate"><span class="pre">BSD-3</span> <span class="pre">clause</span></code>.</p>
+<p>All content is under Creative Commons Attribution <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode.txt">CC-BY 4.0</a> and all the python scripts are under <span class="xref myst">BSD-3 clause</span>.</p>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -194,7 +225,7 @@ Makrina Agaoglou, Broncio Aguilar-Sanjuan, Victor Jose García-Garrido, Francisc
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">Markdown files</a>
+    <a class='right-next' id="next-link" href="content/chapter1.html" title="next page">The Setting: Hamiltonian Dynamics on Phase Space</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
