@@ -229,12 +229,12 @@
 <p>\label{sec:ham2}</p>
 <div class="section" id="hamiltonian-flows">
 <h2>Hamiltonian flows<a class="headerlink" href="#hamiltonian-flows" title="Permalink to this headline">¶</a></h2>
-<p>A Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom is described by the Hamiltonian function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p},t)\)</span>, which depends on the generalized coordinates <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1,\ldots,q_N)\)</span>, their canonically conjugate momenta <span class="math notranslate nohighlight">\(\mathbf{p} = (p_1,\ldots,p_N)\)</span>, and time. This scalar function gives rise to a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional dynamical system by means of Hamilton’s equations of motion
-\begin{equation}
+<p>A Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom is described by the Hamiltonian function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p},t)\)</span>, which depends on the generalized coordinates <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1,\ldots,q_N)\)</span>, their canonically conjugate momenta <span class="math notranslate nohighlight">\(\mathbf{p} = (p_1,\ldots,p_N)\)</span>, and time. This scalar function gives rise to a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional dynamical system by means of Hamilton’s equations of motion</p>
+<p>\begin{equation}
 \dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} ;, \quad \text{for} ; i = 1, 2, \ldots, N. \label{eqn:hamiltons_eom}
 \end{equation}
-where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional \emph{phase space}, Any solution of this system is a trajectory of the form
-\begin{equation}
+where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional \emph{phase space}, Any solution of this system is a trajectory of the form</p>
+<p>\begin{equation}
 \mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) ,,
 \label{eqn:solution}
 \end{equation}
@@ -246,12 +246,12 @@ starting at the initial condition
 \begin{equation}
 \phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) ;. \label{eqn:flow}
 \end{equation}
-The family is a group because it satisfies the properties
-\begin{itemize}
-\item <span class="math notranslate nohighlight">\(\phi_0=Id\)</span>,
-\item <span class="math notranslate nohighlight">\(\phi_s\circ \phi_t=\phi_{t+s}\)</span>,
-\item <span class="math notranslate nohighlight">\(\phi_{-t} \circ \phi_t=\phi_0\)</span>.
-\end{itemize}</p>
+The family is a group because it satisfies the properties</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\phi_0=Id\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi_s\circ \phi_t=\phi_{t+s}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi_{-t} \circ \phi_t=\phi_0\)</span>.</p></li>
+</ul>
 </div>
 <div class="section" id="symplectic-maps">
 <h2>Symplectic maps<a class="headerlink" href="#symplectic-maps" title="Permalink to this headline">¶</a></h2>
@@ -362,63 +362,60 @@ where <span class="math notranslate nohighlight">\(\delta_{ij}\)</span> is the K
 <div class="section" id="phase-space-slices-phase-space-transversal-slice">
 <h2>Phase space slices, phase space transversal slice<a class="headerlink" href="#phase-space-slices-phase-space-transversal-slice" title="Permalink to this headline">¶</a></h2>
 <p>The phase space structures that govern the dynamics of a Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom are of codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space, in the case of an autonomous system codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in the <span class="math notranslate nohighlight">\(2N-1\)</span>-dimensional energy surface \cite{Waalkens08} (refer to hyperbolic section). A Poincar’e surface of section is a <span class="math notranslate nohighlight">\((2N - 2)\)</span>-dimensional surface, for example one specified by <span class="math notranslate nohighlight">\(q_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{q}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{q}_j \leq 0\)</span>,
-where <span class="math notranslate nohighlight">\(j \in 1, 2, \ldots, N\)</span> and <span class="math notranslate nohighlight">\(K\)</span> is constant. For this Poincar’e surface of section to be transverse to the flow, we require
-\begin{equation}
+where <span class="math notranslate nohighlight">\(j \in 1, 2, \ldots, N\)</span> and <span class="math notranslate nohighlight">\(K\)</span> is constant. For this Poincar’e surface of section to be transverse to the flow, we require</p>
+<p>\begin{equation}
 \dot{q}_j = \dfrac{\partial H}{\partial p_j} \neq 0 , ,
 \end{equation}
 on the entire surface of section.</p>
-<p>We note here that the complete <span class="math notranslate nohighlight">\((2N - 2)\)</span>-dimensional surface cannot be visualized without projecting onto a <span class="math notranslate nohighlight">\(2\)</span> or <span class="math notranslate nohighlight">\(3\)</span> dimensional space. Even a three dimensional projection can be difficult to visualize due to the limitation of the viewing medium such as the screen or paper. However, if we consider a two-dimensional slice of the <span class="math notranslate nohighlight">\(2N-1\)</span> dimensional energy surface, then the intersection of the slice with a codimension-<span class="math notranslate nohighlight">\(1\)</span> or codimension-<span class="math notranslate nohighlight">\(2\)</span> object is either one- or zero-dimensional provided they intersect. This follows  the rule
-<span class="math notranslate nohighlight">\($\text{dimension of intersection = (dimension of surface + dimension of object) - dimension of the space.}\)</span>$
-Visualising one- or zero-dimensional intersections on a two-dimensional surface makes high-dimensional phase space structures accessible again. This visualization may not give us the whole picture of these structures in high-dimensional phase space but it is useful in order to obtain important dynamical information about these high-dimensional structures, for example to detect the intersections of the invariant manifolds and many others.</p>
+<p>We note here that the complete <span class="math notranslate nohighlight">\((2N - 2)\)</span>-dimensional surface cannot be visualized without projecting onto a <span class="math notranslate nohighlight">\(2\)</span> or <span class="math notranslate nohighlight">\(3\)</span> dimensional space. Even a three dimensional projection can be difficult to visualize due to the limitation of the viewing medium such as the screen or paper. However, if we consider a two-dimensional slice of the <span class="math notranslate nohighlight">\(2N-1\)</span> dimensional energy surface, then the intersection of the slice with a codimension-<span class="math notranslate nohighlight">\(1\)</span> or codimension-<span class="math notranslate nohighlight">\(2\)</span> object is either one- or zero-dimensional provided they intersect. This follows  the rule</p>
+<p>\begin{equation*}
+\text{dimension of intersection = (dimension of surface + dimension of object) - dimension of the space.}
+\end{equation*}</p>
+<p>Visualising one- or zero-dimensional intersections on a two-dimensional surface makes high-dimensional phase space structures accessible again. This visualization may not give us the whole picture of these structures in high-dimensional phase space but it is useful in order to obtain important dynamical information about these high-dimensional structures, for example to detect the intersections of the invariant manifolds and many others.</p>
 </div>
 <div class="section" id="liouville-s-theorem">
 <h2>Liouville’s Theorem<a class="headerlink" href="#liouville-s-theorem" title="Permalink to this headline">¶</a></h2>
-<p>\fbox{%
-\begin{minipage}{\linewidth}
-This subsection and concepts herein are adapted from \emph{Classical Mechanics by Goldstein, 3rd edition}.
-\end{minipage}
-}</p>
-<p>Suppose some property of the system is denoted by <span class="math notranslate nohighlight">\(A = A(\mathbf{x}, t)\)</span>, then the total time rate of change of this property along the solutions of an autonomous Hamiltonian system <span class="math notranslate nohighlight">\(H\)</span> is
-\begin{equation}
-\frac{d A}{d t} = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\dot{q}<em>i + \frac{\partial A}{\partial p_i} \dot{p}<em>i \right) = \frac{\partial A}{\partial t} + \sum\limits</em>{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
-\end{equation}
-Using the definition of the \emph{Poisson bracket}:
-\begin{equation}
-{A, H} = \sum\limits</em>{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
-\end{equation}
-we can write the time evolution of the property as
-\begin{equation}
+<blockquote>
+<div><p>This subsection and concepts herein are adapted from \emph{Classical Mechanics by Goldstein, 3rd edition}.</p>
+</div></blockquote>
+<p>Suppose some property of the system is denoted by <span class="math notranslate nohighlight">\(A = A(\mathbf{x}, t)\)</span>, then the total time rate of change of this property along the solutions of an autonomous Hamiltonian system <span class="math notranslate nohighlight">\(H\)</span> is</p>
+<p>\begin{equation}
+\frac{d A}{d t} = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\dot{q}_i + \frac{\partial A}{\partial p_i} \dot{p}<em>i \right) = \frac{\partial A}{\partial t} + \sum\limits</em>{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
+\end{equation}</p>
+<p>Using the definition of the \emph{Poisson bracket}:</p>
+<p>\begin{equation}
+{A, H} = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
+\end{equation}</p>
+<p>we can write the time evolution of the property as</p>
+<p>\begin{equation}
 \frac{d A}{d t} = \frac{\partial A}{\partial t} + {A, H}
 \label{eqn:property_conserved}
-\end{equation}
-Therefore, if we assume that the Hamiltonian does not depend explicitly on time and use <span class="math notranslate nohighlight">\(A = H\)</span> in the above equation, we get
-\begin{equation}
+\end{equation}</p>
+<p>Therefore, if we assume that the Hamiltonian does not depend explicitly on time and use <span class="math notranslate nohighlight">\(A = H\)</span> in the above equation, we get</p>
+<p>\begin{equation}
 \frac{d H}{d t} = 0 + {H, H} = 0
 \label{eqn:energy_conserved}
-\end{equation}
-which implies that the Hamiltonian, <span class="math notranslate nohighlight">\(H\)</span>, is a constant of the motion for conservative systems, that is the total energy is fixed. Thus, the states for a specified energy are restricted to the <span class="math notranslate nohighlight">\((2N - 1)\)</span>-dimensional surface embedded in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space.</p>
+\end{equation}</p>
+<p>which implies that the Hamiltonian, <span class="math notranslate nohighlight">\(H\)</span>, is a constant of the motion for conservative systems, that is the total energy is fixed. Thus, the states for a specified energy are restricted to the <span class="math notranslate nohighlight">\((2N - 1)\)</span>-dimensional surface embedded in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space.</p>
 <p>We use this set-up to present the mathematical statement of the Liouville’s theorem which states: \emph{when a classical ensemble evolves its location and shape in phase space may change but its volume will be conserved}.</p>
 <p>A classical ensemble consists of a set of points in phase space, with each point representing a system in a specified state. Let <span class="math notranslate nohighlight">\(\rho(\mathbf{x},t)\)</span> be the density of the set of points in a given volume. As each member of ensemble moves through phase space along a trajectory specified by Hamilton’s equations of motion, the phase space density evolves in time.</p>
-<p>Using Poisson brackets \eqref{eqn:property_conserved}, we can express Liouville’s theorem as
-\begin{equation}
+<p>Using Poisson brackets \eqref{eqn:property_conserved}, we can express Liouville’s theorem as</p>
+<p>\begin{equation}
 \frac{d \rho}{d t} = \frac{\partial \rho}{\partial t} + {\rho, H} = 0,
-\end{equation}
-which means that the phase space density <span class="math notranslate nohighlight">\(\rho(\mathbf{x}, t)\)</span> is conserved along the solutions of <span class="math notranslate nohighlight">\(H\)</span>. Consequently when an ensemble evolves, its location and shape in phase space change but its volume is conserved. It also follows that all autonomous Hamiltonian systems are volume preserving due to Liouville’s theorem.</p>
+\end{equation}</p>
+<p>which means that the phase space density <span class="math notranslate nohighlight">\(\rho(\mathbf{x}, t)\)</span> is conserved along the solutions of <span class="math notranslate nohighlight">\(H\)</span>. Consequently when an ensemble evolves, its location and shape in phase space change but its volume is conserved. It also follows that all autonomous Hamiltonian systems are volume preserving due to Liouville’s theorem.</p>
 </div>
 <div class="section" id="poincar-e-recurrence">
 <h2>Poincar’e recurrence<a class="headerlink" href="#poincar-e-recurrence" title="Permalink to this headline">¶</a></h2>
-<p>\fbox{%
-\begin{minipage}{\linewidth}
-This section is adapted from the book \emph{Applied Nonlinear Dynamical systems by S. Wiggins (Springer, 2003)} and the review article \emph{Symplectic maps, variational principles, and transport by J.D. Meiss (Rev. Mod. Phys. 1992)}.
-\end{minipage}
-}</p>
-<p>\vspace{.5cm}</p>
+<blockquote>
+<div><p>This section is adapted from the book <em>Applied Nonlinear Dynamical systems by S. Wiggins </em> (Springer, 2003) and the review article <em>Symplectic maps, variational principles, and transport by J.D. Meiss </em> (Rev. Mod. Phys. 1992).</p>
+</div></blockquote>
 <p>Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincar’e (1890). The Poincar’e recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time.</p>
 <p>We know from Eq. \eqref{eqn:energy_conserved} that autonomous Hamiltonian systems conserve energy and thus for <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom system, motion is constrained to a <span class="math notranslate nohighlight">\((2N - 1)\)</span>-dimensional energy surface
 <span class="math notranslate nohighlight">\($ E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\} $\)</span>
 If the energy surface is bounded (compact), then the Poincar’e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar’e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in \cite{Wiggins2003}.</p>
 <p>Combining Liouville’s theorem and Poincar’e recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincar’e surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.</p>
-<p>As pointed out by Arnold \cite[p. 71]{Arnold76}, <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">following</span> <span class="pre">prediction</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">paradoxical</span> <span class="pre">conclusion</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">theorems</span> <span class="pre">of</span> <span class="pre">Poincar\'e</span> <span class="pre">and</span> <span class="pre">Liouville:</span> <span class="pre">if</span> <span class="pre">you</span> <span class="pre">open</span> <span class="pre">a</span> <span class="pre">partition</span> <span class="pre">separating</span> <span class="pre">a</span> <span class="pre">chamber</span> <span class="pre">containing</span> <span class="pre">gas</span> <span class="pre">and</span> <span class="pre">a</span> <span class="pre">chamber</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">vacuum,</span> <span class="pre">then</span> <span class="pre">after</span> <span class="pre">a</span> <span class="pre">while</span> <span class="pre">the</span> <span class="pre">gas</span> <span class="pre">molecules</span> <span class="pre">will</span> <span class="pre">again</span> <span class="pre">collect</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">chamber.</span> <span class="pre">The</span> <span class="pre">resolution</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">paradox</span> <span class="pre">lies</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">fact</span> <span class="pre">that</span> </code>a while  may be longer than the duration of the solar system’s existence’’.</p>
+<p>As pointed out by Arnold \cite{Arnold76}, <em>“The following prediction is a paradoxical conclusion from the theorems of Poincar’e and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that”</em> a while  may be longer than the duration of the solar system’s existence.</p>
 </div>
 </div>
 
