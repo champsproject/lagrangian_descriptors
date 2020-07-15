@@ -233,7 +233,7 @@
 <p>\begin{equation}
 \dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} ;, \quad \text{for} ; i = 1, 2, \ldots, N. \label{eqn:hamiltons_eom}
 \end{equation}
-where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional \emph{phase space}, Any solution of this system is a trajectory of the form</p>
+where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional <em>phase space</em>, Any solution of this system is a trajectory of the form</p>
 <p>\begin{equation}
 \mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) ,,
 \label{eqn:solution}
@@ -242,7 +242,7 @@ starting at the initial condition
 \begin{equation}
 \mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) , . \label{eqn:init_condition}
 \end{equation}</p>
-<p>We will assume that <span class="math notranslate nohighlight">\(H\)</span> is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p})\)</span>, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. \eqref{eqn:hamiltons_eom} form a one-parameter family of diffeomorphisms, known as a \emph{Hamiltonian flow}, given by <span class="math notranslate nohighlight">\(\{\phi_t\}_{t\in\mathbb{R}}\)</span> so that
+<p>We will assume that <span class="math notranslate nohighlight">\(H\)</span> is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p})\)</span>, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. \eqref{eqn:hamiltons_eom} form a one-parameter family of diffeomorphisms, known as a <em>Hamiltonian flow</em>, given by <span class="math notranslate nohighlight">\(\{\phi_t\}_{t\in\mathbb{R}}\)</span> so that
 \begin{equation}
 \phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) ;. \label{eqn:flow}
 \end{equation}
@@ -257,7 +257,8 @@ The family is a group because it satisfies the properties</p>
 <h2>Symplectic maps<a class="headerlink" href="#symplectic-maps" title="Permalink to this headline">¶</a></h2>
 <p>A linear transformation <span class="math notranslate nohighlight">\(C\)</span> is symplectic if it satisfies</p>
 <p>\begin{equation}
-C \mathcal{J} C^T = \mathcal{J} = \begin{pmatrix}
+C \mathcal{J} C^T = \mathcal{J} =
+\begin{pmatrix}
 0_N &amp; I_N \
 -I_N &amp; 0_N
 \end{pmatrix}
@@ -299,7 +300,7 @@ p_{x_N}
 \dot{p}</em>{x_1} \
 \vdots \
 \dot{p}</em>{x_N}
-\end{bmatrix}.
+\end{bmatrix}
 \end{equation}</p>
 <p>From \eqref{eqn:symp_cond} we find the inverse transformation <span class="math notranslate nohighlight">\(C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}\)</span>, such that</p>
 <p>\begin{equation}
@@ -319,32 +320,32 @@ p_{x_N}
 \dot{p}_1 \
 \vdots \
 \dot{p}_N
-\end{bmatrix}.
+\end{bmatrix}
 \end{equation}</p>
 <p>Linear symplectic transformations are <span class="math notranslate nohighlight">\(C^\infty\)</span> diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion \eqref{eqn:hamiltons_eom}, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.</p>
 <p>In Ref~\cite{naik_finding_2019}, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems.</p>
-<p>We can define nonlinear symplectic transformations using the \emph{Poisson bracket} (see \eqref{eq:poisson}) defined by
-\begin{equation}
+<p>We can define nonlinear symplectic transformations using the <em>Poisson bracket</em> (see \eqref{eq:poisson}) defined by</p>
+<p>\begin{equation}
 {A, B} = \langle D A,\mathcal{J} D B \rangle = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial B}{\partial q_i} \right),
 \label{eqn:poisson}
-\end{equation}
-where <span class="math notranslate nohighlight">\(D A\)</span> and <span class="math notranslate nohighlight">\(D B\)</span> are the gradients of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is defined in Eq. \eqref{eqn:symp_cond}. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. \eqref{eqn:hamiltons_eom} as
-\begin{equation}
+\end{equation}</p>
+<p>where <span class="math notranslate nohighlight">\(D A\)</span> and <span class="math notranslate nohighlight">\(D B\)</span> are the gradients of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is defined in Eq. \eqref{eqn:symp_cond}. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. \eqref{eqn:hamiltons_eom} as</p>
+<p>\begin{equation}
 \dot{q}_i = {q_i, H} \quad,\quad \dot{p}_i = {p_i, H} ; , \quad \text{for } i = 1,\ldots,N
 \label{eqn:poisson_eqn}
-\end{equation}
-Following \cite{Wiggins2003}, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space <span class="math notranslate nohighlight">\(f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}\)</span>, such that
-\begin{equation}
+\end{equation}</p>
+<p>Following \cite{Wiggins2003}, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space <span class="math notranslate nohighlight">\(f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}\)</span>, such that</p>
+<p>\begin{equation}
 \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
 \label{eqn:symplectic}
 \end{equation}
-for any <span class="math notranslate nohighlight">\(x,u,v\in \mathbb{R}^{2N}\)</span>.
-Under <span class="math notranslate nohighlight">\(f\)</span>, phase space points <span class="math notranslate nohighlight">\((q,p)\)</span> are transformed into <span class="math notranslate nohighlight">\(f(q,p)\)</span> and the Hamiltonian <span class="math notranslate nohighlight">\(H(q,p)\)</span> into the new Hamiltonian <span class="math notranslate nohighlight">\(G(f(q,p))\)</span>, that satisfies <span class="math notranslate nohighlight">\(Df(q,p)DH = DG\)</span>. The equations of motion \eqref{eqn:poisson_eqn} then remain
-\begin{align*}
+for any <span class="math notranslate nohighlight">\(x,u,v\in \mathbb{R}^{2N}\)</span>.</p>
+<p>Under <span class="math notranslate nohighlight">\(f\)</span>, phase space points <span class="math notranslate nohighlight">\((q,p)\)</span> are transformed into <span class="math notranslate nohighlight">\(f(q,p)\)</span> and the Hamiltonian <span class="math notranslate nohighlight">\(H(q,p)\)</span> into the new Hamiltonian <span class="math notranslate nohighlight">\(G(f(q,p))\)</span>, that satisfies <span class="math notranslate nohighlight">\(Df(q,p)DH = DG\)</span>. The equations of motion \eqref{eqn:poisson_eqn} then remain</p>
+<p>\begin{align*}
 {(q,p),H} = \langle D(q,p),\mathcal{J}DH \rangle &amp;= \langle D(q,p),;(Df(q,p))^T\mathcal{J}Df(q,p)DH \rangle \
 &amp;= \langle Df(q,p)D(q,p),;\mathcal{J}Df(q,p)DH \rangle = {f(q,p), G}.
-\end{align*}
-For a coordinate free formulation using differential forms see \cite{Arnold76}.</p>
+\end{align*}</p>
+<p>For a coordinate free formulation using differential forms see \cite{Arnold76}.</p>
 <p>The flow of an autonomous Hamiltonian system is a symplectic transformation for each <span class="math notranslate nohighlight">\(t\)</span>. Another common example of a symplectic map is the return map associated with a Poincar’e surface of section ({\bf refer to LD chapter}), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{‘e}non map.
 Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions \cite{meiss_symplectic_1992} to name but a few.</p>
 </div>
@@ -376,13 +377,14 @@ on the entire surface of section.</p>
 <div class="section" id="liouville-s-theorem">
 <h2>Liouville’s Theorem<a class="headerlink" href="#liouville-s-theorem" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>This subsection and concepts herein are adapted from \emph{Classical Mechanics by Goldstein, 3rd edition}.</p>
+<div><p>This subsection and concepts herein are adapted from <em>Classical Mechanics by Goldstein, 3rd edition</em>.</p>
 </div></blockquote>
 <p>Suppose some property of the system is denoted by <span class="math notranslate nohighlight">\(A = A(\mathbf{x}, t)\)</span>, then the total time rate of change of this property along the solutions of an autonomous Hamiltonian system <span class="math notranslate nohighlight">\(H\)</span> is</p>
-<p>\begin{equation}
-\frac{d A}{d t} = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\dot{q}_i + \frac{\partial A}{\partial p_i} \dot{p}<em>i \right) = \frac{\partial A}{\partial t} + \sum\limits</em>{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
-\end{equation}</p>
-<p>Using the definition of the \emph{Poisson bracket}:</p>
+<div class="math notranslate nohighlight">
+\[{
+\frac{d A}{d t} = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\dot{q}_i + \frac{\partial A}{\partial p_i} \dot{p}_i \right) = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
+}\]</div>
+<p>Using the definition of the <em>Poisson bracket</em>:</p>
 <p>\begin{equation}
 {A, H} = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
 \end{equation}</p>
@@ -397,7 +399,7 @@ on the entire surface of section.</p>
 \label{eqn:energy_conserved}
 \end{equation}</p>
 <p>which implies that the Hamiltonian, <span class="math notranslate nohighlight">\(H\)</span>, is a constant of the motion for conservative systems, that is the total energy is fixed. Thus, the states for a specified energy are restricted to the <span class="math notranslate nohighlight">\((2N - 1)\)</span>-dimensional surface embedded in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space.</p>
-<p>We use this set-up to present the mathematical statement of the Liouville’s theorem which states: \emph{when a classical ensemble evolves its location and shape in phase space may change but its volume will be conserved}.</p>
+<p>We use this set-up to present the mathematical statement of the Liouville’s theorem which states: <em>when a classical ensemble evolves its location and shape in phase space may change but its volume will be conserved</em>.</p>
 <p>A classical ensemble consists of a set of points in phase space, with each point representing a system in a specified state. Let <span class="math notranslate nohighlight">\(\rho(\mathbf{x},t)\)</span> be the density of the set of points in a given volume. As each member of ensemble moves through phase space along a trajectory specified by Hamilton’s equations of motion, the phase space density evolves in time.</p>
 <p>Using Poisson brackets \eqref{eqn:property_conserved}, we can express Liouville’s theorem as</p>
 <p>\begin{equation}
