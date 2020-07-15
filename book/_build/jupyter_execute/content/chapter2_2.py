@@ -2,12 +2,11 @@
 \label{sec:KAM}
 
 KAM theory has developed into a recognized  branch of dynamical systems theory that is concerned with the study of the persistence of quasiperiodic trajectories in Hamiltonian system subjected to perturbation (generally, a Hamiltonian perturbation). The origins of this mathematical theory lie in attempts to understand the convergence of perturbation series solutions representing quasiperiodic solutions of the three-body problem in celestial mechanics \cite{ moser2001stable, barrow1997poincare, dumas2014kam}. Significant progress was made in this area in the second half of the twentieth century, and its name represents an acronym formed by the names of the three founders: Andrei Kolmogorov, Vladimir Arnold and J\"{u}rgen Moser. The main question that KAM addresses is the following: 
-\begin{center}
-\textit{
-What happens to the \textbf{quasiperiodic trajectories} of an \textbf{integrable} Hamiltonian system when the flow is modified with a \textbf{perturbation} that respects the symplectic structure of Hamilton's equations? Will the perturbation \textbf{destroy} these quasiperiodic solutions, or is it possible that some of them will \textbf{survive} and  only become slightly deformed?}
-\end{center}
 
-The first answer to this question was provided by Kolmogorov in his famous plenary lecture \cite{kolmogorov1954} at the International Congress of Mathematicians that took place in Amsterdam in 1954. Since the pioneering works of Poincar\'{e} on the three body problem, the intuition built into the scientific community was that typical systems in classical mechanics exhibit chaotic behaviour in some regions of their phase space. However, Kolmogorov's remarkable announcement produced a complete shock that turned this view upside down. In his talk he claimed that for near-integrable Hamiltonian systems, that is, integrable systems subjected to a perturbation, almost all quasiperiodic motion persists. As we will  explain in more detail shortly, quasiperiodic trajectories trace out tori in phase space. Indeed, they are often viewed synonomously with invariant tori. Moreover, it turns out that the quasiperiodic trajectories that lie on \textit{\textbf{non-resonant tori}} are more robust to survive the perturbation than those associated to \textit{\textbf{resonant tori}}. In fact, resonant tori are the first tori to disappear when the system is perturbed. Interestingly, among the non-resonant tori, KAM theory establishes a criterion to measure the ``degree of non-resonance'' that is related to their robustness with respect to the perturbation. 
+
+> What happens to the <b>quasiperiodic trajectories</b> of an <b>integrable</b> Hamiltonian system when the flow is modified with a <b>perturbation</b> that respects the symplectic structure of Hamilton's equations? Will the perturbation <b>destroy</b> these quasiperiodic solutions, or is it possible that some of them will <b>survive</b> and  only become slightly deformed?
+
+The first answer to this question was provided by Kolmogorov in his famous plenary lecture \cite{kolmogorov1954} at the International Congress of Mathematicians that took place in Amsterdam in 1954. Since the pioneering works of Poincar\'{e} on the three body problem, the intuition built into the scientific community was that typical systems in classical mechanics exhibit chaotic behaviour in some regions of their phase space. However, Kolmogorov's remarkable announcement produced a complete shock that turned this view upside down. In his talk he claimed that for near-integrable Hamiltonian systems, that is, integrable systems subjected to a perturbation, almost all quasiperiodic motion persists. As we will  explain in more detail shortly, quasiperiodic trajectories trace out tori in phase space. Indeed, they are often viewed synonomously with invariant tori. Moreover, it turns out that the quasiperiodic trajectories that lie on _**non-resonant tori**_ are more robust to survive the perturbation than those associated to  _**resonant tori**_. In fact, resonant tori are the first tori to disappear when the system is perturbed. Interestingly, among the non-resonant tori, KAM theory establishes a criterion to measure the "degree of non-resonance" that is related to their robustness with respect to the perturbation. 
 
 Despite the deep consequences and implications that the results presented by Kolmogorov would bring to the field of classical mechanics, he had only provided partial arguments for them and not complete mathematical proofs. Hence, the foundations of this new theory needed a rigorous scaffolding that arrived several years later, in the period 1962-1963, with the independent works of Arnold \cite{arnold1962,arnold1963a,arnold1963b} and Moser \cite{moser1962}. 
 
@@ -35,26 +34,28 @@ Observe that a solution of a dynamical system is a trajectory, that is, a one-di
 
 However, due to the special symplectic structure of Hamiltonian systems, in order to establish the integrability of a system we only need to find $N$ CoM. This criterion is known as the Liouville-Mineur-Arnold Integrability Theorem \cite{liouville1855note, mineur1935systemes, mineur1937systemes, arnol2013mathematical}, and plays a key role in the development of KAM theory. This result states the following:
 
-\medskip
-
-\noindent \textbf{\underline{Liouville-Mineur-Arnold Integrability Theorem (LMAIT):}} 
+<b> Liouville-Mineur-Arnold Integrability Theorem (LMAIT): </b>
 An $N$ DoF Hamiltonian system is integrable if and only if there exist $N$ constants of the motion $F_1,\ldots,F_N$ which are smooth analytic functions of the phase space variables, such that:
-\begin{itemize}
-	\item they are functionally independent, which means that the vectors $\nabla F_1 , \ldots, \nabla F_N$ are linearly independent for almost all phase space points,
-	\item they are in involution with each other, that is, $\lbrace F_i,F_j \rbrace = 0$ for each $i \neq j$.
-\end{itemize}
 
-\medskip
+* they are functionally independent, which means that the vectors $\nabla F_1 , \ldots, \nabla F_N$ are linearly independent for almost all phase space points,
+* they are in involution with each other, that is, $\lbrace F_i,F_j \rbrace = 0$ for each $i \neq j$.
 
 Notice that the involution condition is equivalent to $\nabla F_i$ and $\nabla F_j$ being orthogonal in the symplectic sense
-$$\lbrace F_i,F_j \rbrace = \left(\nabla F_i\right)^{T} \mathcal{J} \, \nabla F_j = 0.$$ This means geometrically that in the symplectic structure of Hamiltonian systems, the level hypersurfaces of the CoM in involution are orthogonal. The LMAIT criterion also ensures that if the intersection resulting from these CoM is a connected and compact manifold, it has the shape of an $N$-torus, denoted by $\mathbb{T}^{N}$. Such an object is the result of taking the cartesian product of $N$ copies of a circle, that is:
-\[
+
+$$\lbrace F_i,F_j \rbrace = \left(\nabla F_i\right)^{T} \mathcal{J} \, \nabla F_j = 0.$$ 
+
+This means geometrically that in the symplectic structure of Hamiltonian systems, the level hypersurfaces of the CoM in involution are orthogonal. The LMAIT criterion also ensures that if the intersection resulting from these CoM is a connected and compact manifold, it has the shape of an $N$-torus, denoted by $\mathbb{T}^{N}$. Such an object is the result of taking the cartesian product of $N$ copies of a circle, that is:
+
+\begin{equation*}
 \mathbb{T}^{N} = \underbrace{S^1 \times \ldots \times S^1}_{\scriptsize{\mbox{$N$ times}}} = \left(\mathbb{R} / 2\pi \mathbb{Z}\right)^{N}
-\]
+\end{equation*}
+
 The LMAIT result goes further by ensuring that for the phase space regions where one can find these tori, there exists a canonical transformation to action-angle coordinates $(\mathbf{I},\boldsymbol{\theta})$ such that the Hamiltonian in these new variables only depends on the actions:
-\[
+
+\begin{equation*}
 K(\mathbf{I}) = K(I_1,\ldots,I_N)
-\]
+\end{equation*}
+
 and Hamilton's equations are given by:
 
 
@@ -77,9 +78,9 @@ $$
 K_0 = K(\mathbf{I}_0) = K\left(I_1^0,\ldots,I_N^0\right),
 $$ 
 and the differential equations for the angle variables yield:
-\[
-\theta_i(t) = \omega_i(\mathbf{I}_0) \, t + \theta_i^0 \mod 2\pi \;\; , \quad i \in \lbrace 1, \ldots,N \rbrace
-\] 
+
+$${\theta_i(t) = \omega_i(\mathbf{I}_0) \, t + \theta_i^0 \mod 2\pi \;\; , \quad i \in \lbrace 1, \ldots,N \rbrace}$$
+
 where $\omega_i(\mathbf{I}_0)$ are the angular frequencies. We can write the angular solution in vector form:
 \begin{equation}
 \boldsymbol{\theta}(t) = \boldsymbol{\omega}\left(\mathbf{I}_0\right) t + \boldsymbol{\theta}_0 \mod 2\pi
@@ -91,16 +92,18 @@ Equations \eqref{eq:actions} and \eqref{eq:angles} tell us that the flow generat
 
 Next we introduce the notion of non-degeneracy of a Hamiltonian, which is a necessary requirement for many results described in the framework of KAM theory. 
 
-\medskip
 
-\noindent \textbf{\underline{Kolmogorov non-degeneracy condition:}} Given an integrable Hamiltonian system in action-angle coordinates $K = K(\mathbf{I})$, we say that it is non-degenerate if the frequency map:
-\[
-\mathbf{I} \;\; \mapsto \;\; \boldsymbol{\omega} = \boldsymbol{\omega}(\mathbf{I}) 
-\]
+<b>Kolmogorov non-degeneracy condition:</b> Given an integrable Hamiltonian system in action-angle coordinates $K = K(\mathbf{I})$, we say that it is non-degenerate if the frequency map:
+
+$${\mathbf{I} \;\; \mapsto \;\; \boldsymbol{\omega} = \boldsymbol{\omega}(\mathbf{I}) }$$
+
+
 is a diffeomorphism. In particular, due to the inverse function theorem, a sufficient condition which implies that the Hamiltonian is non-degenerate is the following:
-\[
+
+$${
 \det \left(\dfrac{\partial \boldsymbol{\omega}}{\partial \mathbf{I}}\right) = \det \left( \text{Hess}_{K}\right) \neq 0
-\]
+}$$
+
 where $\text{Hess}_{K}$ represents the Hessian matrix of the Hamiltonian $K$. This condition means that the Jacobian of the frequency map (or the Hessian of $K$) has to be an invertible matrix.
 
 \begin{figure}[htbp]
@@ -114,26 +117,28 @@ where $\text{Hess}_{K}$ represents the Hessian matrix of the Hamiltonian $K$. Th
 
 At this point, it is important to define what we mean by a resonant and a non-resonant torus, because the informal statement of the main results of KAM theory that we gave at the beginning of this section relies heavily on this concept. Recall that KAM theory studies the conditions under which the tori of an integrable Hamiltonian persist  when the system is subjected to a small perturbation.
 
-\noindent \textbf{\underline{Resonance:}} The frequency vector $\boldsymbol{\omega} \in \mathbb{R}^{N}$ is said to be resonant if there exists a vector of integers with at least one of its components not zero, that is, $\mathbf{k} \in \mathbb{Z}^{N} - \lbrace 0 \rbrace$, such that:
+__Resonance:__ The frequency vector $\boldsymbol{\omega} \in \mathbb{R}^{N}$ is said to be resonant if there exists a vector of integers with at least one of its components not zero, that is, $\mathbf{k} \in \mathbb{Z}^{N} - \lbrace 0 \rbrace$, such that:
 \begin{equation}
 \mathbf{k} \cdot \boldsymbol{\omega} = \sum_{i = 1}^{N} k_i \, \omega_i = 0.
 \end{equation}
 Otherwise $\boldsymbol{\omega}$ is non-resonant. Tori characterized by a resonant (or non-resonant) frequency vector are known in the literature as resonant (or non-resonant) tori.
 
 Consider the nearly-integrable Hamiltonian:
+
 \begin{equation}
 \mathcal{H}(\mathbf{I},\boldsymbol{\theta}) = h(\mathbf{I}) + \varepsilon  f(\mathbf{I},\boldsymbol{\theta}) 
 \end{equation} 
+
 where $h$ is the integrable Hamiltonian, $f$ is the perturbation and $\varepsilon \geq 0$ is the magnitude of the perturbation. KAM theory establishes that resonant tori are very fragile since they are the first ones to be destroyed when the perturbation is switched on, while most of the non-resonant tori (in the measure-theoretic sense) are robust and survive the perturbation, but become slightly deformed by it. The key ingredient which determines the ``degree of robustness" that allows us to quantify if a torus will survive or not is  the frequency vector associated to each of the tori in the integrable system. We give here the basic definitions of these concepts and, for  a more detailed analysis, the reader can refer to \cite{wiggins2003introduction} and references therein.
 
-\medskip
-
-\textbf{Add example of 2 DOF harmonic oscillators.}
+__Add example of 2 DOF harmonic oscillators.__
 
 In order to get a better idea and develop some geometrical intuition on the relationship between the definition of resonance and the corresponding dynamical behavior of trajectories on tori, we go back to the simple case provided by an integrable Hamiltonian system with $N = 2$ DoF. In this context, a resonant torus is determined by a frequency vector $\boldsymbol{\omega} = (\omega_1,\omega_2)$ that satisfies:
-\[
+
+$${
 k_1 \, \omega_1 + k_2 \, \omega_2 = 0 \;,\quad k_1 , k_2 \in \mathbb{Z}-\lbrace 0 \rbrace \quad \Leftrightarrow \quad \dfrac{\omega_2}{\omega_1} = -\dfrac{k_1}{k_2} \in \mathbb{Q}
-\] 
+}$$
+
 Motion on resonant tori is periodic, and hence trajectories are closed. For example, if we consider motion on a torus with frequencies $\omega_1 = 2$ and $\omega_2 = 3$, a trajectory lying on this torus will wind around it making $3$ complete revolutions through the hole on the torus and $2$ full revolutions around the hole before it closes onto itself. This motion is illustrated in Fig. \ref{fig:quasip_mot} A). 
 
 On the other hand, a non-resonant torus is associated to a frequency vector for which the ratio of its components is irrational, that is $\omega_2 / \omega_1 \in \mathbb{I} = \mathbb{R} - \mathbb{Q}$. Motion on non-resonant tori is ergodic, and any trajectory evolving on this type of torus will densely and uniformly fill its surface without ever closing. This is called quasiperiodic motion and is depicted in Fig. \ref{fig:quasip_mot} B) for a frequency ratio $\omega_2 / \omega_1 = \sqrt{2}$.

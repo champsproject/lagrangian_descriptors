@@ -220,34 +220,63 @@
 <h1>The Hyperbolic setting<a class="headerlink" href="#the-hyperbolic-setting" title="Permalink to this headline">¶</a></h1>
 <p>\label{sec:hyper}</p>
 <p>Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be ``crossed’’ by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.</p>
-<p>Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable \cite{guillemin2010differential}.  {\em Normally hyperbolic invariant manifolds} (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.</p>
+<p>Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable \cite{guillemin2010differential}.  <em>Normally hyperbolic invariant manifolds</em> (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.</p>
 <p>Unstable periodic orbits play an important role in our understanding of the dynamics of Hamiltonian systems. Periodic orbits have constant energy, as well as their stable and unstable manifolds, and are contained in the energy surface that is of one less dimension than the dimension of the phase space, i.e. the energy surface has codimension one. In general, the codimension of a surface contained in phase space is the dimension of phase space minus the dimension of the surface. If the  codimension is one then it may divide the ambient space, and therefore  act as a barrier to transport in the space.</p>
-<p>In two degree-of-freedom Hamiltonian systems a one dimensional unstable periodic orbits has two dimensional stable and unstable manifolds that can <code class="docutils literal notranslate"><span class="pre">divide’’</span> <span class="pre">the</span> <span class="pre">energy</span> <span class="pre">surface</span> <span class="pre">and</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">used</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">invariant</span> <span class="pre">regions</span> <span class="pre">(</span></code>lobes’’)  that transport throughout the phase space, while respecting the ``barrier nature’’ of invariant manifolds.</p>
+<p>In two degree-of-freedom Hamiltonian systems a one dimensional unstable periodic orbits has two dimensional stable and unstable manifolds that can <em>“divide”</em> the energy surface and can be used to create invariant regions (<em>“lobes”</em>)  that transport throughout the phase space, while respecting the <em>“barrier nature”</em> of invariant manifolds.</p>
 <p>For more than two degrees-of-freedom periodic orbits and their stable and unstable manifolds do not have sufficient dimension (or, equivalently, their codimension is greater than one) to form barriers to transport or lobes.</p>
 <p>We also note (cf. Section \ref{sec:LDs}) the global phase space structure can be studied by creating a mapping along trajectories from a surface transverse to the flow in the energy surface, i.e. the Poincar’e map and the Poincar’e section. For two degrees-of-freedom the Poincar’e section is two dimensional. For <span class="math notranslate nohighlight">\(n\)</span> degrees-of-freedom the Poincar’e section is <span class="math notranslate nohighlight">\(2n-2\)</span> dimensional. The dynamics in the Poincar’e section is not easy to visualize for more than two degrees-of-freedom.</p>
 <p>In the table below we collect together some dimensionality and codimensionality properties of periodic orbits and their associated geometrical structures within the energy surface, i.e. <span class="math notranslate nohighlight">\(E= {\rm constant}\)</span>.</p>
-<p>\begin{table}[h!]
-\begin{tabular}{| l | c | c | c |}
-\hline
-Degrees of freedom &amp; 2 &amp; 3 &amp; <span class="math notranslate nohighlight">\(n\)</span> \
-Phase space &amp; 4 &amp; 6 &amp; 2$n$ \
-Energy surface &amp; 3 &amp; 5 &amp; 2$n<span class="math notranslate nohighlight">\(-1 \\
-Poincar\'e section &amp; 2 &amp; 4 &amp; 2\)</span>n<span class="math notranslate nohighlight">\(-2 \\
-Periodic orbit &amp; 1 (2) &amp; 1 (4) &amp; 1 (2\)</span>n<span class="math notranslate nohighlight">\(-2) \\
-Stable and unstable manifolds of a periodic orbit  &amp; 2 (1) &amp; 2 or 3 (3 or 2) &amp; 2 to n (2\)</span>n$-3 to <span class="math notranslate nohighlight">\(n\)</span>-1) \
-Barriers in energy surface &amp; 2 (1) &amp; 4 (1) &amp; 2$n$-2 (1)\
-\hline
-\end{tabular}
-\caption{Dimension count of phase space structures. Codimension of certain objects appears in parentheses.}
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Degrees of freedom</p></th>
+<th class="text-align:center head"><p>2</p></th>
+<th class="text-align:center head"><p>3</p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Phase space</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>2$n$</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Energy surface</p></td>
+<td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>2$n$-1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Poincar’e section</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>2$n$-2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Periodic orbit</p></td>
+<td class="text-align:center"><p>1 (2)</p></td>
+<td class="text-align:center"><p>1 (4)</p></td>
+<td class="text-align:center"><p>1 (2$n$-2)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Stable and unstable manifolds of a periodic orbit</p></td>
+<td class="text-align:center"><p>2 (1)</p></td>
+<td class="text-align:center"><p>2 or 3 (3 or 2)</p></td>
+<td class="text-align:center"><p>2 to n (2$n$-3 to <span class="math notranslate nohighlight">\(n\)</span>-1)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Barriers in energy surface</p></td>
+<td class="text-align:center"><p>2 (1)</p></td>
+<td class="text-align:center"><p>4 (1)</p></td>
+<td class="text-align:center"><p>2$n$-2 (1)</p></td>
+</tr>
+</tbody>
+</table>
+<p>\caption{Dimension count of phase space structures. Codimension of certain objects appears in parentheses.}
 \label{tab:dimensions}
 \end{table}</p>
-<p>NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they {\em may} have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom \cite{wiggins1990geometry}.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are \cite{Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013}, but we will begin with an elementary description.</p>
-<p>In understanding what is meant by ``normally hyperbolic invariant manifold’’ we start by explaining the last word in the phrase and working towards the first.</p>
-<p>\begin{itemize}</p>
-<p>\item A {\em manifold} is the natural generalization of a differentiable curve or surface.</p>
-<p>\item A set in the constant energy level set is called {\em invariant} under the flow if any trajectory in the set is contained in the set at all times (link to definition in previous chapter).</p>
-<p>\item {\em Normal hyperbolicity} means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds \cite{Fenichel1971}.</p>
-<p>\end{itemize}</p>
+<p>NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they <em>may</em> have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom \cite{wiggins1990geometry}.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are \cite{Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013}, but we will begin with an elementary description.</p>
+<p>In understanding what is meant by <em>“normally hyperbolic invariant manifold”</em> we start by explaining the last word in the phrase and working towards the first.</p>
+<ul class="simple">
+<li><p>A <em>manifold</em> is the natural generalization of a differentiable curve or surface.</p></li>
+<li><p>A set in the constant energy level set is called <em>invariant</em> under the flow if any trajectory in the set is contained in the set at all times (link to definition in previous chapter).</p></li>
+<li><p><em>Normal hyperbolicity</em> means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds \cite{Fenichel1971}.</p></li>
+</ul>
 <p>Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works \cite{Wiggins2001,Wiggins2016}.</p>
 <p>In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy <span class="math notranslate nohighlight">\((H = K + V)\)</span>.</p>
 <div class="section" id="one-degree-of-freedom-hyperbolic-equilibrium-point">
@@ -446,16 +475,14 @@ The point <span class="math notranslate nohighlight">\((q_1, p_1, q_2, p_2) = (0
 \frac{\omega}{2} ( p_2^2 + q_2^2)=E &gt;0,
 \label{eq:LST4}
 \end{equation}</p>
-<p>\noindent
-which is a periodic orbit for each <span class="math notranslate nohighlight">\(E &gt; 0\)</span>. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit \eqref{eq:LST4}. This family of periodic orbits (``family’’ in terms of the energy <span class="math notranslate nohighlight">\(E&gt;0\)</span>, lies on the two dimensional invariant manifold <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span>. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is {\em not} isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.</p>
+<p>which is a periodic orbit for each <span class="math notranslate nohighlight">\(E &gt; 0\)</span>. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit \eqref{eq:LST4}. This family of periodic orbits (``family’’ in terms of the energy <span class="math notranslate nohighlight">\(E&gt;0\)</span>, lies on the two dimensional invariant manifold <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span>. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is {\em not} isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.</p>
 <p>The Lyapunov subcenter theorem says that this result holds, for sufficiently small <span class="math notranslate nohighlight">\(E &gt; 0\)</span>, if higher  order terms are added to \eqref{eq:LST1}. All of these  periodic orbits are unstable since the dynamics normal to the Lyapunov subcenter manifold is exponentially growing and decaying, i.e. the Lyapunov subcenter manifold is a NHIM.</p>
 <p>This set-up can be generalized to higher dimensions. The quadratic normal form associated to an index <span class="math notranslate nohighlight">\(n_s\)</span> saddle has the general form (assuming  that the <span class="math notranslate nohighlight">\(\lambda_i\)</span> are distinct and the  <span class="math notranslate nohighlight">\(\omega_i\)</span> are distinct):</p>
 <p>\begin{equation}
 H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{\omega_{i+n_s}}{2} ( p_{i+n_s}^2 + q_{i+n_s}^2),
 \label{eq:LST5}
 \end{equation}</p>
-<p>\noindent
-where  <span class="math notranslate nohighlight">\(\lambda_i, \, \omega_i &gt;0, \quad (q_1, p_1,  \ldots, q_{n_s}, p_{n_s},  q_{n_s +1}, p_{n_s + 1}, \ldots, q_{n_s +n_c}, p_{n_s + n_c}) 
+<p>where  <span class="math notranslate nohighlight">\(\lambda_i, \, \omega_i &gt;0, \quad (q_1, p_1,  \ldots, q_{n_s}, p_{n_s},  q_{n_s +1}, p_{n_s + 1}, \ldots, q_{n_s +n_c}, p_{n_s + n_c}) 
 \in \mathbb{R}^{2(n_s + n_c)}\)</span>.</p>
 <p>The structure of the NHIM is treated in detail for <span class="math notranslate nohighlight">\({n_s} =1\)</span> in \cite{wiggins2016role}.  Results for <span class="math notranslate nohighlight">\({n_s} &gt;1\)</span> are treated in \cite{collins2011index}.
 When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply \cite{Wigginsbook1994} and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for <span class="math notranslate nohighlight">\({n_c} &gt;1\)</span> and requires KAM type techniques for its understanding \cite{dumas2014kam}.</p>
