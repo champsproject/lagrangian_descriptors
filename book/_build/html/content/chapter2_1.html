@@ -31,8 +31,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Method of Lagrangian Descriptors" href="chapter3.html" />
-    <link rel="prev" title="The Setting: Hamiltonian Dynamics on Phase Space" href="chapter1.html" />
+    <link rel="next" title="An Informal Introduction to Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory" href="chapter2_2.html" />
+    <link rel="prev" title="Hamiltonian flows and symplectic maps" href="chapter1_2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,13 +74,19 @@
 <p class="margin-caption">Chapter 1</p>
 </li>
   <li class="">
-    <a href="chapter1.html">The Setting: Hamiltonian Dynamics on Phase Space</a>
+    <a href="chapter1_1.html">The Setting: Hamiltonian Dynamics on Phase Space</a>
+  </li>
+  <li class="">
+    <a href="chapter1_2.html">Hamiltonian flows and symplectic maps</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 2</p>
 </li>
   <li class="active">
     <a href="">The Hyperbolic setting</a>
+  </li>
+  <li class="">
+    <a href="chapter2_2.html">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 3</p>
@@ -92,7 +98,7 @@
 <p class="margin-caption">Examples</p>
 </li>
   <li class="">
-    <a href="examples.html">Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems</a>
+    <a href="examples.html">Computing the Lagrangian Descriptors</a>
   </li>
   <li class="">
     <a href="https://github.com/champsproject/lagrangian_descriptors">GitHub repository<i class="fas fa-external-link-alt"></i></a>
@@ -176,9 +182,28 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#one-degree-of-freedom-hyperbolic-equilibrium-point" class="nav-link">One Degree-of-Freedom  Hyperbolic Equilibrium Point</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#two-degrees-of-freedom-and-the-hyperbolic-periodic-orbit" class="nav-link">Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#three-and-more-degrees-of-freedom-and-nhims" class="nav-link">Three and More Degrees-of-Freedom and NHIMs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-lyapunov-subcenter-theorem" class="nav-link">The Lyapunov Subcenter Theorem</a>
+        </li>
     
     </ul>
 </nav>
@@ -225,8 +250,9 @@ Barriers in energy surface &amp; 2 (1) &amp; 4 (1) &amp; 2$n$-2 (1)\
 <p>\end{itemize}</p>
 <p>Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works \cite{Wiggins2001,Wiggins2016}.</p>
 <p>In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy <span class="math notranslate nohighlight">\((H = K + V)\)</span>.</p>
-<p>\subsection{ One Degree-of-Freedom  Hyperbolic Equilibrium Point }
-\label{sec:1dofsaddle}</p>
+<div class="section" id="one-degree-of-freedom-hyperbolic-equilibrium-point">
+<h2>One Degree-of-Freedom  Hyperbolic Equilibrium Point<a class="headerlink" href="#one-degree-of-freedom-hyperbolic-equilibrium-point" title="Permalink to this headline">¶</a></h2>
+<p>\label{sec:1dofsaddle}</p>
 <p>The most simple Hamiltonian function with a hyperbolic equilibrium point is</p>
 <p>\begin{equation}
 H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambda &gt; 0,
@@ -284,8 +310,10 @@ p_1(t) &amp;=&amp; p_1(0) e^{\lambda t}.
 \end{equation}</p>
 <p>The existence of two special directions where the trajectories converge to the <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> in some direction and diverge from <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> in other one is the essence of the concept of hyperbolicity.</p>
 <p>The basic ideas exposed in this simple example are the basis for understanding the generalization of the geometric objects in more dimensions in the next examples.</p>
-<p>\subsection{Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit}
-\label{sec:2dofupo}</p>
+</div>
+<div class="section" id="two-degrees-of-freedom-and-the-hyperbolic-periodic-orbit">
+<h2>Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit<a class="headerlink" href="#two-degrees-of-freedom-and-the-hyperbolic-periodic-orbit" title="Permalink to this headline">¶</a></h2>
+<p>\label{sec:2dofupo}</p>
 <p>In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Chapter \ref{sec:KAM}). The total energy of the system is split between both DoF to yield:</p>
 <p>\begin{eqnarray}
 H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\
@@ -338,8 +366,10 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\
 <p>\begin{equation}
 \displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2)   = E &gt; 0,  q_1 = - p_1  \rbrace }.
 \end{equation}</p>
-<p>\subsection{ Three and More Degrees-of-Freedom and NHIMs}
-\label{sec:3dofnhim}</p>
+</div>
+<div class="section" id="three-and-more-degrees-of-freedom-and-nhims">
+<h2>Three and More Degrees-of-Freedom and NHIMs<a class="headerlink" href="#three-and-more-degrees-of-freedom-and-nhims" title="Permalink to this headline">¶</a></h2>
+<p>\label{sec:3dofnhim}</p>
 <p>Let us consider the most simple example with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom. The basic idea is the same as in the previous example with 2 degrees of freedom, where the dynamics of each degree of freedom is independent from the other degrees of freedom. In this case, the most simple Hamiltonian function of a <span class="math notranslate nohighlight">\(n\)</span> degree of freedom is</p>
 <p>\begin{equation}
 H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i),
@@ -384,8 +414,10 @@ where <span class="math notranslate nohighlight">\(\lambda, \omega_i &gt;0\)</sp
 \end{equation}</p>
 <p>The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel \cite{Fenichel1971,Fenichel1974,Fenichel1977} and more recent works \cite{Wigginsbook1994,Eldering2013}.</p>
 <p>It is important to note that the  basic theory of NHIMs does not tell us how to find NHIMs in specific systems. It only characterizes them and describes their properties based on that characterization. Next we describe a theorem from Hamiltonian systems that provides sufficient conditions for the existence of NHIMs under certain specific circumstances.</p>
-<p>\subsection{The Lyapunov Subcenter Theorem}
-\label{sec:LyapSub}</p>
+</div>
+<div class="section" id="the-lyapunov-subcenter-theorem">
+<h2>The Lyapunov Subcenter Theorem<a class="headerlink" href="#the-lyapunov-subcenter-theorem" title="Permalink to this headline">¶</a></h2>
+<p>\label{sec:LyapSub}</p>
 <p>The Lyapunov subcenter theorem \cite{liapounoff1907probleme} is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton’s equations give rise to periodic orbits, or ``NHIMs’’. Basic background on the topic can be found in \cite{moser1958generalization, kelley1967liapounov, moser1976periodic, weinstein1973normal, duistermaat1972periodic}.</p>
 <p>We will explain the ideas in the context of a two degree-of-freedom quadratic Hamiltonian, and then describe how they extend to more general settings.</p>
 <p>\begin{equation}
@@ -428,6 +460,7 @@ where  <span class="math notranslate nohighlight">\(\lambda_i, \, \omega_i &gt;0
 <p>The structure of the NHIM is treated in detail for <span class="math notranslate nohighlight">\({n_s} =1\)</span> in \cite{wiggins2016role}.  Results for <span class="math notranslate nohighlight">\({n_s} &gt;1\)</span> are treated in \cite{collins2011index}.
 When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply \cite{Wigginsbook1994} and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for <span class="math notranslate nohighlight">\({n_c} &gt;1\)</span> and requires KAM type techniques for its understanding \cite{dumas2014kam}.</p>
 </div>
+</div>
 
 
               </div>
@@ -438,8 +471,8 @@ When higher order terms are added to \eqref{eq:LST5} theorems on the persistence
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="chapter1.html" title="previous page">The Setting: Hamiltonian Dynamics on Phase Space</a>
-    <a class='right-next' id="next-link" href="chapter3.html" title="next page">The Method of Lagrangian Descriptors</a>
+    <a class='left-prev' id="prev-link" href="chapter1_2.html" title="previous page">Hamiltonian flows and symplectic maps</a>
+    <a class='right-next' id="next-link" href="chapter2_2.html" title="next page">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

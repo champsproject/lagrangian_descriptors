@@ -1,4 +1,4 @@
-# Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems
+# Computing the Lagrangian Descriptors
 
 ## Basic setup: IMPORTANT
 

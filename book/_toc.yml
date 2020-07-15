@@ -1,10 +1,12 @@
 - file: intro
 
 - header: Chapter 1
-- file: content/chapter1
-
+- file: content/chapter1_1
+- file: content/chapter1_2
+    
 - header: Chapter 2
 - file: content/chapter2_1
+- file: content/chapter2_2
 
 - header: Chapter 3
 - file: content/chapter3

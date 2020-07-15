@@ -1,6 +1,6 @@
 # The Method of Lagrangian Descriptors
 
-\section{Introduction}
+## Introduction
 \label{sec:LDs}
 
 One of the biggest challenges of dynamical systems theory or nonlinear dynamics is the development of mathematical techniques that provide us with the capability of exploring  transport in phase space. Since the early 1900, the idea of pursuing a qualitative description of the solutions of differential equations, which emerged from the pioneering work carried out by Henri Poincar\'e on the three body problem of celestial mechanics \cite{hp1890}, has had a profound impact on our understanding of the nonlinear character of natural phenomena. The qualitative theory of dynamical systems has now been widely embraced by the scientific community. 
@@ -30,11 +30,11 @@ Lagrangian descriptors (LDs) provide us with a simple and effective way of addre
 Lagrangian descriptors have advantages in comparison with other methodologies for the exploration of phase space structures. A notable advantage is that they are straightforward to implement. 
 Since its proposal as a nonlinear dynamics tool to explore phase space, this technique has found a myriad of applications in different scientific areas. For instance, it has been used in oceanography to plan transoceanic autonomous underwater vehicle missions by taking advantage of the underlying dynamical structure of ocean currents \cite{ramos2018}. Also, it has been shown to provide relevant information for the effective management of marine oil spills \cite{gg2016}. LDs have been used to analyze the structure of the Stratospheric Polar Vortex and its relation to sudden stratospheric warmings and also to ozone hole formation \cite{alvaro1,alvaro2,curbelo2019a,curbelo2019b}. In all these problems, the vector field defining the dynamical system is a discrete spatio-temporal dataset obtained from the numerical simulation of geophysical models. Recently, this tool has also received recognition in the field of chemistry, for instance in transition state theory \cite{craven2015lagrangian,craven2016deconstructing,craven2017lagrangian,revuelta2019unveiling}, where the computation of chemical reaction rates relies on the know\-ledge of the phase space structures. These high-dimensional structures characterizing reaction dynamics are typically related to Normally Hyperbolic Invariant Manifolds (NHIMs) and their stable and unstable manifolds that occur in Hamiltonian systems. Other applications of LDs to chemical problems include the analysis of isomerization reactions \cite{naik2020,GG2020b}, roaming \cite{krajnak2019,gonzalez2020}, the study of the influence of bifurcations on the manifolds that control chemical reactions \cite{GG2020a}, and also the explanation of the dynamical matching mechanism in terms of the existence of heteroclinic connections in a Hamiltonian system defined by Caldera-type potential energy surfaces \cite{katsanikas2020a}.
 
-\subsection{Lagrangian Descriptors versus Poincar\'e Maps}
+### Lagrangian Descriptors versus Poincar\'e Maps
 
 Poincar\'e maps have been a standard and traditional technique for understanding the global phase space structure of dynamical systems. However,  Lagrangian descriptors offer substantial advantages over Poincar\'e maps. We will describe these advantages in the context of the most common settings in which they are applied. However, we note that Lagrangian descriptors can be applied in exactly the same way to both Hamiltonian and non-Hamiltonian vector fields. In keeping with the spirit of this book, we will frame our discussion and description in the Hamiltonian setting.
 
-\subsubsection{Autonomous Hamiltonian vector fields}
+### Autonomous Hamiltonian vector fields
 
 The consideration of the dimension of different geometric objects is crucial to understanding the advantages of Lagrangian descriptors over Poincar\'e maps. Therefore we will first consider the ``simplest'' situation in which these arise — the autonomous Hamiltonian systems with two degrees of freedom.
 
@@ -46,13 +46,13 @@ However, the real advantage comes in considering higher dimensions, e.g autonomo
 
 Lagrangian descriptors avoid all of these difficulties. In particular, they can be computed on any subset of the phase space since there is no requirement for trajectories to return to that subset. Since phase space structure is encoded in the initial conditions (not the final state) of  trajectories a dense grid of initial conditions can be placed on any subset of the phase space and a ``Lagrangian descriptor field’’ can be computed for that subset with high resolution and accuracy. Such computations are generally not possible using the Poincar\'e map approach.
 
-\subsubsection{Nonautonomous Hamiltonian vector fields}
+### Nonautonomous Hamiltonian vector fields
 
 Nonautonomous vector fields are fundamentally different than autonomous vector fields, and even more so for Hamiltonian vector fields. For example, one degree-of-freedom autonomous Hamiltonian vector fields are integrable. One degree-of-freedom autonomous Hamiltonian vector fields may exhibit chaos. Regardless of the dimension, a very significant difference is that energy is not conserved for nonautonomous Hamiltonian vector fields. Nevertheless, Lagrangian descriptors can be applied in exactly the same way as for autonomous Hamiltonian vector fields, {\em regardless of the nature of the time dependence. We add this last remark since the concept of Poincar\'e maps  is not applicable unless the time dependence is periodic.}
 
-\section{Formulations for Lagrangian Descriptors}
+## Formulations for Lagrangian Descriptors
 
-\subsection{The Arclength Definition}
+### The Arclength Definition
 
 In order to build some intuition on how the method works and understand its very simple and straightforward implementation, we start with the arclength definition mentioned in the previous section. This version of LDs is also known in the literature as function $M$. Consider any region of the phase space where one would like to reveal structures at time $t = t_0$, and create a uniformly-spaced grid of ICs $\mathbf{x}_0 = \mathbf{x}(t_0)$ on it. Select a fixed integration time $\tau$ that will be used to evolve all the trajectories generated from these ICs forward and backward in time for the time intervals $[t_0,t_0+\tau]$ and $[t_0-\tau,t_0]$ respectively. This covers a temporal range of $2\tau$ centered at $t = t_0$, marking the time at which we want to take a snapshot of the underlying structures in phase space. The arclength of a trajectory in forward time can be easily calculated by solving he integral:
 \begin{equation}
@@ -121,7 +121,7 @@ where the initial condition $(q_0,p_0)$ has energy $H = H_0$ and therefore it li
 \end{equation}
 which proves that the phase space points for which the time average of LDs converges to the same value are part of the same invariant set. For more details about the relationship between the convergence of time averages of LDs and KAM tori, see \cite{lopesino2017,naik2019a}.
 
-\subsection{The $p$-norm Definition}
+### The $p$-norm Definition
 
 Besides the arclength definition of Lagrangian descriptors introduced in the previous subsection, there are many other versions used throughout the literature. An alternative definition of LDs, which is inspired by the $p$-norm of the vector field describing the dynamical system. We remark that we use the expression for $p\in(0,1]$, while the $p$-norm is only a norm for $p\geq 1$. For the sake of consistency with literature we retain the name $p$-norm even for $p<1$. The LD is defined as:
 
@@ -170,7 +170,7 @@ where $\mathbf{x}_0 = (q_0,p_0)$ is the initial condition and $A = q_0 + p_0$ an
 Therefore, this shows that the scalar field grows exponentially with $\tau$ and also that the leading order singularities in $\mathcal{L}_{p}$ occur when $|A| = 0$, that is, when $p_0 = -  q_0$, which corresponds to initial conditions on the stable manifold of the system, or in the case where $|B| = 0$, that is, $p_0 = q_0$, representing initial conditions on the unstable manifold. Moreover, $\mathcal{L}_{p}$ is non-differentiable at the hyperbolic point at the origin, since it is given by the intersection of the stable and unstable invariant manifolds. For more details on how this computation is carried out, we refer the reader to \cite{lopesino2017,demian2017,naik2019a}. Notice also that this argument is easily applicable for Hamiltonian systems with $N \geq 2$ DoF in order to prove that LDs detects normally hyperbolic invariant manifolds (unstable periodic orbits for 2 DOF systems) and their stable and unstable manifolds at points where the output of the $p$-norm LD is singular.
 
 
-\subsection{Lagrangian Descriptors Based on the Classical Action}
+### Lagrangian Descriptors Based on the Classical Action
 \label{sec:LDaction}
 
 In this section we discuss a formulation of Lagrangian descriptors that has a direct connection to classical Hamiltonian mechanics, namely the principle of least action. The principle of least action is treated in most advanced books on classical mechanics; see, for example, \cite{arnol2013mathematical, goldstein2002classical, landau2013mechanics}. An intuitive and  elementary discussion of the principle of least action is given by Richard Feynman in the following lecture \url{https://www.feynmanlectures.caltech.edu/II_19.html},
@@ -182,7 +182,7 @@ To begin, we note that the general form of Lagrangian descriptors are as follows
 \noindent
 The positivity of the integrand is often imposed via an absolute value. In our discussion below we show that this is not necessary for the action.
 
-\subsubsection{One Degree-of-Freedom Autonomous Hamiltonian Systems}
+#### One Degree-of-Freedom Autonomous Hamiltonian Systems
 
 We consider a Hamiltonian of the form:
 
@@ -227,7 +227,7 @@ q_0 = - \dfrac{\cosh(2\tau) - 1}{\sinh(2\tau) - 2 \tau} \, p_0
 \end{equation}
 and notice now that if $\tau$ is sufficiently large, this condition tends exponentially to the points on the stable manifold of the system, $q_0 = - p_0$. A similar argument, but considering the backward integration, yields the unstable manifold located at points on the line $q = p$.
 
-\subsubsection{$n$ Degree-of-Freedom Autonomous Hamiltonian Systems}
+#### $n$ Degree-of-Freedom Autonomous Hamiltonian Systems
 
 The above calculations for one DoF are easily generalized to $n$ degrees-of-freedom. We begin with a Hamiltonian of the form:
 \begin{equation}
@@ -251,7 +251,7 @@ p_1dq_1 + \cdots + p_n dq_n =  \sum_{i=1}^n \frac{p_i ^2}{2m_i} dt = 2 (H-V(q_1,
 \end{equation}
 In summary, we can use the vis-viva as the integrand for Lagrangian descriptors. It is very closely related to action as you can see above. Action based Lagrangian descriptors have been successfully used in RAFA's paper (to be added later) FRANCISCO's new paper~\cite{montoya2020phase}.
 
-\section{Variable Integration Time Lagrangian Descriptors}
+## Variable Integration Time Lagrangian Descriptors
 
 At this point, we would like to discuss the issues that might arise from the definitions of LDs provided in Eqs. \eqref{eq:M_function} and \eqref{eq:Mp_function} when they are applied to analyze the dynamics in open Hamiltonian systems, that is, those for which phase space dynamics occurs in unbounded energy hypersurfaces. Notice that in both definitions, all the initial conditions considered by the method are integrated forward and backward for the same time $\tau$. Recent studies have revealed  \cite{junginger2017chemical,naik2019b,GG2020a} issues with trajectories that escape to infinity in finite time or at an increasing rate. The trajectories that show this behavior will give NaN (not-a-number) values in the LD scalar field, hiding some regions of the phase space, and therefore obscuring the detection of invariant manifolds. In order to circumvent this problem we explain here the approach that has been recently adopted in the literature \cite{junginger2017chemical,naik2019b,GG2020a} known as variable integration time Lagrangian descriptors. In this methodology, LDs at any initial condition are calculated for a fixed initial integration time $\tau_0$ or until the trajectory corresponding to that initial condition leaves a certain phase space region $\mathcal{R}$ that we call the {\em interaction region}, whichever happens first. Therefore the total integration time depends on the initial conditions, that is $\tau(\mathbf{x}_0)$. In this variable-time formulation, given a fixed integration time $\tau_0 > 0$, the $p$-norm definition of LDs with $p \in (0,1]$ will take the form:
 \begin{equation}
@@ -270,9 +270,9 @@ It is important to highlight that the variable time integration LD has also the 
 \label{eq:M_vt}
 \end{equation}
 
-\section{Examples}
+## Examples
 
-\subsection{The Duffing Oscillator}
+### The Duffing Oscillator
 
 In the next example, we illustrate how the arclength and the function $M$ LDs capture the stable and unstable manifolds that determine the phase portrait of the forced and undamped Duffing oscillator. The Duffing equation arises when studying the motion of a particle on a line, i.e. a one DoF system, subjected to the influence of a symmetric double well potential and an external forcing. The second order ODE that describes this oscillator is given by:
 
@@ -319,7 +319,7 @@ We move on to compute LDs for the forced Duffing oscillator. In this situation, 
 	\label{fig:duffing2_lds}
 \end{figure}
 
-\subsection{The linear Hamiltonian saddle with 2 DoF}
+### The linear Hamiltonian saddle with 2 DoF
 
 Consider the two DoF system given by the linear quadratic Hamiltonian associated to an index-1 saddle at the origin. This Hamiltonian and the equations of motion are given by the expressions:
 \begin{equation}
@@ -343,7 +343,7 @@ For this dynamical system we compute the $p$-norm LDs in the saddle space $x-p_x
 	\label{fig:index1_lds}
 \end{figure}
 
-\subsection{The Cubic Potential}
+### The Cubic Potential
 
 In order to illustrate the issues encountered by the fixed integration time LDs and how the variable integration approach resolves them, we apply the method to a basic one degree-of-freedom Hamiltonian known as the ``fish potential'', which is given by the formula:
 \begin{equation}
@@ -366,7 +366,7 @@ This dynamical system has a saddle point at the point $(-1,0)$ from which a homo
 	\label{fig:fish_lds}
 \end{figure}
 
-\subsection{The H\'enon-Heiles Hamiltonian System}
+### The H\'enon-Heiles Hamiltonian System
 
 We continue illustrating how to apply the method of Lagrangian descriptors to unveil the dynamical skeleton in systems with a high-dimensional phase space by applying this tool to a hallmark Hamiltonian of nonlinear dynamics, the H\'enon-Heiles Hamiltonian. This model was introduced in 1964 to study the motion of stars in galaxies \cite{henon1964} and is described by:
 \begin{equation}
@@ -416,11 +416,11 @@ Once we have fixed the surfaces of section (SOS) where we want to compute LDs, w
 	\label{fig:henonHeiles_lds}
 \end{figure}
 
-\section{Stochastic Lagrangian Descriptors}
+## Stochastic Lagrangian Descriptors
 
 Lagrangian descriptors were extended to stochastic dynamical systems in  \cite{balibrea2016lagrangian}, and our discussion here is taken from this source, where the reader can also find more details. A basic introduction to stochastic differential equations is in the book \cite{Oksendal2003}.
 
-\subsection{Preliminary concepts}
+### Preliminary concepts
 \label{sec:pc}
 
 Lagrangian descriptors are a trajectory based diagnostic. Therefore we first need to develop the concepts required to 
@@ -637,7 +637,7 @@ Anyway the noisy saddle serves to establish an analogy to the dynamics with the 
 
 However there persists an open question about how reliable the stochastic Lagrangian descriptors method is when trying to depict the phase space of an arbitrary stochastic differential equation. This is the main issue concerning this method and has only been partially reported for deterministic dynamical systems in previous articles (\cite{mancho2013lagrangian} and \cite{lopesino2017}). In this last paper it is analytically proven the efficacy of this method for autonomous and non-autonomous Hamiltonian systems. The theoretical idea that supports this assertion is the discontinuity of the transversal derivative of the Lagrangian descriptor function over the manifolds of the corresponding hyperbolic trajectory. Following this idea, these ``singular features" arising on the manifolds of a hyperbolic trajectory for a deterministic Hamiltonian system motivates  us to study whether the ``abrupt changes" on the stochastic Lagrangian descriptor function represent the location of the manifolds of a stationary orbit or not. Another related question is to determine the size of the random term $\sigma dW$ in relation to  its influence on  the phase space of the deterministic equation $dX = b dt$. The next sections will be dedicated to addressing  these  issues by considering concrete examples of SDEs.
 
-\subsection{The stochastic Lagrangian descriptor}
+### The stochastic Lagrangian descriptor
 \label{sec:SLD}
 
 The definition of stochastic Lagrangian descriptors that we introduce here is based on the discretization of the continuous time definition given in Eq. \eqref{eq:Mp_function} that relies on the computation of the $p$-norm of trajectories. In fact, this discretization gave rise to a version of LDs that can be used to analyze discrete time dynamical systems (maps), see \cite{carlos2015}. Let $\{x_i\}^{N}_{i = 
@@ -687,7 +687,7 @@ MS_p(\cdot, \omega_M)}{M}\right) ,}
 
 for a sufficiently large number of experiments $M$. Since the solution of a SDE is affected by the noise term, the phase portrait of the studied SDE for an arbitrary $\omega$ becomes unpredictable and one can only refer to places where hyperbolic trajectories and invariant manifolds are likely located. This way of understanding the geometry of transport for SDEs is similar in spirit as the one explained in \cite{banisch16} where the authors provide an alternative method for revealing coherent sets from Lagrangian trajectory data.
 
-\section{Numerical Simulation of the Stochastic Lagrangian Descriptor}
+## Numerical Simulation of the Stochastic Lagrangian Descriptor
 \label{sec:num}
 
 In this section we describe the stochastic Lagrangian descriptor method that can be used to numerically solve and visualize the geometrical structures of SDEs. Consider a general $n$-dimensional SDE of the form
@@ -713,7 +713,7 @@ for any arbitrary $t_p = t_0 + p\Delta t$ and $\Delta t$ small enough.
 \noindent
 Indeed, the Euler-Maruyama method has an order of convergence equal to $1/2$ (see \cite{kloeden2013numerical} for further details).
 
-\subsection{The noisy saddle}
+### The noisy saddle
 
 The noisy saddle is a fundamental benchmark for assessing numerical methods for revealing phase space structures. Its main value is in the simplicity of the expressions taken by the components of the stationary orbit and its  corresponding stable and unstable manifolds. From these one clearly observes the exponential separation rates between particles passing 
 near the manifolds. Now for the stochastic differential equations
@@ -833,7 +833,7 @@ This means that the stationary orbit $ (\tilde{x}(\omega ),\tilde{y}(\omega ))$ 
 
 Therefore we can assert that the stochastic Lagrangian descriptor is a technique that provides a phase portrait representation of the dynamics generated by the noisy saddle equation (\ref{eq:general_noisy}). Next we apply this same technique to further examples.
 
-\subsection{The Stochastically forced Duffing Oscillator}
+### The Stochastically forced Duffing Oscillator
 \label{sec:examp}
 
 Another classical problem is that of the Duffing oscillator. The deterministic version is given by

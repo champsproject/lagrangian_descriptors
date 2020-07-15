@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Setting: Hamiltonian Dynamics on Phase Space &#8212; Lagrangian Descriptors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hamiltonian flows and symplectic maps" href="chapter1_2.html" />
+    <link rel="prev" title="Authors" href="../intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/champs_logo.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Lagrangian Descriptors</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Authors</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 1</p>
+</li>
+  <li class="active">
+    <a href="">The Setting: Hamiltonian Dynamics on Phase Space</a>
+  </li>
+  <li class="">
+    <a href="chapter1_2.html">Hamiltonian flows and symplectic maps</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 2</p>
+</li>
+  <li class="">
+    <a href="chapter2_1.html">The Hyperbolic setting</a>
+  </li>
+  <li class="">
+    <a href="chapter2_2.html">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 3</p>
+</li>
+  <li class="">
+    <a href="chapter3.html">The Method of Lagrangian Descriptors</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Examples</p>
+</li>
+  <li class="">
+    <a href="examples.html">Computing the Lagrangian Descriptors</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/champsproject/lagrangian_descriptors">GitHub repository<i class="fas fa-external-link-alt"></i></a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/chapter1_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/champsproject/lagrangian_descriptors/master?filepath=book%2Fcontent/v2/gh/champsproject/lagrangian_descriptors/master?urlpath=tree/content/chapter1_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#configuration-space-and-phase-space" class="nav-link">Configuration Space and Phase space</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#hamilton-s-equations" class="nav-link">Hamilton’s Equations</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#conserved-quantities-in-phase-space" class="nav-link">Conserved quantities in phase space</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#invariant-sets" class="nav-link">Invariant Sets</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-setting-hamiltonian-dynamics-on-phase-space">
+<h1>The Setting: Hamiltonian Dynamics on Phase Space<a class="headerlink" href="#the-setting-hamiltonian-dynamics-on-phase-space" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="configuration-space-and-phase-space">
+<h2>Configuration Space and Phase space<a class="headerlink" href="#configuration-space-and-phase-space" title="Permalink to this headline">¶</a></h2>
+<p>\label{sec:Ham1}</p>
+<p>\fbox{%
+\begin{minipage}{\linewidth}
+\begin{center}
+The concepts in this section are adapted from the books \cite{lifshitz1978,wiggins2003applied}.<br />
+\end{center}</p>
+<p>\end{minipage}
+}</p>
+<p>\bigskip</p>
+<p>\begin{description}</p>
+<p>\item[\underline{\textbf{Generalized Coordinates:}}] The location of the particles comprising a system are described by a set of coordinates, known in Mechanics as generalized coordinates. The space, i.e. all possible values, described by these coordinates is referred to as {\em configuration space}.</p>
+<p>\item[\underline{\textbf{Degrees-of-freedom (DoF):}}] The number of DoF is the number of independent generalized coordinates required to describe the configuration of the system, i.e. it is the dimension of the configuration space.</p>
+<p>\item[\underline{\textbf{Momenta:}}] In the canonical Hamiltonian framework, each configuration space variable has an associated canonically conjugate variable which are referred to as momentum variables.</p>
+<p>\item[\underline{\textbf{Phase space:}}] The collection of all the configuration and momentum variables is referred to as the phase space of the Hamiltonian dynamical system.</p>
+<p>\end{description}</p>
+</div>
+<div class="section" id="hamilton-s-equations">
+<h2>Hamilton’s Equations<a class="headerlink" href="#hamilton-s-equations" title="Permalink to this headline">¶</a></h2>
+<p>Consider an <span class="math notranslate nohighlight">\(n\)</span> DoF system described by the scalar function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p},t)\)</span>, known as the Hamiltonian of the system, which smoothly depends on the configuration space coordinates <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1,\ldots,q_n) \in \mathbb{R}^{n}\)</span>, their canonically conjugate momenta <span class="math notranslate nohighlight">\(\mathbf{p} = (p_1,\ldots,p_n) \in \mathbb{R}^{n}\)</span> and time. Hamilton’s equations are a set of <span class="math notranslate nohighlight">\(2n\)</span> first-order differential equations:
+\begin{equation}
+\begin{cases}
+\dot{q}_i = \dfrac{\partial H}{\partial p_i} \[.4cm]
+\dot{p}_i = -\dfrac{\partial H}{\partial q_i}
+\end{cases}
+; , \qquad ; i = 1, 2, \ldots, n,
+\label{eq:hamiltoneq}
+\end{equation}
+that describe the dynamics of the system, where the dot symbol over a variable denotes the total time derivative, that is <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. When the Hamiltonian function does not depend on time explicitly, the dynamical system it generates by means of Eq. \eqref{eq:hamiltoneq} is said to be \emph{autonomous}.</p>
+</div>
+<div class="section" id="conserved-quantities-in-phase-space">
+<h2>Conserved quantities in phase space<a class="headerlink" href="#conserved-quantities-in-phase-space" title="Permalink to this headline">¶</a></h2>
+<p>\fbox{%
+\begin{minipage}{\linewidth}
+\begin{center}
+The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. \cite{lifshitz1978,arnold1978,giorgilli2002}.
+\end{center}</p>
+<p>\end{minipage}
+}</p>
+<p>\bigskip</p>
+<p>Given a Hamiltonian system, a function <span class="math notranslate nohighlight">\(A(\mathbf{q}, \mathbf{p},t)\)</span> is called an \textbf{integral of motion}, \textbf{constant of motion} or \textbf{first integral} if it remains constant along a trajectory. Then, its total time derivative is zero along solutions <span class="math notranslate nohighlight">\((\mathbf{q}(t),\mathbf{p}(t))\)</span> of Hamilton’s equations, that is</p>
+<p>\begin{equation}
+\dfrac{dA}{dt} = \dfrac{\partial A}{\partial t} + \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i} \dfrac{d q_i}{dt} + \dfrac{\partial A}{\partial p_i} \dfrac{d p_i}{dt} \right)  = \dfrac{\partial A}{\partial t} +
+\sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0.
+\label{eq:integral}
+\end{equation}</p>
+<p>\noindent
+The quantity</p>
+<p>\begin{equation}
+{A,H} = \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right),
+\label{eq:poisson}
+\end{equation}</p>
+<p>\noindent
+is called the \textit{Poisson bracket} of the functions <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(H\)</span>. Therefore, Eq. \eqref{eq:integral} is equivalent to:
+\begin{equation}
+\dfrac{dA}{dt} = \frac{\partial A}{\partial t} + {A,H} = 0. \label{eq:integral2}
+\end{equation}
+Notice that if the function <span class="math notranslate nohighlight">\(A\)</span> does not explicitly depend on time, that is <span class="math notranslate nohighlight">\(\partial A / \partial t = 0\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> is an integral of motion if and only if  <span class="math notranslate nohighlight">\(\{A, H\} = 0\)</span>. In other words, the Poisson bracket provides us with a useful test to see if a function of the phase space variables and time is conserved or not in a Hamiltonian system. In particular, if the Hamiltonian of the system is time-independent, that is <span class="math notranslate nohighlight">\(H = H(\mathbf{q},\mathbf{p})\)</span>, then we can deduce that:
+\begin{equation}
+\frac{dH}{dt} = \dfrac{\partial H}{\partial t} +  { H, H } = 0 + \sum\limits_{i = 1}^n \left( \dfrac{\partial H}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial H}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0 ;,
+\end{equation}
+which implies that the Hamiltonian itself is a constant of the motion. If the Hamiltonian represents the total energy of the physical system, this property is just the law of conservation of total energy along trajectories of an autonomous Hamiltonian system. The implicit time dependence of the position and momentum coordinates may increase/decrease the kinetic energy at the expense/gain of the potential energy, but the sum of kinetic and potential energy remains constant.</p>
+<p>Another example of a quantity that is a constant of the motion is provided by ignorable or cyclic coordinates. A generalized coordinate <span class="math notranslate nohighlight">\(q_i\)</span> is said to be \textit{ignorable} or \textit{cyclic} if it does not appear in the expression of the Hamiltonian function. By Hamilton’s equations in Eq. \eqref{eq:hamiltoneq}, this implies that
+\begin{equation}
+\dot{p}_i = - \dfrac{\partial H}{\partial q_i} = 0
+\end{equation}
+and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</span> is constant along trajectories, that is, <span class="math notranslate nohighlight">\(p_i(t) = p_i^0\)</span>.</p>
+<p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see \cite{arnold1978} and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy
+\begin{equation}
+{A,B} = 0 ;.
+\label{eq:involution}
+\end{equation}</p>
+</div>
+<div class="section" id="invariant-sets">
+<h2>Invariant Sets<a class="headerlink" href="#invariant-sets" title="Permalink to this headline">¶</a></h2>
+<p>\fbox{%
+\begin{minipage}{\linewidth}
+\begin{center}
+The concepts here are adapted from \cite{wiggins2003applied}.
+\end{center}
+\end{minipage}
+}</p>
+<p>\bigskip</p>
+<p>Invariant sets play a fundamental role in how we understand the nature of phase space dynamics. We will give here a definition for this concept for an autonomous dynamical system in the continuous time setting:
+\begin{equation}
+\dot{x} = f(x) ;, \quad x \in \mathbb{R}^{n}
+\label{eq:cont_ds}
+\end{equation}
+and also for a map (discrete time dynamics):
+\begin{equation}
+x \mapsto g(x) ;, \quad x\in \mathbb{R}^{n}
+\label{eq:disc_ds}
+\end{equation}</p>
+<p>\begin{definition}
+\label{def:invset}
+Let <span class="math notranslate nohighlight">\(S \subset \mathbb{R}^{n}\)</span> be a set of the phase space of the dynamical system, then</p>
+<p>\begin{itemize}</p>
+<p>\item \underline{\textbf{Continuous time:}} <span class="math notranslate nohighlight">\(S\)</span> is invariant under the flow generated by Eq. \eqref{eq:cont_ds} if for any point <span class="math notranslate nohighlight">\(x_{0} \in S\)</span> we have that  <span class="math notranslate nohighlight">\(x(t;x_{0}) \in S\)</span> for all <span class="math notranslate nohighlight">\(t \in I\)</span>, where <span class="math notranslate nohighlight">\(x(t;x_{0})\)</span> denotes the solution of Eq. \eqref{eq:cont_ds} with initial condition <span class="math notranslate nohighlight">\(x(0) = x_{0}\)</span>, and <span class="math notranslate nohighlight">\(I\)</span> is the time interval of existence of the solution.</p>
+<p>\item \underline{\textbf{Discrete time:}} <span class="math notranslate nohighlight">\(S\)</span> is said to be invariant under the map in Eq. \eqref{eq:disc_ds} if for any <span class="math notranslate nohighlight">\(x_{0}\in S\)</span>, the orbit (trajectory) associated to that initial condition remains inside the set for all iterates of the map, that is <span class="math notranslate nohighlight">\(g^{n}(x_{0})\in S\)</span>, for all <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>\end{itemize}
+\end{definition}</p>
+<p>Invariant sets play an important role for the analysis of dynamical systems, as they allow us to break up the dynamics into smaller parts. For example the dynamics in invariant sets can be investigated separately from the rest of the system. As we will show in the following sections, some invariant sets, such as invariant manifolds, naturally divide the phase space of the system into regions of qualitatively distinct dynamical behavior that can be studied independently.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">Authors</a>
+    <a class='right-next' id="next-link" href="chapter1_2.html" title="next page">Hamiltonian flows and symplectic maps</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The CHAMPS Project<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -52,7 +52,7 @@ Now we consider a number of simple examples in order to explain in more detail t
 
 In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy $(H = K + V)$.
 
-\subsection{ One Degree-of-Freedom  Hyperbolic Equilibrium Point }
+## One Degree-of-Freedom  Hyperbolic Equilibrium Point
 \label{sec:1dofsaddle}
 
 
@@ -139,7 +139,7 @@ The existence of two special directions where the trajectories converge to the $
 
 The basic ideas exposed in this simple example are the basis for understanding the generalization of the geometric objects in more dimensions in the next examples.
 
-\subsection{Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit}
+## Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit
 \label{sec:2dofupo}
 
 In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Chapter \ref{sec:KAM}). The total energy of the system is split between both DoF to yield:
@@ -219,7 +219,7 @@ In a similar way to the 1-degree of freedom case, we can find the stable and uns
 \displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2)   = E > 0,  q_1 = - p_1  \rbrace }.
 \end{equation}
 
-\subsection{ Three and More Degrees-of-Freedom and NHIMs}
+## Three and More Degrees-of-Freedom and NHIMs
 \label{sec:3dofnhim}
 
 Let us consider the most simple example with $n$ degrees of freedom. The basic idea is the same as in the previous example with 2 degrees of freedom, where the dynamics of each degree of freedom is independent from the other degrees of freedom. In this case, the most simple Hamiltonian function of a $n$ degree of freedom is 
@@ -299,7 +299,7 @@ The general study  of NHIMs, including their characterization,  the nature of th
 
 It is important to note that the  basic theory of NHIMs does not tell us how to find NHIMs in specific systems. It only characterizes them and describes their properties based on that characterization. Next we describe a theorem from Hamiltonian systems that provides sufficient conditions for the existence of NHIMs under certain specific circumstances.
 
-\subsection{The Lyapunov Subcenter Theorem}
+## The Lyapunov Subcenter Theorem
 \label{sec:LyapSub}
 
 The Lyapunov subcenter theorem \cite{liapounoff1907probleme} is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton's equations give rise to periodic orbits, or ``NHIMs''. Basic background on the topic can be found in \cite{moser1958generalization, kelley1967liapounov, moser1976periodic, weinstein1973normal, duistermaat1972periodic}.
