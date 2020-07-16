@@ -84,11 +84,12 @@ H(q,p) = \dfrac{1}{2} \left(p^2 - q^2\right)  \quad \Leftrightarrow \quad
 \label{eq:1dof_saddle}
 }$$
 
-\begin{figure}[htbp]
-		\includegraphics[width=\linewidth]{1d_saddle_ld.png}
-	\caption{Forward \eqref{eq:M_function_bw}, backward \eqref{eq:M_function_fw} and combined \eqref{eq:M_function} Lagrangian descriptors for system \eqref{eq:1dof_saddle} respectively.}
-	\label{fig:1d_saddle}
-\end{figure}
+```{figure} figures/1d_saddle_ld.png
+---
+name: 1d_saddle
+---
+Forward \eqref{eq:M_function_bw}, backward \eqref{eq:M_function_fw} and combined \eqref{eq:M_function} Lagrangian descriptors for system \eqref{eq:1dof_saddle} respectively.
+```
 
 We know that this dynamical system has a hyperbolic equilibrium point at the origin and that its stable and unstable invariant manifolds correspond to the lines $p = \pm q$ respectively (refer to hyperbolic section). Outside of these lines, the trajectories are hyperbolas. What happens when we apply LDs to this system? Why does the method pick up the manifolds? Notice first that in Fig. \ref{fig:1d_saddle} the value attained by LDs at the origin is zero, because it is an equilibrium point and hence it is not moving. Therefore, the arclength of its trajectory is zero. Next, let's consider the forward time evolution term of LDs, that is, $\mathcal{L}^f$. Take two neighboring ICs, one lying on the line that corresponds to the stable manifold and another slightly off it. If we integrate them for a time $\tau$, the initial condition that is on the manifold converges to the origin, while the other initial condition follows the arc of a hyperbola. If $\tau$ is small, both segments of trajectory are comparable in length, so that the value obtained from LDs for both ICs is almost equal. However, if we integrate the system for a larger $\tau$, the arclengths of the two trajectories become very different, because one converges while the other one diverges. Therefore, we can clearly see  in Fig. \ref{fig:1d_saddle} that the LD values vary significantly near the stable manifold in comparison to those elsewhere. Moreover, if we consider a curve of initial conditions that crosses transversely the stable manifold, the LD value along it attains a minimum on the manifold. Notice also that by the same argument we gave above, but constructing the backward time evolution term of LDs, $\mathcal{L}^b$, we can arrive to the conclusion that backward integration of initial conditions will highlight the unstable manifold of the hyperbolic equilibrium point at the origin. It is important to remark here that, although we have used above the simple linear saddle system as an example to illustrate how the method recovers phase space structure, this argument also applies to a nonlinear system with an hyperbolic point, whose stable and unstable manifolds are convoluted curves.
 
@@ -309,33 +310,27 @@ $${
 
 We begin by computing LDs for the unforced Duffing system using $\tau = 2$. For this small integration time, the method highlights the saddle and center fixed points, since the arclength at those points is always zero. In this case the phase portrait looks blurry as shown in Fig. \ref{fig:duffing1_lds} A), and this is a consequence of trajectories not being sufficiently dynamically distinct by the end of the integration interval. If we increase the integration time to $\tau = 10$, we can see in Fig. \ref{fig:duffing1_lds} B) that the homoclinic connection formed by the stable and unstable manifolds of the saddle point at the origin becomes clearly visible. Moreover, observe that the manifolds are located at points where the scalar values taken by LDs change abruptly. This property is demonstrated in Fig. \ref{fig:duffing1_lds} C), where we have depicted the value of function $M$ along the line $y = 0.5$. Notice that sharp changes in the scalar field of LDs at the manifolds are also related to local minima.
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.25]{duffing_tau_2.png}
-		B)\includegraphics[scale=0.25]{duffing_tau_10.png}
-		C)\includegraphics[scale=0.25]{duffing_maniDetect.png}
-	\end{center}
-	\caption{Phase portrait of the autonomous and undamped Duffing oscillator obtained by applying the arclength definition of LDs in Eq. \eqref{eq:M_function}. A) LDs with $\tau = 2$; B) LDs with $\tau = 10$; C) Value of LDs along the line $y = 0.5$ depicted in panel B) illustrating how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.}
-	\label{fig:duffing1_lds}
-\end{figure} 
+<img src="figures/duffing_tau_2.png">
+<img src="figures/duffing_tau_10.png">
+<img src="figures/duffing_maniDetect.png">
+\label{fig:duffing1_lds}
+\caption{Phase portrait of the autonomous and undamped Duffing oscillator obtained by applying the arclength definition of LDs in Eq. \eqref{eq:M_function}. A) LDs with $\tau = 2$; B) LDs with $\tau = 10$; C) Value of LDs along the line $y = 0.5$ depicted in panel B) illustrating how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.}
 
 We move on to compute LDs for the forced Duffing oscillator. In this situation, the vector field is time-dependent and thus the dynamical system is nonautonomous. The consequence is that the homoclinic connection breaks up and the stable and unstable manifolds intersect, forming an intricate tangle that gives rise to chaos. We illustrate this phenomenon by computing LDs with $\tau = 10$ to reconstruct the phase portrait at the initial time $t_0 = 0$. For the forcing, we use a perturbation strength $\varepsilon = 0.1$, an angular frequency of $\omega = 1$ and a phase $\phi = 0$. This result is shown in Fig. \ref{fig:duffing2_lds} C), and we also depict the forward $(\mathcal{L}^f)$ and backward $(\mathcal{L}^b)$ contributions of LDs in Fig. \ref{fig:duffing2_lds} A) and B) respectively, demonstrating that the method can be used to recover the stable and unstable manifolds separately. Furthermore, by taking the value of LDs along the line $y = 0.5$, the location of the invariant manifolds are highlighted at points corresponding to sharp changes (and local minima) in the scalar field values of LDs.
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.36]{duffing_stbl_tau_10_pert_01.png}
-		B)\includegraphics[scale=0.36]{duffing_unstbl_tau_10_pert_01.png}
-		C)\includegraphics[scale=0.36]{duffing_tau_10_pert_01.png}
-		D)\includegraphics[scale=0.36]{duffing_maniDetect_pert_01.png}
-	\end{center}
-	\caption{Phase portrait of the nonautonomous and undamped Duffing oscillator obtained at time $t = 0$ by applying the arclength definition of LDs in Eq. \eqref{eq:M_function} with an integration time $\tau = 10$. A) Forward LDs detect stable manifolds; B) Backward LDs highlight unstable manifolds of the system; C) Total LDs (forward $+$ backward) showing that all invariant manifolds are recovered simultaneously. D) Value taken by LDs along the line $y = 0.5$ in panel C) to illustrate how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.}
-	\label{fig:duffing2_lds}
-\end{figure}
+<img src="figures/duffing_stbl_tau_10_pert_01.png">
+<img src="figures/duffing_unstbl_tau_10_pert_01.png">
+<img src="figures/duffing_tau_10_pert_01.png">
+<img src="figures/duffing_maniDetect_pert_01.png">
+\label{fig:duffing2_lds}
+\caption{Phase portrait of the nonautonomous and undamped Duffing oscillator obtained at time $t = 0$ by applying the arclength definition of LDs in Eq. \eqref{eq:M_function} with an integration time $\tau = 10$. A) Forward LDs detect stable manifolds; B) Backward LDs highlight unstable manifolds of the system; C) Total LDs (forward $+$ backward) showing that all invariant manifolds are recovered simultaneously. D) Value taken by LDs along the line $y = 0.5$ in panel C) to illustrate how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.}
 
 ### The linear Hamiltonian saddle with 2 DoF
 
 Consider the two DoF system given by the linear quadratic Hamiltonian associated to an index-1 saddle at the origin. This Hamiltonian and the equations of motion are given by the expressions:
-\begin{equation}
+
+
+$${
 H(x,y,p_x,p_y) = \dfrac{\lambda}{2}\left(p_x^2 - x^2\right) + \dfrac{\omega}{2} \left(p_y^2 + y^2 \right) \quad,\quad \begin{cases}
 \dot{x} = \lambda \, p_x \\
 \dot{p}_{x} = \lambda \, x \\
@@ -343,18 +338,15 @@ H(x,y,p_x,p_y) = \dfrac{\lambda}{2}\left(p_x^2 - x^2\right) + \dfrac{\omega}{2} 
 \dot{p}_{y} = -\omega \, y 
 \end{cases}
 \label{eq:index1_Ham}
-\end{equation}
+}$$
+
 For this dynamical system we compute the $p$-norm LDs in the saddle space $x-p_x$ of the linear Hamiltonian given in Eq. \eqref{eq:index1_Ham} using $p = 1/2$ and for an integration time $\tau = 10$. In Fig. \ref{fig:index1_lds} we illustrate how the method detects the stable (red) and unstable (blue) manifolds of the unstable periodic orbit at the origin, and these manifolds can be directly extracted from the ridges of the scalar field $||\nabla \mathcal{L}^{f/b}_p||$ respectively. Moreover, we show in Fig. \ref{fig:index1_lds} C) that the LD scalar field is non-differentiable at the manifolds and also attains a local minimum on them, and we do so by looking at the values taken by $M_p$ along the line $p_x = 1/2$. 
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.25]{LD_p_05_Saddle_tau_10.png}
-		B)\includegraphics[scale=0.25]{manifolds_Saddle_tau_10.png}
-		C)\includegraphics[scale=0.25]{detectMani_Saddle_tau_10.png}
-	\end{center}
-	\caption{Phase portrait in the saddle space of the linear Hamiltonian given in Eq. \eqref{eq:index1_Ham}. A) Application of the $p$-norm definition of LDs in Eq. \eqref{eq:Mp_function} using $p = 1/2$ with $\tau = 10$; B) Stable (blue) and unstable (red) invariant manifolds of the unstable periodic orbit at the origin extracted from the gradient of the $M_p$ function; C) Value of LDs along the line $p_x = 0.5$ depicted in panel A) to illustrate how the method detects the stable and unstable manifolds at points where the scalar field is singular or non-differentiable and attains a local minimum.}
-	\label{fig:index1_lds}
-\end{figure}
+<img src="figures/LD_p_05_Saddle_tau_10.png">
+<img src="figures/manifolds_Saddle_tau_10.png">
+<img src="figures/detectMani_Saddle_tau_10.png">
+\label{fig:index1_lds}
+\caption{Phase portrait in the saddle space of the linear Hamiltonian given in Eq. \eqref{eq:index1_Ham}. A) Application of the $p$-norm definition of LDs in Eq. \eqref{eq:Mp_function} using $p = 1/2$ with $\tau = 10$; B) Stable (blue) and unstable (red) invariant manifolds of the unstable periodic orbit at the origin extracted from the gradient of the $M_p$ function; C) Value of LDs along the line $p_x = 0.5$ depicted in panel A) to illustrate how the method detects the stable and unstable manifolds at points where the scalar field is singular or non-differentiable and attains a local minimum.}
 
 ### The Cubic Potential
 
@@ -369,15 +361,11 @@ H = \dfrac{1}{2} p_x^2 + \dfrac{1}{2} x^2 + \dfrac{1}{3} x^3 \quad \Leftrightarr
 \end{equation}
 This dynamical system has a saddle point at the point $(-1,0)$ from which a homoclinic orbit emerges, which surrounds the elliptic point located at the origin. By applying the $p$-norm LD with $p = 1/2$ and integrating all initial conditions for the same time $\tau = 3$ we clearly observe in Fig. \ref{fig:fish_lds} A) the problems that appear in the detection of phase space structures due to trajectories escaping to infinity in finite time. If we increase $\tau$ further, very large and NaN values of LDs completely obscure the phase portrait of the system. On the other hand, if now we use the variable integration time LDs with $\tau = 8$ and we select for the interaction region a circle of radius $r = 15$ centered at the origin, the homoclininc orbit and the equilibrium points are nicely captured. Moreover, we can extract the stable and unstable manifolds of the system from the sharp ridges in the gradient of the scalar field, due to the fact that the method is non-differentiable at the location of the manifolds.
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.26]{LDfixTime_p_05_fishPot_tau_3.png}
-		B)\includegraphics[scale=0.26]{LD_p_05_fishPot_tau_8.png}
-		C)\includegraphics[scale=0.26]{manifolds_fishPot_tau_8.png}
-	\end{center}
-	\caption{Phase portrait of the ``fish potential'' Hamiltonian in Eq. \eqref{eq:fish_Ham} revealed by the $p$-norm LDs with $p = 1/2$. A) Fixed-time integration LDs in Eq. \eqref{eq:Mp_function} with $\tau = 3$; B) Variable-time integration definition of LDs in Eq. \eqref{eq:Mp_vt} with $\tau = 8$; C) Invariant stable (blue) and unstable (red) manifolds of the saddle fixed point  extracted from the gradient of the variable time $M_p$ function.}
-	\label{fig:fish_lds}
-\end{figure}
+<img src="figures/LDfixTime_p_05_fishPot_tau_3.png">
+<img src="figures/LD_p_05_fishPot_tau_8.png">
+<img src="figures/manifolds_fishPot_tau_8.png">
+\label{fig:fish_lds}
+\caption{Phase portrait of the "fish potential" Hamiltonian in Eq. \eqref{eq:fish_Ham} revealed by the $p$-norm LDs with $p = 1/2$. A) Fixed-time integration LDs in Eq. \eqref{eq:Mp_function} with $\tau = 3$; B) Variable-time integration definition of LDs in Eq. \eqref{eq:Mp_vt} with $\tau = 8$; C) Invariant stable (blue) and unstable (red) manifolds of the saddle fixed point  extracted from the gradient of the variable time $M_p$ function.}
 
 ### The H\'enon-Heiles Hamiltonian System
 
@@ -414,27 +402,19 @@ $${
 
 Once we have fixed the surfaces of section (SOS) where we want to compute LDs, we select a grid of initial conditions and, after discarding those that are energetically unfeasible, we integrate the remaining conditions both forward and backward in time, and compute LDs using the definition in Eq. \eqref{eq:Mp_vt} with $p = 1/2$ along the trajectory for the whole fixed integration time or until the initial condition leaves the interaction region $\mathcal{R}$, what happens first. The result obtained when the LDs values are plotted will reveal the stable and unstable manifolds and also KAM tori in the surface of section under consideration. Since the stable and unstable manifolds are detected at points where the LD scalar function is non-differentiable, we can directly extract them from the gradient, that is, using $||\nabla \mathcal{L}_p||$. We begin by looking at the phase space structures on the SOS $\mathcal{U}^{+}_{y,p_y}$. To do so, we fix an energy for the system $H = 1/12$, which is below that of the saddle-center equilibrium points. For that energy level, the exit channels of the PES are closed, and therefore, all trajectories are trapped in the scattering region of the central minimum at the origin. We can clearly see in Fig. \ref{fig:henonHeiles_lds} A)-B) that the computation of the $p$-norm variable integration time LDs with $p = 1/2$ using $\tau = 50$ reveals that the motion of the system is completely regular. The method nicely captures the UPO present in the central region of the PES and also its stable and unstable manifolds which form a homoclininc connection. In order to demonstrate how the intricate details of chaotic motion are captured by LDs, we increase the energy of the system to $H = 1/3$. This energy level is now above that of the index-1 saddles of the PES, and consequently, phase space bottlenecks open in the energy manifold allowing trajectories of the system to escape to infinity from the scattering region. When we apply LDs using $\tau = 10$ on the SOSs defined in Eq. \eqref{eq:psos}, we observe in Figs. \ref{fig:henonHeiles_lds} C)-F) that we can detect with high-fidelity the intricate homoclinic tangle formed by the stable and unstable manifolds of the UPO associated to the upper index-1 saddle of the PES. Moreover, observe that despite the issue of trajectories escaping to infinity in finite time, LDs succeed in revealing the template of geometrical phase space structures that governs transport and escape dynamics from the PES of the H\'enon-Heiles Hamiltonian system.
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.33]{henonheiles_pot.png}
-		B)\includegraphics[scale=0.33]{hen_conts.png}
-	\end{center}
-	\caption{Potential energy surface for the H\'enon-Heiles system.}
-	\label{fig:henonHeiles_pes}
-\end{figure}
+<img src="figures/henonheiles_pot.png">
+<img src="figures/hen_conts.png">
+\label{fig:henonHeiles_pes}
+\caption{Potential energy surface for the H\'enon-Heiles system.}
 
-\begin{figure}[htbp]
-	\begin{center}
-		A)\includegraphics[scale=0.38]{LDs_Henon_tau_50_x_0_E_1div12.png}
-		B)\includegraphics[scale=0.38]{Mani_Henon_tau_50_x_0_E_1div12.png}
-		C)\includegraphics[scale=0.38]{LDs_Henon_tau_10_x_0_E_1div3.png}
-		D)\includegraphics[scale=0.38]{Mani_Henon_tau_10_x_0_E_1div3.png}
-		E)\includegraphics[scale=0.38]{LDs_Henon_tau_10_y_0_E_1div3.png}
-		F)\includegraphics[scale=0.38]{Mani_Henon_tau_10_y_0_E_1div3.png}
-	\end{center}
-	\caption{Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$; C) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$; E) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$;. In the right panels we have extracted the invariant stable (blue) and unstable (red) manifolds from the gradient of LDs.}
-	\label{fig:henonHeiles_lds}
-\end{figure}
+<img src="figures/LDs_Henon_tau_50_x_0_E_1div12.png">
+<img src="figures/Mani_Henon_tau_50_x_0_E_1div12.png">
+<img src="figures/LDs_Henon_tau_10_x_0_E_1div3.png">
+<img src="figures/Mani_Henon_tau_10_x_0_E_1div3.png">
+<img src="figures/LDs_Henon_tau_10_y_0_E_1div3.png">
+<img src="figures/Mani_Henon_tau_10_y_0_E_1div3.png">
+\label{fig:henonHeiles_lds}
+\caption{Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$; C) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$; E) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$;. In the right panels we have extracted the invariant stable (blue) and unstable (red) manifolds from the gradient of LDs.}
 
 ## Stochastic Lagrangian Descriptors
 
@@ -865,13 +845,10 @@ This statement is in agreement with the distinguished nature of the manifolds of
 
 The intersection of the two "singular" curves  represents the position of the stationary orbit $(\tilde{x}(\omega ),\tilde{y}(\omega ))$ for a given $\omega \in \Omega$. This fact is validated by the depiction of the stationary orbit, whose components have been computed separately from the SLD, and using the same output of the Wiener process.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width = 0.48\textwidth]{fig1a.png}
-\includegraphics[width = 0.48\textwidth]{fig1b.png}
-\caption{Figures from  \cite{balibrea2016lagrangian} showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.}
+<img src="figures/fig1a.png">
+<img src="figures/fig1b.png">
 \label{fig:saddle}
-\end{figure}
+\caption{Figures from  \cite{balibrea2016lagrangian} showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.}
 
 \begin{remark}
 Due to the properties of It\^{o} integrals, see for instance \cite{duan15}, the components of the stationary orbit satisfy
@@ -908,12 +885,8 @@ equation is studied in \cite{datta01} and can be written as follows:
 For our numerical experiments we have selected $\alpha = \beta = 1$, $\gamma = -1$ and $\epsilon = 0.25$. The results of three different experiments (let say three different samples of $\omega_{1},\omega_{2},\omega_{3} \in \Omega$) are shown in Figure \ref{fig:duffing}.
 
 
-\begin{figure}[htbp]
-  \centering
-  \subfigure[$MS_p$ contours for $\omega_1$]{\includegraphics[width=0.48\linewidth]{fig2a.png}}
-  \subfigure[$MS_p$ contours for $\omega_2$]{\includegraphics[width=0.48\linewidth]{fig2b.png}} \\
-  \subfigure[$MS_p$ contours for $\omega_3$]{\includegraphics[width=0.48\linewidth]{fig2c.png}}
-  \subfigure[$M_p$ for equation $\eqref{eq:duffing_determ}$]{\includegraphics[width=0.48\linewidth]{fig2d.png}} \\
-  \caption{a), b), c) Figures from  \cite{balibrea2016lagrangian}  showing three different experiments representing $MS_p$ contours for $p=0.5$ over a grid of initial conditions. d) The last image corresponds to the $M_p$ function for equation \eqref{eq:duffing_determ} and $p=0.75$. All these pictures were computed for $\tau=15$, and over a $1200 \times 1200$ points grid. The time step for integration of the vector field was chosen to be $\Delta t = 0.05$.}
+<img src="figures/fig2a.png">
+<img src="figures/fig2b.png">
+<img src="figures/fig2c.png">
 \label{fig:duffing}
-\end{figure}
+\caption{a), b), c) Figures from  \cite{balibrea2016lagrangian}  showing three different experiments representing $MS_p$ contours for $p=0.5$ over a grid of initial conditions. d) The last image corresponds to the $M_p$ function for equation \eqref{eq:duffing_determ} and $p=0.75$. All these pictures were computed for $\tau=15$, and over a $1200 \times 1200$ points grid. The time step for integration of the vector field was chosen to be $\Delta t = 0.05$.}

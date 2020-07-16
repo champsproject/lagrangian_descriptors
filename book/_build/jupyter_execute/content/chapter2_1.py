@@ -54,19 +54,19 @@ H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambd
 
 where $K_1(p_1)=\frac{\lambda}{2} p^2_1$ is the kinetic and $V_1(q_1)=-\frac{\lambda}{2} q^2_1$ the potential energy.
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{Vq1}
-\caption{The potential energy $V(q_1)$. An unstable equilibrium point is located at $q_1=0$.}
-\end{center}
-\end{figure}
+```{figure} figures/Vq1.jpg
+---
+name: Vq1
+---
+The potential energy $V(q_1)$. An unstable equilibrium point is located at $q_1=0$.
+```
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{q1p1}
-\caption{Plane $q_1$--$p_1$. The equilibrium point is at the origin $\mathcal{M}=(q_1=0, p_1=0)$. The red line is the stable manifold $W^s(M)$, the blue line is the unstable manifold $W^u(M)$. }
-\end{center}
-\end{figure}
+```{figure} figures/q1p1.jpg
+---
+name: q1p1
+---
+Plane $q_1$--$p_1$. The equilibrium point is at the origin $\mathcal{M}=(q_1=0, p_1=0)$. The red line is the stable manifold $W^s(M)$, the blue line is the unstable manifold $W^u(M)$.
+```
 
 The equations of motion are 
 
@@ -140,19 +140,19 @@ H &=& K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
 &=& \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega >0.
 \end{eqnarray}
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{Vm.jpg}
-\caption{ Potential energy associated to the 2-degree of freedom system $V(q_1,q_2) = V_1(q_1)+V_2(q_2)$. The potential has a saddle point at the point $(q_1, q_2)=(0,0)$}
-\end{center}
-\end{figure}
+```{figure} figures/Vm.jpg
+---
+name: Vm
+---
+Potential energy associated to the 2-degree of freedom system $V(q_1,q_2) = V_1(q_1)+V_2(q_2)$. The potential has a saddle point at the point $(q_1, q_2)=(0,0)$
+```
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=1]{Vcm}
-\caption{ Contour plot of $V(q_1,q_2)$. The black curves are the equipotential curves. }
-\end{center}
-\end{figure}
+```{figure} figures/Vcm.jpg
+---
+name: Vcm
+---
+Contour plot of $V(q_1,q_2)$. The black curves are the equipotential curves.
+```
 
 Hamilton's equations are
 
@@ -165,29 +165,11 @@ Hamilton's equations are
 
 The motion in the $(q_1,p_1)$ plane is independent of $(q_2,p_2)$ and vice versa, the degrees of freedom are said to be uncoupled. As we mentioned before, the energy in each degree of freedom is constant and therefore we can write it as $E=E_1+E_2$. The motion in the $q_1$ direction is the same as that in the previous case with 1 degree of freedom. The motion in  $q_2$ corresponds to a harmonic oscillation. 
 
- \begin{figure}
- \begin{center}
- 
- \subfigure[$V_1(q_1) $]{  
- %\label{}
- \includegraphics[scale=0.75]{Vq1.jpg}}
-% &
- \subfigure[$V_2(q_2)$ ]{
- %\label{}
- \includegraphics[scale=0.75]{Vq2.jpg}}\\
-
- \subfigure[Plane $q_1$--$p_1$ ]{  
- %\label{}
- \includegraphics[scale=0.75]{q1p1.jpg}} 
-% &
- \subfigure[Plane $q_2$--$p_2$  ]{
- %\label{}
- \includegraphics[scale=0.75]{q2p2.jpg}} 
- 
+<img src="figures/Vq1.jpg"> 
+<img src="figures/Vq2.jpg">
+<img src="figures/q1p1.jpg">
+<img src="figures/q2p2.jpg">
 \caption{ (a) Potential $V_1(q_1) $, (b) Potential $V_2(q_2)$, (c) Plane $q_1$--$p_1$ and (d) Plane $q_2$--$p_2$  }
-
-\end{center}
-\end{figure}
 
 Again, the point in the phase space $(q_1,q_2,p_1,p_2)=(0,0,0,0)$ is a equilibrium point of the system at the energy $E=0$.  The equilibrium point has stable and unstable manifolds, similar to the 1-degree of freedom example above.
 
@@ -228,47 +210,20 @@ The equation of motion are :
 \dot{p_i} &=& -\frac{\partial H}{ \partial q_i} = -\omega_i q_i, \quad i = 2,...,n.
 \end{eqnarray}
 
- \begin{figure}[h!]
- \begin{center}
- 
- 
- \subfigure[$V_1(q_1) $]{  
- %\label{}
- \includegraphics[scale=0.45]{Vq1.jpg}}
-% &
- \subfigure[$V_2(q_2)$ ]{
- %\label{}
- \includegraphics[scale=0.45]{Vq2.jpg}}
- % &
- \subfigure[$V_2(q_2)$ ]{
- %\label{}
- \includegraphics[scale=0.45]{Vqn.jpg}}\\
- 
- 
-
- \subfigure[Plane $q_1$--$p_1$ ]{  
- %\label{}
- \includegraphics[scale=0.45]{q1p1.jpg}} 
-% &
- \subfigure[Plane $q_2$--$p_2$  ]{
- %\label{}
- \includegraphics[scale=0.45]{q2p2.jpg}} 
- % &
- \subfigure[Plane $q_n$--$p_n$  ]{
- %\label{}
- \includegraphics[scale=0.45]{qnpn.jpg}} 
-
+<img src="figures/Vq1.jpg"> 
+<img src="figures/Vq2.jpg"> 
+<img src="figures/Vqn.jpg"> 
+<img src="figures/q1p1.jpg"> 
+<img src="figures/q2p2.jpg"> 
+<img src="figures/qnpn.jpg"> 
 \caption{(a) Potential $V_1(q_1) $, (b) Potential $V_2(q_2)$, (c) Potential $V_n(q_n)$, (d) Plane $q_1$--$p_1$, (e) Plane $q_2$--$p_2$  and (f) Plane $q_n$--$p_n$.}
-
-\end{center}
-\end{figure}
 
 The NHIM and its stable and unstable manifolds can be found analogously to the  2 degree of freedom system case. If $q_1=p_1=0$ then $\dot{q_1}=0$ and $\dot{p_1}=0$ and the system consists of $n-1$ harmonic oscillators bounded by the fixed total energy. For $E=0$, $q_1,p_1=0$ is an unstable equilibrium point and for $E>0$, an invariant set that can be shown to be a sphere. The dimension of the sphere depends on the number of degrees of freedom with non-zero energy. This sphere is a manifold, it is invariant and normally hyperbolic, hence a NHIM. In general a NHIM does not have to be a sphere. If all degrees of freedom have non-zero energy, except for $q_1,p_1=0$, the NHIM is $2n-3$ dimensional and its stable and unstable manifolds are dynamical barriers on the energy level set according to Tab. \ref{tab:dimensions}.
 
-\begin{equation}
-\displaystyle{\Gamma = \lbrace  (0,q_2,...,q_n, 0,p_2,...,p_n )  |  \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i) = E  > 0 \rbrace}.
+$${
+\Gamma = \lbrace  (0,q_2,...,q_n, 0,p_2,...,p_n )  |  \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i) = E  > 0 \rbrace
 \label{eq:NHIM}
-\end{equation}
+}$$
 
 Note that the NHIM is a generalization of the hyperbolic equilibrium point and hyperbolic periodic orbit from previous examples.
 
