@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Computing the Lagrangian Descriptors &#8212; Lagrangian Descriptors</title>
+    <title>Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems &#8212; Lagrangian Descriptors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -97,7 +97,7 @@
 <p class="margin-caption">Examples</p>
 </li>
   <li class="active">
-    <a href="">Computing the Lagrangian Descriptors</a>
+    <a href="">Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems</a>
   </li>
   <li class="">
     <a href="https://github.com/champsproject/lagrangian_descriptors">GitHub repository<i class="fas fa-external-link-alt"></i></a>
@@ -189,73 +189,70 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#" class="nav-link">Computing the Lagrangian Descriptors</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
             <a href="#basic-setup-important" class="nav-link">Basic setup: IMPORTANT</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
+        <li class="nav-item toc-entry toc-h2">
             <a href="#package-requirements" class="nav-link">Package requirements</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
+        <li class="nav-item toc-entry toc-h2">
             <a href="#benchmark-examples" class="nav-link">Benchmark examples</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#some-simple-systems" class="nav-link">Some simple systems</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#hamilton-centre" class="nav-link">Hamilton Centre</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#hamilton-saddle" class="nav-link">Hamilton Saddle</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#duffing-oscillator" class="nav-link">Duffing oscillator</a>
         </li>
     
             </ul>
         </li>
     
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#example-of-a-perturbed-system" class="nav-link">Example of a perturbed system</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#harmonically-perturbed-duffing-oscillator" class="nav-link">Harmonically perturbed Duffing oscillator</a>
         </li>
     
             </ul>
         </li>
     
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#example-of-systems-that-blow-up-in-finite-time" class="nav-link">Example of systems that blow up in finite time</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#hamilton-saddle-node" class="nav-link">Hamilton Saddle-Node</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#inverted-duffing-oscillator" class="nav-link">Inverted Duffing oscillator</a>
         </li>
     
             </ul>
         </li>
     
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#high-dimensional-hamiltonian-systems" class="nav-link">High-dimensional Hamiltonian systems</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#henon-heiles" class="nav-link">Henon-Heiles</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#index-1-normal-form-saddle" class="nav-link">Index-1 Normal Form Saddle</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h5">
+        <li class="nav-item toc-entry toc-h4">
             <a href="#double-well-potential" class="nav-link">Double well potential</a>
         </li>
     
@@ -265,25 +262,18 @@
             </ul>
         </li>
     
-        <li class="nav-item toc-entry toc-h3">
+        <li class="nav-item toc-entry toc-h2">
             <a href="#how-tos" class="nav-link">HOW-TOs</a><ul class="nav section-nav flex-column">
                 
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#change-parameters-of-built-in-vector-fields" class="nav-link">Change parameters of built-in vector fields</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h4">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#working-with-my-own-vector-field" class="nav-link">Working with my own vector field</a>
         </li>
     
             </ul>
-        </li>
-    
-            </ul>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#future-development" class="nav-link">FUTURE DEVELOPMENT</a>
         </li>
     
     </ul>
@@ -297,8 +287,8 @@
         
               <div>
                 
-  <div class="section" id="computing-the-lagrangian-descriptors">
-<h1>Computing the Lagrangian Descriptors<a class="headerlink" href="#computing-the-lagrangian-descriptors" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="computing-the-lagrangian-descriptors-of-nonlinear-dynamical-systems">
+<h1>Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems<a class="headerlink" href="#computing-the-lagrangian-descriptors-of-nonlinear-dynamical-systems" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="basic-setup-important">
 <h2>Basic setup: IMPORTANT<a class="headerlink" href="#basic-setup-important" title="Permalink to this headline">¶</a></h2>
 <p>BEFORE running this Notebook we assume the following</p>
@@ -350,7 +340,7 @@
 <span class="c1"># Mesh parameters</span>
 <span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">]</span>
 <span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+<span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -621,19 +611,19 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <span class="n">p_value</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 
 <span class="c1"># Mesh visualisation slice parameters</span>
-<span class="n">H0</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span> <span class="c1"># Energy</span>
+<span class="n">H0</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span> <span class="c1"># Energy</span>
 
 <span class="n">ax1_min</span><span class="p">,</span><span class="n">ax1_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]</span>
 <span class="n">ax2_min</span><span class="p">,</span><span class="n">ax2_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">]</span>
-<span class="n">N1</span><span class="p">,</span> <span class="n">N2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">N1</span><span class="p">,</span> <span class="n">N2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">160</span><span class="p">]</span>
 
 <span class="c1"># Box escape condition</span>
 <span class="n">box_boundaries</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
 
 <span class="c1"># Miscellaneous grid parameters</span>
-<span class="n">dof_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x1 x2 y1 y2)</span>
-<span class="n">dof_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
-<span class="n">dof_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
+<span class="n">dims_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x1 x2 y1 y2)</span>
+<span class="n">dims_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
+<span class="n">dims_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
 <span class="n">momentum_sign</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Direction of momentum that defines the slice - (1) positive / (-1) negative</span>
 </pre></div>
 </div>
@@ -648,8 +638,8 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 
 <span class="n">grid_parameters</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;slice_parameters&#39;</span> <span class="p">:</span> <span class="n">slice_parameters</span><span class="p">,</span>
-        <span class="s1">&#39;dof_slice&#39;</span> <span class="p">:</span> <span class="n">dof_slice</span><span class="p">,</span>
-        <span class="s1">&#39;dof_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dof_fixed</span><span class="p">,</span> <span class="n">dof_fixed_values</span><span class="p">],</span>
+        <span class="s1">&#39;dims_slice&#39;</span> <span class="p">:</span> <span class="n">dims_slice</span><span class="p">,</span>
+        <span class="s1">&#39;dims_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dims_fixed</span><span class="p">,</span> <span class="n">dims_fixed_values</span><span class="p">],</span>
         <span class="s1">&#39;momentum_sign&#39;</span> <span class="p">:</span> <span class="n">momentum_sign</span><span class="p">,</span>
         <span class="s1">&#39;potential_energy&#39;</span><span class="p">:</span> <span class="n">potential_energy</span><span class="p">,</span>
         <span class="s1">&#39;energy_level&#39;</span><span class="p">:</span> <span class="n">H0</span>
@@ -661,13 +651,13 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_forward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">box_boundaries</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_backward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="o">-</span><span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">box_boundaries</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_total</span> <span class="o">=</span> <span class="n">LD_forward</span> <span class="o">+</span> <span class="n">LD_backward</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -704,9 +694,9 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <span class="n">box_boundaries</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># Miscellaneous grid parameters</span>
-<span class="n">dof_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x1 x2 y1 y2)</span>
-<span class="n">dof_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
-<span class="n">dof_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
+<span class="n">dims_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x1 x2 y1 y2)</span>
+<span class="n">dims_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
+<span class="n">dims_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
 <span class="n">momentum_sign</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="c1"># Direction of momentum that defines the slice - (1) positive / (-1) negative</span>
 </pre></div>
 </div>
@@ -721,8 +711,8 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 
 <span class="n">grid_parameters</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;slice_parameters&#39;</span> <span class="p">:</span> <span class="n">slice_parameters</span><span class="p">,</span>
-        <span class="s1">&#39;dof_slice&#39;</span> <span class="p">:</span> <span class="n">dof_slice</span><span class="p">,</span>
-        <span class="s1">&#39;dof_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dof_fixed</span><span class="p">,</span> <span class="n">dof_fixed_values</span><span class="p">],</span>
+        <span class="s1">&#39;dims_slice&#39;</span> <span class="p">:</span> <span class="n">dims_slice</span><span class="p">,</span>
+        <span class="s1">&#39;dims_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dims_fixed</span><span class="p">,</span> <span class="n">dims_fixed_values</span><span class="p">],</span>
         <span class="s1">&#39;momentum_sign&#39;</span> <span class="p">:</span> <span class="n">momentum_sign</span><span class="p">,</span>
         <span class="s1">&#39;potential_energy&#39;</span><span class="p">:</span> <span class="n">potential_energy</span><span class="p">,</span>
         <span class="s1">&#39;energy_level&#39;</span><span class="p">:</span> <span class="n">H0</span>
@@ -734,13 +724,13 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_forward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_backward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="o">-</span><span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_total</span> <span class="o">=</span> <span class="n">LD_forward</span> <span class="o">+</span> <span class="n">LD_backward</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -784,9 +774,9 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <span class="sd">    v : array_like, shape(n,)</span>
 <span class="sd">        Vector field corresponding to points u, in phase space at time t.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">N_dof</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">points_positions</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dof</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
-    <span class="n">points_momenta</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dof</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
+    <span class="n">N_dims</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">points_positions</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dims</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+    <span class="n">points_momenta</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">N_dims</span><span class="o">/</span><span class="mi">2</span><span class="p">):]</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">points_positions</span>
     <span class="n">p_x</span><span class="p">,</span> <span class="n">p_y</span> <span class="o">=</span> <span class="n">points_momenta</span> 
     
@@ -835,9 +825,9 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <span class="n">box_boundaries</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># Miscellaneous grid parameters</span>
-<span class="n">dof_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x y p_x p_y)</span>
-<span class="n">dof_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
-<span class="n">dof_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
+<span class="n">dims_fixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Variable ordering (x y p_x p_y)</span>
+<span class="n">dims_fixed_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># This can also be an array of values</span>
+<span class="n">dims_slice</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Visualisation slice</span>
 <span class="n">momentum_sign</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Direction of momentum that defines the slice - (1) positive / (-1) negative</span>
 </pre></div>
 </div>
@@ -852,8 +842,8 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 
 <span class="n">grid_parameters</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;slice_parameters&#39;</span> <span class="p">:</span> <span class="n">slice_parameters</span><span class="p">,</span>
-        <span class="s1">&#39;dof_slice&#39;</span> <span class="p">:</span> <span class="n">dof_slice</span><span class="p">,</span>
-        <span class="s1">&#39;dof_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dof_fixed</span><span class="p">,</span> <span class="n">dof_fixed_values</span><span class="p">],</span>
+        <span class="s1">&#39;dims_slice&#39;</span> <span class="p">:</span> <span class="n">dims_slice</span><span class="p">,</span>
+        <span class="s1">&#39;dims_fixed&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">dims_fixed</span><span class="p">,</span> <span class="n">dims_fixed_values</span><span class="p">],</span>
         <span class="s1">&#39;momentum_sign&#39;</span> <span class="p">:</span> <span class="n">momentum_sign</span><span class="p">,</span>
         <span class="s1">&#39;potential_energy&#39;</span><span class="p">:</span> <span class="n">potential_energy</span><span class="p">,</span>
         <span class="s1">&#39;energy_level&#39;</span><span class="p">:</span> <span class="n">H0</span>
@@ -865,13 +855,13 @@ H(x, y) = \frac{\lambda}{2}( y^2 -  x^2 ), \quad \lambda &gt; 0
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_forward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_backward</span> <span class="o">=</span> <span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="o">-</span><span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 
 <span class="n">LD_total</span> <span class="o">=</span> <span class="n">LD_forward</span> <span class="o">+</span> <span class="n">LD_backward</span>
-<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">slice_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1009,28 +999,60 @@ f_2(x, y) &amp;= \beta \cdot cos(\gamma x^3)
 <span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># Timestep</span>
 
 <span class="c1"># Lp-norm, p-value</span>
-<span class="n">p_norm</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">p_value</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 
 <span class="c1"># Mesh parameters</span>
 <span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">]</span>
 <span class="n">y_min</span><span class="p">,</span><span class="n">y_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">=</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>
+<span class="n">Nx</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">=</span> <span class="p">[</span><span class="mi">160</span><span class="p">,</span> <span class="mi">160</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grid_parameters</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">Nx</span><span class="p">),</span> <span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">Ny</span><span class="p">)]</span> <span class="c1"># Grid to sample Initial Conditions</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p><span style='color:blue'><b>THIRD</b></span> Compute and Visualise your desired Lagrangian Descriptors</p>
-<p><strong>Note</strong> The only difference for <code class="docutils literal notranslate"><span class="pre">LD_backward</span></code> is the <code class="docutils literal notranslate"><span class="pre">time_interval</span> <span class="pre">=</span> <span class="pre">(t0,</span> <span class="pre">t0</span> <span class="pre">-</span> <span class="pre">tau,</span> <span class="pre">dt)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_forward</span> <span class="o">=</span> <span class="n">pylds</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">pylds</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_forward</span><span class="p">,</span> <span class="s1">&#39;forward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">colormap_name</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/examples_64_0.png" src="../_images/examples_64_0.png" />
+</div>
+</div>
+<p><strong>Note</strong> The only difference for <code class="docutils literal notranslate"><span class="pre">LD_backward</span></code> is the integration time <code class="docutils literal notranslate"><span class="pre">-</span> <span class="pre">tau</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_backward</span> <span class="o">=</span> <span class="n">pylds</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">compute_lagrangian_descriptor</span><span class="p">(</span><span class="n">grid_parameters</span><span class="p">,</span> <span class="n">vector_field</span><span class="p">,</span> <span class="o">-</span><span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="n">pylds</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_backward</span><span class="p">,</span> <span class="s1">&#39;backward&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="o">-</span><span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">colormap_name</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/examples_66_0.png" src="../_images/examples_66_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LD_total</span> <span class="o">=</span> <span class="n">LD_forward</span> <span class="o">+</span> <span class="n">LD_backward</span>
+<span class="n">pylds</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">draw_lagrangian_descriptor</span><span class="p">(</span><span class="n">LD_total</span><span class="p">,</span> <span class="s1">&#39;total&#39;</span><span class="p">,</span> <span class="n">grid_parameters</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">colormap_name</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/examples_67_0.png" src="../_images/examples_67_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="future-development">
-<h1>FUTURE DEVELOPMENT<a class="headerlink" href="#future-development" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Higher dimensions</p></li>
-<li><p>Computation of LDs gradient to draw invariant manifolds</p></li>
-<li><p>Enhancements in the implementation</p></li>
-</ul>
+</div>
 </div>
 
 
