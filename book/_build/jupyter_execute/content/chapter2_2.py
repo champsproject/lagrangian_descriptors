@@ -141,16 +141,70 @@ Motion on resonant tori is periodic, and hence trajectories are closed. For exam
 
 On the other hand, a non-resonant torus is associated to a frequency vector for which the ratio of its components is irrational, that is $\omega_2 / \omega_1 \in \mathbb{I} = \mathbb{R} - \mathbb{Q}$. Motion on non-resonant tori is ergodic, and any trajectory evolving on this type of torus will densely and uniformly fill its surface without ever closing. This is called quasiperiodic motion and is depicted in Fig. \ref{fig:quasip_mot} B) for a frequency ratio $\omega_2 / \omega_1 = \sqrt{2}$.
 
+```{figure} figures/periodicFlow_w1_2_w2_3.png
+---
+name:
+----
+A) Periodic motion on a resonant torus with frequency ratio $\omega_2 / \omega_1 = 3/2$.
+```
+
+```{figure} figures/quasiperFlow_w1_1_w2_sqrt2.png
+---
+name: quasip_mot
+----
+B) Quasiperiodic motion on a non-resonant torus with frequency ratio $\omega_2 / \omega_1 = \sqrt{2}$. Notice how the quasiperiodic trajectory densely and uniformly fills the surface of the non-resonant torus along its evolution. This type of motion is ergodic on the torus.
+```
+
 <img src="figures/periodicFlow_w1_2_w2_3.png">
 <img src="figures/quasiperFlow_w1_1_w2_sqrt2.png">
-\label{fig:quasip_mot}
-\caption{A) Periodic motion on a resonant torus with frequency ratio $\omega_2 / \omega_1 = 3/2$. B) Quasiperiodic motion on a non-resonant torus with frequency ratio $\omega_2 / \omega_1 = \sqrt{2}$. Notice how the quasiperiodic trajectory densely and uniformly fills the surface of the non-resonant torus along its evolution. This type of motion is ergodic on the torus.}
 
 Interestingly, the resonant and non-resonant tori of the family that fill out the energy manifold of an integrable Hamiltonian system are intermingled in a similar way as the rational and irrational numbers are distributed among the reals. Moreover, it can be shown that almost all tori are non-resonant. This is also the case for rational and irrational numbers, since rationals are dense in the real numbers, but have zero measure. This means that if we select a real number at random, we will almost always pick an irrational number.  
 
 We can illustrate the results discussed by KAM theory by considering tori in the integrable system defined by the Chirikov standard map \cite{chirikov1979,meiss2008} their persistence under perturbation. The Chirikov standard map is a two dimensional symplectic map that  displays many features of the Poincar\'e return maps for typical 2 DoF autonomous Hamiltonian systems. This discrete dynamical system is defined by a two-dimensional area-preserving map which depends on a parameter $k$ that determines the strength of the perturbation that is applied to the underlying integrable system. The solutions for the unperturbed system ($k = 0$) are one-dimensional tori, that is, circles, and are represented in Fig. \ref{fig:std_map} A). Notice that these tori appear as lines because the left and right boundaries of the domain are identified, and so also, the top and bottom edges of the square. This is the manifestation of the toroidal geometry of the phase space of the standard map. If we increase the perturbation strength to $k = 0.3$ we observe in panel B) that most of the tori have survived the perturbation, but in a slightly distorted shape. Moreover, we notice also that some of the tori of the originally unperturbed system break (the resonant ones), and in the process they have generated smaller tori, and also hyperbolic points that possess stable and unstable manifolds. Increasing the perturbation further to $k = 0.8$, one can see in panel C) that non-resonant tori continue to break up into smaller tori, giving rise to structures known as islands of regularity, and that these subregions of the phase space are surrounded by a larger sea of random points that indicates chaotic motion.
 Panels  D), E) and F) of Fig. \ref{fig:std_map} show how with increasing $k$ all tori eventually break up.
 This is in part one of the main messages that can be drawn from KAM theory; the coexistence of chaotic and regular motion in the phase space of Hamiltonian systems~\cite{markus1974generic}.
+
+```{figure} figures/std_map_k_0.png
+---
+name:
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: A) $k = 0$
+```
+
+```{figure} figures/std_map_k_03.png
+---
+name:
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: B) $k = 0.3$
+```
+
+```{figure} figures/std_map_k_08.png
+---
+name:
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: C) $k = 0.8$
+```
+
+```{figure} figures/std_map_k_12.png
+---
+name:
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: D) $k = 1.2$
+```
+
+```{figure} figures/std_map_k_24.png
+---
+name:
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: E) $k = 2.4$
+```
+
+```{figure} figures/std_map_k_150.png
+---
+name: std_map
+----
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: F) $k = 15$
+```
 
 <img src="figures/std_map_k_0.png">
 <img src="figures/std_map_k_03.png">
