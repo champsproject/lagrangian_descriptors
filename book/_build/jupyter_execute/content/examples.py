@@ -1,4 +1,4 @@
-# Computing the Lagrangian Descriptors
+# Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems
 
 ## Basic setup: IMPORTANT
 
@@ -49,7 +49,7 @@ p_value = 0.5
 # Mesh parameters
 x_min,x_max = [-1.6, 1.6]
 y_min,y_max = [-1, 1]
-Nx, Ny = [200, 200]
+Nx, Ny = [100, 100]
 
 ### Some simple systems
 
@@ -214,19 +214,19 @@ tau = 50
 p_value = 1/2
 
 # Mesh visualisation slice parameters
-H0 = 1/6 # Energy
+H0 = 1/5 # Energy
 
 ax1_min,ax1_max = [-0.6, 1.2]
 ax2_min,ax2_max = [-0.65, 0.65]
-N1, N2 = [100, 100]
+N1, N2 = [160, 160]
 
 # Box escape condition
 box_boundaries = [[-5, 5], [-5, 5]]
 
 # Miscellaneous grid parameters
-dof_fixed = [1,0,0,0] # Variable ordering (x1 x2 y1 y2)
-dof_fixed_values = [0] # This can also be an array of values
-dof_slice = [0,1,0,1] # Visualisation slice
+dims_fixed = [1,0,0,0] # Variable ordering (x1 x2 y1 y2)
+dims_fixed_values = [0] # This can also be an array of values
+dims_slice = [0,1,0,1] # Visualisation slice
 momentum_sign = 1 # Direction of momentum that defines the slice - (1) positive / (-1) negative
 
 potential_energy = HenonHeiles_potential
@@ -236,21 +236,21 @@ slice_parameters = [[ax1_min, ax1_max, N1],[ax2_min, ax2_max, N2]]
 
 grid_parameters = {
         'slice_parameters' : slice_parameters,
-        'dof_slice' : dof_slice,
-        'dof_fixed' : [dof_fixed, dof_fixed_values],
+        'dims_slice' : dims_slice,
+        'dims_fixed' : [dims_fixed, dims_fixed_values],
         'momentum_sign' : momentum_sign,
         'potential_energy': potential_energy,
         'energy_level': H0
     }
 
 LD_forward = compute_lagrangian_descriptor(grid_parameters, vector_field, tau, p_value, box_boundaries)
-draw_lagrangian_descriptor(LD_forward, 'forward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_forward, 'forward', grid_parameters, tau, p_value)
 
 LD_backward = compute_lagrangian_descriptor(grid_parameters, vector_field, -tau, p_value, box_boundaries)
-draw_lagrangian_descriptor(LD_backward, 'backward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_backward, 'backward', grid_parameters, tau, p_value)
 
 LD_total = LD_forward + LD_backward
-draw_lagrangian_descriptor(LD_total, 'total', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_total, 'total', grid_parameters, tau, p_value)
 
 #### Index-1 Normal Form Saddle
 
@@ -271,9 +271,9 @@ N1, N2 = [100, 100]
 box_boundaries = False
 
 # Miscellaneous grid parameters
-dof_fixed = [0,1,0,0] # Variable ordering (x1 x2 y1 y2)
-dof_fixed_values = [0] # This can also be an array of values
-dof_slice = [1,0,1,0] # Visualisation slice
+dims_fixed = [0,1,0,0] # Variable ordering (x1 x2 y1 y2)
+dims_fixed_values = [0] # This can also be an array of values
+dims_slice = [1,0,1,0] # Visualisation slice
 momentum_sign = -1 # Direction of momentum that defines the slice - (1) positive / (-1) negative
 
 potential_energy = NFSaddle_potential
@@ -283,21 +283,21 @@ slice_parameters = [[ax1_min, ax1_max, N1],[ax2_min, ax2_max, N2]]
 
 grid_parameters = {
         'slice_parameters' : slice_parameters,
-        'dof_slice' : dof_slice,
-        'dof_fixed' : [dof_fixed, dof_fixed_values],
+        'dims_slice' : dims_slice,
+        'dims_fixed' : [dims_fixed, dims_fixed_values],
         'momentum_sign' : momentum_sign,
         'potential_energy': potential_energy,
         'energy_level': H0
     }
 
 LD_forward = compute_lagrangian_descriptor(grid_parameters, vector_field, tau, p_value)
-draw_lagrangian_descriptor(LD_forward, 'forward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_forward, 'forward', grid_parameters, tau, p_value)
 
 LD_backward = compute_lagrangian_descriptor(grid_parameters, vector_field, -tau, p_value)
-draw_lagrangian_descriptor(LD_backward, 'backward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_backward, 'backward', grid_parameters, tau, p_value)
 
 LD_total = LD_forward + LD_backward
-draw_lagrangian_descriptor(LD_total, 'total', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_total, 'total', grid_parameters, tau, p_value)
 
 #### Double well potential
 
@@ -325,9 +325,9 @@ def DoubleWell2DoF_vector_field(t, u, PARAMETERS = [None]):
     v : array_like, shape(n,)
         Vector field corresponding to points u, in phase space at time t.
     """
-    N_dof = u.shape[-1]
-    points_positions = u.T[:int(N_dof/2)]
-    points_momenta = u.T[int(N_dof/2):]
+    N_dims = u.shape[-1]
+    points_positions = u.T[:int(N_dims/2)]
+    points_momenta = u.T[int(N_dims/2):]
     x, y = points_positions
     p_x, p_y = points_momenta 
     
@@ -366,9 +366,9 @@ N1, N2 = [200, 200]
 box_boundaries = False
 
 # Miscellaneous grid parameters
-dof_fixed = [0,1,0,0] # Variable ordering (x y p_x p_y)
-dof_fixed_values = [0] # This can also be an array of values
-dof_slice = [1,0,1,0] # Visualisation slice
+dims_fixed = [0,1,0,0] # Variable ordering (x y p_x p_y)
+dims_fixed_values = [0] # This can also be an array of values
+dims_slice = [1,0,1,0] # Visualisation slice
 momentum_sign = 1 # Direction of momentum that defines the slice - (1) positive / (-1) negative
 
 potential_energy = DoubleWell2DoF_potential
@@ -378,21 +378,21 @@ slice_parameters = [[ax1_min, ax1_max, N1],[ax2_min, ax2_max, N2]]
 
 grid_parameters = {
         'slice_parameters' : slice_parameters,
-        'dof_slice' : dof_slice,
-        'dof_fixed' : [dof_fixed, dof_fixed_values],
+        'dims_slice' : dims_slice,
+        'dims_fixed' : [dims_fixed, dims_fixed_values],
         'momentum_sign' : momentum_sign,
         'potential_energy': potential_energy,
         'energy_level': H0
     }
 
 LD_forward = compute_lagrangian_descriptor(grid_parameters, vector_field, tau, p_value)
-draw_lagrangian_descriptor(LD_forward, 'forward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_forward, 'forward', grid_parameters, tau, p_value)
 
 LD_backward = compute_lagrangian_descriptor(grid_parameters, vector_field, -tau, p_value)
-draw_lagrangian_descriptor(LD_backward, 'backward', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_backward, 'backward', grid_parameters, tau, p_value)
 
 LD_total = LD_forward + LD_backward
-draw_lagrangian_descriptor(LD_total, 'total', slice_parameters, tau, p_value)
+draw_lagrangian_descriptor(LD_total, 'total', grid_parameters, tau, p_value)
 
 ## HOW-TOs
 
@@ -479,35 +479,24 @@ tau = 8 # Length integration
 dt = 0.1 # Timestep
 
 # Lp-norm, p-value
-p_norm = 1/2
+p_value = 1/2
 
 # Mesh parameters
 x_min,x_max = [-1.6, 1.6]
 y_min,y_max = [-1, 1]
-Nx, Ny = [300, 300]
+Nx, Ny = [160, 160]
 
-GRID_PARAMETERS = [(x_min, x_max, Nx), (y_min, y_max, Ny)] # Grid to sample Initial Conditions
-initial_conditions = pylds.base.generate_points(GRID_PARAMETERS)
+grid_parameters = [(x_min, x_max, Nx), (y_min, y_max, Ny)] # Grid to sample Initial Conditions
 
 <span style='color:blue'><b>THIRD</b></span> Compute and Visualise your desired Lagrangian Descriptors
 
-time_interval = (t0, t0 + tau, dt)
-LD_PARAMETERS = [time_interval, p_norm]
-LD_forward = pylds.base.compute_lagrangian_descriptor(initial_conditions, vector_field, LD_PARAMETERS)
-pylds.tools.draw_lagrangian_descriptor(LD_forward, 'forward', GRID_PARAMETERS, LD_PARAMETERS, colormap_name='rainbow')
+LD_forward = pylds.base.compute_lagrangian_descriptor(grid_parameters, vector_field, tau, p_value)
+pylds.tools.draw_lagrangian_descriptor(LD_forward, 'forward', grid_parameters, tau, p_value, colormap_name='rainbow')
 
-__Note__ The only difference for `LD_backward` is the `time_interval = (t0, t0 - tau, dt)`
+__Note__ The only difference for `LD_backward` is the integration time `- tau`
 
-time_interval = (t0, t0 - tau, dt)
-LD_PARAMETERS = [time_interval, p_norm]
-LD_backward = compute_lagrangian_descriptor(initial_conditions, vector_field, LD_PARAMETERS)
-draw_lagrangian_descriptor(LD_backward, 'backward', GRID_PARAMETERS, LD_PARAMETERS, colormap_name='rainbow')
+LD_backward = pylds.base.compute_lagrangian_descriptor(grid_parameters, vector_field, -tau, p_value)
+pylds.tools.draw_lagrangian_descriptor(LD_backward, 'backward', grid_parameters, -tau, p_value, colormap_name='rainbow')
 
 LD_total = LD_forward + LD_backward
-pylds.tools.draw_lagrangian_descriptor(LD_total, 'total', GRID_PARAMETERS, LD_PARAMETERS, colormap_name='rainbow')
-
-# FUTURE DEVELOPMENT
-
-* Higher dimensions
-* Computation of LDs gradient to draw invariant manifolds
-* Enhancements in the implementation
+pylds.tools.draw_lagrangian_descriptor(LD_total, 'total', grid_parameters, tau, p_value, colormap_name='rainbow')
