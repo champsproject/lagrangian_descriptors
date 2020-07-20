@@ -3,7 +3,7 @@
 
 Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be ``crossed’’ by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
 
-Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable \cite{guillemin2010differential}.  _Normally hyperbolic invariant manifolds_ (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.
+Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable {cite}`guillemin2010differential`.  _Normally hyperbolic invariant manifolds_ (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.
 
 Unstable periodic orbits play an important role in our understanding of the dynamics of Hamiltonian systems. Periodic orbits have constant energy, as well as their stable and unstable manifolds, and are contained in the energy surface that is of one less dimension than the dimension of the phase space, i.e. the energy surface has codimension one. In general, the codimension of a surface contained in phase space is the dimension of phase space minus the dimension of the surface. If the  codimension is one then it may divide the ambient space, and therefore  act as a barrier to transport in the space.
 
@@ -29,16 +29,16 @@ In the table below we collect together some dimensionality and codimensionality 
 \end{table}
 
 
-NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they _may_ have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom \cite{wiggins1990geometry}.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are \cite{Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013}, but we will begin with an elementary description.
+NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they _may_ have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom {cite}`wiggins1990geometry`.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are {cite}`Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013`, but we will begin with an elementary description.
 
 
 In understanding what is meant by _"normally hyperbolic invariant manifold"_ we start by explaining the last word in the phrase and working towards the first.
 
 * A _manifold_ is the natural generalization of a differentiable curve or surface.
 * A set in the constant energy level set is called _invariant_ under the flow if any trajectory in the set is contained in the set at all times (link to definition in previous chapter).
-* _Normal hyperbolicity_ means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds \cite{Fenichel1971}.
+* _Normal hyperbolicity_ means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds {cite}`Fenichel1971`.
 
-Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works \cite{Wiggins2001,Wiggins2016}.
+Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works {cite}`Wiggins2001,Wiggins2016`.
 
 In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy $(H = K + V)$.
 
@@ -305,14 +305,14 @@ The stable and unstable manifolds, $W^{u}(\Gamma)$ and $W^{s}(\Gamma)$, are mult
 \displaystyle{ W^s(\Gamma)= \lbrace  (q_1,q_2,...,q_n, p_1,p_2,...,p_n )  |    \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i)    = E > 0,  q_1 = - p_1  \rbrace }.
 \end{equation}
 
-The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel \cite{Fenichel1971,Fenichel1974,Fenichel1977} and more recent works \cite{Wigginsbook1994,Eldering2013}.
+The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel {cite}`Fenichel1971,Fenichel1974,Fenichel1977` and more recent works {cite}`Wigginsbook1994,Eldering2013`.
 
 It is important to note that the  basic theory of NHIMs does not tell us how to find NHIMs in specific systems. It only characterizes them and describes their properties based on that characterization. Next we describe a theorem from Hamiltonian systems that provides sufficient conditions for the existence of NHIMs under certain specific circumstances.
 
 ## The Lyapunov Subcenter Theorem
 \label{sec:LyapSub}
 
-The Lyapunov subcenter theorem \cite{liapounoff1907probleme} is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton's equations give rise to periodic orbits, or ``NHIMs''. Basic background on the topic can be found in \cite{moser1958generalization, kelley1967liapounov, moser1976periodic, weinstein1973normal, duistermaat1972periodic}.
+The Lyapunov subcenter theorem {cite}`liapounoff1907probleme` is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton's equations give rise to periodic orbits, or ``NHIMs''. Basic background on the topic can be found in {cite}`moser1958generalization,kelley1967liapounov,moser1976periodic,weinstein1973normal,duistermaat1972periodic`.
 
 We will explain the ideas in the context of a two degree-of-freedom quadratic Hamiltonian, and then describe how they extend to more general settings.
 
@@ -364,5 +364,9 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
 where  $\lambda_i, \, \omega_i >0, \quad (q_1, p_1,  \ldots, q_{n_s}, p_{n_s},  q_{n_s +1}, p_{n_s + 1}, \ldots, q_{n_s +n_c}, p_{n_s + n_c}) 
 \in \mathbb{R}^{2(n_s + n_c)}$.
 
-The structure of the NHIM is treated in detail for ${n_s} =1$ in \cite{wiggins2016role}.  Results for ${n_s} >1$ are treated in \cite{collins2011index}. 
-When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply \cite{Wigginsbook1994} and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for ${n_c} >1$ and requires KAM type techniques for its understanding \cite{dumas2014kam}.
+The structure of the NHIM is treated in detail for ${n_s} =1$ in {cite}`wiggins2016role`.  Results for ${n_s} >1$ are treated in {cite}`collins2011index`. 
+When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply {cite}`Wigginsbook1994` and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for ${n_c} >1$ and requires KAM type techniques for its understanding {cite}`dumas2014kam`s.
+
+# References
+```{bibliography} bibliography/chapter2.bib
+```

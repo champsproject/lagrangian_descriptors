@@ -107,7 +107,7 @@ From \eqref{eqn:symp_cond} we find the inverse transformation $C^{-1}=\mathcal{J
 
 Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion \eqref{eqn:hamiltons_eom}, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.
 
-In Ref~\cite{naik_finding_2019}, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems. 
+In Ref {cite}`naik_finding_2019`, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems. 
 
 We can define nonlinear symplectic transformations using the _Poisson bracket_ (see \eqref{eq:poisson}) defined by
 
@@ -123,7 +123,7 @@ where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is def
  \label{eqn:poisson_eqn}
 \end{equation}
 
-Following \cite{Wiggins2003}, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space $f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}$, such that 
+Following {cite}`Wiggins2003`, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space $f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}$, such that 
 
 \begin{equation}
  \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
@@ -138,11 +138,11 @@ Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hami
  &= \langle Df(q,p)D(q,p),\;\mathcal{J}Df(q,p)DH \rangle = \{f(q,p), G\}.
 \end{align*}
 
-For a coordinate free formulation using differential forms see \cite{Arnold76}.
+For a coordinate free formulation using differential forms see {cite}`Arnold76`.
 
 
 The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincar\'e surface of section ({\bf refer to LD chapter}), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
-Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions \cite{meiss_symplectic_1992} to name but a few.
+Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions {cite}`meiss_symplectic_1992` to name but a few.
 
 
 ## Coordinates, ($q, p)$, $(q_i , p_i)$, significance of canonically conjugate pairs
@@ -153,16 +153,16 @@ The canonical coordinates $(q, p)$ satisfy the following Poisson bracket relatio
 \{q_i, p_j\} = \delta_{ij} \; , \quad \text{for } i,j \in \{1,\ldots,N\}
 \label{eqn:pb_canonical}
 \end{equation}
-where $\delta_{ij}$ is the Kronecker delta. The pair $(q_i , p_i)$ is referred to as canonically conjugate. The relations above are referred to as the fundamental Poisson bracket equations and are preserved if and only if the coordinates are canonical. Further details on this can be found in the section 9.4 and 9.5 of the textbook~\cite{Goldstein2001}.
+where $\delta_{ij}$ is the Kronecker delta. The pair $(q_i , p_i)$ is referred to as canonically conjugate. The relations above are referred to as the fundamental Poisson bracket equations and are preserved if and only if the coordinates are canonical. Further details on this can be found in the section 9.4 and 9.5 of the textbook {cite}`Goldstein2001`.
 
-An important feature of canonically conjugate pairs lies in their role in defining Poincar\'e surfaces of section. A surface defined by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$, or $p_j = K$ with $\dot{p}_j \geq 0$ or $\dot{p}_j \leq 0$, admits a symplectic (Poincar\'e) return map, provided it is a surface of section in the sense of Birkhoff \cite[Chapter 5]{Birkhoff27}. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincar\'e surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.
+An important feature of canonically conjugate pairs lies in their role in defining Poincar\'e surfaces of section. A surface defined by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$, or $p_j = K$ with $\dot{p}_j \geq 0$ or $\dot{p}_j \leq 0$, admits a symplectic (Poincar\'e) return map, provided it is a surface of section in the sense of Birkhoff {cite}`Birkhoff27`. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincar\'e surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.
 
 
 
 ## Phase space slices, phase space transversal slice
 
 
-The phase space structures that govern the dynamics of a Hamiltonian system with $N$ degrees of freedom are of codimension-$1$ and codimension-$2$ in $2N$-dimensional phase space, in the case of an autonomous system codimension-$1$ and codimension-$2$ in the $2N-1$-dimensional energy surface \cite{Waalkens08} (refer to hyperbolic section). A Poincar\'e surface of section is a $(2N - 2)$-dimensional surface, for example one specified by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$,
+The phase space structures that govern the dynamics of a Hamiltonian system with $N$ degrees of freedom are of codimension-$1$ and codimension-$2$ in $2N$-dimensional phase space, in the case of an autonomous system codimension-$1$ and codimension-$2$ in the $2N-1$-dimensional energy surface {cite}`Waalkens08` (refer to hyperbolic section). A Poincar\'e surface of section is a $(2N - 2)$-dimensional surface, for example one specified by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$,
 where $j \in 1, 2, \ldots, N$ and $K$ is constant. For this Poincar\'e surface of section to be transverse to the flow, we require
 
 \begin{equation}
@@ -231,9 +231,14 @@ Hamiltonian systems with a bounded energy surface have a recurrence property dis
 
 We know from Eq. \eqref{eqn:energy_conserved} that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
 $$ E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\} $$
-If the energy surface is bounded (compact), then the Poincar\'e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar\'e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in \cite{Wiggins2003}.
+If the energy surface is bounded (compact), then the Poincar\'e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar\'e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.
 
 Combining Liouville's theorem and Poincar\'e recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincar\'e surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.
 
 
-As pointed out by Arnold \cite{Arnold76}, _"The following prediction is a paradoxical conclusion from the theorems of Poincar\'e and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that"_ a while  may be longer than the duration of the solar system's existence.
+As pointed out by Arnold {cite}`Arnold76`, _"The following prediction is a paradoxical conclusion from the theorems of Poincar\'e and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that"_ a while  may be longer than the duration of the solar system's existence.
+
+# References
+
+```{bibliography} bibliography/chapter1.bib
+```

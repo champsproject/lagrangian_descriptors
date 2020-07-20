@@ -3,7 +3,7 @@
 ## Configuration Space and Phase space
 \label{sec:Ham1}
 
-> The concepts in this section are adapted from the books \cite{lifshitz1978,wiggins2003applied}.
+> The concepts in this section are adapted from the books {cite}`lifshitz1978,wiggins2003applied`.
 
 * __Generalized Coordinates:__ The location of the particles comprising a system are described by a set of coordinates, known in Mechanics as generalized coordinates. The space, i.e. all possible values, described by these coordinates is referred to as {\em configuration space}.
 
@@ -31,7 +31,7 @@ that describe the dynamics of the system, where the dot symbol over a variable d
 
 ## Conserved quantities in phase space
 
-> The reader can find more details on Poisson brackets and their properties \\ in many books and lecture notes, see e.g. \cite{lifshitz1978,arnold1978,giorgilli2002}.
+> The reader can find more details on Poisson brackets and their properties \\ in many books and lecture notes, see e.g. {cite}`lifshitz1978,arnold1978,giorgilli2002`
 
 
 Given a Hamiltonian system, a function $A(\mathbf{q}, \mathbf{p},t)$ is called an \textbf{integral of motion}, \textbf{constant of motion} or \textbf{first integral} if it remains constant along a trajectory. Then, its total time derivative is zero along solutions $(\mathbf{q}(t),\mathbf{p}(t))$ of Hamilton's equations, that is
@@ -71,7 +71,7 @@ Another example of a quantity that is a constant of the motion is provided by ig
 \end{equation}
 and therefore the momentum $p_i$ is constant along trajectories, that is, $p_i(t) = p_i^0$.
 
-We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see \cite{arnold1978} and the contents in Section \ref{sec:Ham2}. Two constants of the motion $A$ and $B$ are said to be in \textit{involution} if they satisfy
+We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see {cite}`arnold1978` and the contents in Section \ref{sec:Ham2}. Two constants of the motion $A$ and $B$ are said to be in \textit{involution} if they satisfy
 
 \begin{equation}
     \{A,B\} = 0 \;.
@@ -80,7 +80,7 @@ We introduce next a concept which is important for the study of integrable Hamil
 
 ## Invariant Sets
 
-> The concepts here are adapted from \cite{wiggins2003applied}.
+> The concepts here are adapted from {cite}`wiggins2003applied`.
 
 Invariant sets play a fundamental role in how we understand the nature of phase space dynamics. We will give here a definition for this concept for an autonomous dynamical system in the continuous time setting:
 
@@ -106,3 +106,9 @@ Let $S \subset \mathbb{R}^{n}$ be a set of the phase space of the dynamical syst
 
 
 Invariant sets play an important role for the analysis of dynamical systems, as they allow us to break up the dynamics into smaller parts. For example the dynamics in invariant sets can be investigated separately from the rest of the system. As we will show in the following sections, some invariant sets, such as invariant manifolds, naturally divide the phase space of the system into regions of qualitatively distinct dynamical behavior that can be studied independently.
+
+
+# References
+
+```{bibliography} bibliography/chapter1.bib
+```
