@@ -232,7 +232,7 @@
 <h2>Configuration Space and Phase space<a class="headerlink" href="#configuration-space-and-phase-space" title="Permalink to this headline">¶</a></h2>
 <p>\label{sec:Ham1}</p>
 <blockquote>
-<div><p>The concepts in this section are adapted from the books <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id1">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id2">[Wig03]</a>.</p>
+<div><p>The concepts in this section are adapted from the books <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id1">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id2">[Wig03b]</a>.</p>
 </div></blockquote>
 <ul class="simple">
 <li><p><strong>Generalized Coordinates:</strong> The location of the particles comprising a system are described by a set of coordinates, known in Mechanics as generalized coordinates. The space, i.e. all possible values, described by these coordinates is referred to as {\em configuration space}.</p></li>
@@ -255,7 +255,7 @@
 <div class="section" id="conserved-quantities-in-phase-space">
 <h2>Conserved quantities in phase space<a class="headerlink" href="#conserved-quantities-in-phase-space" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id3">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id4">[Arn78]</a><a class="bibtex reference internal" href="chapter2_2.html#giorgilli2002" id="id5">[Gio02]</a></p>
+<div><p>The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id3">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id4">[Arn78]</a><a class="bibtex reference internal" href="chapter2_1.html#giorgilli2002" id="id5">[Gio02]</a></p>
 </div></blockquote>
 <p>Given a Hamiltonian system, a function <span class="math notranslate nohighlight">\(A(\mathbf{q}, \mathbf{p},t)\)</span> is called an \textbf{integral of motion}, \textbf{constant of motion} or \textbf{first integral} if it remains constant along a trajectory. Then, its total time derivative is zero along solutions <span class="math notranslate nohighlight">\((\mathbf{q}(t),\mathbf{p}(t))\)</span> of Hamilton’s equations, that is</p>
 <div class="math notranslate nohighlight" id="equation-integral">
@@ -266,13 +266,11 @@
 <span class="eqno">(3)<a class="headerlink" href="#equation-poisson" title="Permalink to this equation">¶</a></span>\[    \{A,H\} = \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right),\]</div>
 <p>\noindent
 is called the \textit{Poisson bracket} of the functions <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(H\)</span>. Therefore, Eq. <a class="reference internal" href="#equation-integral">(2)</a> is equivalent to:</p>
-<p>\begin{equation}
-\dfrac{dA}{dt} = \frac{\partial A}{\partial t} + {A,H} = 0. \label{eq:integral2}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-integral2">
+<span class="eqno">(4)<a class="headerlink" href="#equation-integral2" title="Permalink to this equation">¶</a></span>\[\dfrac{dA}{dt} = \frac{\partial A}{\partial t} + \{A,H\} = 0\]</div>
 <p>Notice that if the function <span class="math notranslate nohighlight">\(A\)</span> does not explicitly depend on time, that is <span class="math notranslate nohighlight">\(\partial A / \partial t = 0\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> is an integral of motion if and only if  <span class="math notranslate nohighlight">\(\{A, H\} = 0\)</span>. In other words, the Poisson bracket provides us with a useful test to see if a function of the phase space variables and time is conserved or not in a Hamiltonian system. In particular, if the Hamiltonian of the system is time-independent, that is <span class="math notranslate nohighlight">\(H = H(\mathbf{q},\mathbf{p})\)</span>, then we can deduce that:</p>
-<p>\begin{equation}
-\frac{dH}{dt} = \dfrac{\partial H}{\partial t} +  { H, H } = 0 + \sum\limits_{i = 1}^n \left( \dfrac{\partial H}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial H}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0 ;,
-\end{equation}</p>
+<div class="math notranslate nohighlight">
+\[    \frac{dH}{dt} = \dfrac{\partial H}{\partial t} +  \{ H, H \} = 0 + \sum\limits_{i = 1}^n \left( \dfrac{\partial H}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial H}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0 \;, \]</div>
 <p>which implies that the Hamiltonian itself is a constant of the motion. If the Hamiltonian represents the total energy of the physical system, this property is just the law of conservation of total energy along trajectories of an autonomous Hamiltonian system. The implicit time dependence of the position and momentum coordinates may increase/decrease the kinetic energy at the expense/gain of the potential energy, but the sum of kinetic and potential energy remains constant.</p>
 <p>Another example of a quantity that is a constant of the motion is provided by ignorable or cyclic coordinates. A generalized coordinate <span class="math notranslate nohighlight">\(q_i\)</span> is said to be \textit{ignorable} or \textit{cyclic} if it does not appear in the expression of the Hamiltonian function. By Hamilton’s equations in Eq. <a class="reference internal" href="#equation-hamiltoneq">(1)</a>, this implies that</p>
 <p>\begin{equation}
@@ -281,25 +279,25 @@ is called the \textit{Poisson bracket} of the functions <span class="math notran
 <p>and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</span> is constant along trajectories, that is, <span class="math notranslate nohighlight">\(p_i(t) = p_i^0\)</span>.</p>
 <p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see <a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id6">[Arn78]</a> and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy</p>
 <div class="math notranslate nohighlight" id="equation-involution">
-<span class="eqno">(4)<a class="headerlink" href="#equation-involution" title="Permalink to this equation">¶</a></span>\[\{A,B\} = 0 \;.\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-involution" title="Permalink to this equation">¶</a></span>\[\{A,B\} = 0 \;.\]</div>
 </div>
 <div class="section" id="invariant-sets">
 <h2>Invariant Sets<a class="headerlink" href="#invariant-sets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The concepts here are adapted from <a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id7">[Wig03]</a>.</p>
+<div><p>The concepts here are adapted from <a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id7">[Wig03b]</a>.</p>
 </div></blockquote>
 <p>Invariant sets play a fundamental role in how we understand the nature of phase space dynamics. We will give here a definition for this concept for an autonomous dynamical system in the continuous time setting:</p>
 <div class="math notranslate nohighlight" id="equation-cont-ds">
-<span class="eqno">(5)<a class="headerlink" href="#equation-cont-ds" title="Permalink to this equation">¶</a></span>\[\dot{x} = f(x) \;, \quad x \in \mathbb{R}^{n}\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-cont-ds" title="Permalink to this equation">¶</a></span>\[\dot{x} = f(x) \;, \quad x \in \mathbb{R}^{n}\]</div>
 <p>and also for a map (discrete time dynamics):</p>
 <div class="math notranslate nohighlight" id="equation-disc-ds">
-<span class="eqno">(6)<a class="headerlink" href="#equation-disc-ds" title="Permalink to this equation">¶</a></span>\[x \mapsto g(x) \;, \quad x\in \mathbb{R}^{n}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-disc-ds" title="Permalink to this equation">¶</a></span>\[x \mapsto g(x) \;, \quad x\in \mathbb{R}^{n}\]</div>
 <p><strong>Definition</strong>
 \label{def:invset}
 Let <span class="math notranslate nohighlight">\(S \subset \mathbb{R}^{n}\)</span> be a set of the phase space of the dynamical system, then</p>
 <ul class="simple">
-<li><p><strong>Continuous time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is invariant under the flow generated by Eq. <a class="reference internal" href="#equation-cont-ds">(5)</a> if for any point <span class="math notranslate nohighlight">\(x_{0} \in S\)</span> we have that  <span class="math notranslate nohighlight">\(x(t;x_{0}) \in S\)</span> for all <span class="math notranslate nohighlight">\(t \in I\)</span>, where <span class="math notranslate nohighlight">\(x(t;x_{0})\)</span> denotes the solution of Eq. <a class="reference internal" href="#equation-cont-ds">(5)</a> with initial condition <span class="math notranslate nohighlight">\(x(0) = x_{0}\)</span>, and <span class="math notranslate nohighlight">\(I\)</span> is the time interval of existence of the solution.</p></li>
-<li><p><strong>Discrete time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is said to be invariant under the map in Eq. <a class="reference internal" href="#equation-disc-ds">(6)</a> if for any <span class="math notranslate nohighlight">\(x_{0}\in S\)</span>, the orbit (trajectory) associated to that initial condition remains inside the set for all iterates of the map, that is <span class="math notranslate nohighlight">\(g^{n}(x_{0})\in S\)</span>, for all <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><strong>Continuous time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is invariant under the flow generated by Eq. <a class="reference internal" href="#equation-cont-ds">(6)</a> if for any point <span class="math notranslate nohighlight">\(x_{0} \in S\)</span> we have that  <span class="math notranslate nohighlight">\(x(t;x_{0}) \in S\)</span> for all <span class="math notranslate nohighlight">\(t \in I\)</span>, where <span class="math notranslate nohighlight">\(x(t;x_{0})\)</span> denotes the solution of Eq. <a class="reference internal" href="#equation-cont-ds">(6)</a> with initial condition <span class="math notranslate nohighlight">\(x(0) = x_{0}\)</span>, and <span class="math notranslate nohighlight">\(I\)</span> is the time interval of existence of the solution.</p></li>
+<li><p><strong>Discrete time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is said to be invariant under the map in Eq. <a class="reference internal" href="#equation-disc-ds">(7)</a> if for any <span class="math notranslate nohighlight">\(x_{0}\in S\)</span>, the orbit (trajectory) associated to that initial condition remains inside the set for all iterates of the map, that is <span class="math notranslate nohighlight">\(g^{n}(x_{0})\in S\)</span>, for all <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
 </ul>
 <p>Invariant sets play an important role for the analysis of dynamical systems, as they allow us to break up the dynamics into smaller parts. For example the dynamics in invariant sets can be investigated separately from the rest of the system. As we will show in the following sections, some invariant sets, such as invariant manifolds, naturally divide the phase space of the system into regions of qualitatively distinct dynamical behavior that can be studied independently.</p>
 </div>
@@ -307,13 +305,34 @@ Let <span class="math notranslate nohighlight">\(S \subset \mathbb{R}^{n}\)</spa
 <div class="section" id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
 <p id="bibtex-bibliography-content/chapter1_1-0"><dl class="citation">
+<dt class="bibtex label" id="arnold76"><span class="brackets">Arn76</span></dt>
+<dd><p>V. I. Arnold. <em>Les méthodes mathématiques de la mécanique classique</em>. Nauka, Moscow, Éditions Mir, 1976.</p>
+</dd>
 <dt class="bibtex label" id="arnold1978"><span class="brackets">Arn78</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id6">2</a>)</span></dt>
 <dd><p>V. I. Arnold. <em>Mathematical methods of Classical Mechanics</em>. Volume. Springer-Verlag, 1978.</p>
+</dd>
+<dt class="bibtex label" id="birkhoff27"><span class="brackets">Bir27</span></dt>
+<dd><p>G. D. Birkhoff. <em>Dynamical Systems</em>. AMS, 1927.</p>
+</dd>
+<dt class="bibtex label" id="goldstein2001"><span class="brackets">GPS01</span></dt>
+<dd><p>Herbert Goldstein, Charles Poole, and John Safko. <em>Classical Mechanics, 3rd edition</em>. Addison-Wesley, 2001.</p>
 </dd>
 <dt class="bibtex label" id="lifshitz1978"><span class="brackets">LL82</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
 <dd><p>L. D. Landau and E.M. Lifshitz. <em>Mechanics</em>. Volume 1. Elsevier, 1982.</p>
 </dd>
-<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>)</span></dt>
+<dt class="bibtex label" id="meiss-symplectic-1992"><span class="brackets">Mei92</span></dt>
+<dd><p>J. D. Meiss. Symplectic maps, variational principles, and transport. <em>Reviews of Modern Physics</em>, 64(3):795–848, July 1992. <a class="reference external" href="https://doi.org/10.1103/RevModPhys.64.795">doi:10.1103/RevModPhys.64.795</a>.</p>
+</dd>
+<dt class="bibtex label" id="naik-finding-2019"><span class="brackets">NGGW19</span></dt>
+<dd><p>Shibabrat Naik, Víctor J. García-Garrido, and Stephen Wiggins. Finding NHIM: Identifying high dimensional phase space structures in reaction dynamics using Lagrangian descriptors. <em>Communications in Nonlinear Science and Numerical Simulation</em>, 79:104907, December 2019. <a class="reference external" href="https://doi.org/10.1016/j.cnsns.2019.104907">doi:10.1016/j.cnsns.2019.104907</a>.</p>
+</dd>
+<dt class="bibtex label" id="waalkens08"><span class="brackets">WSW08</span></dt>
+<dd><p>H. Waalkens, R. Schubert, and S. Wiggins. Wigner’s dynamical transition state theory in phase space: classical and quantum. <em>Nonlinearity</em>, 2008. <a class="reference external" href="https://doi.org/10.1088/0951-7715/21/1/R01">doi:10.1088/0951-7715/21/1/R01</a>.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2003"><span class="brackets">Wig03a</span></dt>
+<dd><p>S. Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Springer, New York, 2nd ed edition, 2003. ISBN 978-0-387-00177-7.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03b</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>)</span></dt>
 <dd><p>Stephen Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Volume 1. Springer Science &amp; Business Media, 2003.</p>
 </dd>
 </dl>
