@@ -244,15 +244,13 @@
 <div class="section" id="hamilton-s-equations">
 <h2>Hamilton’s Equations<a class="headerlink" href="#hamilton-s-equations" title="Permalink to this headline">¶</a></h2>
 <p>Consider an <span class="math notranslate nohighlight">\(n\)</span> DoF system described by the scalar function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p},t)\)</span>, known as the Hamiltonian of the system, which smoothly depends on the configuration space coordinates <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1,\ldots,q_n) \in \mathbb{R}^{n}\)</span>, their canonically conjugate momenta <span class="math notranslate nohighlight">\(\mathbf{p} = (p_1,\ldots,p_n) \in \mathbb{R}^{n}\)</span> and time. Hamilton’s equations are a set of <span class="math notranslate nohighlight">\(2n\)</span> first-order differential equations:</p>
-<p>\begin{equation}
-\begin{cases}
-\dot{q}_i = \dfrac{\partial H}{\partial p_i} \[.4cm]
-\dot{p}_i = -\dfrac{\partial H}{\partial q_i}
+<div class="math notranslate nohighlight" id="equation-hamiltoneq">
+<span class="eqno">(1)<a class="headerlink" href="#equation-hamiltoneq" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{cases}
+\dot{q}_i = \dfrac{\partial H}{\partial p_i} \\[.4cm]
+\dot{p}_i = -\dfrac{\partial H}{\partial q_i} 
 \end{cases}
-; , \qquad ; i = 1, 2, \ldots, n,
-\label{eq:hamiltoneq}
-\end{equation}</p>
-<p>that describe the dynamics of the system, where the dot symbol over a variable denotes the total time derivative, that is <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. When the Hamiltonian function does not depend on time explicitly, the dynamical system it generates by means of Eq. \eqref{eq:hamiltoneq} is said to be <strong>autonomous</strong>.</p>
+\; , \qquad \; i = 1, 2, \ldots, n,\end{split}\]</div>
+<p>that describe the dynamics of the system, where the dot symbol over a variable denotes the total time derivative, that is <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. When the Hamiltonian function does not depend on time explicitly, the dynamical system it generates by means of Eq. <a class="reference internal" href="#equation-hamiltoneq">(1)</a> is said to be <strong>autonomous</strong>.</p>
 </div>
 <div class="section" id="conserved-quantities-in-phase-space">
 <h2>Conserved quantities in phase space<a class="headerlink" href="#conserved-quantities-in-phase-space" title="Permalink to this headline">¶</a></h2>
@@ -260,18 +258,14 @@
 <div><p>The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id3">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id4">[Arn78]</a><a class="bibtex reference internal" href="chapter2_2.html#giorgilli2002" id="id5">[Gio02]</a></p>
 </div></blockquote>
 <p>Given a Hamiltonian system, a function <span class="math notranslate nohighlight">\(A(\mathbf{q}, \mathbf{p},t)\)</span> is called an \textbf{integral of motion}, \textbf{constant of motion} or \textbf{first integral} if it remains constant along a trajectory. Then, its total time derivative is zero along solutions <span class="math notranslate nohighlight">\((\mathbf{q}(t),\mathbf{p}(t))\)</span> of Hamilton’s equations, that is</p>
-<p>\begin{equation}
-\dfrac{dA}{dt} = \dfrac{\partial A}{\partial t} + \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i} \dfrac{d q_i}{dt} + \dfrac{\partial A}{\partial p_i} \dfrac{d p_i}{dt} \right)  = \dfrac{\partial A}{\partial t} +
-\sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0.
-\label{eq:integral}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-integral">
+<span class="eqno">(2)<a class="headerlink" href="#equation-integral" title="Permalink to this equation">¶</a></span>\[    \dfrac{dA}{dt} = \dfrac{\partial A}{\partial t} + \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i} \dfrac{d q_i}{dt} + \dfrac{\partial A}{\partial p_i} \dfrac{d p_i}{dt} \right)  = \dfrac{\partial A}{\partial t} + 
+    \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0.\]</div>
 <p>The quantity</p>
-<p>\begin{equation}
-{A,H} = \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right),
-\label{eq:poisson}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-poisson">
+<span class="eqno">(3)<a class="headerlink" href="#equation-poisson" title="Permalink to this equation">¶</a></span>\[    \{A,H\} = \sum\limits_{i = 1}^n \left( \dfrac{\partial A}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial A}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right),\]</div>
 <p>\noindent
-is called the \textit{Poisson bracket} of the functions <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(H\)</span>. Therefore, Eq. \eqref{eq:integral} is equivalent to:</p>
+is called the \textit{Poisson bracket} of the functions <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(H\)</span>. Therefore, Eq. <a class="reference internal" href="#equation-integral">(2)</a> is equivalent to:</p>
 <p>\begin{equation}
 \dfrac{dA}{dt} = \frac{\partial A}{\partial t} + {A,H} = 0. \label{eq:integral2}
 \end{equation}</p>
@@ -280,16 +274,14 @@ is called the \textit{Poisson bracket} of the functions <span class="math notran
 \frac{dH}{dt} = \dfrac{\partial H}{\partial t} +  { H, H } = 0 + \sum\limits_{i = 1}^n \left( \dfrac{\partial H}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial H}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0 ;,
 \end{equation}</p>
 <p>which implies that the Hamiltonian itself is a constant of the motion. If the Hamiltonian represents the total energy of the physical system, this property is just the law of conservation of total energy along trajectories of an autonomous Hamiltonian system. The implicit time dependence of the position and momentum coordinates may increase/decrease the kinetic energy at the expense/gain of the potential energy, but the sum of kinetic and potential energy remains constant.</p>
-<p>Another example of a quantity that is a constant of the motion is provided by ignorable or cyclic coordinates. A generalized coordinate <span class="math notranslate nohighlight">\(q_i\)</span> is said to be \textit{ignorable} or \textit{cyclic} if it does not appear in the expression of the Hamiltonian function. By Hamilton’s equations in Eq. \eqref{eq:hamiltoneq}, this implies that</p>
+<p>Another example of a quantity that is a constant of the motion is provided by ignorable or cyclic coordinates. A generalized coordinate <span class="math notranslate nohighlight">\(q_i\)</span> is said to be \textit{ignorable} or \textit{cyclic} if it does not appear in the expression of the Hamiltonian function. By Hamilton’s equations in Eq. <a class="reference internal" href="#equation-hamiltoneq">(1)</a>, this implies that</p>
 <p>\begin{equation}
 \dot{p}_i = - \dfrac{\partial H}{\partial q_i} = 0
-\end{equation}
-and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</span> is constant along trajectories, that is, <span class="math notranslate nohighlight">\(p_i(t) = p_i^0\)</span>.</p>
-<p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see <a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id6">[Arn78]</a> and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy</p>
-<p>\begin{equation}
-{A,B} = 0 ;.
-\label{eq:involution}
 \end{equation}</p>
+<p>and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</span> is constant along trajectories, that is, <span class="math notranslate nohighlight">\(p_i(t) = p_i^0\)</span>.</p>
+<p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see <a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id6">[Arn78]</a> and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy</p>
+<div class="math notranslate nohighlight" id="equation-involution">
+<span class="eqno">(4)<a class="headerlink" href="#equation-involution" title="Permalink to this equation">¶</a></span>\[\{A,B\} = 0 \;.\]</div>
 </div>
 <div class="section" id="invariant-sets">
 <h2>Invariant Sets<a class="headerlink" href="#invariant-sets" title="Permalink to this headline">¶</a></h2>
@@ -297,21 +289,17 @@ and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</s
 <div><p>The concepts here are adapted from <a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id7">[Wig03]</a>.</p>
 </div></blockquote>
 <p>Invariant sets play a fundamental role in how we understand the nature of phase space dynamics. We will give here a definition for this concept for an autonomous dynamical system in the continuous time setting:</p>
-<p>\begin{equation}
-\dot{x} = f(x) ;, \quad x \in \mathbb{R}^{n}
-\label{eq:cont_ds}
-\end{equation}
-and also for a map (discrete time dynamics):
-\begin{equation}
-x \mapsto g(x) ;, \quad x\in \mathbb{R}^{n}
-\label{eq:disc_ds}
-\end{equation}</p>
+<div class="math notranslate nohighlight" id="equation-cont-ds">
+<span class="eqno">(5)<a class="headerlink" href="#equation-cont-ds" title="Permalink to this equation">¶</a></span>\[\dot{x} = f(x) \;, \quad x \in \mathbb{R}^{n}\]</div>
+<p>and also for a map (discrete time dynamics):</p>
+<div class="math notranslate nohighlight" id="equation-disc-ds">
+<span class="eqno">(6)<a class="headerlink" href="#equation-disc-ds" title="Permalink to this equation">¶</a></span>\[x \mapsto g(x) \;, \quad x\in \mathbb{R}^{n}\]</div>
 <p><strong>Definition</strong>
 \label{def:invset}
 Let <span class="math notranslate nohighlight">\(S \subset \mathbb{R}^{n}\)</span> be a set of the phase space of the dynamical system, then</p>
 <ul class="simple">
-<li><p><strong>Continuous time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is invariant under the flow generated by Eq. \eqref{eq:cont_ds} if for any point <span class="math notranslate nohighlight">\(x_{0} \in S\)</span> we have that  <span class="math notranslate nohighlight">\(x(t;x_{0}) \in S\)</span> for all <span class="math notranslate nohighlight">\(t \in I\)</span>, where <span class="math notranslate nohighlight">\(x(t;x_{0})\)</span> denotes the solution of Eq. \eqref{eq:cont_ds} with initial condition <span class="math notranslate nohighlight">\(x(0) = x_{0}\)</span>, and <span class="math notranslate nohighlight">\(I\)</span> is the time interval of existence of the solution.</p></li>
-<li><p><strong>Discrete time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is said to be invariant under the map in Eq. \eqref{eq:disc_ds} if for any <span class="math notranslate nohighlight">\(x_{0}\in S\)</span>, the orbit (trajectory) associated to that initial condition remains inside the set for all iterates of the map, that is <span class="math notranslate nohighlight">\(g^{n}(x_{0})\in S\)</span>, for all <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><strong>Continuous time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is invariant under the flow generated by Eq. <a class="reference internal" href="#equation-cont-ds">(5)</a> if for any point <span class="math notranslate nohighlight">\(x_{0} \in S\)</span> we have that  <span class="math notranslate nohighlight">\(x(t;x_{0}) \in S\)</span> for all <span class="math notranslate nohighlight">\(t \in I\)</span>, where <span class="math notranslate nohighlight">\(x(t;x_{0})\)</span> denotes the solution of Eq. <a class="reference internal" href="#equation-cont-ds">(5)</a> with initial condition <span class="math notranslate nohighlight">\(x(0) = x_{0}\)</span>, and <span class="math notranslate nohighlight">\(I\)</span> is the time interval of existence of the solution.</p></li>
+<li><p><strong>Discrete time:</strong> <span class="math notranslate nohighlight">\(S\)</span> is said to be invariant under the map in Eq. <a class="reference internal" href="#equation-disc-ds">(6)</a> if for any <span class="math notranslate nohighlight">\(x_{0}\in S\)</span>, the orbit (trajectory) associated to that initial condition remains inside the set for all iterates of the map, that is <span class="math notranslate nohighlight">\(g^{n}(x_{0})\in S\)</span>, for all <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
 </ul>
 <p>Invariant sets play an important role for the analysis of dynamical systems, as they allow us to break up the dynamics into smaller parts. For example the dynamics in invariant sets can be investigated separately from the rest of the system. As we will show in the following sections, some invariant sets, such as invariant manifolds, naturally divide the phase space of the system into regions of qualitatively distinct dynamical behavior that can be studied independently.</p>
 </div>

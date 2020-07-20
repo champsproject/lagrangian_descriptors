@@ -5,24 +5,40 @@
 
 A Hamiltonian system with $N$ degrees of freedom is described by the Hamiltonian function $H(\mathbf{q},\mathbf{p},t)$, which depends on the generalized coordinates $\mathbf{q} = (q_1,\ldots,q_N)$, their canonically conjugate momenta $\mathbf{p} = (p_1,\ldots,p_N)$, and time. This scalar function gives rise to a $2N$-dimensional dynamical system by means of Hamilton's equations of motion
 
-\begin{equation}
-\dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} \;, \quad \text{for} \; i = 1, 2, \ldots, N. \label{eqn:hamiltons_eom}
-\end{equation}
+```{math}
+---
+label: hamiltons_eom
+---
+\dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} \;, \quad \text{for} \; i = 1, 2, \ldots, N.
+```
+
 where the dot symbol represents the total time derivative, that is,  $\cdot \equiv d/dt$. A state of the system is represented by a point in the $2N$-dimensional _phase space_, Any solution of this system is a trajectory of the form
 
-\begin{equation}
+```{math}
+---
+label: solution
+---
 \mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) \,, 
-\label{eqn:solution}
-\end{equation}
-starting at the initial condition 
-\begin{equation}
-\mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) \, . \label{eqn:init_condition}
-\end{equation}
+```
 
-We will assume that $H$ is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is $H(\mathbf{q},\mathbf{p})$, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. \eqref{eqn:hamiltons_eom} form a one-parameter family of diffeomorphisms, known as a _Hamiltonian flow_, given by $\{\phi_t\}_{t\in\mathbb{R}}$ so that
-\begin{equation}
-\phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) \;. \label{eqn:flow}
-\end{equation}
+starting at the initial condition 
+
+```{math}
+---
+label: init_condition
+---
+\mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) \, .
+```
+
+We will assume that $H$ is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is $H(\mathbf{q},\mathbf{p})$, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. {eq}`hamiltons_eom` form a one-parameter family of diffeomorphisms, known as a _Hamiltonian flow_, given by $\{\phi_t\}_{t\in\mathbb{R}}$ so that
+
+```{math}
+---
+label: flow
+---
+\phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) \;.
+```
+
 The family is a group because it satisfies the properties
 
 * $\phi_0=Id$,
@@ -34,17 +50,22 @@ The family is a group because it satisfies the properties
 
 A linear transformation $C$ is symplectic if it satisfies
 
+```{math}
+---
+label: symp_cond
+---
 \begin{equation}
 C \mathcal{J} C^T = \mathcal{J} = 
     \begin{pmatrix}
     0_N & I_N \\
     -I_N & 0_N
     \end{pmatrix}
-\label{eqn:symp_cond}
 \end{equation}
+```
 
-where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, and $I_N$ denotes the $N \times N$ identity matrix. The symplectic transformation $C$ maps the original coordinates $(x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})$ to the coordinates $(q_1, \ldots, q_N, p_1, \ldots, p_N)$ and Hamilton's equations in Eq, \eqref{eqn:hamiltons_eom} as follows:
+where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, and $I_N$ denotes the $N \times N$ identity matrix. The symplectic transformation $C$ maps the original coordinates $(x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})$ to the coordinates $(q_1, \ldots, q_N, p_1, \ldots, p_N)$ and Hamilton's equations in Eq, {eq}`hamiltons_eom` as follows:
 
+```{math}
 \begin{equation}
     \begin{bmatrix}
     q_1 \\
@@ -82,9 +103,11 @@ where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, a
     \dot{p}_{x_N}
     \end{bmatrix}
 \end{equation}
+```
 
-From \eqref{eqn:symp_cond} we find the inverse transformation $C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}$, such that
+From {eq}`symp_cond` we find the inverse transformation $C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}$, such that
 
+```{math}
 \begin{equation}
 \begin{bmatrix}
 \dot{x}_1 \\
@@ -104,8 +127,9 @@ From \eqref{eqn:symp_cond} we find the inverse transformation $C^{-1}=\mathcal{J
 \dot{p}_N
 \end{bmatrix}
 \end{equation}
+```
 
-Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion \eqref{eqn:hamiltons_eom}, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.
+Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion {eq}`hamiltons_eom`, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.
 
 In Ref {cite}`naik_finding_2019`, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems. 
 
@@ -129,6 +153,7 @@ Following {cite}`Wiggins2003`, a  symplectic transformations is a sufficiently s
  \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
 \label{eqn:symplectic}
 \end{equation}
+
 for any $x,u,v\in \mathbb{R}^{2N}$.
 
 Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hamiltonian $H(q,p)$ into the new Hamiltonian $G(f(q,p))$, that satisfies $Df(q,p)DH = DG$. The equations of motion \eqref{eqn:poisson_eqn} then remain
