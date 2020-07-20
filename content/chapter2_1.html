@@ -190,19 +190,29 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#" class="nav-link">The Hyperbolic setting</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
             <a href="#one-degree-of-freedom-hyperbolic-equilibrium-point" class="nav-link">One Degree-of-Freedom  Hyperbolic Equilibrium Point</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#two-degrees-of-freedom-and-the-hyperbolic-periodic-orbit" class="nav-link">Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#three-and-more-degrees-of-freedom-and-nhims" class="nav-link">Three and More Degrees-of-Freedom and NHIMs</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#the-lyapunov-subcenter-theorem" class="nav-link">The Lyapunov Subcenter Theorem</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#references" class="nav-link">References</a>
         </li>
     
     </ul>
@@ -220,7 +230,7 @@
 <h1>The Hyperbolic setting<a class="headerlink" href="#the-hyperbolic-setting" title="Permalink to this headline">¶</a></h1>
 <p>\label{sec:hyper}</p>
 <p>Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be ``crossed’’ by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.</p>
-<p>Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable \cite{guillemin2010differential}.  <em>Normally hyperbolic invariant manifolds</em> (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.</p>
+<p>Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable <a class="bibtex reference internal" href="chapter2_2.html#guillemin2010differential" id="id1">[GP10]</a>.  <em>Normally hyperbolic invariant manifolds</em> (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.</p>
 <p>Unstable periodic orbits play an important role in our understanding of the dynamics of Hamiltonian systems. Periodic orbits have constant energy, as well as their stable and unstable manifolds, and are contained in the energy surface that is of one less dimension than the dimension of the phase space, i.e. the energy surface has codimension one. In general, the codimension of a surface contained in phase space is the dimension of phase space minus the dimension of the surface. If the  codimension is one then it may divide the ambient space, and therefore  act as a barrier to transport in the space.</p>
 <p>In two degree-of-freedom Hamiltonian systems a one dimensional unstable periodic orbits has two dimensional stable and unstable manifolds that can <em>“divide”</em> the energy surface and can be used to create invariant regions (<em>“lobes”</em>)  that transport throughout the phase space, while respecting the <em>“barrier nature”</em> of invariant manifolds.</p>
 <p>For more than two degrees-of-freedom periodic orbits and their stable and unstable manifolds do not have sufficient dimension (or, equivalently, their codimension is greater than one) to form barriers to transport or lobes.</p>
@@ -270,14 +280,14 @@
 <p>\caption{Dimension count of phase space structures. Codimension of certain objects appears in parentheses.}
 \label{tab:dimensions}
 \end{table}</p>
-<p>NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they <em>may</em> have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom \cite{wiggins1990geometry}.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are \cite{Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013}, but we will begin with an elementary description.</p>
+<p>NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they <em>may</em> have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom <a class="bibtex reference internal" href="chapter2_2.html#wiggins1990geometry" id="id2">[Wig90]</a>.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are <a class="bibtex reference internal" href="chapter2_2.html#wigginsbook1994" id="id3">[Wig94]</a><a class="bibtex reference internal" href="chapter2_2.html#wiggins2001" id="id4">[WWJaffeU01]</a><a class="bibtex reference internal" href="chapter2_2.html#wigginsbook2004" id="id5">[Wig04]</a><a class="bibtex reference internal" href="chapter2_2.html#eldering2013" id="id6">[Eld13]</a>, but we will begin with an elementary description.</p>
 <p>In understanding what is meant by <em>“normally hyperbolic invariant manifold”</em> we start by explaining the last word in the phrase and working towards the first.</p>
 <ul class="simple">
 <li><p>A <em>manifold</em> is the natural generalization of a differentiable curve or surface.</p></li>
 <li><p>A set in the constant energy level set is called <em>invariant</em> under the flow if any trajectory in the set is contained in the set at all times (link to definition in previous chapter).</p></li>
-<li><p><em>Normal hyperbolicity</em> means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds \cite{Fenichel1971}.</p></li>
+<li><p><em>Normal hyperbolicity</em> means that locally under the linearized dynamics, the growth and decay rates in the normal directions to the manifold dominate the growth and decay rates tangent to it. These growth rates are quantified by eigenvalues of the matrix associated with the linearization for equilibria, Floquet exponents for the monodromy matrix associated with periodic orbits, and generalized Lyapunov exponents for more general invariant manifolds <a class="bibtex reference internal" href="chapter2_2.html#fenichel1971" id="id7">[Fen71]</a>.</p></li>
 </ul>
-<p>Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works \cite{Wiggins2001,Wiggins2016}.</p>
+<p>Now we consider a number of simple examples in order to explain in more detail these concepts. The following exposition is based on the works <a class="bibtex reference internal" href="chapter2_2.html#wiggins2001" id="id8">[WWJaffeU01]</a><a class="bibtex reference internal" href="chapter2_2.html#wiggins2016" id="id9">[Wig16b]</a>.</p>
 <p>In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy <span class="math notranslate nohighlight">\((H = K + V)\)</span>.</p>
 <div class="section" id="one-degree-of-freedom-hyperbolic-equilibrium-point">
 <h2>One Degree-of-Freedom  Hyperbolic Equilibrium Point<a class="headerlink" href="#one-degree-of-freedom-hyperbolic-equilibrium-point" title="Permalink to this headline">¶</a></h2>
@@ -361,17 +371,17 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\
 \dot{p_2} &amp;=&amp; -\frac{\partial H}{ \partial q_2} = -\omega q_2.
 \end{eqnarray}</p>
 <p>The motion in the <span class="math notranslate nohighlight">\((q_1,p_1)\)</span> plane is independent of <span class="math notranslate nohighlight">\((q_2,p_2)\)</span> and vice versa, the degrees of freedom are said to be uncoupled. As we mentioned before, the energy in each degree of freedom is constant and therefore we can write it as <span class="math notranslate nohighlight">\(E=E_1+E_2\)</span>. The motion in the <span class="math notranslate nohighlight">\(q_1\)</span> direction is the same as that in the previous case with 1 degree of freedom. The motion in  <span class="math notranslate nohighlight">\(q_2\)</span> corresponds to a harmonic oscillation.</p>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="id10">
 <img alt="../_images/Vq1.jpg" src="../_images/Vq1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">(a) Potential $V_1(q_1) $</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">(a) Potential $V_1(q_1) $</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="vq2">
 <img alt="../_images/Vq2.jpg" src="../_images/Vq2.jpg" />
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">(b) Potential <span class="math notranslate nohighlight">\(V_2(q_2)\)</span></span><a class="headerlink" href="#vq2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id11">
 <img alt="../_images/q1p1.jpg" src="../_images/q1p1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">(c) Plane <span class="math notranslate nohighlight">\(q_1\)</span>–<span class="math notranslate nohighlight">\(p_1\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">(c) Plane <span class="math notranslate nohighlight">\(q_1\)</span>–<span class="math notranslate nohighlight">\(p_1\)</span></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="q2p2">
 <img alt="../_images/q2p2.jpg" src="../_images/q2p2.jpg" />
@@ -406,29 +416,29 @@ where <span class="math notranslate nohighlight">\(\lambda, \omega_i &gt;0\)</sp
 \dot{q_i} &amp;=&amp; \frac{\partial H}{ \partial p_i} = \omega_i p_i  \nonumber  \
 \dot{p_i} &amp;=&amp; -\frac{\partial H}{ \partial q_i} = -\omega_i q_i, \quad i = 2,…,n.
 \end{eqnarray}</p>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id27">
 <img alt="../_images/Vq1.jpg" src="../_images/Vq1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">(a) Potential $V_1(q_1) $</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">(a) Potential $V_1(q_1) $</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id28">
 <img alt="../_images/Vq2.jpg" src="../_images/Vq2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">(b) Potential <span class="math notranslate nohighlight">\(V_2(q_2)\)</span></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">(b) Potential <span class="math notranslate nohighlight">\(V_2(q_2)\)</span></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id29">
 <img alt="../_images/Vqn.jpg" src="../_images/Vqn.jpg" />
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">(c) Potential <span class="math notranslate nohighlight">\(V_n(q_n)\)</span></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">(c) Potential <span class="math notranslate nohighlight">\(V_n(q_n)\)</span></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id6">
+<div class="figure align-default" id="id30">
 <img alt="../_images/q1p1.jpg" src="../_images/q1p1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">(d) Plane <span class="math notranslate nohighlight">\(q_1\)</span>–<span class="math notranslate nohighlight">\(p_1\)</span></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">(d) Plane <span class="math notranslate nohighlight">\(q_1\)</span>–<span class="math notranslate nohighlight">\(p_1\)</span></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id31">
 <img alt="../_images/q2p2.jpg" src="../_images/q2p2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">(e) Plane <span class="math notranslate nohighlight">\(q_2\)</span>–<span class="math notranslate nohighlight">\(p_2\)</span></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">(e) Plane <span class="math notranslate nohighlight">\(q_2\)</span>–<span class="math notranslate nohighlight">\(p_2\)</span></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-default" id="id8">
+<div class="figure align-default" id="id32">
 <img alt="../_images/qnpn.jpg" src="../_images/qnpn.jpg" />
-<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">(f) Plane <span class="math notranslate nohighlight">\(q_n\)</span>–<span class="math notranslate nohighlight">\(p_n\)</span>.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">(f) Plane <span class="math notranslate nohighlight">\(q_n\)</span>–<span class="math notranslate nohighlight">\(p_n\)</span>.</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
 <p>The NHIM and its stable and unstable manifolds can be found analogously to the  2 degree of freedom system case. If <span class="math notranslate nohighlight">\(q_1=p_1=0\)</span> then <span class="math notranslate nohighlight">\(\dot{q_1}=0\)</span> and <span class="math notranslate nohighlight">\(\dot{p_1}=0\)</span> and the system consists of <span class="math notranslate nohighlight">\(n-1\)</span> harmonic oscillators bounded by the fixed total energy. For <span class="math notranslate nohighlight">\(E=0\)</span>, <span class="math notranslate nohighlight">\(q_1,p_1=0\)</span> is an unstable equilibrium point and for <span class="math notranslate nohighlight">\(E&gt;0\)</span>, an invariant set that can be shown to be a sphere. The dimension of the sphere depends on the number of degrees of freedom with non-zero energy. This sphere is a manifold, it is invariant and normally hyperbolic, hence a NHIM. In general a NHIM does not have to be a sphere. If all degrees of freedom have non-zero energy, except for <span class="math notranslate nohighlight">\(q_1,p_1=0\)</span>, the NHIM is <span class="math notranslate nohighlight">\(2n-3\)</span> dimensional and its stable and unstable manifolds are dynamical barriers on the energy level set according to Tab. \ref{tab:dimensions}.</p>
 <p>\begin{equation}
@@ -442,13 +452,13 @@ where <span class="math notranslate nohighlight">\(\lambda, \omega_i &gt;0\)</sp
 <p>\begin{equation}
 \displaystyle{ W^s(\Gamma)= \lbrace  (q_1,q_2,…,q_n, p_1,p_2,…,p_n )  |    \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i)    = E &gt; 0,  q_1 = - p_1  \rbrace }.
 \end{equation}</p>
-<p>The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel \cite{Fenichel1971,Fenichel1974,Fenichel1977} and more recent works \cite{Wigginsbook1994,Eldering2013}.</p>
+<p>The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel <a class="bibtex reference internal" href="chapter2_2.html#fenichel1971" id="id12">[Fen71]</a><a class="bibtex reference internal" href="chapter2_2.html#fenichel1974" id="id13">[Fen74]</a><a class="bibtex reference internal" href="chapter2_2.html#fenichel1977" id="id14">[Fen77]</a> and more recent works <a class="bibtex reference internal" href="chapter2_2.html#wigginsbook1994" id="id15">[Wig94]</a><a class="bibtex reference internal" href="chapter2_2.html#eldering2013" id="id16">[Eld13]</a>.</p>
 <p>It is important to note that the  basic theory of NHIMs does not tell us how to find NHIMs in specific systems. It only characterizes them and describes their properties based on that characterization. Next we describe a theorem from Hamiltonian systems that provides sufficient conditions for the existence of NHIMs under certain specific circumstances.</p>
 </div>
 <div class="section" id="the-lyapunov-subcenter-theorem">
 <h2>The Lyapunov Subcenter Theorem<a class="headerlink" href="#the-lyapunov-subcenter-theorem" title="Permalink to this headline">¶</a></h2>
 <p>\label{sec:LyapSub}</p>
-<p>The Lyapunov subcenter theorem \cite{liapounoff1907probleme} is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton’s equations give rise to periodic orbits, or ``NHIMs’’. Basic background on the topic can be found in \cite{moser1958generalization, kelley1967liapounov, moser1976periodic, weinstein1973normal, duistermaat1972periodic}.</p>
+<p>The Lyapunov subcenter theorem <a class="bibtex reference internal" href="chapter2_2.html#liapounoff1907probleme" id="id17">[Lia07]</a> is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton’s equations give rise to periodic orbits, or ``NHIMs’’. Basic background on the topic can be found in <a class="bibtex reference internal" href="chapter2_2.html#moser1958generalization" id="id18">[Mos58]</a><a class="bibtex reference internal" href="chapter2_2.html#kelley1967liapounov" id="id19">[Kel67]</a><a class="bibtex reference internal" href="chapter2_2.html#moser1976periodic" id="id20">[Mos76]</a><a class="bibtex reference internal" href="chapter2_2.html#weinstein1973normal" id="id21">[Wei73]</a><a class="bibtex reference internal" href="chapter2_2.html#duistermaat1972periodic" id="id22">[Dui72]</a>.</p>
 <p>We will explain the ideas in the context of a two degree-of-freedom quadratic Hamiltonian, and then describe how they extend to more general settings.</p>
 <p>\begin{equation}
 H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad \lambda, , \omega &gt;0, \quad (q_1, p_1, q_2, p_2) \in \mathbb{R}^4,
@@ -485,9 +495,75 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
 \end{equation}</p>
 <p>where  <span class="math notranslate nohighlight">\(\lambda_i, \, \omega_i &gt;0, \quad (q_1, p_1,  \ldots, q_{n_s}, p_{n_s},  q_{n_s +1}, p_{n_s + 1}, \ldots, q_{n_s +n_c}, p_{n_s + n_c}) 
 \in \mathbb{R}^{2(n_s + n_c)}\)</span>.</p>
-<p>The structure of the NHIM is treated in detail for <span class="math notranslate nohighlight">\({n_s} =1\)</span> in \cite{wiggins2016role}.  Results for <span class="math notranslate nohighlight">\({n_s} &gt;1\)</span> are treated in \cite{collins2011index}.
-When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply \cite{Wigginsbook1994} and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for <span class="math notranslate nohighlight">\({n_c} &gt;1\)</span> and requires KAM type techniques for its understanding \cite{dumas2014kam}.</p>
+<p>The structure of the NHIM is treated in detail for <span class="math notranslate nohighlight">\({n_s} =1\)</span> in <a class="bibtex reference internal" href="chapter2_2.html#wiggins2016role" id="id23">[Wig16a]</a>.  Results for <span class="math notranslate nohighlight">\({n_s} &gt;1\)</span> are treated in <a class="bibtex reference internal" href="chapter2_2.html#collins2011index" id="id24">[CEW11]</a>.
+When higher order terms are added to \eqref{eq:LST5} theorems on the persistence of NHIMS under perturbation apply <a class="bibtex reference internal" href="chapter2_2.html#wigginsbook1994" id="id25">[Wig94]</a> and allow us to conclude that the NHIM exists even with the inclusion of  higher order terms in \eqref{eq:LST5}. The dynamics restricted to the NHIM is much more intricate for <span class="math notranslate nohighlight">\({n_c} &gt;1\)</span> and requires KAM type techniques for its understanding <a class="bibtex reference internal" href="chapter2_2.html#dumas2014kam" id="id26">[Dum14]</a>s.</p>
 </div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="bibtex-bibliography-content/chapter2_1-0"><dl class="citation">
+<dt class="bibtex label" id="collins2011index"><span class="brackets"><a class="fn-backref" href="#id24">CEW11</a></span></dt>
+<dd><p>P. Collins, G. S Ezra, and S. Wiggins. Index k saddles and dividing surfaces in phase space with applications to isomerization dynamics. <em>The Journal of chemical physics</em>, 134(24):244105, 2011.</p>
+</dd>
+<dt class="bibtex label" id="duistermaat1972periodic"><span class="brackets"><a class="fn-backref" href="#id22">Dui72</a></span></dt>
+<dd><p>JJ Duistermaat. On periodic solutions near equilibrium points of conservative systems. <em>Archive for Rational Mechanics and Analysis</em>, 45(2):143–160, 1972.</p>
+</dd>
+<dt class="bibtex label" id="dumas2014kam"><span class="brackets"><a class="fn-backref" href="#id26">Dum14</a></span></dt>
+<dd><p>H. S. Dumas. <em>The KAM Story: A Friendly Introduction to the Content, History, and Significance of Classical Kolmogorovâ Arnoldâ Moser Theory</em>. World Scientific Publishing Company, 2014.</p>
+</dd>
+<dt class="bibtex label" id="eldering2013"><span class="brackets">Eld13</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id16">2</a>)</span></dt>
+<dd><p>J Eldering. <em>Normally Hyperbolic Invariant Manifolds. The Noncompact Case</em>. Atlantis Press, 2013.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1971"><span class="brackets">Fen71</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p>N Fenichel. Persistence and smoothess of the invariant manifolds for flows. <em>Indiana University Mathematics Journal</em>, 1971.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1974"><span class="brackets"><a class="fn-backref" href="#id13">Fen74</a></span></dt>
+<dd><p>N. Fenichel. Asymptotic stability with rate conditions. <em>Indiana Univ. Math. J.</em>, 23:1109–1137, 1974.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1977"><span class="brackets"><a class="fn-backref" href="#id14">Fen77</a></span></dt>
+<dd><p>N. Fenichel. Asymptotic stability with rate conditions, ii. <em>Indiana Univ. Math. J.</em>, 26:81–93, 1977.</p>
+</dd>
+<dt class="bibtex label" id="giorgilli2002"><span class="brackets">Gio02</span></dt>
+<dd><p>A. Giorgilli. <em>Notes on Exponential stability of Hamiltonian systems</em>. Centro de ricerca Matematica Ennio De Giorgi Pisa, February 4-15., 2002.</p>
+</dd>
+<dt class="bibtex label" id="guillemin2010differential"><span class="brackets"><a class="fn-backref" href="#id1">GP10</a></span></dt>
+<dd><p>Victor Guillemin and Alan Pollack. <em>Differential topology</em>. Volume 370. American Mathematical Soc., 2010.</p>
+</dd>
+<dt class="bibtex label" id="kelley1967liapounov"><span class="brackets"><a class="fn-backref" href="#id19">Kel67</a></span></dt>
+<dd><p>A. Kelley. On the liapounov subcenter manifold. <em>Journal of mathematical analysis and applications</em>, 18(3):472–478, 1967.</p>
+</dd>
+<dt class="bibtex label" id="liapounoff1907probleme"><span class="brackets"><a class="fn-backref" href="#id17">Lia07</a></span></dt>
+<dd><p>A. Liapounoff. Problème général de la stabilité du mouvement. In <em>Annales de la Faculté des sciences de Toulouse: Mathématiques</em>, volume 9, 203–474. 1907.</p>
+</dd>
+<dt class="bibtex label" id="moser1958generalization"><span class="brackets"><a class="fn-backref" href="#id18">Mos58</a></span></dt>
+<dd><p>J. Moser. On the generalization of a theorem of a. liapounoff. <em>Communications on Pure and Applied Mathematics</em>, 11(2):257–271, 1958.</p>
+</dd>
+<dt class="bibtex label" id="moser1976periodic"><span class="brackets"><a class="fn-backref" href="#id20">Mos76</a></span></dt>
+<dd><p>J. Moser. Periodic orbits near an equilibrium and a theorem by alan weinstein. <em>Communications on Pure and Applied Mathematics</em>, 29(6):727–747, 1976.</p>
+</dd>
+<dt class="bibtex label" id="weinstein1973normal"><span class="brackets"><a class="fn-backref" href="#id21">Wei73</a></span></dt>
+<dd><p>A. Weinstein. Normal modes for nonlinear hamiltonian systems. <em>Inventiones mathematicae</em>, 20(1):47–57, 1973.</p>
+</dd>
+<dt class="bibtex label" id="wiggins1990geometry"><span class="brackets"><a class="fn-backref" href="#id2">Wig90</a></span></dt>
+<dd><p>S Wiggins. On the geometry of transport in phase space I. transport in k-degree-of-freedom hamiltonian systems, $2 \le k&lt; \infty $. <em>Physica D: Nonlinear Phenomena</em>, 44(3):471–501, 1990.</p>
+</dd>
+<dt class="bibtex label" id="wigginsbook1994"><span class="brackets">Wig94</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id15">2</a>,<a href="#id25">3</a>)</span></dt>
+<dd><p>S Wiggins. <em>Normally hyperbolic invariant manifolds in dynamical systems</em>. Springer-Verlag New York, 1994.</p>
+</dd>
+<dt class="bibtex label" id="wigginsbook2004"><span class="brackets"><a class="fn-backref" href="#id5">Wig04</a></span></dt>
+<dd><p>S Wiggins. <em>Introduction to Applied Nonlinear Dynamics and Chaos</em>. Springer–Verlag, 2004.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2001"><span class="brackets">WWJaffeU01</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>S Wiggins, L Wiesenfeld, C Jaffé, and T Uzer. Impenetrable Barriers in Phase-Space. <em>Phys. Rev. Lett.</em>, 86(24):5478–5481, jun 2001. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevLett.86.5478">https://link.aps.org/doi/10.1103/PhysRevLett.86.5478</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.86.5478">doi:10.1103/PhysRevLett.86.5478</a>.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2016role"><span class="brackets"><a class="fn-backref" href="#id23">Wig16a</a></span></dt>
+<dd><p>S. Wiggins. The role of normally hyperbolic invariant manifolds (nhims) in the context of the phase space setting for chemical reaction dynamics. <em>Regular and Chaotic Dynamics</em>, 21(6):621–638, 2016.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2016"><span class="brackets"><a class="fn-backref" href="#id9">Wig16b</a></span></dt>
+<dd><p>S. Wiggins. The role of normally hyperbolic invariant manifolds (NHIMS) in the context of the phase space setting for chemical reaction dynamics. <em>Regular and Chaotic Dynamics</em>, 21(6):621–638, 2016.</p>
+</dd>
+</dl>
+</p>
 </div>
 
 

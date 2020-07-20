@@ -190,19 +190,29 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#" class="nav-link">The Setting: Hamiltonian Dynamics on Phase Space</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
             <a href="#configuration-space-and-phase-space" class="nav-link">Configuration Space and Phase space</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#hamilton-s-equations" class="nav-link">Hamilton’s Equations</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#conserved-quantities-in-phase-space" class="nav-link">Conserved quantities in phase space</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#invariant-sets" class="nav-link">Invariant Sets</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#references" class="nav-link">References</a>
         </li>
     
     </ul>
@@ -222,7 +232,7 @@
 <h2>Configuration Space and Phase space<a class="headerlink" href="#configuration-space-and-phase-space" title="Permalink to this headline">¶</a></h2>
 <p>\label{sec:Ham1}</p>
 <blockquote>
-<div><p>The concepts in this section are adapted from the books \cite{lifshitz1978,wiggins2003applied}.</p>
+<div><p>The concepts in this section are adapted from the books <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id1">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id2">[Wig03]</a>.</p>
 </div></blockquote>
 <ul class="simple">
 <li><p><strong>Generalized Coordinates:</strong> The location of the particles comprising a system are described by a set of coordinates, known in Mechanics as generalized coordinates. The space, i.e. all possible values, described by these coordinates is referred to as {\em configuration space}.</p></li>
@@ -247,7 +257,7 @@
 <div class="section" id="conserved-quantities-in-phase-space">
 <h2>Conserved quantities in phase space<a class="headerlink" href="#conserved-quantities-in-phase-space" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. \cite{lifshitz1978,arnold1978,giorgilli2002}.</p>
+<div><p>The reader can find more details on Poisson brackets and their properties \ in many books and lecture notes, see e.g. <a class="bibtex reference internal" href="chapter1_2.html#lifshitz1978" id="id3">[LL82]</a><a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id4">[Arn78]</a><a class="bibtex reference internal" href="chapter2_2.html#giorgilli2002" id="id5">[Gio02]</a></p>
 </div></blockquote>
 <p>Given a Hamiltonian system, a function <span class="math notranslate nohighlight">\(A(\mathbf{q}, \mathbf{p},t)\)</span> is called an \textbf{integral of motion}, \textbf{constant of motion} or \textbf{first integral} if it remains constant along a trajectory. Then, its total time derivative is zero along solutions <span class="math notranslate nohighlight">\((\mathbf{q}(t),\mathbf{p}(t))\)</span> of Hamilton’s equations, that is</p>
 <p>\begin{equation}
@@ -275,7 +285,7 @@ is called the \textit{Poisson bracket} of the functions <span class="math notran
 \dot{p}_i = - \dfrac{\partial H}{\partial q_i} = 0
 \end{equation}
 and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</span> is constant along trajectories, that is, <span class="math notranslate nohighlight">\(p_i(t) = p_i^0\)</span>.</p>
-<p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see \cite{arnold1978} and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy</p>
+<p>We introduce next a concept which is important for the study of integrable Hamiltonian systems. Integrable Hamiltonian systems are those that can be solved by quadratures and are characterized by Liouville-Arnold theorem, see <a class="bibtex reference internal" href="chapter1_2.html#arnold1978" id="id6">[Arn78]</a> and the contents in Section \ref{sec:Ham2}. Two constants of the motion <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are said to be in \textit{involution} if they satisfy</p>
 <p>\begin{equation}
 {A,B} = 0 ;.
 \label{eq:involution}
@@ -284,7 +294,7 @@ and therefore the momentum <span class="math notranslate nohighlight">\(p_i\)</s
 <div class="section" id="invariant-sets">
 <h2>Invariant Sets<a class="headerlink" href="#invariant-sets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The concepts here are adapted from \cite{wiggins2003applied}.</p>
+<div><p>The concepts here are adapted from <a class="bibtex reference internal" href="chapter1_2.html#wiggins2003applied" id="id7">[Wig03]</a>.</p>
 </div></blockquote>
 <p>Invariant sets play a fundamental role in how we understand the nature of phase space dynamics. We will give here a definition for this concept for an autonomous dynamical system in the continuous time setting:</p>
 <p>\begin{equation}
@@ -305,6 +315,21 @@ Let <span class="math notranslate nohighlight">\(S \subset \mathbb{R}^{n}\)</spa
 </ul>
 <p>Invariant sets play an important role for the analysis of dynamical systems, as they allow us to break up the dynamics into smaller parts. For example the dynamics in invariant sets can be investigated separately from the rest of the system. As we will show in the following sections, some invariant sets, such as invariant manifolds, naturally divide the phase space of the system into regions of qualitatively distinct dynamical behavior that can be studied independently.</p>
 </div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="bibtex-bibliography-content/chapter1_1-0"><dl class="citation">
+<dt class="bibtex label" id="arnold1978"><span class="brackets">Arn78</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>V. I. Arnold. <em>Mathematical methods of Classical Mechanics</em>. Volume. Springer-Verlag, 1978.</p>
+</dd>
+<dt class="bibtex label" id="lifshitz1978"><span class="brackets">LL82</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>L. D. Landau and E.M. Lifshitz. <em>Mechanics</em>. Volume 1. Elsevier, 1982.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p>Stephen Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Volume 1. Springer Science &amp; Business Media, 2003.</p>
+</dd>
+</dl>
+</p>
 </div>
 
 
