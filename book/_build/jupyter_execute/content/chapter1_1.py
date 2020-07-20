@@ -56,15 +56,18 @@ label: poisson
 \noindent
 is called the \textit{Poisson bracket} of the functions $A$ and $H$. Therefore, Eq. {eq}`integral` is equivalent to:
 
-\begin{equation}
-\dfrac{dA}{dt} = \frac{\partial A}{\partial t} + \{A,H\} = 0. \label{eq:integral2}
-\end{equation}
+```{math}
+---
+label: integral2
+---
+\dfrac{dA}{dt} = \frac{\partial A}{\partial t} + \{A,H\} = 0
+```
 
 Notice that if the function $A$ does not explicitly depend on time, that is $\partial A / \partial t = 0$, then $A$ is an integral of motion if and only if  $\{A, H\} = 0$. In other words, the Poisson bracket provides us with a useful test to see if a function of the phase space variables and time is conserved or not in a Hamiltonian system. In particular, if the Hamiltonian of the system is time-independent, that is $H = H(\mathbf{q},\mathbf{p})$, then we can deduce that:
 
-\begin{equation}
+```{math}
     \frac{dH}{dt} = \dfrac{\partial H}{\partial t} +  \{ H, H \} = 0 + \sum\limits_{i = 1}^n \left( \dfrac{\partial H}{\partial q_i}\dfrac{\partial H}{\partial p_i}- \dfrac{\partial H}{\partial p_i}  \dfrac{\partial H}{\partial q_i} \right) = 0 \;, 
-\end{equation}
+```
 
 which implies that the Hamiltonian itself is a constant of the motion. If the Hamiltonian represents the total energy of the physical system, this property is just the law of conservation of total energy along trajectories of an autonomous Hamiltonian system. The implicit time dependence of the position and momentum coordinates may increase/decrease the kinetic energy at the expense/gain of the potential energy, but the sum of kinetic and potential energy remains constant.
 

@@ -133,35 +133,51 @@ Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means th
 
 In Ref {cite}`naik_finding_2019`, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems. 
 
-We can define nonlinear symplectic transformations using the _Poisson bracket_ (see \eqref{eq:poisson}) defined by
+We can define nonlinear symplectic transformations using the _Poisson bracket_ (see {eq}`poisson`) defined by
 
+```{math}
+---
+label: poisson
+---
 \begin{equation}
  \{A, B\} = \langle D A,\mathcal{J} D B \rangle = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial B}{\partial q_i} \right),
-\label{eqn:poisson}
 \end{equation}
+```
 
-where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is defined in Eq. \eqref{eqn:symp_cond}. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. \eqref{eqn:hamiltons_eom} as
+where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is defined in Eq. {eq}`symp_cond`. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. {eq}`hamiltons_eom` as
 
+```{math}
+---
+label: poisson_eq
+---
 \begin{equation}
 \dot{q}_i = \{q_i, H\} \quad,\quad \dot{p}_i = \{p_i, H\} \; , \quad \text{for } i = 1,\ldots,N
  \label{eqn:poisson_eqn}
 \end{equation}
+```
 
 Following {cite}`Wiggins2003`, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space $f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}$, such that 
 
+
+```{math}
+---
+label: symplectic
+---
 \begin{equation}
  \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
-\label{eqn:symplectic}
 \end{equation}
+```
 
 for any $x,u,v\in \mathbb{R}^{2N}$.
 
-Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hamiltonian $H(q,p)$ into the new Hamiltonian $G(f(q,p))$, that satisfies $Df(q,p)DH = DG$. The equations of motion \eqref{eqn:poisson_eqn} then remain
+Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hamiltonian $H(q,p)$ into the new Hamiltonian $G(f(q,p))$, that satisfies $Df(q,p)DH = DG$. The equations of motion {eq}`poisson_eqn` then remain
 
+```{math}
 \begin{align*}
  \{(q,p),H\} = \langle D(q,p),\mathcal{J}DH \rangle &= \langle D(q,p),\;(Df(q,p))^T\mathcal{J}Df(q,p)DH \rangle \\
  &= \langle Df(q,p)D(q,p),\;\mathcal{J}Df(q,p)DH \rangle = \{f(q,p), G\}.
 \end{align*}
+```
 
 For a coordinate free formulation using differential forms see {cite}`Arnold76`.
 
@@ -173,11 +189,17 @@ Symplectic maps arise in many applications in physics and chemistry, for example
 ## Coordinates, ($q, p)$, $(q_i , p_i)$, significance of canonically conjugate pairs
 
 The canonical coordinates $(q, p)$ satisfy the following Poisson bracket relations
+
+```{math}
+---
+label: pb_canonical
+---
 \begin{equation}
 \{q_i, q_j\} = 0 \quad,\quad \{p_i, p_j\} = 0 \quad,\quad 
 \{q_i, p_j\} = \delta_{ij} \; , \quad \text{for } i,j \in \{1,\ldots,N\}
-\label{eqn:pb_canonical}
 \end{equation}
+```
+
 where $\delta_{ij}$ is the Kronecker delta. The pair $(q_i , p_i)$ is referred to as canonically conjugate. The relations above are referred to as the fundamental Poisson bracket equations and are preserved if and only if the coordinates are canonical. Further details on this can be found in the section 9.4 and 9.5 of the textbook {cite}`Goldstein2001`.
 
 An important feature of canonically conjugate pairs lies in their role in defining Poincar\'e surfaces of section. A surface defined by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$, or $p_j = K$ with $\dot{p}_j \geq 0$ or $\dot{p}_j \leq 0$, admits a symplectic (Poincar\'e) return map, provided it is a surface of section in the sense of Birkhoff {cite}`Birkhoff27`. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincar\'e surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.
@@ -190,12 +212,16 @@ An important feature of canonically conjugate pairs lies in their role in defini
 The phase space structures that govern the dynamics of a Hamiltonian system with $N$ degrees of freedom are of codimension-$1$ and codimension-$2$ in $2N$-dimensional phase space, in the case of an autonomous system codimension-$1$ and codimension-$2$ in the $2N-1$-dimensional energy surface {cite}`Waalkens08` (refer to hyperbolic section). A Poincar\'e surface of section is a $(2N - 2)$-dimensional surface, for example one specified by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$,
 where $j \in 1, 2, \ldots, N$ and $K$ is constant. For this Poincar\'e surface of section to be transverse to the flow, we require
 
+```{math}
 \begin{equation}
 \dot{q}_j = \dfrac{\partial H}{\partial p_j} \neq 0 \, ,
 \end{equation}
+```
+
 on the entire surface of section.
 
 We note here that the complete $(2N - 2)$-dimensional surface cannot be visualized without projecting onto a $2$ or $3$ dimensional space. Even a three dimensional projection can be difficult to visualize due to the limitation of the viewing medium such as the screen or paper. However, if we consider a two-dimensional slice of the $2N-1$ dimensional energy surface, then the intersection of the slice with a codimension-$1$ or codimension-$2$ object is either one- or zero-dimensional provided they intersect. This follows  the rule 
+
 
 \begin{equation*}
 \text{dimension of intersection = (dimension of surface + dimension of object) - dimension of the space.}
@@ -210,29 +236,39 @@ Visualising one- or zero-dimensional intersections on a two-dimensional surface 
 
 Suppose some property of the system is denoted by $A = A(\mathbf{x}, t)$, then the total time rate of change of this property along the solutions of an autonomous Hamiltonian system $H$ is 
 
-$${
+```{math}
 \frac{d A}{d t} = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\dot{q}_i + \frac{\partial A}{\partial p_i} \dot{p}_i \right) = \frac{\partial A}{\partial t} + \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
-}$$
+```
 
 Using the definition of the _Poisson bracket_:
 
+```{math}
 \begin{equation}
 \{A, H\} = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial H}{\partial q_i} \right)
 \end{equation}
+```
 
 we can write the time evolution of the property as
 
+```{math}
+---
+label: property_conserved
+---
 \begin{equation}
 \frac{d A}{d t} = \frac{\partial A}{\partial t} + \{A, H\}
-\label{eqn:property_conserved}
 \end{equation}
+```
 
 Therefore, if we assume that the Hamiltonian does not depend explicitly on time and use $A = H$ in the above equation, we get
 
+```{math}
+---
+label: energy_conserved
+---
 \begin{equation}
 \frac{d H}{d t} = 0 + \{H, H\} = 0
-\label{eqn:energy_conserved}
 \end{equation}
+```
 
 which implies that the Hamiltonian, $H$, is a constant of the motion for conservative systems, that is the total energy is fixed. Thus, the states for a specified energy are restricted to the $(2N - 1)$-dimensional surface embedded in the $2N$-dimensional phase space.
 
@@ -240,11 +276,13 @@ We use this set-up to present the mathematical statement of the Liouville's theo
 
 A classical ensemble consists of a set of points in phase space, with each point representing a system in a specified state. Let $\rho(\mathbf{x},t)$ be the density of the set of points in a given volume. As each member of ensemble moves through phase space along a trajectory specified by Hamilton's equations of motion, the phase space density evolves in time.
 
-Using Poisson brackets \eqref{eqn:property_conserved}, we can express Liouville's theorem as
+Using Poisson brackets {eq}`property_conserved`, we can express Liouville's theorem as
 
+```{math}
 \begin{equation}
 \frac{d \rho}{d t} = \frac{\partial \rho}{\partial t} + \{\rho, H\} = 0,
 \end{equation}
+```
 
 which means that the phase space density $\rho(\mathbf{x}, t)$ is conserved along the solutions of $H$. Consequently when an ensemble evolves, its location and shape in phase space change but its volume is conserved. It also follows that all autonomous Hamiltonian systems are volume preserving due to Liouville's theorem.
 
@@ -254,7 +292,7 @@ which means that the phase space density $\rho(\mathbf{x}, t)$ is conserved alon
 
 Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincar\'e (1890). The Poincar\'e recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time. 
 
-We know from Eq. \eqref{eqn:energy_conserved} that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
+We know from Eq. {eq}`energy_conserved` that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
 $$ E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\} $$
 If the energy surface is bounded (compact), then the Poincar\'e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar\'e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.
 
