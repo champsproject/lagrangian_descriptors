@@ -240,23 +240,18 @@
 <div class="section" id="hamiltonian-flows">
 <h2>Hamiltonian flows<a class="headerlink" href="#hamiltonian-flows" title="Permalink to this headline">¶</a></h2>
 <p>A Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom is described by the Hamiltonian function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p},t)\)</span>, which depends on the generalized coordinates <span class="math notranslate nohighlight">\(\mathbf{q} = (q_1,\ldots,q_N)\)</span>, their canonically conjugate momenta <span class="math notranslate nohighlight">\(\mathbf{p} = (p_1,\ldots,p_N)\)</span>, and time. This scalar function gives rise to a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional dynamical system by means of Hamilton’s equations of motion</p>
-<p>\begin{equation}
-\dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} ;, \quad \text{for} ; i = 1, 2, \ldots, N. \label{eqn:hamiltons_eom}
-\end{equation}
-where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional <em>phase space</em>, Any solution of this system is a trajectory of the form</p>
-<p>\begin{equation}
-\mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) ,,
-\label{eqn:solution}
-\end{equation}
-starting at the initial condition
-\begin{equation}
-\mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) , . \label{eqn:init_condition}
-\end{equation}</p>
-<p>We will assume that <span class="math notranslate nohighlight">\(H\)</span> is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p})\)</span>, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. \eqref{eqn:hamiltons_eom} form a one-parameter family of diffeomorphisms, known as a <em>Hamiltonian flow</em>, given by <span class="math notranslate nohighlight">\(\{\phi_t\}_{t\in\mathbb{R}}\)</span> so that
-\begin{equation}
-\phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) ;. \label{eqn:flow}
-\end{equation}
-The family is a group because it satisfies the properties</p>
+<div class="math notranslate nohighlight" id="equation-hamiltons-eom">
+<span class="eqno">(7)<a class="headerlink" href="#equation-hamiltons-eom" title="Permalink to this equation">¶</a></span>\[\dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} \;, \quad \text{for} \; i = 1, 2, \ldots, N.\]</div>
+<p>where the dot symbol represents the total time derivative, that is,  <span class="math notranslate nohighlight">\(\cdot \equiv d/dt\)</span>. A state of the system is represented by a point in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional <em>phase space</em>, Any solution of this system is a trajectory of the form</p>
+<div class="math notranslate nohighlight" id="equation-solution">
+<span class="eqno">(8)<a class="headerlink" href="#equation-solution" title="Permalink to this equation">¶</a></span>\[\mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) \,, \]</div>
+<p>starting at the initial condition</p>
+<div class="math notranslate nohighlight" id="equation-init-condition">
+<span class="eqno">(9)<a class="headerlink" href="#equation-init-condition" title="Permalink to this equation">¶</a></span>\[\mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) \, .\]</div>
+<p>We will assume that <span class="math notranslate nohighlight">\(H\)</span> is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p})\)</span>, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. <a class="reference internal" href="#equation-hamiltons-eom">(7)</a> form a one-parameter family of diffeomorphisms, known as a <em>Hamiltonian flow</em>, given by <span class="math notranslate nohighlight">\(\{\phi_t\}_{t\in\mathbb{R}}\)</span> so that</p>
+<div class="math notranslate nohighlight" id="equation-flow">
+<span class="eqno">(10)<a class="headerlink" href="#equation-flow" title="Permalink to this equation">¶</a></span>\[\phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) \;.\]</div>
+<p>The family is a group because it satisfies the properties</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\phi_0=Id\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(\phi_s\circ \phi_t=\phi_{t+s}\)</span>,</p></li>
@@ -266,73 +261,75 @@ The family is a group because it satisfies the properties</p>
 <div class="section" id="symplectic-maps">
 <h2>Symplectic maps<a class="headerlink" href="#symplectic-maps" title="Permalink to this headline">¶</a></h2>
 <p>A linear transformation <span class="math notranslate nohighlight">\(C\)</span> is symplectic if it satisfies</p>
-<p>\begin{equation}
-C \mathcal{J} C^T = \mathcal{J} =
-\begin{pmatrix}
-0_N &amp; I_N \
--I_N &amp; 0_N
-\end{pmatrix}
-\label{eqn:symp_cond}
-\end{equation}</p>
-<p>where <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is a 2N <span class="math notranslate nohighlight">\(\times\)</span> 2N matrix known as the symplectic matrix, and <span class="math notranslate nohighlight">\(I_N\)</span> denotes the <span class="math notranslate nohighlight">\(N \times N\)</span> identity matrix. The symplectic transformation <span class="math notranslate nohighlight">\(C\)</span> maps the original coordinates <span class="math notranslate nohighlight">\((x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})\)</span> to the coordinates <span class="math notranslate nohighlight">\((q_1, \ldots, q_N, p_1, \ldots, p_N)\)</span> and Hamilton’s equations in Eq, \eqref{eqn:hamiltons_eom} as follows:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight" id="equation-symp-cond">
+<span class="eqno">(11)<a class="headerlink" href="#equation-symp-cond" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{equation}
+C \mathcal{J} C^T = \mathcal{J} = 
+    \begin{pmatrix}
+    0_N &amp; I_N \\
+    -I_N &amp; 0_N
+    \end{pmatrix}
+\end{equation}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is a 2N <span class="math notranslate nohighlight">\(\times\)</span> 2N matrix known as the symplectic matrix, and <span class="math notranslate nohighlight">\(I_N\)</span> denotes the <span class="math notranslate nohighlight">\(N \times N\)</span> identity matrix. The symplectic transformation <span class="math notranslate nohighlight">\(C\)</span> maps the original coordinates <span class="math notranslate nohighlight">\((x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})\)</span> to the coordinates <span class="math notranslate nohighlight">\((q_1, \ldots, q_N, p_1, \ldots, p_N)\)</span> and Hamilton’s equations in Eq, <a class="reference internal" href="#equation-hamiltons-eom">(7)</a> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation}
+    \begin{bmatrix}
+    q_1 \\
+    \vdots \\
+    q_N \\
+    p_1 \\
+    \vdots \\
+    q_N
+    \end{bmatrix}
+    = C
+    \begin{bmatrix}
+    x_1 \\
+    \vdots \\
+    x_N \\
+    p_{x_1} \\
+    \vdots \\
+    p_{x_N} 
+    \end{bmatrix} 
+    \implies
+    \begin{bmatrix}
+    \dot{q}_1 \\
+    \vdots \\
+    \dot{q}_N \\ 
+    \dot{p}_1 \\
+    \vdots \\
+    \dot{p}_N
+    \end{bmatrix}
+    = C
+    \begin{bmatrix}
+    \dot{x}_1 \\
+    \vdots \\
+    \dot{x}_N \\
+    \dot{p}_{x_1} \\
+    \vdots \\
+    \dot{p}_{x_N}
+    \end{bmatrix}
+\end{equation}\end{split}\]</div>
+<p>From <a class="reference internal" href="#equation-symp-cond">(11)</a> we find the inverse transformation <span class="math notranslate nohighlight">\(C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}\)</span>, such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation}
 \begin{bmatrix}
-q_1 \
-\vdots \
-q_N \
-p_1 \
-\vdots \
-q_N
-\end{bmatrix}
-= C
-\begin{bmatrix}
-x_1 \
-\vdots \
-x_N \
-p_{x_1} \
-\vdots \
-p_{x_N}
-\end{bmatrix}
-\implies
-\begin{bmatrix}
-\dot{q}_1 \
-\vdots \
-\dot{q}_N \
-\dot{p}_1 \
-\vdots \
-\dot{p}_N
-\end{bmatrix}
-= C
-\begin{bmatrix}
-\dot{x}<em>1 \
-\vdots \
-\dot{x}<em>N \
-\dot{p}</em>{x_1} \
-\vdots \
-\dot{p}</em>{x_N}
-\end{bmatrix}
-\end{equation}</p>
-<p>From \eqref{eqn:symp_cond} we find the inverse transformation <span class="math notranslate nohighlight">\(C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}\)</span>, such that</p>
-<p>\begin{equation}
-\begin{bmatrix}
-\dot{x}<em>1 \
-\vdots \
-\dot{x}<em>N \
-\dot{p}</em>{x_1} \
-\vdots \
-\dot{p}</em>{x_N}
-\end{bmatrix}
+\dot{x}_1 \\
+\vdots \\
+\dot{x}_N \\
+\dot{p}_{x_1} \\
+\vdots \\
+\dot{p}_{x_N} 
+\end{bmatrix} 
 = C^{-1}
 \begin{bmatrix}
-\dot{q}_1 \
-\vdots \
-\dot{q}_N \
-\dot{p}_1 \
-\vdots \
+\dot{q}_1 \\
+\vdots \\
+\dot{q}_N \\ 
+\dot{p}_1 \\
+\vdots \\
 \dot{p}_N
 \end{bmatrix}
-\end{equation}</p>
-<p>Linear symplectic transformations are <span class="math notranslate nohighlight">\(C^\infty\)</span> diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion \eqref{eqn:hamiltons_eom}, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.</p>
+\end{equation}\end{split}\]</div>
+<p>Linear symplectic transformations are <span class="math notranslate nohighlight">\(C^\infty\)</span> diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion <a class="reference internal" href="#equation-hamiltons-eom">(7)</a>, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.</p>
 <p>In Ref <span class="bibtex" id="id1">[naik_finding_2019]</span>, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems.</p>
 <p>We can define nonlinear symplectic transformations using the <em>Poisson bracket</em> (see \eqref{eq:poisson}) defined by</p>
 <p>\begin{equation}
@@ -348,8 +345,8 @@ p_{x_N}
 <p>\begin{equation}
 \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
 \label{eqn:symplectic}
-\end{equation}
-for any <span class="math notranslate nohighlight">\(x,u,v\in \mathbb{R}^{2N}\)</span>.</p>
+\end{equation}</p>
+<p>for any <span class="math notranslate nohighlight">\(x,u,v\in \mathbb{R}^{2N}\)</span>.</p>
 <p>Under <span class="math notranslate nohighlight">\(f\)</span>, phase space points <span class="math notranslate nohighlight">\((q,p)\)</span> are transformed into <span class="math notranslate nohighlight">\(f(q,p)\)</span> and the Hamiltonian <span class="math notranslate nohighlight">\(H(q,p)\)</span> into the new Hamiltonian <span class="math notranslate nohighlight">\(G(f(q,p))\)</span>, that satisfies <span class="math notranslate nohighlight">\(Df(q,p)DH = DG\)</span>. The equations of motion \eqref{eqn:poisson_eqn} then remain</p>
 <p>\begin{align*}
 {(q,p),H} = \langle D(q,p),\mathcal{J}DH \rangle &amp;= \langle D(q,p),;(Df(q,p))^T\mathcal{J}Df(q,p)DH \rangle \
