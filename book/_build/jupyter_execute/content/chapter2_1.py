@@ -15,18 +15,18 @@ We also note (cf. Section \ref{sec:LDs}) the global phase space structure can be
 
 In the table below we collect together some dimensionality and codimensionality properties of periodic orbits and their associated geometrical structures within the energy surface, i.e. $E= {\rm constant}$. 
 
-|Degrees of freedom | 2 | 3 | $n$ |
+
+|Degrees of freedom | 2 | 3 | n |
 |:------- | :-------: | :-------: | :-------: |
-|Phase space | 4 | 6 | 2$n$ |
-|Energy surface | 3 | 5 | 2$n$-1 |
-|Poincar\'e section | 2 | 4 | 2$n$-2 |
-|Periodic orbit | 1 (2) | 1 (4) | 1 (2$n$-2) |
-|Stable and unstable manifolds of a periodic orbit  | 2 (1) | 2 or 3 (3 or 2) | 2 to n (2$n$-3 to $n$-1) |
-|Barriers in energy surface | 2 (1) | 4 (1) | 2$n$-2 (1) |
+|Phase space | 4 | 6 | 2n |
+|Energy surface | 3 | 5 | 2n - 1 |
+|Poincar\'e section | 2 | 4 | 2n-2 |
+|Periodic orbit | 1 (2) | 1 (4) | 1 (2n-2) |
+|Stable and unstable manifolds of a periodic orbit  | 2 (1) | 2 or 3 (3 or 2) | 2 to n (2n-3 to n-1) |
+|Barriers in energy surface | 2 (1) | 4 (1) | 2n-2 (1) |
 
 \caption{Dimension count of phase space structures. Codimension of certain objects appears in parentheses.}
 \label{tab:dimensions}
-\end{table}
 
 
 NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they _may_ have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom {cite}`wiggins1990geometry`.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are {cite}`Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013`, but we will begin with an elementary description.

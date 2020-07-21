@@ -31,7 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Hyperbolic setting" href="chapter2_1.html" />
+    <link rel="next" title="The Hyperbolic setting" href="chapter2_1_new.html" />
     <link rel="prev" title="The Setting: Hamiltonian Dynamics on Phase Space" href="chapter1_1.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +83,7 @@
 <p class="margin-caption">Chapter 2</p>
 </li>
   <li class="">
-    <a href="chapter2_1.html">The Hyperbolic setting</a>
+    <a href="chapter2_1_new.html">The Hyperbolic setting</a>
   </li>
   <li class="">
     <a href="chapter2_2.html">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
@@ -337,10 +337,9 @@ C \mathcal{J} C^T = \mathcal{J} =
  \{A, B\} = \langle D A,\mathcal{J} D B \rangle = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial B}{\partial q_i} \right),
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(D A\)</span> and <span class="math notranslate nohighlight">\(D B\)</span> are the gradients of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is defined in Eq. <a class="reference internal" href="#equation-symp-cond">(12)</a>. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. <a class="reference internal" href="#equation-hamiltons-eom">(8)</a> as</p>
-<div class="math notranslate nohighlight" id="equation-poisson-eq">
-<span class="eqno">(14)<a class="headerlink" href="#equation-poisson-eq" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight" id="equation-poisson-eqn">
+<span class="eqno">(14)<a class="headerlink" href="#equation-poisson-eqn" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \dot{q}_i = \{q_i, H\} \quad,\quad \dot{p}_i = \{p_i, H\} \; , \quad \text{for } i = 1,\ldots,N
- \label{eqn:poisson_eqn}
 \end{equation}\]</div>
 <p>Following <a class="bibtex reference internal" href="#wiggins2003" id="id2">[Wig03a]</a>, a  symplectic transformations is a sufficiently smooth diffeomorphism defined on phase space <span class="math notranslate nohighlight">\(f:~\mathbb{R}^{2N}\rightarrow \mathbb{R}^{2N}\)</span>, such that</p>
 <div class="math notranslate nohighlight" id="equation-symplectic">
@@ -348,7 +347,7 @@ C \mathcal{J} C^T = \mathcal{J} =
  \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
 \end{equation}\]</div>
 <p>for any <span class="math notranslate nohighlight">\(x,u,v\in \mathbb{R}^{2N}\)</span>.</p>
-<p>Under <span class="math notranslate nohighlight">\(f\)</span>, phase space points <span class="math notranslate nohighlight">\((q,p)\)</span> are transformed into <span class="math notranslate nohighlight">\(f(q,p)\)</span> and the Hamiltonian <span class="math notranslate nohighlight">\(H(q,p)\)</span> into the new Hamiltonian <span class="math notranslate nohighlight">\(G(f(q,p))\)</span>, that satisfies <span class="math notranslate nohighlight">\(Df(q,p)DH = DG\)</span>. The equations of motion <code class="xref eq docutils literal notranslate"><span class="pre">poisson_eqn</span></code> then remain</p>
+<p>Under <span class="math notranslate nohighlight">\(f\)</span>, phase space points <span class="math notranslate nohighlight">\((q,p)\)</span> are transformed into <span class="math notranslate nohighlight">\(f(q,p)\)</span> and the Hamiltonian <span class="math notranslate nohighlight">\(H(q,p)\)</span> into the new Hamiltonian <span class="math notranslate nohighlight">\(G(f(q,p))\)</span>, that satisfies <span class="math notranslate nohighlight">\(Df(q,p)DH = DG\)</span>. The equations of motion <a class="reference internal" href="#equation-poisson-eqn">(14)</a> then remain</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
  \{(q,p),H\} = \langle D(q,p),\mathcal{J}DH \rangle &amp;= \langle D(q,p),\;(Df(q,p))^T\mathcal{J}Df(q,p)DH \rangle \\
@@ -460,7 +459,7 @@ If the energy surface is bounded (compact), then the Poincar’e recurrence theo
 <dt class="bibtex label" id="wiggins2003"><span class="brackets">Wig03a</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>S. Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Springer, New York, 2nd ed edition, 2003. ISBN 978-0-387-00177-7.</p>
 </dd>
-<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03b</span></dt>
+<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03</span></dt>
 <dd><p>Stephen Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Volume 1. Springer Science &amp; Business Media, 2003.</p>
 </dd>
 </dl>
@@ -477,7 +476,7 @@ If the energy surface is bounded (compact), then the Poincar’e recurrence theo
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="chapter1_1.html" title="previous page">The Setting: Hamiltonian Dynamics on Phase Space</a>
-    <a class='right-next' id="next-link" href="chapter2_1.html" title="next page">The Hyperbolic setting</a>
+    <a class='right-next' id="next-link" href="chapter2_1_new.html" title="next page">The Hyperbolic setting</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

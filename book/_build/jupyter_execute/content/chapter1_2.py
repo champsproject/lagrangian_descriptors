@@ -148,11 +148,10 @@ where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is def
 
 ```{math}
 ---
-label: poisson_eq
+label: poisson_eqn
 ---
 \begin{equation}
 \dot{q}_i = \{q_i, H\} \quad,\quad \dot{p}_i = \{p_i, H\} \; , \quad \text{for } i = 1,\ldots,N
- \label{eqn:poisson_eqn}
 \end{equation}
 ```
 
