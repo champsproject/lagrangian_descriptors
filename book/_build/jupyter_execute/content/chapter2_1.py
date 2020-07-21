@@ -226,6 +226,7 @@ Let us consider the most simple example with $n$ degrees of freedom. The basic i
 \begin{equation}
 H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i),
 \end{equation}
+
 where $\lambda, \omega_i >0$.
 
 The equation of motion are :
