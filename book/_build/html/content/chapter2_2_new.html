@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>An Informal Introduction to Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory &#8212; Lagrangian Descriptors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/mystnb.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Method of Lagrangian Descriptors" href="chapter3_new.html" />
+    <link rel="prev" title="The Hyperbolic setting" href="chapter2_1_new.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/champs_logo.jpg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Lagrangian Descriptors</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">Authors</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 1</p>
+</li>
+  <li class="">
+    <a href="chapter1_1.html">The Setting: Hamiltonian Dynamics on Phase Space</a>
+  </li>
+  <li class="">
+    <a href="chapter1_2.html">Hamiltonian flows and symplectic maps</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 2</p>
+</li>
+  <li class="">
+    <a href="chapter2_1_new.html">The Hyperbolic setting</a>
+  </li>
+  <li class="active">
+    <a href="">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Chapter 3</p>
+</li>
+  <li class="">
+    <a href="chapter3_new.html">The Method of Lagrangian Descriptors</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Examples</p>
+</li>
+  <li class="">
+    <a href="examples.html">Computing the Lagrangian Descriptors of Nonlinear Dynamical Systems</a>
+  </li>
+  <li class="">
+    <a href="https://github.com/champsproject/lagrangian_descriptors">GitHub repository<i class="fas fa-external-link-alt"></i></a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/chapter2_2_new.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/champsproject/lagrangian_descriptors/master?filepath=book%2Fcontent/v2/gh/champsproject/lagrangian_descriptors/master?urlpath=tree/content/chapter2_2_new.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#" class="nav-link">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#references" class="nav-link">References</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="an-informal-introduction-to-ideas-related-to-kam-kolmogorov-arnold-moser-theory">
+<h1>An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory<a class="headerlink" href="#an-informal-introduction-to-ideas-related-to-kam-kolmogorov-arnold-moser-theory" title="Permalink to this headline">¶</a></h1>
+<p>\label{sec:KAM}</p>
+<p>KAM theory has developed into a recognized  branch of dynamical systems theory that is concerned with the study of the persistence of quasiperiodic trajectories in Hamiltonian system subjected to perturbation (generally, a Hamiltonian perturbation). The origins of this mathematical theory lie in attempts to understand the convergence of perturbation series solutions representing quasiperiodic solutions of the three-body problem in celestial mechanics <a class="bibtex reference internal" href="#moser2001stable" id="id1">[Mos01]</a><a class="bibtex reference internal" href="#barrow1997poincare" id="id2">[BG97]</a><a class="bibtex reference internal" href="#dumas2014kam" id="id3">[Dum14]</a>. Significant progress was made in this area in the second half of the twentieth century, and its name represents an acronym formed by the names of the three founders: Andrei Kolmogorov, Vladimir Arnold and J”{u}rgen Moser. The main question that KAM addresses is the following:</p>
+<blockquote>
+<div><p>What happens to the <b>quasiperiodic trajectories</b> of an <b>integrable</b> Hamiltonian system when the flow is modified with a <b>perturbation</b> that respects the symplectic structure of Hamilton’s equations? Will the perturbation <b>destroy</b> these quasiperiodic solutions, or is it possible that some of them will <b>survive</b> and  only become slightly deformed?</p>
+</div></blockquote>
+<p>The first answer to this question was provided by Kolmogorov in his famous plenary lecture <a class="bibtex reference internal" href="#kolmogorov1954" id="id4">[Kol57]</a> at the International Congress of Mathematicians that took place in Amsterdam in 1954. Since the pioneering works of Poincar’{e} on the three body problem, the intuition built into the scientific community was that typical systems in classical mechanics exhibit chaotic behaviour in some regions of their phase space. However, Kolmogorov’s remarkable announcement produced a complete shock that turned this view upside down. In his talk he claimed that for near-integrable Hamiltonian systems, that is, integrable systems subjected to a perturbation, almost all quasiperiodic motion persists. As we will  explain in more detail shortly, quasiperiodic trajectories trace out tori in phase space. Indeed, they are often viewed synonomously with invariant tori. Moreover, it turns out that the quasiperiodic trajectories that lie on <em><strong>non-resonant tori</strong></em> are more robust to survive the perturbation than those associated to  <em><strong>resonant tori</strong></em>. In fact, resonant tori are the first tori to disappear when the system is perturbed. Interestingly, among the non-resonant tori, KAM theory establishes a criterion to measure the “degree of non-resonance” that is related to their robustness with respect to the perturbation.</p>
+<p>Despite the deep consequences and implications that the results presented by Kolmogorov would bring to the field of classical mechanics, he had only provided partial arguments for them and not complete mathematical proofs. Hence, the foundations of this new theory needed a rigorous scaffolding that arrived several years later, in the period 1962-1963, with the independent works of Arnold <a class="bibtex reference internal" href="#arnold1962" id="id5">[Arn62]</a><a class="bibtex reference internal" href="#arnold1963a" id="id6">[Arn63a]</a><a class="bibtex reference internal" href="#arnold1963b" id="id7">[Arn63b]</a> and Moser <a class="bibtex reference internal" href="#moser1962" id="id8">[Mos62]</a>.</p>
+<p>The goal of this section is to provide the reader with a basic and brief overview of the mathematical ideas and concepts behind KAM theory, and how its development has contributed greatly to the recognition of this theory as an important achievement of the modern theory of dynamical systems. For the sake of clarity, we will  avoid many abstract and technical details of the theory.  Instead, we will focus on explaining the mathematics behind the terms we have highlighted in boldface in the text above, so that this can help us better understand the mathematical content of the questions introduced above in italics, and the answers to them provided by KAM theory. Most of the material discussed in this section is based on, and has been adapted from, the detailed and nice descriptions of KAM theory presented in the books <a class="bibtex reference internal" href="#diacu1996" id="id9">[DH96]</a><a class="bibtex reference internal" href="#dumas2014kam" id="id10">[Dum14]</a><a class="bibtex reference internal" href="#wiggins2003introduction" id="id11">[Wig03]</a></p>
+<p>For completeness, we begin our explanation of KAM theory by considering a Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees-of-freedom (DoF) defined by a scalar function <span class="math notranslate nohighlight">\(H(\mathbf{q},\mathbf{p})\)</span> known as the Hamiltonian, (see \eqref{eq:hamiltoneq}). This function depends on <span class="math notranslate nohighlight">\(\mathbf{q} \in \mathbb{R}^N\)</span>, the configuration space coordinates that represent the DoF of the system, and <span class="math notranslate nohighlight">\(\mathbf{p} \in \mathbb{R}^N\)</span>, which corresponds to their canonically conjugate momenta. In this setup, the phase space where dynamics occurs is <span class="math notranslate nohighlight">\(2N\)</span>-dimensional, and if we label a point in phase space as <span class="math notranslate nohighlight">\(\mathbf{z} = (\mathbf{q},\mathbf{p}) \in \mathbb{R}^{2N}\)</span>, the evolution of the system’s trajectories is governed by Hamilton’s equations of motion:</p>
+<div class="math notranslate nohighlight" id="equation-content-chapter2-2-new-0">
+<span class="eqno">(42)<a class="headerlink" href="#equation-content-chapter2-2-new-0" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{equation}
+\dot{\mathbf{z}} = \mathcal{J} \, \nabla_{\mathbf{z}} H \quad \Leftrightarrow \quad
+\begin{cases}
+\dot{q}_i = \dfrac{\partial H}{\partial p_i}, \\[.4cm]
+\dot{p}_i = -\dfrac{\partial H}{\partial q_i},
+\end{cases}
+\quad i \in \lbrace 1, \ldots, N\rbrace
+\end{equation}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{J}\)</span> is the symplectic  matrix (see \eqref{eqn:symp_cond})  and <span class="math notranslate nohighlight">\(\nabla_{\mathbf{z}}\)</span> is the gradient operator acting on the Hamiltonian.</p>
+<p>The value of the Hamiltonian corresponds to the total energy of the system, it is conserved along trajectories and therefore it is a constant of motion or a first integral of the system. Dynamics for a fixed energy is constrained to a <span class="math notranslate nohighlight">\(2N-1\)</span>-dimensional constant energy hypersurface embedded in the <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space.</p>
+<p>As stated in the introduction, KAM theory is concerned with perturbed integrable systems. In simple terms, a system is said to be integrable if one can find explicit formulas for its solutions, or at least, expressions for them that involve indicated integrals and elementary functions. As opposed to non-integrable systems, integrable systems admit closed form expressions for their trajectories, given initial conditions. This type of integrability is referred to as ‘’integration by quadratures’’ and was first developed by Liouville <a class="bibtex reference internal" href="#liouville1855note" id="id12">[Lio55]</a>.</p>
+<p>Observe that a solution of a dynamical system is a trajectory, that is, a one-dimensional curve wandering around in the <span class="math notranslate nohighlight">\(2N\)</span> high dimensional phase space. Therefore, in order to determine this trajectory one would need to be able to obtain <span class="math notranslate nohighlight">\(2N-1\)</span> functionally independent constants of the motion (CoM), <span class="math notranslate nohighlight">\(F_{i}(\mathbf{q},\mathbf{p}) = C_i\)</span> where <span class="math notranslate nohighlight">\(i \in \lbrace 1,\ldots,2N-1\rbrace\)</span>, so that the result of their intersection is the sought trajectory. This means that each CoM decreases the dimensionality of the accessible phase space for the system by one. Notice also that this approach of finding constants of the motion in order to determine the solutions of the system comes from the natural approach of integrating the <span class="math notranslate nohighlight">\(2N\)</span> ordinary differential equations that define Hamilton’s equations, an operation which would yield, if it can be carried out, <span class="math notranslate nohighlight">\(2N\)</span> integration constants that are later obtained in the classical way from initial conditions.</p>
+<p>However, due to the special symplectic structure of Hamiltonian systems, in order to establish the integrability of a system we only need to find <span class="math notranslate nohighlight">\(N\)</span> CoM. This criterion is known as the Liouville-Mineur-Arnold Integrability Theorem <a class="bibtex reference internal" href="#liouville1855note" id="id13">[Lio55]</a><a class="bibtex reference internal" href="#mineur1935systemes" id="id14">[Min35]</a><a class="bibtex reference internal" href="#mineur1937systemes" id="id15">[Min37]</a><a class="bibtex reference internal" href="#arnol2013mathematical" id="id16">[Arnold13]</a>, and plays a key role in the development of KAM theory. This result states the following:</p>
+<p><b> Liouville-Mineur-Arnold Integrability Theorem (LMAIT): </b>
+An <span class="math notranslate nohighlight">\(N\)</span> DoF Hamiltonian system is integrable if and only if there exist <span class="math notranslate nohighlight">\(N\)</span> constants of the motion <span class="math notranslate nohighlight">\(F_1,\ldots,F_N\)</span> which are smooth analytic functions of the phase space variables, such that:</p>
+<ul class="simple">
+<li><p>they are functionally independent, which means that the vectors <span class="math notranslate nohighlight">\(\nabla F_1 , \ldots, \nabla F_N\)</span> are linearly independent for almost all phase space points,</p></li>
+<li><p>they are in involution with each other, that is, <span class="math notranslate nohighlight">\(\lbrace F_i,F_j \rbrace = 0\)</span> for each <span class="math notranslate nohighlight">\(i \neq j\)</span>.</p></li>
+</ul>
+<p>Notice that the involution condition is equivalent to <span class="math notranslate nohighlight">\(\nabla F_i\)</span> and <span class="math notranslate nohighlight">\(\nabla F_j\)</span> being orthogonal in the symplectic sense</p>
+<div class="math notranslate nohighlight">
+\[\lbrace F_i,F_j \rbrace = \left(\nabla F_i\right)^{T} \mathcal{J} \, \nabla F_j = 0.\]</div>
+<p>This means geometrically that in the symplectic structure of Hamiltonian systems, the level hypersurfaces of the CoM in involution are orthogonal. The LMAIT criterion also ensures that if the intersection resulting from these CoM is a connected and compact manifold, it has the shape of an <span class="math notranslate nohighlight">\(N\)</span>-torus, denoted by <span class="math notranslate nohighlight">\(\mathbb{T}^{N}\)</span>. Such an object is the result of taking the cartesian product of <span class="math notranslate nohighlight">\(N\)</span> copies of a circle, that is:</p>
+<p>\begin{equation*}
+\mathbb{T}^{N} = \underbrace{S^1 \times \ldots \times S^1}_{\scriptsize{\mbox{<span class="math notranslate nohighlight">\(N\)</span> times}}} = \left(\mathbb{R} / 2\pi \mathbb{Z}\right)^{N}
+\end{equation*}</p>
+<p>The LMAIT result goes further by ensuring that for the phase space regions where one can find these tori, there exists a canonical transformation to action-angle coordinates <span class="math notranslate nohighlight">\((\mathbf{I},\boldsymbol{\theta})\)</span> such that the Hamiltonian in these new variables only depends on the actions:</p>
+<p>\begin{equation*}
+K(\mathbf{I}) = K(I_1,\ldots,I_N)
+\end{equation*}</p>
+<p>and Hamilton’s equations are given by:</p>
+<div class="math notranslate nohighlight" id="equation-content-chapter2-2-new-1">
+<span class="eqno">(43)<a class="headerlink" href="#equation-content-chapter2-2-new-1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{equation}
+\begin{cases}
+\dot{\theta}_i = \dfrac{\partial K}{\partial I_i} = \omega_i(\mathbf{I}) \\[.3cm]
+\dot{I}_i = -\dfrac{\partial K}{\partial \theta_i} = 0
+\end{cases}
+\; , \quad i \in \lbrace 1, \ldots,N \rbrace
+\end{equation}\end{split}\]</div>
+<p>The action variables are <span class="math notranslate nohighlight">\(N\)</span> independent constants of motion and they only depend on initial conditions:</p>
+<div class="math notranslate nohighlight" id="equation-actions">
+<span class="eqno">(44)<a class="headerlink" href="#equation-actions" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+I_i(t) = I_i^{0} = \text{constant} \quad \Leftrightarrow \quad \mathbf{I}(t) = \mathbf{I}_0 = \text{constant}.
+\label{eq:actions}
+\end{equation}\]</div>
+<p>The actions determine the energy of the system,
+<span class="math notranslate nohighlight">\($
+K_0 = K(\mathbf{I}_0) = K\left(I_1^0,\ldots,I_N^0\right),
+$\)</span>
+and the differential equations for the angle variables yield:</p>
+<div class="math notranslate nohighlight">
+\[{\theta_i(t) = \omega_i(\mathbf{I}_0) \, t + \theta_i^0 \mod 2\pi \;\; , \quad i \in \lbrace 1, \ldots,N \rbrace}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_i(\mathbf{I}_0)\)</span> are the angular frequencies. We can write the angular solution in vector form:</p>
+<div class="math notranslate nohighlight" id="equation-angles">
+<span class="eqno">(45)<a class="headerlink" href="#equation-angles" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\boldsymbol{\theta}(t) = \boldsymbol{\omega}\left(\mathbf{I}_0\right) t + \boldsymbol{\theta}_0 \mod 2\pi
+\label{eq:angles}
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{\omega}\left(\mathbf{I}_0\right)\)</span> is the frequency vector that characterizes the type of motion displayed by the trajectories of the integrable system. Consequently, we have completely solved the motion in the action-angle coordinate space, and since the change of variable from <span class="math notranslate nohighlight">\((\mathbf{q},\mathbf{p})\)</span> to <span class="math notranslate nohighlight">\((\mathbf{I},\boldsymbol{\theta})\)</span> is canonical (symplectic), it is invertible and we can express the solutions to the original Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> in the form <span class="math notranslate nohighlight">\(\mathbf{q} = \mathbf{q}(\mathbf{I},\boldsymbol{\theta})\)</span> and <span class="math notranslate nohighlight">\(\mathbf{p} = \mathbf{p}(\mathbf{I},\boldsymbol{\theta})\)</span>.</p>
+<p>Equations \eqref{eq:actions} and \eqref{eq:angles} tell us that the flow generated by an integrable Hamiltonian system is linear and takes place on invariant <span class="math notranslate nohighlight">\(N\)</span>-dimensional tori parametrized by <span class="math notranslate nohighlight">\(N\)</span> angle variables. This behavior is known as quasiperiodic motion. Invariance means that a trajectory starting on one of these tori will never leave that torus. Given an energy level for the Hamiltonian system, this family of tori, which is parametrized by the action variables, foliates the energy manifold. Each member of the tori family can be labelled according to a particular value taken by the actions. In the case of <span class="math notranslate nohighlight">\(N = 2\)</span> DoF, this foliation of the 3D energy hypersurface by 2D tori, similar to many concentric layers of an onion, can be easily visualized. Fig. \ref{fig:tori_foliat} shows a representation of this geometrical arrangement.</p>
+<p>Next we introduce the notion of non-degeneracy of a Hamiltonian, which is a necessary requirement for many results described in the framework of KAM theory.</p>
+<p><b>Kolmogorov non-degeneracy condition:</b> Given an integrable Hamiltonian system in action-angle coordinates <span class="math notranslate nohighlight">\(K = K(\mathbf{I})\)</span>, we say that it is non-degenerate if the frequency map:</p>
+<div class="math notranslate nohighlight">
+\[{\mathbf{I} \;\; \mapsto \;\; \boldsymbol{\omega} = \boldsymbol{\omega}(\mathbf{I}) }\]</div>
+<p>is a diffeomorphism. In particular, due to the inverse function theorem, a sufficient condition which implies that the Hamiltonian is non-degenerate is the following:</p>
+<div class="math notranslate nohighlight">
+\[{
+\det \left(\dfrac{\partial \boldsymbol{\omega}}{\partial \mathbf{I}}\right) = \det \left( \text{Hess}_{K}\right) \neq 0
+}\]</div>
+<div class="figure align-default" id="tori-foliat">
+<img alt="../_images/tori_foliation.png" src="../_images/tori_foliation.png" />
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Foliation of a 3D energy hypersurface by 2D tori for an integrable 2 DoF Hamiltonian system. Each torus in the family is labelled by the action variable. We have cut open the tori to better illustrate the layered structure.</span><a class="headerlink" href="#tori-foliat" title="Permalink to this image">¶</a></p>
+</div>
+<p>At this point, it is important to define what we mean by a resonant and a non-resonant torus, because the informal statement of the main results of KAM theory that we gave at the beginning of this section relies heavily on this concept. Recall that KAM theory studies the conditions under which the tori of an integrable Hamiltonian persist  when the system is subjected to a small perturbation.</p>
+<p><strong>Resonance:</strong> The frequency vector <span class="math notranslate nohighlight">\(\boldsymbol{\omega} \in \mathbb{R}^{N}\)</span> is said to be resonant if there exists a vector of integers with at least one of its components not zero, that is, <span class="math notranslate nohighlight">\(\mathbf{k} \in \mathbb{Z}^{N} - \lbrace 0 \rbrace\)</span>, such that:</p>
+<div class="math notranslate nohighlight" id="equation-content-chapter2-2-new-2">
+<span class="eqno">(46)<a class="headerlink" href="#equation-content-chapter2-2-new-2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathbf{k} \cdot \boldsymbol{\omega} = \sum_{i = 1}^{N} k_i \, \omega_i = 0.
+\end{equation}\]</div>
+<p>Otherwise <span class="math notranslate nohighlight">\(\boldsymbol{\omega}\)</span> is non-resonant. Tori characterized by a resonant (or non-resonant) frequency vector are known in the literature as resonant (or non-resonant) tori.</p>
+<p>Consider the nearly-integrable Hamiltonian:</p>
+<div class="math notranslate nohighlight" id="equation-content-chapter2-2-new-3">
+<span class="eqno">(47)<a class="headerlink" href="#equation-content-chapter2-2-new-3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathcal{H}(\mathbf{I},\boldsymbol{\theta}) = h(\mathbf{I}) + \varepsilon  f(\mathbf{I},\boldsymbol{\theta}) 
+\end{equation} \]</div>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the integrable Hamiltonian, <span class="math notranslate nohighlight">\(f\)</span> is the perturbation and <span class="math notranslate nohighlight">\(\varepsilon \geq 0\)</span> is the magnitude of the perturbation. KAM theory establishes that resonant tori are very fragile since they are the first ones to be destroyed when the perturbation is switched on, while most of the non-resonant tori (in the measure-theoretic sense) are robust and survive the perturbation, but become slightly deformed by it. The key ingredient which determines the ``degree of robustness” that allows us to quantify if a torus will survive or not is  the frequency vector associated to each of the tori in the integrable system. We give here the basic definitions of these concepts and, for  a more detailed analysis, the reader can refer to <a class="bibtex reference internal" href="#wiggins2003introduction" id="id17">[Wig03]</a> and references therein.</p>
+<p><strong>Add example of 2 DOF harmonic oscillators.</strong></p>
+<p>In order to get a better idea and develop some geometrical intuition on the relationship between the definition of resonance and the corresponding dynamical behavior of trajectories on tori, we go back to the simple case provided by an integrable Hamiltonian system with <span class="math notranslate nohighlight">\(N = 2\)</span> DoF. In this context, a resonant torus is determined by a frequency vector <span class="math notranslate nohighlight">\(\boldsymbol{\omega} = (\omega_1,\omega_2)\)</span> that satisfies:</p>
+<div class="math notranslate nohighlight">
+\[{
+k_1 \, \omega_1 + k_2 \, \omega_2 = 0 \;,\quad k_1 , k_2 \in \mathbb{Z}-\lbrace 0 \rbrace \quad \Leftrightarrow \quad \dfrac{\omega_2}{\omega_1} = -\dfrac{k_1}{k_2} \in \mathbb{Q}
+}\]</div>
+<p>Motion on resonant tori is periodic, and hence trajectories are closed. For example, if we consider motion on a torus with frequencies <span class="math notranslate nohighlight">\(\omega_1 = 2\)</span> and <span class="math notranslate nohighlight">\(\omega_2 = 3\)</span>, a trajectory lying on this torus will wind around it making <span class="math notranslate nohighlight">\(3\)</span> complete revolutions through the hole on the torus and <span class="math notranslate nohighlight">\(2\)</span> full revolutions around the hole before it closes onto itself. This motion is illustrated in Fig. \ref{fig:quasip_mot} A).</p>
+<div class="figure align-default" id="id21">
+<img alt="../_images/periodicFlow_w1_2_w2_3.png" src="../_images/periodicFlow_w1_2_w2_3.png" />
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">A) Periodic motion on a resonant torus with frequency ratio <span class="math notranslate nohighlight">\(\omega_2 / \omega_1 = 3/2\)</span>.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="quasip-mot">
+<img alt="../_images/quasiperFlow_w1_1_w2_sqrt2.png" src="../_images/quasiperFlow_w1_1_w2_sqrt2.png" />
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">B) Quasiperiodic motion on a non-resonant torus with frequency ratio <span class="math notranslate nohighlight">\(\omega_2 / \omega_1 = \sqrt{2}\)</span>. Notice how the quasiperiodic trajectory densely and uniformly fills the surface of the non-resonant torus along its evolution. This type of motion is ergodic on the torus.</span><a class="headerlink" href="#quasip-mot" title="Permalink to this image">¶</a></p>
+</div>
+<p>Interestingly, the resonant and non-resonant tori of the family that fill out the energy manifold of an integrable Hamiltonian system are intermingled in a similar way as the rational and irrational numbers are distributed among the reals. Moreover, it can be shown that almost all tori are non-resonant. This is also the case for rational and irrational numbers, since rationals are dense in the real numbers, but have zero measure. This means that if we select a real number at random, we will almost always pick an irrational number.</p>
+<p>We can illustrate the results discussed by KAM theory by considering tori in the integrable system defined by the Chirikov standard map <a class="bibtex reference internal" href="#chirikov1979" id="id18">[Chi79]</a><a class="bibtex reference internal" href="#meiss2008" id="id19">[Mei08]</a> their persistence under perturbation. The Chirikov standard map is a two dimensional symplectic map that  displays many features of the Poincar’e return maps for typical 2 DoF autonomous Hamiltonian systems. This discrete dynamical system is defined by a two-dimensional area-preserving map which depends on a parameter <span class="math notranslate nohighlight">\(k\)</span> that determines the strength of the perturbation that is applied to the underlying integrable system. The solutions for the unperturbed system (<span class="math notranslate nohighlight">\(k = 0\)</span>) are one-dimensional tori, that is, circles, and are represented in Fig. \ref{fig:std_map} A). Notice that these tori appear as lines because the left and right boundaries of the domain are identified, and so also, the top and bottom edges of the square. This is the manifestation of the toroidal geometry of the phase space of the standard map. If we increase the perturbation strength to <span class="math notranslate nohighlight">\(k = 0.3\)</span> we observe in panel B) that most of the tori have survived the perturbation, but in a slightly distorted shape. Moreover, we notice also that some of the tori of the originally unperturbed system break (the resonant ones), and in the process they have generated smaller tori, and also hyperbolic points that possess stable and unstable manifolds. Increasing the perturbation further to <span class="math notranslate nohighlight">\(k = 0.8\)</span>, one can see in panel C) that non-resonant tori continue to break up into smaller tori, giving rise to structures known as islands of regularity, and that these subregions of the phase space are surrounded by a larger sea of random points that indicates chaotic motion.
+Panels  D), E) and F) of Fig. \ref{fig:std_map} show how with increasing <span class="math notranslate nohighlight">\(k\)</span> all tori eventually break up.
+This is in part one of the main messages that can be drawn from KAM theory; the coexistence of chaotic and regular motion in the phase space of Hamiltonian systems <a class="bibtex reference internal" href="#markus1974generic" id="id20">[MM74]</a></p>
+<div class="figure align-default" id="id22">
+<img alt="../_images/std_map_k_0.png" src="../_images/std_map_k_0.png" />
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: A) <span class="math notranslate nohighlight">\(k = 0\)</span></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id23">
+<img alt="../_images/std_map_k_03.png" src="../_images/std_map_k_03.png" />
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: B) <span class="math notranslate nohighlight">\(k = 0.3\)</span></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id24">
+<img alt="../_images/std_map_k_08.png" src="../_images/std_map_k_08.png" />
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: C) <span class="math notranslate nohighlight">\(k = 0.8\)</span></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id25">
+<img alt="../_images/std_map_k_12.png" src="../_images/std_map_k_12.png" />
+<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: D) <span class="math notranslate nohighlight">\(k = 1.2\)</span></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id26">
+<img alt="../_images/std_map_k_24.png" src="../_images/std_map_k_24.png" />
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: E) <span class="math notranslate nohighlight">\(k = 2.4\)</span></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="std-map">
+<img alt="../_images/std_map_k_150.png" src="../_images/std_map_k_150.png" />
+<p class="caption"><span class="caption-number">Fig. 23 </span><span class="caption-text">Phase space of the Chirikov’s Standard Map as revealed by means of a Poincar’e map for different values of the perturbation parameter: F) <span class="math notranslate nohighlight">\(k = 15\)</span></span><a class="headerlink" href="#std-map" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p id="bibtex-bibliography-content/chapter2_2_new-0"><dl class="citation">
+<dt class="bibtex label" id="arnol2013mathematical"><span class="brackets"><a class="fn-backref" href="#id16">Arnold13</a></span></dt>
+<dd><p>V. I. Arnol’d. <em>Mathematical methods of classical mechanics</em>. Volume 60. Springer Science &amp; Business Media, 2013.</p>
+</dd>
+<dt class="bibtex label" id="arnold1962"><span class="brackets"><a class="fn-backref" href="#id5">Arn62</a></span></dt>
+<dd><p>V. I. Arnold. The classical theory of perturbations and the problem of stability of planetary systems. <em>Soviet Mathematics Doklady</em>, 3:1008–1012, 1962.</p>
+</dd>
+<dt class="bibtex label" id="arnold1963a"><span class="brackets"><a class="fn-backref" href="#id6">Arn63a</a></span></dt>
+<dd><p>V. I. Arnold. Proof of a theorem of A. N. Kolmogorov on the invariance of quasi-periodic motions under small perturbations of the Hamiltonian. <em>Russian Mathematical Surveys</em>, 18(5):9–36, 1963.</p>
+</dd>
+<dt class="bibtex label" id="arnold1963b"><span class="brackets"><a class="fn-backref" href="#id7">Arn63b</a></span></dt>
+<dd><p>V. I. Arnold. Small divisor problems in classical and celestial mechanics. <em>Russian Mathematical Surveys</em>, 18(6):85–192, 1963.</p>
+</dd>
+<dt class="bibtex label" id="barrow1997poincare"><span class="brackets"><a class="fn-backref" href="#id2">BG97</a></span></dt>
+<dd><p>J. Barrow-Green. <em>Poincaré and the three body problem</em>. Number 11. American Mathematical Soc., 1997.</p>
+</dd>
+<dt class="bibtex label" id="chirikov1979"><span class="brackets"><a class="fn-backref" href="#id18">Chi79</a></span></dt>
+<dd><p>B. V. Chirikov. A universal instability of many-dimensional oscillator systems. <em>Physics Reports</em>, 52(5):263–379, 1979. <a class="reference external" href="https://doi.org/https://doi.org/10.1016/0370-1573(79)90023-1">doi:https://doi.org/10.1016/0370-1573(79)90023-1</a>.</p>
+</dd>
+<dt class="bibtex label" id="collins2011index"><span class="brackets">CEW11</span></dt>
+<dd><p>P. Collins, G. S Ezra, and S. Wiggins. Index k saddles and dividing surfaces in phase space with applications to isomerization dynamics. <em>The Journal of chemical physics</em>, 134(24):244105, 2011.</p>
+</dd>
+<dt class="bibtex label" id="diacu1996"><span class="brackets"><a class="fn-backref" href="#id9">DH96</a></span></dt>
+<dd><p>F. Diacu and P. Holmes. <em>Celestial Encounters: The Origins of Chaos and Stability</em>. Princeton University Press, 1996.</p>
+</dd>
+<dt class="bibtex label" id="duistermaat1972periodic"><span class="brackets">Dui72</span></dt>
+<dd><p>JJ Duistermaat. On periodic solutions near equilibrium points of conservative systems. <em>Archive for Rational Mechanics and Analysis</em>, 45(2):143–160, 1972.</p>
+</dd>
+<dt class="bibtex label" id="dumas2014kam"><span class="brackets">Dum14</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id10">2</a>)</span></dt>
+<dd><p>H. S. Dumas. <em>The KAM Story: A Friendly Introduction to the Content, History, and Significance of Classical Kolmogorovâ Arnoldâ Moser Theory</em>. World Scientific Publishing Company, 2014.</p>
+</dd>
+<dt class="bibtex label" id="eldering2013"><span class="brackets">Eld13</span></dt>
+<dd><p>J Eldering. <em>Normally Hyperbolic Invariant Manifolds. The Noncompact Case</em>. Atlantis Press, 2013.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1971"><span class="brackets">Fen71</span></dt>
+<dd><p>N Fenichel. Persistence and smoothess of the invariant manifolds for flows. <em>Indiana University Mathematics Journal</em>, 1971.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1974"><span class="brackets">Fen74</span></dt>
+<dd><p>N. Fenichel. Asymptotic stability with rate conditions. <em>Indiana Univ. Math. J.</em>, 23:1109–1137, 1974.</p>
+</dd>
+<dt class="bibtex label" id="fenichel1977"><span class="brackets">Fen77</span></dt>
+<dd><p>N. Fenichel. Asymptotic stability with rate conditions, ii. <em>Indiana Univ. Math. J.</em>, 26:81–93, 1977.</p>
+</dd>
+<dt class="bibtex label" id="giorgilli2002"><span class="brackets">Gio02</span></dt>
+<dd><p>A. Giorgilli. <em>Notes on Exponential stability of Hamiltonian systems</em>. Centro de ricerca Matematica Ennio De Giorgi Pisa, February 4-15., 2002.</p>
+</dd>
+<dt class="bibtex label" id="guillemin2010differential"><span class="brackets">GP10</span></dt>
+<dd><p>Victor Guillemin and Alan Pollack. <em>Differential topology</em>. Volume 370. American Mathematical Soc., 2010.</p>
+</dd>
+<dt class="bibtex label" id="kelley1967liapounov"><span class="brackets">Kel67</span></dt>
+<dd><p>A. Kelley. On the liapounov subcenter manifold. <em>Journal of mathematical analysis and applications</em>, 18(3):472–478, 1967.</p>
+</dd>
+<dt class="bibtex label" id="kolmogorov1954"><span class="brackets"><a class="fn-backref" href="#id4">Kol57</a></span></dt>
+<dd><p>A. N. Kolmogorov. Théorie générale des systèmes dynamiques et mécanique classique. In <em>Proceedings of the International Congress of Mathematicians, Amsterdam, 1954, Vol. 1</em>, 315–333. North-Holland Publishing Co., 1957.</p>
+</dd>
+<dt class="bibtex label" id="liapounoff1907probleme"><span class="brackets">Lia07</span></dt>
+<dd><p>A. Liapounoff. Problème général de la stabilité du mouvement. In <em>Annales de la Faculté des sciences de Toulouse: Mathématiques</em>, volume 9, 203–474. 1907.</p>
+</dd>
+<dt class="bibtex label" id="liouville1855note"><span class="brackets">Lio55</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id13">2</a>)</span></dt>
+<dd><p>J. Liouville. Note sur l’intégration des équations différentielles de la dynamique, présentée au bureau des longitudes le 29 juin 1853. <em>Journal de Mathématiques pures et appliquées</em>, pages 137–138, 1855.</p>
+</dd>
+<dt class="bibtex label" id="markus1974generic"><span class="brackets"><a class="fn-backref" href="#id20">MM74</a></span></dt>
+<dd><p>Lawrence Markus and Kenneth Ray Meyer. <em>Generic Hamiltonian dynamical systems are neither integrable nor ergodic</em>. Number 144. American Mathematical Soc., 1974.</p>
+</dd>
+<dt class="bibtex label" id="meiss2008"><span class="brackets"><a class="fn-backref" href="#id19">Mei08</a></span></dt>
+<dd><p>J. D. Meiss. Visual explorations of dynamics: The standard map. <em>Pramana</em>, 70(6):965–988, 2008. <a class="reference external" href="https://doi.org/10.1007/s12043-008-0103-3">doi:10.1007/s12043-008-0103-3</a>.</p>
+</dd>
+<dt class="bibtex label" id="mineur1935systemes"><span class="brackets"><a class="fn-backref" href="#id14">Min35</a></span></dt>
+<dd><p>H. Mineur. Sur les systemes mécaniques admettant n intégrales premieres uniformes et l’extensiona ces systemes de la méthode de quantification de sommerfeld. <em>CR Acad. Sci., Paris</em>, 200:1571–1573, 1935.</p>
+</dd>
+<dt class="bibtex label" id="mineur1937systemes"><span class="brackets"><a class="fn-backref" href="#id15">Min37</a></span></dt>
+<dd><p>H. Mineur. Sur les systèmes mécaniques dans lesquels figurent des paramètres fonctions du temps. Étude des systèmes admettant n intégrales premières uniformes en involution. extension à ces systèmes des conditions de quantification de bohr-sommerfeld. <em>J. Ecole Polytechn</em>, 3:173–191, 1937.</p>
+</dd>
+<dt class="bibtex label" id="moser1958generalization"><span class="brackets">Mos58</span></dt>
+<dd><p>J. Moser. On the generalization of a theorem of a. liapounoff. <em>Communications on Pure and Applied Mathematics</em>, 11(2):257–271, 1958.</p>
+</dd>
+<dt class="bibtex label" id="moser1976periodic"><span class="brackets">Mos76</span></dt>
+<dd><p>J. Moser. Periodic orbits near an equilibrium and a theorem by alan weinstein. <em>Communications on Pure and Applied Mathematics</em>, 29(6):727–747, 1976.</p>
+</dd>
+<dt class="bibtex label" id="moser2001stable"><span class="brackets"><a class="fn-backref" href="#id1">Mos01</a></span></dt>
+<dd><p>J. Moser. <em>Stable and random motions in dynamical systems: With special emphasis on celestial mechanics</em>. Volume 1. Princeton university press, 2001.</p>
+</dd>
+<dt class="bibtex label" id="moser1962"><span class="brackets"><a class="fn-backref" href="#id8">Mos62</a></span></dt>
+<dd><p>J. K. Moser. On invariant curves of area-preserving mappings of an annulus. <em>Nachr. Akad. Wiss. Göttingen II, Math. Phys. Kl.</em>, pages 1–20, 1962.</p>
+</dd>
+<dt class="bibtex label" id="weinstein1973normal"><span class="brackets">Wei73</span></dt>
+<dd><p>A. Weinstein. Normal modes for nonlinear hamiltonian systems. <em>Inventiones mathematicae</em>, 20(1):47–57, 1973.</p>
+</dd>
+<dt class="bibtex label" id="wiggins1990geometry"><span class="brackets">Wig90</span></dt>
+<dd><p>S Wiggins. On the geometry of transport in phase space I. transport in k-degree-of-freedom hamiltonian systems, $2 \le k&lt; \infty $. <em>Physica D: Nonlinear Phenomena</em>, 44(3):471–501, 1990.</p>
+</dd>
+<dt class="bibtex label" id="wigginsbook1994"><span class="brackets">Wig94</span></dt>
+<dd><p>S Wiggins. <em>Normally hyperbolic invariant manifolds in dynamical systems</em>. Springer-Verlag New York, 1994.</p>
+</dd>
+<dt class="bibtex label" id="wigginsbook2004"><span class="brackets">Wig04</span></dt>
+<dd><p>S Wiggins. <em>Introduction to Applied Nonlinear Dynamics and Chaos</em>. Springer–Verlag, 2004.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2001"><span class="brackets">WWJaffeU01</span></dt>
+<dd><p>S Wiggins, L Wiesenfeld, C Jaffé, and T Uzer. Impenetrable Barriers in Phase-Space. <em>Phys. Rev. Lett.</em>, 86(24):5478–5481, jun 2001. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevLett.86.5478">https://link.aps.org/doi/10.1103/PhysRevLett.86.5478</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.86.5478">doi:10.1103/PhysRevLett.86.5478</a>.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2003introduction"><span class="brackets">Wig03</span><span class="fn-backref">(<a href="#id11">1</a>,<a href="#id17">2</a>)</span></dt>
+<dd><p>S. Wiggins. <em>Introduction to applied nonlinear dynamical systems and chaos</em>. Volume 2. Springer Science &amp; Business Media, 2003.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2016role"><span class="brackets">Wig16a</span></dt>
+<dd><p>S. Wiggins. The role of normally hyperbolic invariant manifolds (nhims) in the context of the phase space setting for chemical reaction dynamics. <em>Regular and Chaotic Dynamics</em>, 21(6):621–638, 2016.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2016"><span class="brackets">Wig16b</span></dt>
+<dd><p>S. Wiggins. The role of normally hyperbolic invariant manifolds (NHIMS) in the context of the phase space setting for chemical reaction dynamics. <em>Regular and Chaotic Dynamics</em>, 21(6):621–638, 2016.</p>
+</dd>
+</dl>
+</p>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="chapter2_1_new.html" title="previous page">The Hyperbolic setting</a>
+    <a class='right-next' id="next-link" href="chapter3_new.html" title="next page">The Method of Lagrangian Descriptors</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The CHAMPS Project<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
