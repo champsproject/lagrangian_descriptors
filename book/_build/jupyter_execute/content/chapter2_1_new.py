@@ -1,7 +1,7 @@
 (sec:hyper)=
 # The Hyperbolic setting
 
-Invariant sets (see Definition {ref}`Invariant Sets<invariant_sets>` play a fundamental role in dynamical systems theory. In particular, they cannot be "crossed" by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
+Invariant sets (see Definition {ref}`here<invariant_set>`) play a fundamental role in dynamical systems theory. In particular, they cannot be "crossed" by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
 
 Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable {cite}`guillemin2010differential`.  _Normally hyperbolic invariant manifolds_ (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.
 
@@ -11,23 +11,43 @@ In two degree-of-freedom Hamiltonian systems a one dimensional unstable periodic
 
 For more than two degrees-of-freedom periodic orbits and their stable and unstable manifolds do not have sufficient dimension (or, equivalently, their codimension is greater than one) to form barriers to transport or lobes. 
 
-We also note (cf. Section {ref}`3 <sec:LDs>` ) the global phase space structure can be studied by creating a mapping along trajectories from a surface transverse to the flow in the energy surface, i.e. the Poincar\'e map and the Poincar\'e section. For two degrees-of-freedom the Poincar\'e section is two dimensional. For $n$ degrees-of-freedom the Poincar\'e section is $2n-2$ dimensional. The dynamics in the Poincar\'e section is not easy to visualize for more than two degrees-of-freedom.
+We also note (cf. Section {ref}`3 <sec:LDs>` ) the global phase space structure can be studied by creating a mapping along trajectories from a surface transverse to the flow in the energy surface, i.e. the Poincarè map and the Poincarè section. For two degrees-of-freedom the Poincarè section is two dimensional. For $n$ degrees-of-freedom the Poincarè section is $2n-2$ dimensional. The dynamics in the Poincarè section is not easy to visualize for more than two degrees-of-freedom.
 
 In the table below we collect together some dimensionality and codimensionality properties of periodic orbits and their associated geometrical structures within the energy surface, i.e. $E= {\rm constant}$. 
 
+```{list-table} Dimension count of phase space structures. Codimension of certain objects appears in parentheses.
+:header-rows: 1
+:name: tab:dimensions
 
-|Degrees of freedom | 2 | 3 | n |
-|:------- | :-------: | :-------: | :-------: |
-|Phase space | 4 | 6 | 2n |
-|Energy surface | 3 | 5 | 2n - 1 |
-|Poincar\'e section | 2 | 4 | 2n-2 |
-|Periodic orbit | 1 (2) | 1 (4) | 1 (2n-2) |
-|Stable and unstable manifolds of a periodic orbit  | 2 (1) | 2 or 3 (3 or 2) | 2 to n (2n-3 to n-1) |
-|Barriers in energy surface | 2 (1) | 4 (1) | 2n-2 (1) |
-
-\caption{Dimension count of phase space structures. Codimension of certain objects appears in parentheses.}
-\label{tab:dimensions}
-
+* - Degrees of freedom
+  - 2 
+  - 3 
+  - $n$
+* - Phase space 
+  - 4 
+  - 6 
+  - $2n$
+* - Energy surface  
+  - 3 
+  - 5 
+  - $2n$
+* - Poincarè section 
+  - 2 
+  - 4 
+  - $2n-2$
+* - Periodic orbit 
+  - 1 (2) 
+  - 1 (4) 
+  - 1 ($2n-2$)
+* - Stable and unstable manifolds of a periodic orbit  
+  - 2 (1) 
+  - 2 or 3 (3 or 2) 
+  - 2 to $n$ ($2n-3$ to $n-1$)
+* - Barriers in energy surface 
+  - 2 (1) 
+  - 4 (1) 
+  - $2n-2$ (1)
+```
 
 NHIMs are a generalization of unstable periodic orbits to more than two degrees-of-freedom in this sense that they _may_ have stable and unstable manifolds of codimension one in the energy surface and, hence, for the framework on which phase space transport occurs  in Hamiltonian systems with more than two degrees-of-freedom {cite}`wiggins1990geometry`.  Now we want to develop this idea of a NHIM, and its consequences, in more detail. Recent references for this topic are {cite}`Wigginsbook1994,Wiggins2001,Wigginsbook2004,Eldering2013`, but we will begin with an elementary description.
 
@@ -102,7 +122,7 @@ label: eq:ws
 \label{eq:ws}
 \end{eqnarray}
 ```
-A trajectory that starts on the line $ q_1 = - p_1$ remains on the line. This line is an invariant set under the flow. 
+A trajectory that starts on the line $q_1 = - p_1$ remains on the line. This line is an invariant set under the flow. 
 
 The solution of the system of differential Eq. {eq}`eq:ws` decay exponentially in time.
 
@@ -125,7 +145,7 @@ label:
 \displaystyle{ W^s(\mathcal{M})=  \lbrace (q_1,p_1) | (q_1(t), p_1(t) ) \rightarrow \mathcal{M} , t \rightarrow + \infty \rbrace} = \lbrace  (q_1, p_1 )  |  q_1 = - p_1 \rbrace  
 \end{equation}
 ```
-Now, let us consider the trajectories that start on the line $ q_1 =  p_1$. Like in the previous case, the Hamiltonian vector field is tangent to the line,
+Now, let us consider the trajectories that start on the line $q_1 = p_1$. Like in the previous case, the Hamiltonian vector field is tangent to the line,
 
 ```{math}
 ---
@@ -136,7 +156,7 @@ label:
 \dot{p_1} &=& \lambda p_1.
 \end{eqnarray}
 ```
-However, the vector field points away from $\mathcal{M}$. The trajectories that start on the line $ q_1 =  p_1$ diverge from the equilibrium point $\mathcal{M}$.
+However, the vector field points away from $\mathcal{M}$. The trajectories that start on the line $q_1 = p_1$ diverge from the equilibrium point $\mathcal{M}$.
 
 ```{math}
 ---
@@ -209,7 +229,7 @@ label:
 ---
 name: Vq1
 ---
-(a) Potential $V_1(q_1) $
+(a) Potential $V_1(q_1)$
 ```
 
 ```{figure} figures/Vq2.jpg
@@ -302,7 +322,7 @@ label:
 ---
 name:
 ---
-(a) Potential $V_1(q_1) $
+(a) Potential $V_1(q_1)$
 ```
 
 ```{figure} figures/Vq2.jpg
@@ -347,7 +367,7 @@ name:
 <img src="figures/q2p2.jpg"> 
 <img src="figures/qnpn.jpg"> 
 
-The NHIM and its stable and unstable manifolds can be found analogously to the  2 degree of freedom system case. If $q_1=p_1=0$ then $\dot{q_1}=0$ and $\dot{p_1}=0$ and the system consists of $n-1$ harmonic oscillators bounded by the fixed total energy. For $E=0$, $q_1,p_1=0$ is an unstable equilibrium point and for $E>0$, an invariant set that can be shown to be a sphere. The dimension of the sphere depends on the number of degrees of freedom with non-zero energy. This sphere is a manifold, it is invariant and normally hyperbolic, hence a NHIM. In general a NHIM does not have to be a sphere. If all degrees of freedom have non-zero energy, except for $q_1,p_1=0$, the NHIM is $2n-3$ dimensional and its stable and unstable manifolds are dynamical barriers on the energy level set according to Tab. \ref{tab:dimensions}.
+The NHIM and its stable and unstable manifolds can be found analogously to the  2 degree of freedom system case. If $q_1=p_1=0$ then $\dot{q_1}=0$ and $\dot{p_1}=0$ and the system consists of $n-1$ harmonic oscillators bounded by the fixed total energy. For $E=0$, $q_1,p_1=0$ is an unstable equilibrium point and for $E>0$, an invariant set that can be shown to be a sphere. The dimension of the sphere depends on the number of degrees of freedom with non-zero energy. This sphere is a manifold, it is invariant and normally hyperbolic, hence a NHIM. In general a NHIM does not have to be a sphere. If all degrees of freedom have non-zero energy, except for $q_1,p_1=0$, the NHIM is $2n-3$ dimensional and its stable and unstable manifolds are dynamical barriers on the energy level set according to {numref}`tab:dimensions` .
 
 ```{math}
 ---

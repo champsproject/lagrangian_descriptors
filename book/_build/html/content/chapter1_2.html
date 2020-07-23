@@ -68,7 +68,16 @@
   
   <ul class="nav sidenav_l1">
   <li class="">
-    <a href="../intro.html">Authors</a>
+    <a href="../authors.html">Authors</a>
+  </li>
+  <li class="">
+    <a href="../dedication.html">Dedication</a>
+  </li>
+  <li class="">
+    <a href="../acknowledgments.html">Acknowledgments</a>
+  </li>
+  <li class="">
+    <a href="../preface.html">Preface</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 1</p>
@@ -213,7 +222,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#poincar-e-recurrence" class="nav-link">Poincar’e recurrence</a>
+            <a href="#poincare-recurrence" class="nav-link">Poincarè recurrence</a>
         </li>
     
             </ul>
@@ -353,7 +362,7 @@ C \mathcal{J} C^T = \mathcal{J} =
  &amp;= \langle Df(q,p)D(q,p),\;\mathcal{J}Df(q,p)DH \rangle = \{f(q,p), G\}.
 \end{align*}\end{split}\]</div>
 <p>For a coordinate free formulation using differential forms see <a class="bibtex reference internal" href="#arnold76" id="id3">[Arn76]</a>.</p>
-<p>The flow of an autonomous Hamiltonian system is a symplectic transformation for each <span class="math notranslate nohighlight">\(t\)</span>. Another common example of a symplectic map is the return map associated with a Poincar’e surface of section (See Chapter <a class="reference internal" href="chapter3_new.html#sec-lds"><span class="std std-ref">3</span></a>), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{‘e}non map.
+<p>The flow of an autonomous Hamiltonian system is a symplectic transformation for each <span class="math notranslate nohighlight">\(t\)</span>. Another common example of a symplectic map is the return map associated with a Poincarè surface of section (See Chapter <a class="reference internal" href="chapter3_new.html#sec-lds"><span class="std std-ref">3</span></a>), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{‘e}non map.
 Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions <a class="bibtex reference internal" href="#meiss-symplectic-1992" id="id4">[Mei92]</a> to name but a few.</p>
 </div>
 <div class="section" id="coordinates-q-p-q-i-p-i-significance-of-canonically-conjugate-pairs">
@@ -365,12 +374,12 @@ Symplectic maps arise in many applications in physics and chemistry, for example
 \{q_i, p_j\} = \delta_{ij} \; , \quad \text{for } i,j \in \{1,\ldots,N\}
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\delta_{ij}\)</span> is the Kronecker delta. The pair <span class="math notranslate nohighlight">\((q_i , p_i)\)</span> is referred to as canonically conjugate. The relations above are referred to as the fundamental Poisson bracket equations and are preserved if and only if the coordinates are canonical. Further details on this can be found in the section 9.4 and 9.5 of the textbook <a class="bibtex reference internal" href="#goldstein2001" id="id5">[GPS01]</a>.</p>
-<p>An important feature of canonically conjugate pairs lies in their role in defining Poincar’e surfaces of section. A surface defined by <span class="math notranslate nohighlight">\(q_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{q}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{q}_j \leq 0\)</span>, or <span class="math notranslate nohighlight">\(p_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{p}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{p}_j \leq 0\)</span>, admits a symplectic (Poincar’e) return map, provided it is a surface of section in the sense of Birkhoff <a class="bibtex reference internal" href="#birkhoff27" id="id6">[Bir27]</a>. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincar’e surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.</p>
+<p>An important feature of canonically conjugate pairs lies in their role in defining Poincarè surfaces of section. A surface defined by <span class="math notranslate nohighlight">\(q_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{q}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{q}_j \leq 0\)</span>, or <span class="math notranslate nohighlight">\(p_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{p}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{p}_j \leq 0\)</span>, admits a symplectic (Poincarè) return map, provided it is a surface of section in the sense of Birkhoff <a class="bibtex reference internal" href="#birkhoff27" id="id6">[Bir27]</a>. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincarè surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.</p>
 </div>
 <div class="section" id="phase-space-slices-phase-space-transversal-slice">
 <h2>Phase space slices, phase space transversal slice<a class="headerlink" href="#phase-space-slices-phase-space-transversal-slice" title="Permalink to this headline">¶</a></h2>
-<p>The phase space structures that govern the dynamics of a Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom are of codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space, in the case of an autonomous system codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in the <span class="math notranslate nohighlight">\(2N-1\)</span>-dimensional energy surface <a class="bibtex reference internal" href="#waalkens08" id="id7">[WSW08]</a> (refer to hyperbolic section). A Poincar’e surface of section is a <span class="math notranslate nohighlight">\((2N - 2)\)</span>-dimensional surface, for example one specified by <span class="math notranslate nohighlight">\(q_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{q}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{q}_j \leq 0\)</span>,
-where <span class="math notranslate nohighlight">\(j \in 1, 2, \ldots, N\)</span> and <span class="math notranslate nohighlight">\(K\)</span> is constant. For this Poincar’e surface of section to be transverse to the flow, we require</p>
+<p>The phase space structures that govern the dynamics of a Hamiltonian system with <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom are of codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in <span class="math notranslate nohighlight">\(2N\)</span>-dimensional phase space, in the case of an autonomous system codimension-<span class="math notranslate nohighlight">\(1\)</span> and codimension-<span class="math notranslate nohighlight">\(2\)</span> in the <span class="math notranslate nohighlight">\(2N-1\)</span>-dimensional energy surface <a class="bibtex reference internal" href="#waalkens08" id="id7">[WSW08]</a> (refer to hyperbolic section). A Poincarè surface of section is a <span class="math notranslate nohighlight">\((2N - 2)\)</span>-dimensional surface, for example one specified by <span class="math notranslate nohighlight">\(q_j = K\)</span> with <span class="math notranslate nohighlight">\(\dot{q}_j \geq 0\)</span> or <span class="math notranslate nohighlight">\(\dot{q}_j \leq 0\)</span>,
+where <span class="math notranslate nohighlight">\(j \in 1, 2, \ldots, N\)</span> and <span class="math notranslate nohighlight">\(K\)</span> is constant. For this Poincarè surface of section to be transverse to the flow, we require</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
 \dot{q}_j = \dfrac{\partial H}{\partial p_j} \neq 0 \, ,
@@ -415,19 +424,19 @@ where <span class="math notranslate nohighlight">\(j \in 1, 2, \ldots, N\)</span
 \end{equation}\]</div>
 <p>which means that the phase space density <span class="math notranslate nohighlight">\(\rho(\mathbf{x}, t)\)</span> is conserved along the solutions of <span class="math notranslate nohighlight">\(H\)</span>. Consequently when an ensemble evolves, its location and shape in phase space change but its volume is conserved. It also follows that all autonomous Hamiltonian systems are volume preserving due to Liouville’s theorem.</p>
 </div>
-<div class="section" id="poincar-e-recurrence">
-<h2>Poincar’e recurrence<a class="headerlink" href="#poincar-e-recurrence" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poincare-recurrence">
+<h2>Poincarè recurrence<a class="headerlink" href="#poincare-recurrence" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>This section is adapted from the book <em>Applied Nonlinear Dynamical systems by S. Wiggins </em> (Springer, 2003) and the review article <em>Symplectic maps, variational principles, and transport by J.D. Meiss </em> (Rev. Mod. Phys. 1992).</p>
 </div></blockquote>
-<p>Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincar’e (1890). The Poincar’e recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time.</p>
+<p>Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincarè (1890). The Poincarè recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time.</p>
 <p>We know from Eq. <a class="reference internal" href="#equation-eq-energy-conserved">(18)</a> that autonomous Hamiltonian systems conserve energy and thus for <span class="math notranslate nohighlight">\(N\)</span> degrees of freedom system, motion is constrained to a <span class="math notranslate nohighlight">\((2N - 1)\)</span>-dimensional energy surface</p>
 <p>\begin{equation*}
 E = H(q_j, p_j) ;,\quad \text{where } j \in {1, 2, \ldots, N}
 \end{equation*}</p>
-<p>If the energy surface is bounded (compact), then the Poincar’e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar’e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in <a class="bibtex reference internal" href="#wiggins2003" id="id8">[Wig03a]</a>.</p>
-<p>Combining Liouville’s theorem and Poincar’e recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincar’e surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.</p>
-<p>As pointed out by Arnold <a class="bibtex reference internal" href="#arnold76" id="id9">[Arn76]</a>, <em>“The following prediction is a paradoxical conclusion from the theorems of Poincar’e and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that”</em> a while  may be longer than the duration of the solar system’s existence.</p>
+<p>If the energy surface is bounded (compact), then the Poincarè recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincarè surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in <a class="bibtex reference internal" href="#wiggins2003" id="id8">[Wig03a]</a>.</p>
+<p>Combining Liouville’s theorem and Poincarè recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincarè surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.</p>
+<p>As pointed out by Arnold <a class="bibtex reference internal" href="#arnold76" id="id9">[Arn76]</a>, <em>“The following prediction is a paradoxical conclusion from the theorems of Poincarè and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that”</em> a while  may be longer than the duration of the solar system’s existence.</p>
 </div>
 </div>
 <div class="section" id="references">
@@ -460,7 +469,7 @@ E = H(q_j, p_j) ;,\quad \text{where } j \in {1, 2, \ldots, N}
 <dt class="bibtex label" id="wiggins2003"><span class="brackets">Wig03a</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>S. Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Springer, New York, 2nd ed edition, 2003. ISBN 978-0-387-00177-7.</p>
 </dd>
-<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03b</span></dt>
+<dt class="bibtex label" id="wiggins2003applied"><span class="brackets">Wig03</span></dt>
 <dd><p>Stephen Wiggins. <em>Introduction to Applied Nonlinear Dynamical Systems and Chaos</em>. Volume 1. Springer Science &amp; Business Media, 2003.</p>
 </dd>
 </dl>

@@ -6,7 +6,7 @@ KAM theory has developed into a recognized  branch of dynamical systems theory t
 
 > What happens to the <b>quasiperiodic trajectories</b> of an <b>integrable</b> Hamiltonian system when the flow is modified with a <b>perturbation</b> that respects the symplectic structure of Hamilton's equations? Will the perturbation <b>destroy</b> these quasiperiodic solutions, or is it possible that some of them will <b>survive</b> and  only become slightly deformed?
 
-The first answer to this question was provided by Kolmogorov in his famous plenary lecture {cite}`kolmogorov1954` at the International Congress of Mathematicians that took place in Amsterdam in 1954. Since the pioneering works of Poincar\'{e} on the three body problem, the intuition built into the scientific community was that typical systems in classical mechanics exhibit chaotic behaviour in some regions of their phase space. However, Kolmogorov's remarkable announcement produced a complete shock that turned this view upside down. In his talk he claimed that for near-integrable Hamiltonian systems, that is, integrable systems subjected to a perturbation, almost all quasiperiodic motion persists. As we will  explain in more detail shortly, quasiperiodic trajectories trace out tori in phase space. Indeed, they are often viewed synonomously with invariant tori. Moreover, it turns out that the quasiperiodic trajectories that lie on _**non-resonant tori**_ are more robust to survive the perturbation than those associated to  _**resonant tori**_. In fact, resonant tori are the first tori to disappear when the system is perturbed. Interestingly, among the non-resonant tori, KAM theory establishes a criterion to measure the "degree of non-resonance" that is related to their robustness with respect to the perturbation. 
+The first answer to this question was provided by Kolmogorov in his famous plenary lecture {cite}`kolmogorov1954` at the International Congress of Mathematicians that took place in Amsterdam in 1954. Since the pioneering works of Poincarè on the three body problem, the intuition built into the scientific community was that typical systems in classical mechanics exhibit chaotic behaviour in some regions of their phase space. However, Kolmogorov's remarkable announcement produced a complete shock that turned this view upside down. In his talk he claimed that for near-integrable Hamiltonian systems, that is, integrable systems subjected to a perturbation, almost all quasiperiodic motion persists. As we will  explain in more detail shortly, quasiperiodic trajectories trace out tori in phase space. Indeed, they are often viewed synonomously with invariant tori. Moreover, it turns out that the quasiperiodic trajectories that lie on _**non-resonant tori**_ are more robust to survive the perturbation than those associated to  _**resonant tori**_. In fact, resonant tori are the first tori to disappear when the system is perturbed. Interestingly, among the non-resonant tori, KAM theory establishes a criterion to measure the "degree of non-resonance" that is related to their robustness with respect to the perturbation. 
 
 Despite the deep consequences and implications that the results presented by Kolmogorov would bring to the field of classical mechanics, he had only provided partial arguments for them and not complete mathematical proofs. Hence, the foundations of this new theory needed a rigorous scaffolding that arrived several years later, in the period 1962-1963, with the independent works of Arnold {cite}`arnold1962,arnold1963a,arnold1963b` and Moser {cite}`moser1962`. 
 
@@ -196,7 +196,7 @@ B) Quasiperiodic motion on a non-resonant torus with frequency ratio $\omega_2 /
 
 Interestingly, the resonant and non-resonant tori of the family that fill out the energy manifold of an integrable Hamiltonian system are intermingled in a similar way as the rational and irrational numbers are distributed among the reals. Moreover, it can be shown that almost all tori are non-resonant. This is also the case for rational and irrational numbers, since rationals are dense in the real numbers, but have zero measure. This means that if we select a real number at random, we will almost always pick an irrational number.  
 
-We can illustrate the results discussed by KAM theory by considering tori in the integrable system defined by the Chirikov standard map {cite}`chirikov1979,meiss2008` their persistence under perturbation. The Chirikov standard map is a two dimensional symplectic map that  displays many features of the Poincar\'e return maps for typical 2 DoF autonomous Hamiltonian systems. This discrete dynamical system is defined by a two-dimensional area-preserving map which depends on a parameter $k$ that determines the strength of the perturbation that is applied to the underlying integrable system. The solutions for the unperturbed system ($k = 0$) are one-dimensional tori, that is, circles, and are represented in {numref}`fig:std_map` A). Notice that these tori appear as lines because the left and right boundaries of the domain are identified, and so also, the top and bottom edges of the square. This is the manifestation of the toroidal geometry of the phase space of the standard map. If we increase the perturbation strength to $k = 0.3$ we observe in panel B) that most of the tori have survived the perturbation, but in a slightly distorted shape. Moreover, we notice also that some of the tori of the originally unperturbed system break (the resonant ones), and in the process they have generated smaller tori, and also hyperbolic points that possess stable and unstable manifolds. Increasing the perturbation further to $k = 0.8$, one can see in panel C) that non-resonant tori continue to break up into smaller tori, giving rise to structures known as islands of regularity, and that these subregions of the phase space are surrounded by a larger sea of random points that indicates chaotic motion.
+We can illustrate the results discussed by KAM theory by considering tori in the integrable system defined by the Chirikov standard map {cite}`chirikov1979,meiss2008` their persistence under perturbation. The Chirikov standard map is a two dimensional symplectic map that  displays many features of the Poincarè return maps for typical 2 DoF autonomous Hamiltonian systems. This discrete dynamical system is defined by a two-dimensional area-preserving map which depends on a parameter $k$ that determines the strength of the perturbation that is applied to the underlying integrable system. The solutions for the unperturbed system ($k = 0$) are one-dimensional tori, that is, circles, and are represented in {numref}`fig:std_map` A). Notice that these tori appear as lines because the left and right boundaries of the domain are identified, and so also, the top and bottom edges of the square. This is the manifestation of the toroidal geometry of the phase space of the standard map. If we increase the perturbation strength to $k = 0.3$ we observe in panel B) that most of the tori have survived the perturbation, but in a slightly distorted shape. Moreover, we notice also that some of the tori of the originally unperturbed system break (the resonant ones), and in the process they have generated smaller tori, and also hyperbolic points that possess stable and unstable manifolds. Increasing the perturbation further to $k = 0.8$, one can see in panel C) that non-resonant tori continue to break up into smaller tori, giving rise to structures known as islands of regularity, and that these subregions of the phase space are surrounded by a larger sea of random points that indicates chaotic motion.
 Panels  D), E) and F) of {numref}`fig:std_map` show how with increasing $k$ all tori eventually break up.
 This is in part one of the main messages that can be drawn from KAM theory; the coexistence of chaotic and regular motion in the phase space of Hamiltonian systems {cite}`markus1974generic`
 
@@ -204,42 +204,42 @@ This is in part one of the main messages that can be drawn from KAM theory; the 
 ---
 name:
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: A) $k = 0$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: A) $k = 0$
 ```
 
 ```{figure} figures/std_map_k_03.png
 ---
 name:
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: B) $k = 0.3$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: B) $k = 0.3$
 ```
 
 ```{figure} figures/std_map_k_08.png
 ---
 name:
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: C) $k = 0.8$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: C) $k = 0.8$
 ```
 
 ```{figure} figures/std_map_k_12.png
 ---
 name:
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: D) $k = 1.2$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: D) $k = 1.2$
 ```
 
 ```{figure} figures/std_map_k_24.png
 ---
 name:
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: E) $k = 2.4$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: E) $k = 2.4$
 ```
 
 ```{figure} figures/std_map_k_150.png
 ---
 name: fig:std_map
 ----
-Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: F) $k = 15$
+Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: F) $k = 15$
 ```
 
 <img src="figures/std_map_k_0.png">
@@ -249,7 +249,7 @@ Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e 
 <img src="figures/std_map_k_24.png">
 <img src="figures/std_map_k_150.png">
 \label{fig:std_map}
-\caption{Phase space of the Chirikov's Standard Map as revealed by means of a Poincar\'e map for different values of the perturbation parameter: A) $k = 0$; B) $k = 0.3$; C) $k = 0.8$; D) $k = 1.2$; E) $k = 2.4$. F) $k = 15$.}
+\caption{Phase space of the Chirikov's Standard Map as revealed by means of a Poincarè map for different values of the perturbation parameter: A) $k = 0$; B) $k = 0.3$; C) $k = 0.8$; D) $k = 1.2$; E) $k = 2.4$. F) $k = 15$.}
 
 # References
 ```{bibliography} bibliography/chapter2.bib

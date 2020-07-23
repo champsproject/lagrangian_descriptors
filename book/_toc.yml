@@ -1,4 +1,10 @@
-- file: intro
+- file: authors
+
+- file: dedication
+
+- file: acknowledgments
+
+- file: preface
 
 - header: Chapter 1
 - file: content/chapter1_1

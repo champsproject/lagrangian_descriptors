@@ -181,7 +181,7 @@ Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hami
 For a coordinate free formulation using differential forms see {cite}`Arnold76`.
 
 
-The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincar\'e surface of section (See Chapter {ref}`3<sec:LDs>`), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
+The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincarè surface of section (See Chapter {ref}`3<sec:LDs>`), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
 Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions {cite}`meiss_symplectic_1992` to name but a few.
 
 
@@ -201,15 +201,15 @@ label: eq:pb_canonical
 
 where $\delta_{ij}$ is the Kronecker delta. The pair $(q_i , p_i)$ is referred to as canonically conjugate. The relations above are referred to as the fundamental Poisson bracket equations and are preserved if and only if the coordinates are canonical. Further details on this can be found in the section 9.4 and 9.5 of the textbook {cite}`Goldstein2001`.
 
-An important feature of canonically conjugate pairs lies in their role in defining Poincar\'e surfaces of section. A surface defined by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$, or $p_j = K$ with $\dot{p}_j \geq 0$ or $\dot{p}_j \leq 0$, admits a symplectic (Poincar\'e) return map, provided it is a surface of section in the sense of Birkhoff {cite}`Birkhoff27`. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincar\'e surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.
+An important feature of canonically conjugate pairs lies in their role in defining Poincarè surfaces of section. A surface defined by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$, or $p_j = K$ with $\dot{p}_j \geq 0$ or $\dot{p}_j \leq 0$, admits a symplectic (Poincarè) return map, provided it is a surface of section in the sense of Birkhoff {cite}`Birkhoff27`. Such a surface must be transverse to the flow and all trajectories that cross it must return. Suitably-chosen Poincarè surfaces of section and the associated return maps allow up to study the dynamics in phase space on a lower dimensional surface, for example they facilitate finding periodic orbits of the system as fixed points of the return maps. Note that such surfaces may not exist in every system.
 
 
 
 ## Phase space slices, phase space transversal slice
 
 
-The phase space structures that govern the dynamics of a Hamiltonian system with $N$ degrees of freedom are of codimension-$1$ and codimension-$2$ in $2N$-dimensional phase space, in the case of an autonomous system codimension-$1$ and codimension-$2$ in the $2N-1$-dimensional energy surface {cite}`Waalkens08` (refer to hyperbolic section). A Poincar\'e surface of section is a $(2N - 2)$-dimensional surface, for example one specified by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$,
-where $j \in 1, 2, \ldots, N$ and $K$ is constant. For this Poincar\'e surface of section to be transverse to the flow, we require
+The phase space structures that govern the dynamics of a Hamiltonian system with $N$ degrees of freedom are of codimension-$1$ and codimension-$2$ in $2N$-dimensional phase space, in the case of an autonomous system codimension-$1$ and codimension-$2$ in the $2N-1$-dimensional energy surface {cite}`Waalkens08` (refer to hyperbolic section). A Poincarè surface of section is a $(2N - 2)$-dimensional surface, for example one specified by $q_j = K$ with $\dot{q}_j \geq 0$ or $\dot{q}_j \leq 0$,
+where $j \in 1, 2, \ldots, N$ and $K$ is constant. For this Poincarè surface of section to be transverse to the flow, we require
 
 ```{math}
 \begin{equation}
@@ -285,11 +285,11 @@ Using Poisson brackets {eq}`eq:property_conserved`, we can express Liouville's t
 
 which means that the phase space density $\rho(\mathbf{x}, t)$ is conserved along the solutions of $H$. Consequently when an ensemble evolves, its location and shape in phase space change but its volume is conserved. It also follows that all autonomous Hamiltonian systems are volume preserving due to Liouville's theorem.
 
-## Poincar\'e recurrence
+## Poincarè recurrence
 
 > This section is adapted from the book <em>Applied Nonlinear Dynamical systems by S. Wiggins </em> (Springer, 2003) and the review article <em>Symplectic maps, variational principles, and transport by J.D. Meiss </em> (Rev. Mod. Phys. 1992).
 
-Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincar\'e (1890). The Poincar\'e recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time. 
+Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincarè (1890). The Poincarè recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time. 
 
 We know from Eq. {eq}`eq:energy_conserved` that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
 
@@ -297,12 +297,12 @@ We know from Eq. {eq}`eq:energy_conserved` that autonomous Hamiltonian systems c
 E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\}
 \end{equation*}
 
-If the energy surface is bounded (compact), then the Poincar\'e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar\'e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.
+If the energy surface is bounded (compact), then the Poincarè recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincarè surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.
 
-Combining Liouville's theorem and Poincar\'e recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincar\'e surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.
+Combining Liouville's theorem and Poincarè recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincarè surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.
 
 
-As pointed out by Arnold {cite}`Arnold76`, _"The following prediction is a paradoxical conclusion from the theorems of Poincar\'e and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that"_ a while  may be longer than the duration of the solar system's existence.
+As pointed out by Arnold {cite}`Arnold76`, _"The following prediction is a paradoxical conclusion from the theorems of Poincarè and Liouville: if you open a partition separating a chamber containing gas and a chamber with a vacuum, then after a while the gas molecules will again collect in the first chamber. The resolution of the paradox lies in the fact that"_ a while  may be longer than the duration of the solar system's existence.
 
 # References
 
