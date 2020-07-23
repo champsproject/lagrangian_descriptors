@@ -1,13 +1,13 @@
 # Hamiltonian flows and symplectic maps
-\label{sec:ham2}
 
+(sec:Ham2)=
 ## Hamiltonian flows
 
 A Hamiltonian system with $N$ degrees of freedom is described by the Hamiltonian function $H(\mathbf{q},\mathbf{p},t)$, which depends on the generalized coordinates $\mathbf{q} = (q_1,\ldots,q_N)$, their canonically conjugate momenta $\mathbf{p} = (p_1,\ldots,p_N)$, and time. This scalar function gives rise to a $2N$-dimensional dynamical system by means of Hamilton's equations of motion
 
 ```{math}
 ---
-label: hamiltons_eom
+label: eq:hamiltons_eom
 ---
 \dot{q}_i = \frac{\partial H}{\partial p_i} \quad,\quad \dot{p}_i = -\frac{\partial H}{\partial q_i} \;, \quad \text{for} \; i = 1, 2, \ldots, N.
 ```
@@ -16,7 +16,7 @@ where the dot symbol represents the total time derivative, that is,  $\cdot \equ
 
 ```{math}
 ---
-label: solution
+label: eq:solution
 ---
 \mathbf{x}(t) = \left(q_1(t), \ldots, q_N(t), p_1(t), \ldots, p_N(t)\right) \,, 
 ```
@@ -25,16 +25,16 @@ starting at the initial condition
 
 ```{math}
 ---
-label: init_condition
+label: eq:init_condition
 ---
 \mathbf{x}(0) = \mathbf{x}_0 = \left(q_1^0, \ldots, q_N^0, p_1^0, \ldots, p_N^0\right) \, .
 ```
 
-We will assume that $H$ is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is $H(\mathbf{q},\mathbf{p})$, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. {eq}`hamiltons_eom` form a one-parameter family of diffeomorphisms, known as a _Hamiltonian flow_, given by $\{\phi_t\}_{t\in\mathbb{R}}$ so that
+We will assume that $H$ is sufficiently smooth to guarantee the uniqueness of solutions. If the Hamiltonian is time independent, that is $H(\mathbf{q},\mathbf{p})$, then the resulting dynamical system is autonomous (ref to part 1) and thus the solutions of Eq. {eq}`eq:hamiltons_eom` form a one-parameter family of diffeomorphisms, known as a _Hamiltonian flow_, given by $\{\phi_t\}_{t\in\mathbb{R}}$ so that
 
 ```{math}
 ---
-label: flow
+label: eq:flow
 ---
 \phi_s(\mathbf{x}(t))=\mathbf{x}(s+t) \;.
 ```
@@ -52,7 +52,7 @@ A linear transformation $C$ is symplectic if it satisfies
 
 ```{math}
 ---
-label: symp_cond
+label: eq:symp_cond
 ---
 \begin{equation}
 C \mathcal{J} C^T = \mathcal{J} = 
@@ -63,7 +63,7 @@ C \mathcal{J} C^T = \mathcal{J} =
 \end{equation}
 ```
 
-where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, and $I_N$ denotes the $N \times N$ identity matrix. The symplectic transformation $C$ maps the original coordinates $(x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})$ to the coordinates $(q_1, \ldots, q_N, p_1, \ldots, p_N)$ and Hamilton's equations in Eq, {eq}`hamiltons_eom` as follows:
+where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, and $I_N$ denotes the $N \times N$ identity matrix. The symplectic transformation $C$ maps the original coordinates $(x_1,\ldots, x_N, p_{x_1}, \ldots, p_{x_N})$ to the coordinates $(q_1, \ldots, q_N, p_1, \ldots, p_N)$ and Hamilton's equations in Eq, {eq}`eq:hamiltons_eom` as follows:
 
 ```{math}
 \begin{equation}
@@ -105,7 +105,7 @@ where $\mathcal{J}$ is a 2N $\times$ 2N matrix known as the symplectic matrix, a
 \end{equation}
 ```
 
-From {eq}`symp_cond` we find the inverse transformation $C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}$, such that
+From {eq}`eq:symp_cond` we find the inverse transformation $C^{-1}=\mathcal{J}C^T\mathcal{J}^{-1}$, such that
 
 ```{math}
 \begin{equation}
@@ -129,26 +129,26 @@ From {eq}`symp_cond` we find the inverse transformation $C^{-1}=\mathcal{J}C^T\m
 \end{equation}
 ```
 
-Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion {eq}`hamiltons_eom`, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.
+Linear symplectic transformations are $C^\infty$ diffeomorphisms, which means that they have continuous derivatives of all orders and they also have a continuous inverse. This group of transformations is important because they preserve the form of the equations of motion {eq}`eq:hamiltons_eom`, and also phase space structures, such as normally hyperbolic invariant manifolds and their associated stable and unstable invariant manifolds. Furthermore, symplectic transformations preserve the stability of invariant sets and Lyapunov exponents of trajectories.
 
 In Ref {cite}`naik_finding_2019`, we used the symplectic transformation to transform the uncoupled (separable) quadratic normal form to a coupled (non-separable) quadratic normal form Hamiltonian for two and three degrees of freedom systems. 
 
-We can define nonlinear symplectic transformations using the _Poisson bracket_ (see {eq}`poisson`) defined by
+We can define nonlinear symplectic transformations using the _Poisson bracket_ (see {eq}`eq:poisson`) defined by
 
 ```{math}
 ---
-label: poisson
+label: eq:poisson
 ---
 \begin{equation}
  \{A, B\} = \langle D A,\mathcal{J} D B \rangle = \sum\limits_{i=1}^{N} \left( \frac{\partial A}{\partial q_i}\frac{\partial B}{\partial p_i} - \frac{\partial A}{\partial p_i} \frac{\partial B}{\partial q_i} \right),
 \end{equation}
 ```
 
-where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is defined in Eq. {eq}`symp_cond`. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. {eq}`hamiltons_eom` as
+where $D A$ and $D B$ are the gradients of $A$ and $B$, and $\mathcal{J}$ is defined in Eq. {eq}`eq:symp_cond`. For example, the Poisson bracket allows us to rewrite the equations of motion in Eq. {eq}`eq:hamiltons_eom` as
 
 ```{math}
 ---
-label: poisson_eqn
+label: eq:poisson_eqn
 ---
 \begin{equation}
 \dot{q}_i = \{q_i, H\} \quad,\quad \dot{p}_i = \{p_i, H\} \; , \quad \text{for } i = 1,\ldots,N
@@ -160,7 +160,7 @@ Following {cite}`Wiggins2003`, a  symplectic transformations is a sufficiently s
 
 ```{math}
 ---
-label: symplectic
+label: eq:symplectic
 ---
 \begin{equation}
  \langle u, \mathcal{J}v \rangle = \langle u, (Df(x))^T\mathcal{J}Df(x) v \rangle,
@@ -169,7 +169,7 @@ label: symplectic
 
 for any $x,u,v\in \mathbb{R}^{2N}$.
 
-Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hamiltonian $H(q,p)$ into the new Hamiltonian $G(f(q,p))$, that satisfies $Df(q,p)DH = DG$. The equations of motion {eq}`poisson_eqn` then remain
+Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hamiltonian $H(q,p)$ into the new Hamiltonian $G(f(q,p))$, that satisfies $Df(q,p)DH = DG$. The equations of motion {eq}`eq:poisson_eqn` then remain
 
 ```{math}
 \begin{align*}
@@ -181,7 +181,7 @@ Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hami
 For a coordinate free formulation using differential forms see {cite}`Arnold76`.
 
 
-The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincar\'e surface of section ({\bf refer to LD chapter}), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
+The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincar\'e surface of section (See Chapter {ref}`3<sec:LDs>`), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
 Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions {cite}`meiss_symplectic_1992` to name but a few.
 
 
@@ -191,7 +191,7 @@ The canonical coordinates $(q, p)$ satisfy the following Poisson bracket relatio
 
 ```{math}
 ---
-label: pb_canonical
+label: eq:pb_canonical
 ---
 \begin{equation}
 \{q_i, q_j\} = 0 \quad,\quad \{p_i, p_j\} = 0 \quad,\quad 
@@ -251,7 +251,7 @@ we can write the time evolution of the property as
 
 ```{math}
 ---
-label: property_conserved
+label: eq:property_conserved
 ---
 \begin{equation}
 \frac{d A}{d t} = \frac{\partial A}{\partial t} + \{A, H\}
@@ -262,7 +262,7 @@ Therefore, if we assume that the Hamiltonian does not depend explicitly on time 
 
 ```{math}
 ---
-label: energy_conserved
+label: eq:energy_conserved
 ---
 \begin{equation}
 \frac{d H}{d t} = 0 + \{H, H\} = 0
@@ -275,7 +275,7 @@ We use this set-up to present the mathematical statement of the Liouville's theo
 
 A classical ensemble consists of a set of points in phase space, with each point representing a system in a specified state. Let $\rho(\mathbf{x},t)$ be the density of the set of points in a given volume. As each member of ensemble moves through phase space along a trajectory specified by Hamilton's equations of motion, the phase space density evolves in time.
 
-Using Poisson brackets {eq}`property_conserved`, we can express Liouville's theorem as
+Using Poisson brackets {eq}`eq:property_conserved`, we can express Liouville's theorem as
 
 ```{math}
 \begin{equation}
@@ -291,8 +291,12 @@ which means that the phase space density $\rho(\mathbf{x}, t)$ is conserved alon
 
 Hamiltonian systems with a bounded energy surface have a recurrence property discovered by Henri Poincar\'e (1890). The Poincar\'e recurrence theorem states that every state of a system will return arbitrarily close to its initial state in finite (potentially very long) time. 
 
-We know from Eq. {eq}`energy_conserved` that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
-$$ E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\} $$
+We know from Eq. {eq}`eq:energy_conserved` that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
+
+\begin{equation*}
+E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\}
+\end{equation*}
+
 If the energy surface is bounded (compact), then the Poincar\'e recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincar\'e surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.
 
 Combining Liouville's theorem and Poincar\'e recurrence theorem leads to the conclusion, that a set of points of a given volume on a Poincar\'e surface of section will return to the surface and intersect it in a set of points of equal volume. The return map associated with this surface is therefore volume preserving.

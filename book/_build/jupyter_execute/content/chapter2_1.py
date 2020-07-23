@@ -1,5 +1,5 @@
+{sec:hyper}=
 # The Hyperbolic setting
-\label{sec:hyper}
 
 Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be ``crossed’’ by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
 
@@ -92,7 +92,7 @@ Let us consider the line $ q_1 = - p_1$. The Hamiltonian vector field evaluated 
 
 A trajectory that starts on the line $ q_1 = - p_1$ remains on the line. This line is an invariant set under the flow. 
 
-The solution of the system of differential Eq. (\ref{eq:ws}) decay exponentially in time.
+The solution of the system of differential Eq. (\eqref{eq:ws}) decay exponentially in time.
 
 \begin{eqnarray}
 q_1(t) &=& q_1(0) e^{-\lambda t}  \nonumber\\

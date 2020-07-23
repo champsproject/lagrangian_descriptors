@@ -1,7 +1,7 @@
+(sec:hyper)=
 # The Hyperbolic setting
-\label{sec:hyper}
 
-Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be ``crossed’’ by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
+Invariant sets (see Definition \ref{def:invset}) play a fundamental role in dynamical systems theory. In particular, they cannot be "crossed" by trajectories and therefore they play a role in determining the possibilities for how trajectories may navigate phase space, i.e. phase space transport. Invariant sets can be characterized by their stability properties. Further, these can be divided into stability characteristics normal to the invariant set and tangential to the invariant set. The normal stability properties indicate how trajectories near, but not contained in, the invariant set behave.  
 
 Normally hyperbolic invariant sets play a particularly important role in phase space transport, particularly when the invariant set has the additional property of being an invariant manifold. For our purposes the reader can think of an invariant manifold as being a generalization of a curve or surface for which  the equation defining such a mathematical object is differentiable {cite}`guillemin2010differential`.  _Normally hyperbolic invariant manifolds_ (NHIMs) have invariant stable and unstable manifolds that form the skeleton or framework,  on which phase space transport  occurs. But before we discuss normally hyperbolic invariant manifolds in general, we discuss the simplest type of non-trivial type of normally hyperbolic invariant manifold—a hyperbolic periodic orbit.
 
@@ -11,7 +11,7 @@ In two degree-of-freedom Hamiltonian systems a one dimensional unstable periodic
 
 For more than two degrees-of-freedom periodic orbits and their stable and unstable manifolds do not have sufficient dimension (or, equivalently, their codimension is greater than one) to form barriers to transport or lobes. 
 
-We also note (cf. Section \ref{sec:LDs}) the global phase space structure can be studied by creating a mapping along trajectories from a surface transverse to the flow in the energy surface, i.e. the Poincar\'e map and the Poincar\'e section. For two degrees-of-freedom the Poincar\'e section is two dimensional. For $n$ degrees-of-freedom the Poincar\'e section is $2n-2$ dimensional. The dynamics in the Poincar\'e section is not easy to visualize for more than two degrees-of-freedom.
+We also note (cf. Section {ref}`3 <sec:LDs>` ) the global phase space structure can be studied by creating a mapping along trajectories from a surface transverse to the flow in the energy surface, i.e. the Poincar\'e map and the Poincar\'e section. For two degrees-of-freedom the Poincar\'e section is two dimensional. For $n$ degrees-of-freedom the Poincar\'e section is $2n-2$ dimensional. The dynamics in the Poincar\'e section is not easy to visualize for more than two degrees-of-freedom.
 
 In the table below we collect together some dimensionality and codimensionality properties of periodic orbits and their associated geometrical structures within the energy surface, i.e. $E= {\rm constant}$. 
 
@@ -42,8 +42,8 @@ Now we consider a number of simple examples in order to explain in more detail t
 
 In all of our examples in this section we will consider the classical autonomous Hamiltonian obtained as the sum of kinetic plus potential energy $(H = K + V)$.
 
+(sec:1dofsaddle)=
 ## One Degree-of-Freedom  Hyperbolic Equilibrium Point
-\label{sec:1dofsaddle}
 
 
 The most simple Hamiltonian function with a hyperbolic equilibrium point is 
@@ -88,13 +88,13 @@ For energies $E_1<0$ the energy level set consists of two disconnected parts, a 
 The origin, $\mathcal{M} = (q_1=0,p_1=0)$, is a equilibrium point of the system. The trajectory that starts at $\mathcal{M}$ remains always at the same point.
 
 
-\textbf{Showing the invariance of candidate sets.}
+**Showing the invariance of candidate sets.**
 
 Let us consider the line $ q_1 = - p_1$. The Hamiltonian vector field evaluated on the line is tangent to the line.
 
 ```{math}
 ---
-label: ws
+label: eq:ws
 ---
 \begin{eqnarray}
 \dot{q_1} &=& -\lambda q_1  \nonumber \\
@@ -104,7 +104,7 @@ label: ws
 ```
 A trajectory that starts on the line $ q_1 = - p_1$ remains on the line. This line is an invariant set under the flow. 
 
-The solution of the system of differential Eq. (\ref{eq:ws}) decay exponentially in time.
+The solution of the system of differential Eq. {eq}`eq:ws` decay exponentially in time.
 
 ```{math}
 ---
@@ -161,10 +161,10 @@ The existence of two special directions where the trajectories converge to the $
 
 
 
+(sec:2dofupo)=
 ## Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit
-\label{sec:2dofupo}
 
-In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Chapter \ref{sec:KAM}). The total energy of the system is split between both DoF to yield:
+In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Section {ref}`sec:KAM` ). The total energy of the system is split between both DoF to yield:
 
 ```{math}
 ---
@@ -244,7 +244,7 @@ For any $E_2>0$ and $E_1=0$, i.e $E=E_2$, a periodic orbit $\gamma$ exists in th
 
 ```{math}
 ---
-label: NHIM
+label: eq:NHIM
 ---
 \begin{equation}
 \displaystyle{\gamma = \lbrace  (0,q_2, 0,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E  > 0 \rbrace}.
@@ -270,8 +270,8 @@ label:
 \displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2)   = E > 0,  q_1 = - p_1  \rbrace }.
 \end{equation}```
 
+(sec:3dofnhim)=
 ## Three and More Degrees-of-Freedom and NHIMs
-\label{sec:3dofnhim}
 
 Let us consider the most simple example with $n$ degrees of freedom. The basic idea is the same as in the previous example with 2 degrees of freedom, where the dynamics of each degree of freedom is independent from the other degrees of freedom. In this case, the most simple Hamiltonian function of a $n$ degree of freedom is 
  
@@ -382,8 +382,8 @@ The general study  of NHIMs, including their characterization,  the nature of th
 
 It is important to note that the  basic theory of NHIMs does not tell us how to find NHIMs in specific systems. It only characterizes them and describes their properties based on that characterization. Next we describe a theorem from Hamiltonian systems that provides sufficient conditions for the existence of NHIMs under certain specific circumstances.
 
+(sec:LyapSub)=
 ## The Lyapunov Subcenter Theorem
-\label{sec:LyapSub}
 
 The Lyapunov subcenter theorem {cite}`liapounoff1907probleme` is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton's equations give rise to periodic orbits, or ``NHIMs''. Basic background on the topic can be found in {cite}`moser1958generalization,kelley1967liapounov,moser1976periodic,weinstein1973normal,duistermaat1972periodic`.
 
@@ -391,7 +391,7 @@ We will explain the ideas in the context of a two degree-of-freedom quadratic Ha
 
 ```{math}
 ---
-label: LST1
+label: eq:LST1
 ---
 \begin{equation}
 H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad \lambda, \, \omega >0, \quad (q_1, p_1, q_2, p_2) \in \mathbb{R}^4,
@@ -403,7 +403,7 @@ with corresponding Hamilton's equations:
 
 ```{math}
 ---
-label: LST2
+label: eq:LST2
 ---
 \begin{eqnarray}
 \dot{q}_1 & = & \frac{\partial H}{\partial p_1} =  \lambda p_1, \nonumber \\
@@ -415,11 +415,11 @@ label: LST2
 ```
 \noindent
 The point $(q_1, p_1, q_2, p_2) = (0, 0, 0, 0)$ is an equilibrium point of Hamilton's equations, and the eigenvalues of the matrix associated with the linearization of Hamilton's equations about this equilibrium point are
-$\pm \lambda, \, \pm i \omega$. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian \eqref{eq:LST1}  evaluated at the equilibrium point, is zero.
+$\pm \lambda, \, \pm i \omega$. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian {eq}`eq:LST1`  evaluated at the equilibrium point, is zero.
 
 ```{math}
 ---
-label: LST3
+label: eq:LST3
 ---
 \begin{equation}
  \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2)=E >0,
@@ -432,22 +432,22 @@ First, note that $q_1 = p_1 =0$ is an invariant manifold for all values of $E$. 
 
 ```{math}
 ---
-label: LST4
+label: eq:LST4
 ---
 \begin{equation}
  \frac{\omega}{2} ( p_2^2 + q_2^2)=E >0,
 \label{eq:LST4}
 \end{equation}
 ```
-which is a periodic orbit for each $E > 0$. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and $q_1 = p_1 =0$ is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit \eqref{eq:LST4}. This family of periodic orbits (``family'' in terms of the energy $E>0$, lies on the two dimensional invariant manifold $q_1 = p_1 =0$. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is {\em not} isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.
+which is a periodic orbit for each $E > 0$. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and $q_1 = p_1 =0$ is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit {eq}`eq:LST4` . This family of periodic orbits ("family" in terms of the energy $E>0$, lies on the two dimensional invariant manifold $q_1 = p_1 =0$. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is *not* isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.
 
-The Lyapunov subcenter theorem says that this result holds, for sufficiently small $E > 0$, if higher  order terms are added to \eqref{eq:LST1}. All of these  periodic orbits are unstable since the dynamics normal to the Lyapunov subcenter manifold is exponentially growing and decaying, i.e. the Lyapunov subcenter manifold is a NHIM.
+The Lyapunov subcenter theorem says that this result holds, for sufficiently small $E > 0$, if higher  order terms are added to {eq}`eq:LST1` . All of these  periodic orbits are unstable since the dynamics normal to the Lyapunov subcenter manifold is exponentially growing and decaying, i.e. the Lyapunov subcenter manifold is a NHIM.
 
 This set-up can be generalized to higher dimensions. The quadratic normal form associated to an index $n_s$ saddle has the general form (assuming  that the $\lambda_i$ are distinct and the  $\omega_i$ are distinct):
 
 ```{math}
 ---
-label: LST5
+label: eq:LST5
 ---
 \begin{equation}
 H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{\omega_{i+n_s}}{2} ( p_{i+n_s}^2 + q_{i+n_s}^2), 
