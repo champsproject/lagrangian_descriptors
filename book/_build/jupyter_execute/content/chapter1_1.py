@@ -34,7 +34,7 @@ that describe the dynamics of the system, where the dot symbol over a variable d
 
 ## Conserved quantities in phase space
 
-> The reader can find more details on Poisson brackets and their properties \\ in many books and lecture notes, see e.g. {cite}`lifshitz1978,arnold1978,giorgilli2002`
+> The reader can find more details on Poisson brackets and their properties in many books and lecture notes, see e.g. {cite}`lifshitz1978,arnold1978,giorgilli2002`
 
 
 Given a Hamiltonian system, a function $A(\mathbf{q}, \mathbf{p},t)$ is called an **integral of motion**, __constant of motion__ or **first integral** if it remains constant along a trajectory. Then, its total time derivative is zero along solutions $(\mathbf{q}(t),\mathbf{p}(t))$ of Hamilton's equations, that is

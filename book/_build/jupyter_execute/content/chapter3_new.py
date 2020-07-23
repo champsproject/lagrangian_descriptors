@@ -47,6 +47,7 @@ Lagrangian descriptors avoid all of these difficulties. In particular, they can 
 
 ### Nonautonomous Hamiltonian vector fields
 
+Nonautonomous vector fields are fundamentally different than autonomous vector fields, and even more so for Hamiltonian vector fields. For example, one degree-of-freedom autonomous Hamiltonian vector fields are integrable. One degree-of-freedom autonomous Hamiltonian vector fields may exhibit chaos. Regardless of the dimension, a very significant difference is that energy is not conserved for nonautonomous Hamiltonian vector fields. Nevertheless, Lagrangian descriptors can be applied in exactly the same way as for autonomous Hamiltonian vector fields, *regardless of the nature of the time dependence. We add this last remark since the concept of Poincarè maps  is not applicable unless the time dependence is periodic.*
 
 
 ## Formulations for Lagrangian Descriptors
@@ -111,12 +112,12 @@ H(q,p) = \dfrac{1}{2} \left(p^2 - q^2\right)  \quad \Leftrightarrow \quad
 
 ```{figure} figures/1d_saddle_ld.png
 ---
-name: eq:1d_saddle
+name: fig:1d_saddle
 ---
 Forward {eq}`eq:M_function_bw`, backward {eq}`eq:M_function_fw` and combined {eq}`eq:M_function` Lagrangian descriptors for system {eq}`eq:1dof_saddle` respectively.
 ```
 
-We know that this dynamical system has a hyperbolic equilibrium point at the origin and that its stable and unstable invariant manifolds correspond to the lines $p = \pm q$ respectively (refer to hyperbolic section). Outside of these lines, the trajectories are hyperbolas. What happens when we apply LDs to this system? Why does the method pick up the manifolds? Notice first that in Fig. \ref{fig:1d_saddle} the value attained by LDs at the origin is zero, because it is an equilibrium point and hence it is not moving. Therefore, the arclength of its trajectory is zero. Next, let's consider the forward time evolution term of LDs, that is, $\mathcal{L}^f$. Take two neighboring ICs, one lying on the line that corresponds to the stable manifold and another slightly off it. If we integrate them for a time $\tau$, the initial condition that is on the manifold converges to the origin, while the other initial condition follows the arc of a hyperbola. If $\tau$ is small, both segments of trajectory are comparable in length, so that the value obtained from LDs for both ICs is almost equal. However, if we integrate the system for a larger $\tau$, the arclengths of the two trajectories become very different, because one converges while the other one diverges. Therefore, we can clearly see  in Fig. \ref{fig:1d_saddle} that the LD values vary significantly near the stable manifold in comparison to those elsewhere. Moreover, if we consider a curve of initial conditions that crosses transversely the stable manifold, the LD value along it attains a minimum on the manifold. Notice also that by the same argument we gave above, but constructing the backward time evolution term of LDs, $\mathcal{L}^b$, we can arrive to the conclusion that backward integration of initial conditions will highlight the unstable manifold of the hyperbolic equilibrium point at the origin. It is important to remark here that, although we have used above the simple linear saddle system as an example to illustrate how the method recovers phase space structure, this argument also applies to a nonlinear system with an hyperbolic point, whose stable and unstable manifolds are convoluted curves.
+We know that this dynamical system has a hyperbolic equilibrium point at the origin and that its stable and unstable invariant manifolds correspond to the lines $p = \pm q$ respectively (refer to hyperbolic section). Outside of these lines, the trajectories are hyperbolas. What happens when we apply LDs to this system? Why does the method pick up the manifolds? Notice first that in {numref}`fig:1d_saddle` the value attained by LDs at the origin is zero, because it is an equilibrium point and hence it is not moving. Therefore, the arclength of its trajectory is zero. Next, let's consider the forward time evolution term of LDs, that is, $\mathcal{L}^f$. Take two neighboring ICs, one lying on the line that corresponds to the stable manifold and another slightly off it. If we integrate them for a time $\tau$, the initial condition that is on the manifold converges to the origin, while the other initial condition follows the arc of a hyperbola. If $\tau$ is small, both segments of trajectory are comparable in length, so that the value obtained from LDs for both ICs is almost equal. However, if we integrate the system for a larger $\tau$, the arclengths of the two trajectories become very different, because one converges while the other one diverges. Therefore, we can clearly see  in {numref}`fig:1d_saddle` that the LD values vary significantly near the stable manifold in comparison to those elsewhere. Moreover, if we consider a curve of initial conditions that crosses transversely the stable manifold, the LD value along it attains a minimum on the manifold. Notice also that by the same argument we gave above, but constructing the backward time evolution term of LDs, $\mathcal{L}^b$, we can arrive to the conclusion that backward integration of initial conditions will highlight the unstable manifold of the hyperbolic equilibrium point at the origin. It is important to remark here that, although we have used above the simple linear saddle system as an example to illustrate how the method recovers phase space structure, this argument also applies to a nonlinear system with an hyperbolic point, whose stable and unstable manifolds are convoluted curves.
 
 The sharp transitions obtained for the LD values across the stable and unstable manifolds, which imply large values of its gradient in the vicinity of them, are known in the literature as "singular features". These features present in the LD scalar field are very easy to visualize and detect when plotting the output provided by the method. We will see shortly that there exists a rigorous mathematical connection between the "singular features" displayed by the LD output and the stable and unstable manifolds of hyperbolic points. This result was first proved in {cite}`lopesino2017` for two-dimensional flows, it was extended to 3D dynamical systems in {cite}`gg2018`, and it has also been recently established for the stable and unstable manifolds of normally hyperbolic invariant manifolds in Hamiltonian systems with two or more degrees of freedom in {cite}`demian2017,naik2019a`. In fact, the derivation of this relationship relies on an alternative definition for LDs, where the positive scalar function accumulated along the trajectories of the system is the $p$-norm of the vector field that determines the flow. Considering this approach, the LD scalar field becomes now non-differentiable at the phase space points that belong to a stable or unstable manifold, and consequently the gradient at these locations is unbounded. This property is crucial in many ways, since it allows us to easily recover the location of the stable and unstable manifolds in the LD plot as if they were the edges of objects that appear in a digital photograph.
 
@@ -200,7 +201,7 @@ label:
 \end{equation}
 ```
 
-Although this alternative definition of LDs does not have such an intuitive physical interpretation as that of arclength, it has been shown to provide many advantages. For example, it allows for a rigorous analysis of the notion of "singular features" and to establish the mathematical connection of this notion to stable and unstable invariant manifolds in phase space. Another important aspect of the $p$-norm of LDs is that, since in the definition all the vector field components contribute separately, one can naturally decompose the LD in a way that allows to isolate individual degrees of freedom. This was used in \cite {demian2017,naik2019a} to show that the method can be used to successfully detect NHIMs and their stable and unstable manifolds in Hamiltonian systems. Using the $p-$norm definition, it has been shown that the points on the LD contour map with non-differentiability identifies the invariant manifolds' intersections with the section on which the LD is computed, for specific systems ~{cite}`lopesino2017,demian2017,naik2019a`. In this context, where a fixed integration time is used, it has also been shown that the LD scalar field attains a minimum value at the locations of the stable and unstable manifolds, and hence:
+Although this alternative definition of LDs does not have such an intuitive physical interpretation as that of arclength, it has been shown to provide many advantages. For example, it allows for a rigorous analysis of the notion of "singular features" and to establish the mathematical connection of this notion to stable and unstable invariant manifolds in phase space. Another important aspect of the $p$-norm of LDs is that, since in the definition all the vector field components contribute separately, one can naturally decompose the LD in a way that allows to isolate individual degrees of freedom. This was used in \cite {demian2017,naik2019a} to show that the method can be used to successfully detect NHIMs and their stable and unstable manifolds in Hamiltonian systems. Using the $p-$norm definition, it has been shown that the points on the LD contour map with non-differentiability identifies the invariant manifolds' intersections with the section on which the LD is computed, for specific systems {cite}`lopesino2017,demian2017,naik2019a`. In this context, where a fixed integration time is used, it has also been shown that the LD scalar field attains a minimum value at the locations of the stable and unstable manifolds, and hence:
 
 ```{math}
 ---
@@ -319,9 +320,8 @@ label:
 p \, dq = \dfrac{p^2}{m} \, dt = 2 (H-V(q)) \, dt.
 \end{equation}
 ```
-Therefore, the positive quantities that appear multiplying the $dt$ are candidates for the integrand of Lagrangian descriptors~{cite}`montoya2020phase`. 
+Therefore, the positive quantities that appear multiplying the $dt$ are candidates for the integrand of Lagrangian descriptors {cite}`montoya2020phase`. 
 
-\smallskip
 
 We will illustrate next how the action-based LDs successfully detects the stable invariant manifold of the hyperbolic equilibrium point in system introduced in Eq. {eq}`eq:1dof_saddle`. We know that the solutions to this dynamical system are given by the expressions:
 ```{math}
@@ -510,7 +510,7 @@ Phase portrait of the autonomous and undamped Duffing oscillator obtained by app
 
 ```{figure} figures/duffing_maniDetect.png
 ---
-name: eq:duffing1_lds
+name: fig:duffing1_lds
 ---
 Phase portrait of the autonomous and undamped Duffing oscillator obtained by applying the arclength definition of LDs in Eq. {eq}`eq:M_function` . C) Value of LDs along the line $y = 0.5$ depicted in panel B) illustrating how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.
 ```
@@ -521,7 +521,7 @@ Phase portrait of the autonomous and undamped Duffing oscillator obtained by app
 \label{fig:duffing1_lds}
 \caption{Phase portrait of the autonomous and undamped Duffing oscillator obtained by applying the arclength definition of LDs in Eq. {eq}`eq:M_function`. A) LDs with $\tau = 2$; B) LDs with $\tau = 10$; C) Value of LDs along the line $y = 0.5$ depicted in panel B) illustrating how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.}
 
-We move on to compute LDs for the forced Duffing oscillator. In this situation, the vector field is time-dependent and thus the dynamical system is nonautonomous. The consequence is that the homoclinic connection breaks up and the stable and unstable manifolds intersect, forming an intricate tangle that gives rise to chaos. We illustrate this phenomenon by computing LDs with $\tau = 10$ to reconstruct the phase portrait at the initial time $t_0 = 0$. For the forcing, we use a perturbation strength $\varepsilon = 0.1$, an angular frequency of $\omega = 1$ and a phase $\phi = 0$. This result is shown in Fig. \ref{fig:duffing2_lds} C), and we also depict the forward $(\mathcal{L}^f)$ and backward $(\mathcal{L}^b)$ contributions of LDs in Fig. \ref{fig:duffing2_lds} A) and B) respectively, demonstrating that the method can be used to recover the stable and unstable manifolds separately. Furthermore, by taking the value of LDs along the line $y = 0.5$, the location of the invariant manifolds are highlighted at points corresponding to sharp changes (and local minima) in the scalar field values of LDs.
+We move on to compute LDs for the forced Duffing oscillator. In this situation, the vector field is time-dependent and thus the dynamical system is nonautonomous. The consequence is that the homoclinic connection breaks up and the stable and unstable manifolds intersect, forming an intricate tangle that gives rise to chaos. We illustrate this phenomenon by computing LDs with $\tau = 10$ to reconstruct the phase portrait at the initial time $t_0 = 0$. For the forcing, we use a perturbation strength $\varepsilon = 0.1$, an angular frequency of $\omega = 1$ and a phase $\phi = 0$. This result is shown in {numref}`fig:duffing2_lds` C), and we also depict the forward $(\mathcal{L}^f)$ and backward $(\mathcal{L}^b)$ contributions of LDs in {numref}`fig:duffing2_lds` A) and B) respectively, demonstrating that the method can be used to recover the stable and unstable manifolds separately. Furthermore, by taking the value of LDs along the line $y = 0.5$, the location of the invariant manifolds are highlighted at points corresponding to sharp changes (and local minima) in the scalar field values of LDs.
 
 ```{figure} figures/duffing_stbl_tau_10_pert_01.png
 ---
@@ -546,7 +546,7 @@ Phase portrait of the nonautonomous and undamped Duffing oscillator obtained at 
 
 ```{figure} figures/duffing_maniDetect_pert_01.png
 ---
-name: duffing2_lds
+name: fig:duffing2_lds
 ---
 Phase portrait of the nonautonomous and undamped Duffing oscillator obtained at time $t = 0$ by applying the arclength definition of LDs in Eq. {eq}`eq:M_function` with an integration time $\tau = 10$. D) Value taken by LDs along the line $y = 0.5$ in panel C) to illustrate how the method detects the stable and unstable manifolds at points where the scalar field changes abruptly.
 ```
@@ -676,7 +676,7 @@ $${
 V(x,y) = x^2/2 + y^2/2 + x^2y - y^3/3
 }$$
 
-which has a $\pi/3$ rotational symmetry and is characterized by a central scattering region about the origin and three escape channels, see Fig. \ref{fig:henonHeiles_pes} below for details.
+which has a $\pi/3$ rotational symmetry and is characterized by a central scattering region about the origin and three escape channels, see {numref}`fig:henonHeiles_pes` below for details.
 
 In order to analyze the phase space of the H\'enon-Heiles Hamiltonian by means of the variable integration time LDs, we fix an energy $H = H_0$ of the system and choose an interaction region $\mathcal{R}$ defined in configuration space by a circle of radius $15$ centered at the origin. For our analysis we consider the following phase space slices:
 
@@ -701,7 +701,7 @@ Potential energy surface for the H\'enon-Heiles system.
 
 ```{figure} figures/hen_conts.png
 ---
-name: henonHeiles_pes
+name: fig:henonHeiles_pes
 ---
 Potential energy surface projected onto XY plane for the H\'enon-Heiles system.
 ```
@@ -748,7 +748,7 @@ Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-
 
 ```{figure} figures/Mani_Henon_tau_10_y_0_E_1div3.png
 ---
-name: henonHeiles_lds
+name: fig:henonHeiles_lds
 ---
 Gradient of the LD function showing stable and unstable manifold intersections in blue and red respectively.  
 ```
@@ -787,8 +787,9 @@ where $b(\cdot) \in C^{1}(\mathbb{R}^{n}\times \mathbb{R})$ is the deterministic
 
 As the notion of solution of a SDE is closely related with the Wiener process, we  state what is meant by $W(\cdot )$. This definition is given in {cite}`duan2015`, and this reference serves to provide the background for all of the notions in this section. Also, throughout we will use $\Omega$ to denote the probability space where the Wiener process is defined.
 
-__Definition__
-\label{def:Wiener}
+(def:Wiener)=
+__Definition__ _Wiener/Brownian process_
+
 A real valued stochastic Wiener or Brownian process $W(\cdot)$ is a stochastic process defined in a probability space $(\Omega , {\cal F},{\cal P})$ which satisfies
 
 1.  $W_0 = 0$ (standard Brownian motion),
@@ -798,7 +799,13 @@ A real valued stochastic Wiener or Brownian process $W(\cdot)$ is a stochastic p
 Moreover, $W(\cdot)$ is a real valued two-sided Wiener process if conditions (ii) and (iii) change into
 
 2.  $W_t - W_s$ follows a Normal distribution $N(0,|t-s|)$ for all $t, s \in \mathbb{R}$,
-3.  for all time $t_1 , t_2 , ... , t_{2n} \in \mathbb{R}$ such that the intervals $\lbrace (t_{2i-1},t_{2i}) \rbrace_{i=1}^{n}$ are non-intersecting between them\footnote{With the notation $(t_{2i-1},t_{2i})$ we refer to the interval of points between the values $t_{2i-1}$ and $t_{2i}$, regardless the order of the two extreme values. Also with the assertion we impose that every pair of intervals of the family $\lbrace (t_{2i-1},t_{2i}) \rbrace_{i=1}^{n}$ has an empty intersection, or alternatively that the union $\bigcup_{i=1}^{n}(t_{2i-1},t_{2i})$ is conformed by $n$ distinct intervals over $\mathbb{R}$.}, the random variables $W_{t_1}-W_{t_2}, W_{t_3} - W_{t_4},... , W_{t_{2n-1}} - W_{t_{2n}}$ are independent.
+3.  for all time $t_1 , t_2 , ... , t_{2n} \in \mathbb{R}$ such that the intervals $\lbrace (t_{2i-1},t_{2i}) \rbrace_{i=1}^{n}$ are non-intersecting between them (_Note_), the random variables $W_{t_1}-W_{t_2}, W_{t_3} - W_{t_4},... , W_{t_{2n-1}} - W_{t_{2n}}$ are independent.
+
+````{margin}
+```{note}
+With the notation $(t_{2i-1},t_{2i})$ we refer to the interval of points between the values $t_{2i-1}$ and $t_{2i}$, regardless the order of the two extreme values. Also with the assertion we impose that every pair of intervals of the family $\lbrace (t_{2i-1},t_{2i}) \rbrace_{i=1}^{n}$ has an empty intersection, or alternatively that the union $\bigcup_{i=1}^{n}(t_{2i-1},t_{2i})$ is conformed by $n$ distinct intervals over $\mathbb{R}$.
+```
+````
 
 This method of Lagrangian descriptors  has been developed for deterministic differential equations whose temporal domain is $\mathbb{R}$. In this sense it is natural to work with two-sided solutions as well as two-sided Wiener processes. Henceforth, every Wiener process $W(\cdot )$ considered in the this article will be of this form.
 
@@ -853,10 +860,16 @@ For verifying the invariance of such sets the solution mapping generated by the 
 
 A similar notion of solution mapping for SDEs is introduced using the notion of a random dynamical system $\varphi$ (henceforth referred to as RDS) in the context of SDEs. This function $\varphi$ is also a solution mapping of a SDE that satisfies several conditions, but compared with the solution mappings in the deterministic case, this RDS depends on an extra argument which is the random variable $\omega \in \Omega$. Furthermore the random variable $\omega$ evolves with respect to $t$ by means of a dynamical system $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$ defined over the probability space $\Omega$.
 
-__Definition__
-\label{rds}
+(rds)=
+__Definition__ _Random Dynamical System_
 
-Let $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$ be a measure-preserving\footnote{Given the probability measure $\mathcal{P}$ associated with the space $(\Omega , \mathcal{F},\mathcal{P})$, this remains invariant under the dynamical system $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$. Formally, $\theta_{t}\mathcal{P} = \mathcal{P}$ for every $t \in \mathbb{R}$. This statement means that $\mathcal{P}(B)=\mathcal{P}(\theta_{t}(B))$ for every $t \in \mathbb{R}$ and every subset $B \in \mathcal{F}$. Indeed for any dynamical system $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$ defined over the same probability space $\Omega$ as a Wiener process $W(\cdot )$, we have the equality $W_{s}(\theta_{t}\omega ) = W_{t+s}(\omega )-W_{t}(\omega )$ which implies that $dW_{s}(\theta_{t}\omega ) = dW_{t+s}(\omega )$ for every $s,t \in \mathbb{R}$ (see {cite}`duan15` for a detailed explanation).} dynamical system defined over $\Omega$, and let $\varphi : \mathbb{R} \times \Omega \times \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ be a measurable mapping such that $(t,\cdot , x) \mapsto \varphi (t,\omega ,x)$ is continuous for all $\omega \in \Omega$, and the family of functions $\lbrace \varphi (t,\omega ,\cdot ): \mathbb{R}^{n} \rightarrow \mathbb{R}^{n} \rbrace$ has the cocycle property:
+````{margin}
+```{note}
+Given the probability measure $\mathcal{P}$ associated with the space $(\Omega , \mathcal{F},\mathcal{P})$, this remains invariant under the dynamical system $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$. Formally, $\theta_{t}\mathcal{P} = \mathcal{P}$ for every $t \in \mathbb{R}$. This statement means that $\mathcal{P}(B)=\mathcal{P}(\theta_{t}(B))$ for every $t \in \mathbb{R}$ and every subset $B \in \mathcal{F}$. Indeed for any dynamical system $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$ defined over the same probability space $\Omega$ as a Wiener process $W(\cdot )$, we have the equality $W_{s}(\theta_{t}\omega ) = W_{t+s}(\omega )-W_{t}(\omega )$ which implies that $dW_{s}(\theta_{t}\omega ) = dW_{t+s}(\omega )$ for every $s,t \in \mathbb{R}$ (see {cite}`duan15` for a detailed explanation).
+```
+````
+
+Let $\lbrace \theta_{t} \rbrace_{t \in \mathbb{R}}$ be a measure-preserving (_Note__) dynamical system defined over $\Omega$, and let $\varphi : \mathbb{R} \times \Omega \times \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ be a measurable mapping such that $(t,\cdot , x) \mapsto \varphi (t,\omega ,x)$ is continuous for all $\omega \in \Omega$, and the family of functions $\lbrace \varphi (t,\omega ,\cdot ): \mathbb{R}^{n} \rightarrow \mathbb{R}^{n} \rbrace$ has the cocycle property:
 
 $$ \varphi (0,\omega ,x)=x \quad \text{and} \quad \varphi (t+s,\omega ,x) = \varphi(t,\theta_{s}\omega,\varphi (s,\omega ,x)) \quad \text{for all } t,s \in \mathbb{R}, \text{ } x \in \mathbb{R}^{n} \text{ and } \omega \in \Omega .$$
 
@@ -909,12 +922,13 @@ label: eq:noisy_saddle_RDS
 \end{equation}
 ```
 
-Notice that this last definition {eq}`eq:rds` is expressed in terms of SDEs with time-independent coefficients $b,\sigma$. For more general SDEs  a definition of nonautonomous RDS is developed in {cite}`duan2015`. However, for the remaining examples considered in this article we make use of the already given definition of RDS.
+Notice that this last definition {ref}`Random Dynamical System<rds>` is expressed in terms of SDEs with time-independent coefficients $b,\sigma$. For more general SDEs  a definition of nonautonomous RDS is developed in {cite}`duan2015`. However, for the remaining examples considered in this article we make use of the already given definition of RDS.
 
 Once we have the notion of RDS, it can be used to describe and detect geometrical structures and determine their influence on the  dynamics of trajectories. Specifically, in clear analogy with the deterministic case, we focus on those trajectories whose expressions do not depend explicitly on time $t$, which are referred as *random fixed points*. Moreover, their stable and unstable manifolds, which may also depend on the random variable $\omega$, are also objects of interest due to their influence on the dynamical behavior of nearby trajectories. Both types of objects are invariant. Therefore we describe a characterization of invariant sets with respect to a SDE by means of an associated RDS.
 
-__Definition__
-\label{invariant_set}
+(invariant_set)=
+__Definition__ _Invariant Set_
+
 
 A non empty collection $M : \Omega \rightarrow \mathcal{P}(\mathbb{R}^{n})$, where $M(\omega ) \subseteq \mathbb{R}^{n}$ is a closed subset for every $\omega \in \Omega$, is called an invariant set for a random dynamical system $\varphi$ if
 
@@ -1042,17 +1056,19 @@ These facts highlight the distinguished nature of the stationary orbit (and its 
 
 These features are also observed for the trajectories within the stable and unstable manifolds of the stationary orbit, but in a more restrictive manner than $(\tilde{x},\tilde{y})$. Taking for instance an arbitrary trajectory $(x^{s},y^{s})$ located at $\mathcal{S}(\omega )$ for every $t \in \mathbb{R}$, its first component $x^{s}_{t}=\tilde{x}(\omega )$ remains bounded for almost every $\omega \in \Omega$. In contrast, any other solution passing arbitrarily closed to $(x^{s},y^{s})$ neither being part of $\mathcal{S}(\omega )$ nor being the stationary orbit, satisfies the previous inequality {eq}`eq:eq_1` and therefore separates from $\mathcal{S}(\omega )$ at an exponential rate for increasing time. With this framework we can now introduce the formal definitions of stationary orbit and invariant manifold.
 
-__Definition__
-\label{stationary_orbit}
+(stationary_orbit)=
+__Definition__ _Stationary Orbit_
+
 
 A random variable $\tilde{X}: \Omega \rightarrow \mathbb{R}^{n}$ is called a stationary orbit (random fixed point) for a random dynamical system $\varphi$ if
 
 $$\varphi(t, \omega, \tilde{X}(\omega)) = \tilde{X}(\theta_t\omega), \quad \text{for every } t \in \mathbb{R} \text{ and every } \omega \in \Omega .$$
 
 
-Obviously every stationary orbit $\tilde{X}(\omega )$ is an invariant set with respect to a RDS as it satisfies Definition \ref{invariant_set}. Among several definitions of invariant manifolds given in the bibliography (for example {cite}`arno98`, {cite}`boxl89`, {cite}`duan15`), which have different formalisms but share the same philosophy, we choose the one given in {cite}`duan15` because it adapts to our example in a very direct way.
+Obviously every stationary orbit $\tilde{X}(\omega )$ is an invariant set with respect to a RDS as it satisfies Definition {ref}`Invariant Set<invariant_set>`. Among several definitions of invariant manifolds given in the bibliography (for example {cite}`arno98`, {cite}`boxl89`, {cite}`duan15`), which have different formalisms but share the same philosophy, we choose the one given in {cite}`duan15` because it adapts to our example in a very direct way.
 
-**Definition**
+__Definition__
+
 A random invariant set $M: \Omega \rightarrow \mathcal{P}(\mathbb{R}^{n})$ for a random dynamical system $\varphi$ is called a $C^{k}$-Lipschitz invariant manifold if it can be represented by a graph of a $C^{k}$ Lipschitz mapping ($k \geq 1$)
 
 ```{math}
@@ -1087,7 +1103,14 @@ Actually the domains of such functions $\gamma_{s}$ and $\gamma_{u}$ are the lin
 
 Before  implementing the numerical method of Lagrangian descriptors to several examples of SDEs, it is important to remark why random fixed points and their respective stable and unstable manifolds govern the nearby trajectories, and furthermore, how they may influence the dynamics throughout the rest of the domain. These are essential issues in order to describe the global phase space  motion of  solutions of SDEs. However, these questions do not have a simple answer. For instance, in the noisy saddle example {eq}`eq:noisy_saddle` the geometrical structures arising from the dynamics generated around the stationary orbit are quite similar to the dynamics corresponding to the deterministic saddle point $\lbrace \dot{x}=x,\dot{y}=-y \rbrace$. Significantly, the manifolds $\mathcal{S}(\omega )$ and $\mathcal{U}(\omega )$ of the noisy saddle form two dynamical barriers for other trajectories in the same way that the manifolds $\lbrace x = 0 \rbrace$ and $\lbrace y = 0 \rbrace$ of the deterministic saddle work. This means that for any particular experiment, i.e., for any given $\omega \in \Omega$, the manifolds $\mathcal{S}(\omega )$ and $\mathcal{U}(\omega )$ are determined and cannot be "crossed" by other trajectories due to the uniqueness of solutions (remember that the manifolds are invariant under the RDS {eq}`eq:noisy_saddle_RDS` and are comprised of an infinite family of solutions). Also by considering the exponential separation rates reported in {eq}`eq:eq_1` with the rest of trajectories, the manifolds $\mathcal{S}(\omega )$ and $\mathcal{U}(\omega )$ divide the plane $\mathbb{R}^{2}$ of initial conditions into four qualitatively distinct dynamical regions; therefore providing a phase portrait representation. 
 
-Nevertheless it remains to show that such analogy can be found between other SDEs and their corresponding non-noisy deterministic differential equations\footnote{Otherwise if nonlinearity is dominating the behavior of the terms in equation {eq}`eq:SDE` then the correspondence between the manifolds for $\Phi (t, \omega )$ to the manifolds for $\varphi$ needs to be made by means of the local stable and unstable manifold theorem (see {cite}`moham99`, Theorem 3.1). Therein it is considered a homeomorphism $H(\omega )$ which establishes the equivalence of the geometrical structures arising for both sets of manifolds, and as a consequence the manifolds for $\varphi$ inherit the same dynamics as the ones for $\Phi (t, \omega )$ but only in a neighborhood of the stationary orbit. In this sense the existence of such manifolds for a nonlinear RDS $\varphi$ is only ensured locally. Anyway this result provides a very good approximation to the stochastic dynamics of a system, and enables us to discuss the different patterns of behavior of the solutions in the following examples.}. In this direction there is a recent result ({cite}`cheng16`, Theorem 2.1) which ensures the equivalence in the dynamics of both kinds of equations when the noisy term $\sigma$ is additive (i.e., $\sigma$ does not depend on the solution $X_{t}$). Although this was done by means of the most probable phase portrait, a technique that closely resembles the ordinary phase space for deterministic systems, this fact might indicate that such analogy in the dynamics cannot be achieved when the noise does depend explicitly on the solution $X_{t}$. Actually any additive noise affects all the particles together at the same magnitude.
+
+````{margin}
+```{note}
+Otherwise, if nonlinearity is dominating the behavior of the terms in equation {eq}`eq:SDE` then the correspondence between the manifolds for $\Phi (t, \omega )$ to the manifolds for $\varphi$ needs to be made by means of the local stable and unstable manifold theorem (see {cite}`moham99`, Theorem 3.1). Therein it is considered a homeomorphism $H(\omega )$ which establishes the equivalence of the geometrical structures arising for both sets of manifolds, and as a consequence the manifolds for $\varphi$ inherit the same dynamics as the ones for $\Phi (t, \omega )$ but only in a neighborhood of the stationary orbit. In this sense the existence of such manifolds for a nonlinear RDS $\varphi$ is only ensured locally. Anyway this result provides a very good approximation to the stochastic dynamics of a system, and enables us to discuss the different patterns of behavior of the solutions in the following examples.
+```
+````
+
+Nevertheless it remains to show that such analogy can be found between other SDEs and their corresponding non-noisy deterministic differential equations (_Note_). In this direction there is a recent result ({cite}`cheng16`, Theorem 2.1) which ensures the equivalence in the dynamics of both kinds of equations when the noisy term $\sigma$ is additive (i.e., $\sigma$ does not depend on the solution $X_{t}$). Although this was done by means of the most probable phase portrait, a technique that closely resembles the ordinary phase space for deterministic systems, this fact might indicate that such analogy in the dynamics cannot be achieved when the noise does depend explicitly on the solution $X_{t}$. Actually any additive noise affects all the particles together at the same magnitude.
 
 Anyway the noisy saddle serves to establish an analogy to the dynamics with the deterministic saddle. One of its features is the contrast between the growth of the components $X_{t}$ and $Y_{t}$, which mainly have a positive and negative exponential growth respectively. We will see that this is graphically captured when applying the stochastic Lagrangian descriptors method to the SDE {eq}`eq:noisy_saddle` over a domain of the stationary orbit. Moreover when representing the stochastic Lagrangian descriptor values for the noisy saddle, one can observe that the lowest values are precisely located on the manifolds $\mathcal{S}(\omega )$ and $\mathcal{U}(\omega )$. These are manifested as  sharp features indicating a rapid change of the values that the stochastic Lagrangian descriptor assumes. This geometrical structure formed by "local minimums" has a very marked crossed form and it is straightforward to think that the stationary orbit is located at the intersection of the two cross-sections. These statements are supported afterwards by numerical simulations and analytical results.
 
@@ -1134,7 +1157,8 @@ X_{t_j} := X_{t_0+j\Delta t},
 
 for a given $\Delta t>0$ small enough and $j=-N,\cdots ,-1,0,1, \cdots ,N$.
 
-__Definition__
+__Definition__ 
+
 The stochastic Lagrangian descriptor evaluated for SDE {eq}`eq:stochastic_lagrangian_system` with general solution 
 $\textbf{X}_{t}(\omega )$ is given by
 
@@ -1153,6 +1177,7 @@ where $\lbrace \textbf{X}_{t_{j}} \rbrace_{j=-N}^{N}$ is a discretization of the
 $\textbf{X}_{t_{-N}} = \textbf{X}_{-\tau}$, $\textbf{X}_{t_N} = \textbf{X}_{\tau}$, $\textbf{X}_{t_0} = \textbf{x}_{0}$, for a given $\omega \in \Omega$.
 
 __Definition__
+
 Obviously every output of the $MS_p$ function highly depends on the experiment $\omega \in \Omega$ where $\Omega$ is the probability space that includes all the possible outcomes of a given phenomena. Therefore in order to analyze the homogeneity of a given set of outputs, we consider a sequence of results of the $MS_p$ function for the same stochastic equation {eq}`eq:stochastic_lagrangian_system` : $MS_p(\cdot, \omega_1)$, $MS_p(\cdot, \omega_2)$, 
 $\cdots$, $MS_p(\cdot, \omega_M)$. It is feasible that the following relation holds
 
@@ -1209,6 +1234,7 @@ This scheme is referred to as the Euler-Marayuma method for solving a single pat
 $\tilde{X}_{t_p}$ its numerical approximation at any time $t_p$. Since both of them are random variables, the accuracy of the method must be determined in probabilistic terms. With this aim, the following definition is introduced.
 
 __Definition__
+
 A stochastic numerical method has an  order of convergence equal to $\gamma$ if there exists a constant $C>0$ such that
 
 ```{math}
@@ -1332,7 +1358,14 @@ e^{-a_{2}\Delta t} - 1 \right|^{p} \left| y_{0} + \int_{0}^{t_{i}}e^{a_{2}s}b_{2
 ```
 
 Once the analytic expression of the SLD applied to the noisy saddle {eq}`eq:general_noisy` is known, it can be proved that the stable and unstable manifolds of the stationary orbit are manifested as singularities of the SLD function over any given domain of initial conditions containing the stationary orbit. This fact implies that the SLD method realizes a procedure to detect these geometrical objects and, consequently, provides a phase portrait representation of the dynamics generated by the noisy saddle. In the same way as described in {cite}`mancho2013lagrangian`, we refer to singularities as points of the domain of spatial  initial conditions where the derivative of the SLD is not defined. The paradigm example of the mathematical manifestation of singularities of the LD on stable and unstable manifolds of hyperbolic trajectories is provided by the scalar function $|\cdot |^{p}$ with $p \in (0,1]$. This function is  singular, alternatively non-differentiable, at those points where its argument is  zero. Graphically this feature is observed as sharp changes in the representation of the SLD values, where the contour lines concentrate in a very narrow space. 
-In this particular example we are able to explicitly identify within the expression of the SLD  the terms that are largest in magnitude. In other words, we are able to identify the terms whose particular singularities determine the non-differentiability of the entire sum\footnote{Note that the differentiability of the SLD is analyzed with respect to the components of the initial conditions $(x_{0},y_{0})$, as the experiment $\omega \in \Omega$ and the starting point $t_{0}$ are previously fixed.}. This is better understandable if the expression of the SLD is divided into two sums
+In this particular example we are able to explicitly identify within the expression of the SLD  the terms that are largest in magnitude. In other words, we are able to identify the terms whose particular singularities determine the non-differentiability of the entire sum (_Note_). This is better understandable if the expression of the SLD is divided into two sums
+
+````{margin}
+```{note}
+Note that the differentiability of the SLD is analyzed with respect to the components of the initial conditions $(x_{0},y_{0})$, as the experiment $\omega \in \Omega$ and the starting point $t_{0}$ are previously fixed.
+```
+````
+
 
 ```{math}
 ---
@@ -1384,20 +1417,19 @@ x_{0} = - \int_{0}^{\tau - \Delta t}e^{-a_{1}s}b_{1}dW_{s}^{1} \quad \text{or} \
 \int_{-\tau}^{0}e^{a_{2}s}b_{2}dW_{s}^{2} \quad \text{for enough large values of } \tau .
 ```
 
-This statement is in agreement with the distinguished nature of the manifolds of the stationary orbit discussed in the previous section. Note also that the two quantities for $x_{0}$ and $y_{0}$ converge to the coordinates of the stationary orbit $(\tilde{x}(\omega ),\tilde{y}(\omega ))$ with $\tau$ tending to infinity. These features are observed in Figure \ref{fig:saddle}, where the sharpness of the SLD representation highlights the location of the stable and unstable manifolds. 
+This statement is in agreement with the distinguished nature of the manifolds of the stationary orbit discussed in the previous section. Note also that the two quantities for $x_{0}$ and $y_{0}$ converge to the coordinates of the stationary orbit $(\tilde{x}(\omega ),\tilde{y}(\omega ))$ with $\tau$ tending to infinity. These features are observed in {numref}`fig:saddle`, where the sharpness of the SLD representation highlights the location of the stable and unstable manifolds. 
 
 
 
 ```{figure} figures/fig1a.png
 ---
-name:
 ---
 Figure A) from  {cite}`balibrea2016lagrangian` showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.
 ```
 
 ```{figure} figures/fig1b.png
 ---
-name: saddle
+name: fig:saddle
 ---
 Figure B) from  {cite}`balibrea2016lagrangian` showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.
 ```
@@ -1407,8 +1439,8 @@ Figure B) from  {cite}`balibrea2016lagrangian` showing two different experiments
 \label{fig:saddle}
 \caption{Figures from  {cite}`balibrea2016lagrangian` showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.}
 
-\begin{remark}
-Due to the properties of It\^{o} integrals, see for instance {cite}`duan15`, the components of the stationary orbit satisfy
+> __Remark__
+> Due to the properties of It\^{o} integrals, see for instance {cite}`duan15`, the components of the stationary orbit satisfy
 
 ```{math}
 ---
@@ -1428,8 +1460,8 @@ label:
 \left[ \tilde{y}(\omega )^{2} \right] = \mathbb{E} \left[ \int_{-\infty}^{0}e^{2s}ds \right] = \frac{1}{2}.
 ```
 
-This means that the stationary orbit $ (\tilde{x}(\omega ),\tilde{y}(\omega ))$ is highly probable to be located closed to the origin of coordinates $(0,0)$, and  this feature is displayed in Figure \ref{fig:saddle}. This result gives more evidences and supports the similarities between the stochastic differential equation {eq}`eq:noisy_saddle` and the deterministic analogue system $\lbrace \dot{x}=x, \hspace{0.1cm} \dot{y}=-y \rbrace$ whose only fixed point is $(0,0)$.
-\end{remark}
+>This means that the stationary orbit $(\tilde{x}(\omega ),\tilde{y}(\omega ))$ is highly probable to be located closed to the origin of coordinates $(0,0)$, and  this feature is displayed in {numref}`fig:saddle`. This result gives more evidences and supports the similarities between the stochastic differential equation {eq}`eq:noisy_saddle` and the deterministic analogue system $\lbrace \dot{x}=x, \hspace{0.1cm} \dot{y}=-y \rbrace$ whose only fixed point is $(0,0)$.
+
 
 Therefore we can assert that the stochastic Lagrangian descriptor is a technique that provides a phase portrait representation of the dynamics generated by the noisy saddle equation {eq}`eq:general_noisy`. Next we apply this same technique to further examples.
 
