@@ -1,8 +1,6 @@
 ![](champs_logo.jpg)
 
 
-
-
 <h1 style="font-size:50px;text-align:center">Lagrangian Descriptors</h1>
 <h1 style="font-size:40px;text-align:center"><em>Discovery and Quantification of Phase Space Structure and Transport</em></h1>
 
