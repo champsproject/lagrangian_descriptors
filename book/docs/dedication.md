@@ -10,7 +10,7 @@ Dedicated to my friends, families, lovers, and many others.
 
 VJGG
 
-Dedicated to my parents, for their love of chemistry.
+Dedicated to all those that, with their encouragement and support over the years, have had a positive influence along my trajectory.
 
 FGM
 

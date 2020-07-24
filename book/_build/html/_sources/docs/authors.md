@@ -10,7 +10,7 @@
 # Authors
 
 <p style="font-size:18px">
-Makrina Agaoglou, Broncio Aguilar-Sanjuan, Victor José García-Garrido, Francisco González-Montoya, Matthaios Katsanikas, Vladimír Krajňák, Shibabrat Naik, Stephen Wiggins.
+Makrina Agaoglou, Broncio Aguilar-Sanjuan, Victor José García Garrido, Francisco González-Montoya, Matthaios Katsanikas, Vladimír Krajňák, Shibabrat Naik, Stephen Wiggins.
 </p>
 
 
