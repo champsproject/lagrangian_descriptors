@@ -1,8 +1,0 @@
-#### Acknowledgments
-
-
-Funding for this book  was provided by the Chemistry and Mathematics in Phase Space (CHAMPS) project (<https://champsproject.com/>). This is a six year Programme Grant funded by the Engineering and Physical Sciences Research Council (EPSRC) led by the School of Mathematics at the University of Bristol, and in collaboration with the School of Chemistry at the University of Bristol, the School of Chemistry at Cardiff University, the School of Chemistry at Leeds University, and the Department of Mathematics at Imperial College.
-
-We are extremely grateful to the project manager for CHAMPS, Ms. Eleanor Machin, who makes this collaboration involving 12 postdoctoral researchers, one PI, four co-Is, and a steady stream of visitors, work “as smooth as clockwork”, especially during the coronavirus lockdown period, in which this book was written.
-
-We are grateful for the many open-source contributions to the tools we used in this book sprint, in particular Jupyter Books, originally created by Sam Lau and Chris Holdgraf with support of the University of California Berkeley Data Science Education Program and the Berkeley Institute for Data Science. (Jupyter Books Version v0.7, Chris Holdgraf; Jan Kleinert; Elizabeth DuPre; Mainak Jas; Alexander Morley; Matthew Brett; Matt Craig; Erik Sundell; Sam Lau; Luke; gaow; stafforddavidj; cnydw; Zachary Sailer; Tom; Mathieu Boudreau; James Mason; Ariel Rokem. Zenodo archive, DOI:10.5281/zenodo.2799972). Lorena Barba contributed to the planning of this book sprint and the book “Teaching and Learning with Jupyter, also the product of a book sprint, served as inspiration (<https://jupyter4edu.github.io/jupyter-edu-book/index.html>).

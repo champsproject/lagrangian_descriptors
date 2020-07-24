@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Preface &#8212; Lagrangian Descriptors</title>
+    <title>Contributing to the book &#8212; Lagrangian Descriptors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -31,8 +31,6 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The Setting: Hamiltonian Dynamics on Phase Space" href="../content/chapter1_1.html" />
-    <link rel="prev" title="Acknowledgments" href="acknowledgments.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -76,8 +74,8 @@
   <li class="">
     <a href="acknowledgments.html">Acknowledgments</a>
   </li>
-  <li class="active">
-    <a href="">Preface</a>
+  <li class="">
+    <a href="preface.html">Preface</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 1</p>
@@ -153,7 +151,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/preface.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/contributing.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -174,9 +172,34 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#" class="nav-link">Contributing to the book</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#code-of-conduct" class="nav-link">Code of Conduct</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-should-i-know-before-i-get-started" class="nav-link">What should I know before I get started?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#how-can-i-contribute" class="nav-link">How Can I Contribute?</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#reporting-bugs" class="nav-link">Reporting Bugs</a>
+        </li>
+    
+            </ul>
+        </li>
     
     </ul>
 </nav>
@@ -189,15 +212,39 @@
         
               <div>
                 
-  <div class="section" id="preface">
-<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
-<p>This book is a collaborative project between researchers in the CHAMPS (Chemistry and Mathematics in Phase Space) research project <a class="reference external" href="https://www.champsproject.com">https://www.champsproject.com</a>
-Research in CHAMPS is concerned with discovering the geometrical structures in the phase space of dynamical systems that govern the many and varied mechanisms leading to a chemical reaction.  Such dynamical systems are highly nonlinear, often time-dependent (both deterministic and stochastic), and generally high dimensional.  When faced with such a complex dynamical setting, the researcher needs computational techniques for discovering the relevant geometrical structures as well as the theoretical techniques for interpreting the results of computations in the context of specific applications.</p>
-<p>In recent years the method of Lagrangian descriptors has proven a successful computational diagnostic for revealing phase space structure in a wide variety of problems concerned with Lagrangian transport in fluid dynamics and, most recently, to the types of dynamical systems arising in theoretical chemistry that we noted above.</p>
-<p>Lagrangian descriptors are a trajectory diagnostic for revealing phase space structures in dynamical systems. The method is very compelling since it is straightforward to implement computationally, the interpretation is evident, and it provides a “high resolution” method for exploring large dimensional phase space with low dimensional slices. In this book, we will illustrate these aspects of Lagrangian descriptors throughout this book.</p>
-<p>The types of dynamical systems that we consider in this book are Hamiltonian systems, both autonomous (time-independent) and nonautonomous (time-dependent). In Chapters 1 and 2 we describe some of the necessary backgrounds in Hamiltonian systems that are useful for interpreting the output of Lagrangian descriptor calculations for such dynamical systems.  Chapter 3 describes the method of Lagrangian descriptors, both the theoretical settings as well as the history of the method and the current scope of applications. The final part of the book is a collection of Jupyter notebooks that implements the method for a variety of examples.</p>
-<p>This book is a companion to the previous Jupyter book published by the CHAMPS group <a class="reference external" href="https://www.chemicalreactions.io">https://www.chemicalreactions.io</a>. That book was written using the book sprint approach. That was originally the plan for this book, but the coronavirus and the subsequent lockdown intervened, and this project became more of a book marathon. Using our experience from the previous book sprint we tried, as much as possible, to implement the same approach, but through regularly scheduled weekly meetings where assignments were handed out and criticized on a weekly basis.</p>
-<p>We view these books as community projects and we invite all those interested to participate in their further development through Github.</p>
+  <div class="section" id="contributing-to-the-book">
+<h1>Contributing to the book<a class="headerlink" href="#contributing-to-the-book" title="Permalink to this headline">¶</a></h1>
+<p>Thank you for considering and taking the time to contribute!</p>
+<p>The following is a set of guidelines (<a class="reference external" href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md">borrowed from the Atom project by Github</a>) for contributing to this package. As always use your best judgment and feel free to propose changes to this document in a pull request.</p>
+<p><a class="reference external" href="#code-of-conduct">Code of Conduct</a></p>
+<p><a class="reference external" href="#what-should-i-know-before-i-get-started">What should I know before I get started?</a></p>
+<p><a class="reference external" href="#how-can-i-contribute">How Can I Contribute?</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#reporting-bugs">Reporting Bugs</a></p></li>
+<li><p><a class="reference external" href="#suggesting-enhancements">Suggesting Enhancements</a></p></li>
+<li><p><a class="reference external" href="#pull-requests">Pull Requests</a></p></li>
+</ul>
+<p><a class="reference external" href="#additional-notes">Additional Notes</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="#issue-and-pull-request-labels">Issue and Pull Request Labels</a></p></li>
+</ul>
+</div>
+<div class="section" id="code-of-conduct">
+<h1>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h1>
+<p>This project and everyone participating in it is governed by the <span class="xref myst">Contributor Covenant</span>.
+By participating, you are expected to uphold this code. Please report unacceptable behavior to <a class="reference external" href="mailto:s&#46;wiggins&#37;&#52;&#48;bristol&#46;ac&#46;uk">Prof<span>&#46;</span> Stephen Wiggins</a>.</p>
+</div>
+<div class="section" id="what-should-i-know-before-i-get-started">
+<h1>What should I know before I get started?<a class="headerlink" href="#what-should-i-know-before-i-get-started" title="Permalink to this headline">¶</a></h1>
+<p>We recommend familiarity with concepts in the prologue chapter of the book and some of the systems presented as case studies.</p>
+</div>
+<div class="section" id="how-can-i-contribute">
+<h1>How Can I Contribute?<a class="headerlink" href="#how-can-i-contribute" title="Permalink to this headline">¶</a></h1>
+<p>We recommend using the Jupyter notebook or Markdown template files for contributing to the book. More details on this process will be added later.</p>
+<div class="section" id="reporting-bugs">
+<h2>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h2>
+<p>As per open-source <em>modus operandi</em>, open an issue in the Github repository for the book using the standard style listed <a class="reference external" href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#additional-notes">here</a>.</p>
+</div>
 </div>
 
 
@@ -209,8 +256,6 @@ Research in CHAMPS is concerned with discovering the geometrical structures in t
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="acknowledgments.html" title="previous page">Acknowledgments</a>
-    <a class='right-next' id="next-link" href="../content/chapter1_1.html" title="next page">The Setting: Hamiltonian Dynamics on Phase Space</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
