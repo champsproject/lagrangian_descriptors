@@ -11,11 +11,11 @@
 - file: content/chapter1_2
     
 - header: Chapter 2
-- file: content/chapter2_1_new
-- file: content/chapter2_2_new
+- file: content/chapter2_1
+- file: content/chapter2_2
 
 - header: Chapter 3
-- file: content/chapter3_new
+- file: content/chapter3
 
 - header: Examples
 - file: content/examples
