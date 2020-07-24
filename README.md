@@ -1,4 +1,4 @@
-(ZENODO BADGE HERE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3958985.svg)](https://doi.org/10.5281/zenodo.3958985)
 
 # Lagrangian Descriptors: Discovery and Quantification of Phase Space Structure and Transport
 
