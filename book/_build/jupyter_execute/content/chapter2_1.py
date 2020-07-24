@@ -135,8 +135,8 @@ The basic ideas exposed in this simple example are the basis for understanding t
 In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Chapter \ref{sec:KAM}). The total energy of the system is split between both DoF to yield:
 
 \begin{eqnarray}
-H &=& K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
-&=& K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \nonumber\\  
+H &=& K(p_{1},p_{2}) + V(q_{1},q_{2}), \\
+&=& K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2), \\  
 &=& \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega >0.
 \end{eqnarray}
 

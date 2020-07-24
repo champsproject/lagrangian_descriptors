@@ -1,10 +1,10 @@
-- file: authors
+- file: docs/authors
 
-- file: dedication
+- file: docs/dedication
 
-- file: acknowledgments
+- file: docs/acknowledgments
 
-- file: preface
+- file: docs/preface
 
 - header: Chapter 1
 - file: content/chapter1_1

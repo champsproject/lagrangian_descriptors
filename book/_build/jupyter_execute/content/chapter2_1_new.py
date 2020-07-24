@@ -110,7 +110,7 @@ The origin, $\mathcal{M} = (q_1=0,p_1=0)$, is a equilibrium point of the system.
 
 **Showing the invariance of candidate sets.**
 
-Let us consider the line $ q_1 = - p_1$. The Hamiltonian vector field evaluated on the line is tangent to the line.
+Let us consider the line $q_1 = - p_1$. The Hamiltonian vector field evaluated on the line is tangent to the line.
 
 ```{math}
 ---
@@ -191,10 +191,11 @@ In this case, the Hamiltonian function for the 2-degree of freedom system is the
 label: 
 ---
 \begin{eqnarray}
-H &=& K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
-&=& K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \nonumber\\  
-&=& \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega >0.
-\end{eqnarray}```
+H &=& K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
+  &=& K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \\  
+  &=& \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega >0
+\end{eqnarray}
+```
 
 ```{figure} figures/Vm.jpg
 ---
@@ -217,13 +218,12 @@ Hamilton's equations are
 label: 
 ---
 \begin{eqnarray}
-\dot{q_1} &=& \frac{\partial H}{ \partial p_1} = \lambda p_1  \nonumber  \\
-\dot{p_1} &=& -\frac{\partial H}{ \partial q_1} = \lambda q_1 \nonumber  \\
-\dot{q_2} &=& \frac{\partial H}{ \partial p_2} = \omega p_2  \nonumber  \\
-\dot{p_2} &=& -\frac{\partial H}{ \partial q_2} = -\omega q_2.
+\dot{q_1} &=& \frac{\partial H}{ \partial p_1} = \lambda p_1  \\
+\dot{p_1} &=& -\frac{\partial H}{ \partial q_1} = \lambda q_1  \\
+\dot{q_2} &=& \frac{\partial H}{ \partial p_2} = \omega p_2 \\
+\dot{p_2} &=& -\frac{\partial H}{ \partial q_2} = -\omega q_2
 \end{eqnarray}
 ```
-
 
 ```{figure} figures/Vq1.jpg
 ---
@@ -287,8 +287,9 @@ label:
 label: 
 ---
 \begin{equation}
-\displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2)   = E > 0,  q_1 = - p_1  \rbrace }.
-\end{equation}```
+\displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E > 0, q_1 = - p_1  \rbrace }.
+\end{equation}
+```
 
 (sec:3dofnhim)=
 ## Three and More Degrees-of-Freedom and NHIMs
@@ -312,11 +313,12 @@ The equation of motion are :
 label: 
 ---
 \begin{eqnarray}
-\dot{q_1} &=& \frac{\partial H}{ \partial p_1} = \lambda p_1  \nonumber  \\
-\dot{p_1} &=& -\frac{\partial H}{ \partial q_1} = \lambda q_1 \nonumber  \\
-\dot{q_i} &=& \frac{\partial H}{ \partial p_i} = \omega_i p_i  \nonumber  \\
+\dot{q_1} &=& \frac{\partial H}{ \partial p_1} = \lambda p_1\\
+\dot{p_1} &=& -\frac{\partial H}{ \partial q_1} = \lambda q_1\\
+\dot{q_i} &=& \frac{\partial H}{ \partial p_i} = \omega_i p_i\\
 \dot{p_i} &=& -\frac{\partial H}{ \partial q_i} = -\omega_i q_i, \quad i = 2,...,n.
-\end{eqnarray}```
+\end{eqnarray}
+```
 
 ```{figure} figures/Vq1.jpg
 ---
@@ -418,7 +420,7 @@ H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad
 \label{eq:LST1}
 \end{equation}
 ```
-\noindent
+
 with corresponding Hamilton's equations:
 
 ```{math}
@@ -426,14 +428,14 @@ with corresponding Hamilton's equations:
 label: eq:LST2
 ---
 \begin{eqnarray}
-\dot{q}_1 & = & \frac{\partial H}{\partial p_1} =  \lambda p_1, \nonumber \\
-\dot{p}_1 & = & - \frac{\partial H}{\partial q_1} =  \lambda q_1, \nonumber \\
-\dot{q}_2 & = & \frac{\partial H}{\partial p_2} =  \omega  p_2, \nonumber \\
+\dot{q}_1 & = & \frac{\partial H}{\partial p_1} =  \lambda p_1,  \\
+\dot{p}_1 & = & - \frac{\partial H}{\partial q_1} =  \lambda q_1,  \\
+\dot{q}_2 & = & \frac{\partial H}{\partial p_2} =  \omega  p_2,  \\
 \dot{p}_2 & = & - \frac{\partial H}{\partial q_2} =  - \omega q_2, 
 \label{eq:LST2}
 \end{eqnarray}
 ```
-\noindent
+
 The point $(q_1, p_1, q_2, p_2) = (0, 0, 0, 0)$ is an equilibrium point of Hamilton's equations, and the eigenvalues of the matrix associated with the linearization of Hamilton's equations about this equilibrium point are
 $\pm \lambda, \, \pm i \omega$. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian {eq}`eq:LST1`  evaluated at the equilibrium point, is zero.
 

@@ -181,7 +181,7 @@ Under $f$, phase space points $(q,p)$ are transformed into $f(q,p)$ and the Hami
 For a coordinate free formulation using differential forms see {cite}`Arnold76`.
 
 
-The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincarè surface of section (See Chapter {ref}`3<sec:LDs>`), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and H{\'e}non map.
+The flow of an autonomous Hamiltonian system is a symplectic transformation for each $t$. Another common example of a symplectic map is the return map associated with a Poincarè surface of section (See Chapter {ref}`3<sec:LDs>`), to be discussed in the next section. Other well known examples of symplectic maps include the cat map, standard map, and Hénon map.
 Symplectic maps arise in many applications in physics and chemistry, for example in celestial mechanics and dynamical astronomy, particle accelerators, plasma, and chemical reactions {cite}`meiss_symplectic_1992` to name but a few.
 
 
@@ -294,7 +294,7 @@ Hamiltonian systems with a bounded energy surface have a recurrence property dis
 We know from Eq. {eq}`eq:energy_conserved` that autonomous Hamiltonian systems conserve energy and thus for $N$ degrees of freedom system, motion is constrained to a $(2N - 1)$-dimensional energy surface
 
 \begin{equation*}
-E = H(q_j, p_j) \;,\quad \text{where } j \in \{1, 2, \ldots, N\}
+E = H(q_j, p_j),\quad \text{where } j \in \{1, 2, \ldots, N\}
 \end{equation*}
 
 If the energy surface is bounded (compact), then the Poincarè recurrence theorem states that almost all trajectories (all but a set of zero volume) that begin on a Poincarè surface of section will return to it. For a formal statement and proof, see Theorem 7.6.3 in {cite}`Wiggins2003`.

@@ -68,16 +68,16 @@
   
   <ul class="nav sidenav_l1">
   <li class="">
-    <a href="../authors.html">Authors</a>
+    <a href="../docs/authors.html">Authors</a>
   </li>
   <li class="">
-    <a href="../dedication.html">Dedication</a>
+    <a href="../docs/dedication.html">Dedication</a>
   </li>
   <li class="">
-    <a href="../acknowledgments.html">Acknowledgments</a>
+    <a href="../docs/acknowledgments.html">Acknowledgments</a>
   </li>
   <li class="">
-    <a href="../preface.html">Preface</a>
+    <a href="../docs/preface.html">Preface</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 1</p>
@@ -325,7 +325,7 @@ H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambd
 <p>For energies <span class="math notranslate nohighlight">\(E_1&lt;0\)</span> the energy level set consists of two disconnected parts, a trajectory cannot reach <span class="math notranslate nohighlight">\(q_1=0\)</span> due insufficient energy. For <span class="math notranslate nohighlight">\(E_1=0\)</span> the two previously disconnected parts connect at <span class="math notranslate nohighlight">\(q_1=p_1=0\)</span> and for energies <span class="math notranslate nohighlight">\(E_1&gt;0\)</span>, any value of <span class="math notranslate nohighlight">\(q_1\)</span> is accessible.</p>
 <p>The origin, <span class="math notranslate nohighlight">\(\mathcal{M} = (q_1=0,p_1=0)\)</span>, is a equilibrium point of the system. The trajectory that starts at <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> remains always at the same point.</p>
 <p><strong>Showing the invariance of candidate sets.</strong></p>
-<p>Let us consider the line $ q_1 = - p_1$. The Hamiltonian vector field evaluated on the line is tangent to the line.</p>
+<p>Let us consider the line <span class="math notranslate nohighlight">\(q_1 = - p_1\)</span>. The Hamiltonian vector field evaluated on the line is tangent to the line.</p>
 <div class="math notranslate nohighlight" id="equation-eq-ws">
 <span class="eqno">(21)<a class="headerlink" href="#equation-eq-ws" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; -\lambda q_1  \nonumber \\
@@ -368,10 +368,10 @@ p_1(t) &amp;=&amp; p_1(0) e^{\lambda t}.
 <p>In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Section <a class="reference internal" href="chapter2_2_new.html#sec-kam"><span class="std std-ref">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</span></a> ). The total energy of the system is split between both DoF to yield:</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-new-7">
 <span class="eqno">(27)<a class="headerlink" href="#equation-content-chapter2-1-new-7" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
-H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
-&amp;=&amp; K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \nonumber\\  
-&amp;=&amp; \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega &gt;0.
-\end{eqnarray}```\end{split}\]</div>
+H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
+  &amp;=&amp; K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \\  
+  &amp;=&amp; \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega &gt;0
+\end{eqnarray}\end{split}\]</div>
 <div class="figure align-default" id="vm">
 <img alt="../_images/Vm.jpg" src="../_images/Vm.jpg" />
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Potential energy associated to the 2-degree of freedom system <span class="math notranslate nohighlight">\(V(q_1,q_2) = V_1(q_1)+V_2(q_2)\)</span>. The potential has a saddle point at the point <span class="math notranslate nohighlight">\((q_1, q_2)=(0,0)\)</span></span><a class="headerlink" href="#vm" title="Permalink to this image">¶</a></p>
@@ -383,10 +383,10 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
 <p>Hamilton’s equations are</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-new-8">
 <span class="eqno">(28)<a class="headerlink" href="#equation-content-chapter2-1-new-8" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
-\dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1  \nonumber  \\
-\dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1 \nonumber  \\
-\dot{q_2} &amp;=&amp; \frac{\partial H}{ \partial p_2} = \omega p_2  \nonumber  \\
-\dot{p_2} &amp;=&amp; -\frac{\partial H}{ \partial q_2} = -\omega q_2.
+\dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1  \\
+\dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1  \\
+\dot{q_2} &amp;=&amp; \frac{\partial H}{ \partial p_2} = \omega p_2 \\
+\dot{p_2} &amp;=&amp; -\frac{\partial H}{ \partial q_2} = -\omega q_2
 \end{eqnarray}\end{split}\]</div>
 <div class="figure align-default" id="id10">
 <img alt="../_images/Vq1.jpg" src="../_images/Vq1.jpg" />
@@ -418,8 +418,8 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \nonumber\\
 \end{equation}\]</div>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-new-10">
 <span class="eqno">(31)<a class="headerlink" href="#equation-content-chapter2-1-new-10" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-\displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2)   = E &gt; 0,  q_1 = - p_1  \rbrace }.
-\end{equation}```\]</div>
+\displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E &gt; 0, q_1 = - p_1  \rbrace }.
+\end{equation}\]</div>
 </div>
 <div class="section" id="three-and-more-degrees-of-freedom-and-nhims">
 <span id="sec-3dofnhim"></span><h2>Three and More Degrees-of-Freedom and NHIMs<a class="headerlink" href="#three-and-more-degrees-of-freedom-and-nhims" title="Permalink to this headline">¶</a></h2>
@@ -432,11 +432,11 @@ H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + 
 <p>The equation of motion are :</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-new-12">
 <span class="eqno">(33)<a class="headerlink" href="#equation-content-chapter2-1-new-12" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
-\dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1  \nonumber  \\
-\dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1 \nonumber  \\
-\dot{q_i} &amp;=&amp; \frac{\partial H}{ \partial p_i} = \omega_i p_i  \nonumber  \\
+\dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1\\
+\dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1\\
+\dot{q_i} &amp;=&amp; \frac{\partial H}{ \partial p_i} = \omega_i p_i\\
 \dot{p_i} &amp;=&amp; -\frac{\partial H}{ \partial q_i} = -\omega_i q_i, \quad i = 2,...,n.
-\end{eqnarray}```\end{split}\]</div>
+\end{eqnarray}\end{split}\]</div>
 <div class="figure align-default" id="id25">
 <img alt="../_images/Vq1.jpg" src="../_images/Vq1.jpg" />
 <p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">(a) Potential <span class="math notranslate nohighlight">\(V_1(q_1)\)</span></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
@@ -488,18 +488,16 @@ H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + 
 H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad \lambda, \, \omega &gt;0, \quad (q_1, p_1, q_2, p_2) \in \mathbb{R}^4,
 \label{eq:LST1}
 \end{equation}\]</div>
-<p>\noindent
-with corresponding Hamilton’s equations:</p>
+<p>with corresponding Hamilton’s equations:</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst2">
 <span class="eqno">(38)<a class="headerlink" href="#equation-eq-lst2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
-\dot{q}_1 &amp; = &amp; \frac{\partial H}{\partial p_1} =  \lambda p_1, \nonumber \\
-\dot{p}_1 &amp; = &amp; - \frac{\partial H}{\partial q_1} =  \lambda q_1, \nonumber \\
-\dot{q}_2 &amp; = &amp; \frac{\partial H}{\partial p_2} =  \omega  p_2, \nonumber \\
+\dot{q}_1 &amp; = &amp; \frac{\partial H}{\partial p_1} =  \lambda p_1,  \\
+\dot{p}_1 &amp; = &amp; - \frac{\partial H}{\partial q_1} =  \lambda q_1,  \\
+\dot{q}_2 &amp; = &amp; \frac{\partial H}{\partial p_2} =  \omega  p_2,  \\
 \dot{p}_2 &amp; = &amp; - \frac{\partial H}{\partial q_2} =  - \omega q_2, 
 \label{eq:LST2}
 \end{eqnarray}\end{split}\]</div>
-<p>\noindent
-The point <span class="math notranslate nohighlight">\((q_1, p_1, q_2, p_2) = (0, 0, 0, 0)\)</span> is an equilibrium point of Hamilton’s equations, and the eigenvalues of the matrix associated with the linearization of Hamilton’s equations about this equilibrium point are
+<p>The point <span class="math notranslate nohighlight">\((q_1, p_1, q_2, p_2) = (0, 0, 0, 0)\)</span> is an equilibrium point of Hamilton’s equations, and the eigenvalues of the matrix associated with the linearization of Hamilton’s equations about this equilibrium point are
 <span class="math notranslate nohighlight">\(\pm \lambda, \, \pm i \omega\)</span>. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian <a class="reference internal" href="#equation-eq-lst1">(37)</a>  evaluated at the equilibrium point, is zero.</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst3">
 <span class="eqno">(39)<a class="headerlink" href="#equation-eq-lst3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
@@ -529,8 +527,29 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
 <div class="section" id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
 <p id="bibtex-bibliography-content/chapter2_1_new-0"><dl class="citation">
+<dt class="bibtex label" id="arnol2013mathematical"><span class="brackets">Arnold13</span></dt>
+<dd><p>V. I. Arnol’d. <em>Mathematical methods of classical mechanics</em>. Volume 60. Springer Science &amp; Business Media, 2013.</p>
+</dd>
+<dt class="bibtex label" id="arnold1962"><span class="brackets">Arn62</span></dt>
+<dd><p>V. I. Arnold. The classical theory of perturbations and the problem of stability of planetary systems. <em>Soviet Mathematics Doklady</em>, 3:1008–1012, 1962.</p>
+</dd>
+<dt class="bibtex label" id="arnold1963a"><span class="brackets">Arn63a</span></dt>
+<dd><p>V. I. Arnold. Proof of a theorem of A. N. Kolmogorov on the invariance of quasi-periodic motions under small perturbations of the Hamiltonian. <em>Russian Mathematical Surveys</em>, 18(5):9–36, 1963.</p>
+</dd>
+<dt class="bibtex label" id="arnold1963b"><span class="brackets">Arn63b</span></dt>
+<dd><p>V. I. Arnold. Small divisor problems in classical and celestial mechanics. <em>Russian Mathematical Surveys</em>, 18(6):85–192, 1963.</p>
+</dd>
+<dt class="bibtex label" id="barrow1997poincare"><span class="brackets">BG97</span></dt>
+<dd><p>J. Barrow-Green. <em>Poincaré and the three body problem</em>. Number 11. American Mathematical Soc., 1997.</p>
+</dd>
+<dt class="bibtex label" id="chirikov1979"><span class="brackets">Chi79</span></dt>
+<dd><p>B. V. Chirikov. A universal instability of many-dimensional oscillator systems. <em>Physics Reports</em>, 52(5):263–379, 1979. <a class="reference external" href="https://doi.org/https://doi.org/10.1016/0370-1573(79)90023-1">doi:https://doi.org/10.1016/0370-1573(79)90023-1</a>.</p>
+</dd>
 <dt class="bibtex label" id="collins2011index"><span class="brackets"><a class="fn-backref" href="#id24">CEW11</a></span></dt>
 <dd><p>P. Collins, G. S Ezra, and S. Wiggins. Index k saddles and dividing surfaces in phase space with applications to isomerization dynamics. <em>The Journal of chemical physics</em>, 134(24):244105, 2011.</p>
+</dd>
+<dt class="bibtex label" id="diacu1996"><span class="brackets">DH96</span></dt>
+<dd><p>F. Diacu and P. Holmes. <em>Celestial Encounters: The Origins of Chaos and Stability</em>. Princeton University Press, 1996.</p>
 </dd>
 <dt class="bibtex label" id="duistermaat1972periodic"><span class="brackets"><a class="fn-backref" href="#id22">Dui72</a></span></dt>
 <dd><p>JJ Duistermaat. On periodic solutions near equilibrium points of conservative systems. <em>Archive for Rational Mechanics and Analysis</em>, 45(2):143–160, 1972.</p>
@@ -559,14 +578,38 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
 <dt class="bibtex label" id="kelley1967liapounov"><span class="brackets"><a class="fn-backref" href="#id19">Kel67</a></span></dt>
 <dd><p>A. Kelley. On the liapounov subcenter manifold. <em>Journal of mathematical analysis and applications</em>, 18(3):472–478, 1967.</p>
 </dd>
+<dt class="bibtex label" id="kolmogorov1954"><span class="brackets">Kol57</span></dt>
+<dd><p>A. N. Kolmogorov. Théorie générale des systèmes dynamiques et mécanique classique. In <em>Proceedings of the International Congress of Mathematicians, Amsterdam, 1954, Vol. 1</em>, 315–333. North-Holland Publishing Co., 1957.</p>
+</dd>
 <dt class="bibtex label" id="liapounoff1907probleme"><span class="brackets"><a class="fn-backref" href="#id17">Lia07</a></span></dt>
 <dd><p>A. Liapounoff. Problème général de la stabilité du mouvement. In <em>Annales de la Faculté des sciences de Toulouse: Mathématiques</em>, volume 9, 203–474. 1907.</p>
+</dd>
+<dt class="bibtex label" id="liouville1855note"><span class="brackets">Lio55</span></dt>
+<dd><p>J. Liouville. Note sur l’intégration des équations différentielles de la dynamique, présentée au bureau des longitudes le 29 juin 1853. <em>Journal de Mathématiques pures et appliquées</em>, pages 137–138, 1855.</p>
+</dd>
+<dt class="bibtex label" id="markus1974generic"><span class="brackets">MM74</span></dt>
+<dd><p>Lawrence Markus and Kenneth Ray Meyer. <em>Generic Hamiltonian dynamical systems are neither integrable nor ergodic</em>. Number 144. American Mathematical Soc., 1974.</p>
+</dd>
+<dt class="bibtex label" id="meiss2008"><span class="brackets">Mei08</span></dt>
+<dd><p>J. D. Meiss. Visual explorations of dynamics: The standard map. <em>Pramana</em>, 70(6):965–988, 2008. <a class="reference external" href="https://doi.org/10.1007/s12043-008-0103-3">doi:10.1007/s12043-008-0103-3</a>.</p>
+</dd>
+<dt class="bibtex label" id="mineur1935systemes"><span class="brackets">Min35</span></dt>
+<dd><p>H. Mineur. Sur les systemes mécaniques admettant n intégrales premieres uniformes et l’extensiona ces systemes de la méthode de quantification de sommerfeld. <em>CR Acad. Sci., Paris</em>, 200:1571–1573, 1935.</p>
+</dd>
+<dt class="bibtex label" id="mineur1937systemes"><span class="brackets">Min37</span></dt>
+<dd><p>H. Mineur. Sur les systèmes mécaniques dans lesquels figurent des paramètres fonctions du temps. Étude des systèmes admettant n intégrales premières uniformes en involution. extension à ces systèmes des conditions de quantification de bohr-sommerfeld. <em>J. Ecole Polytechn</em>, 3:173–191, 1937.</p>
 </dd>
 <dt class="bibtex label" id="moser1958generalization"><span class="brackets"><a class="fn-backref" href="#id18">Mos58</a></span></dt>
 <dd><p>J. Moser. On the generalization of a theorem of a. liapounoff. <em>Communications on Pure and Applied Mathematics</em>, 11(2):257–271, 1958.</p>
 </dd>
 <dt class="bibtex label" id="moser1976periodic"><span class="brackets"><a class="fn-backref" href="#id20">Mos76</a></span></dt>
 <dd><p>J. Moser. Periodic orbits near an equilibrium and a theorem by alan weinstein. <em>Communications on Pure and Applied Mathematics</em>, 29(6):727–747, 1976.</p>
+</dd>
+<dt class="bibtex label" id="moser2001stable"><span class="brackets">Mos01</span></dt>
+<dd><p>J. Moser. <em>Stable and random motions in dynamical systems: With special emphasis on celestial mechanics</em>. Volume 1. Princeton university press, 2001.</p>
+</dd>
+<dt class="bibtex label" id="moser1962"><span class="brackets">Mos62</span></dt>
+<dd><p>J. K. Moser. On invariant curves of area-preserving mappings of an annulus. <em>Nachr. Akad. Wiss. Göttingen II, Math. Phys. Kl.</em>, pages 1–20, 1962.</p>
 </dd>
 <dt class="bibtex label" id="weinstein1973normal"><span class="brackets"><a class="fn-backref" href="#id21">Wei73</a></span></dt>
 <dd><p>A. Weinstein. Normal modes for nonlinear hamiltonian systems. <em>Inventiones mathematicae</em>, 20(1):47–57, 1973.</p>
@@ -582,6 +625,9 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
 </dd>
 <dt class="bibtex label" id="wiggins2001"><span class="brackets">WWJaffeU01</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id8">2</a>)</span></dt>
 <dd><p>S Wiggins, L Wiesenfeld, C Jaffé, and T Uzer. Impenetrable Barriers in Phase-Space. <em>Phys. Rev. Lett.</em>, 86(24):5478–5481, jun 2001. URL: <a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevLett.86.5478">https://link.aps.org/doi/10.1103/PhysRevLett.86.5478</a>, <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.86.5478">doi:10.1103/PhysRevLett.86.5478</a>.</p>
+</dd>
+<dt class="bibtex label" id="wiggins2003introduction"><span class="brackets">Wig03</span></dt>
+<dd><p>S. Wiggins. <em>Introduction to applied nonlinear dynamical systems and chaos</em>. Volume 2. Springer Science &amp; Business Media, 2003.</p>
 </dd>
 <dt class="bibtex label" id="wiggins2016role"><span class="brackets"><a class="fn-backref" href="#id23">Wig16a</a></span></dt>
 <dd><p>S. Wiggins. The role of normally hyperbolic invariant manifolds (nhims) in the context of the phase space setting for chemical reaction dynamics. <em>Regular and Chaotic Dynamics</em>, 21(6):621–638, 2016.</p>

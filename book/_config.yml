@@ -1,7 +1,7 @@
 # Book settings
 title: Lagrangian Descriptors
 author: The CHAMPS Project
-logo: champs_logo.jpg
+logo: docs/champs_logo.jpg
 
 latex:
   latex_documents:
