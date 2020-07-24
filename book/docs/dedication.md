@@ -18,7 +18,7 @@ Dedicated to rx213.
 
 MK
 
-Dedicated to my parents and my sisters.
+Dedicated to my parents and my nephew and niece, Thanasis and Eva.
 
 VK
 
