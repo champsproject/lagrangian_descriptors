@@ -4,7 +4,7 @@
 <h1 style="font-size:50px;text-align:center">Lagrangian Descriptors</h1>
 <h1 style="font-size:40px;text-align:center"><em>Discovery and Quantification of Phase Space Structure and Transport</em></h1>
 
-(ADD ZENODO BADGE HERE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3958985.svg)](https://doi.org/10.5281/zenodo.3958985)
 
 
 # Authors

@@ -650,9 +650,9 @@ Phase portrait of the "fish potential" Hamiltonian in Eq. {eq}`eq:fish_Ham` reve
 \label{fig:fish_lds}
 \caption{Phase portrait of the "fish potential" Hamiltonian in Eq. {eq}`eq:fish_Ham` revealed by the $p$-norm LDs with $p = 1/2$. A) Fixed-time integration LDs in Eq. {eq}`eq:Mp_function` with $\tau = 3$; B) Variable-time integration definition of LDs in Eq. {eq}`eq:Mp_vt` with $\tau = 8$; C) Invariant stable (blue) and unstable (red) manifolds of the saddle fixed point  extracted from the gradient of the variable time $M_p$ function.}
 
-### The H\'enon-Heiles Hamiltonian System
+### The Hénon-Heiles Hamiltonian System
 
-We continue illustrating how to apply the method of Lagrangian descriptors to unveil the dynamical skeleton in systems with a high-dimensional phase space by applying this tool to a hallmark Hamiltonian of nonlinear dynamics, the H\'enon-Heiles Hamiltonian. This model was introduced in 1964 to study the motion of stars in galaxies {cite}`henon1964` and is described by:
+We continue illustrating how to apply the method of Lagrangian descriptors to unveil the dynamical skeleton in systems with a high-dimensional phase space by applying this tool to a hallmark Hamiltonian of nonlinear dynamics, the Hénon-Heiles Hamiltonian. This model was introduced in 1964 to study the motion of stars in galaxies {cite}`henon1964` and is described by:
 
 ```{math}
 ---
@@ -678,7 +678,7 @@ V(x,y) = x^2/2 + y^2/2 + x^2y - y^3/3
 
 which has a $\pi/3$ rotational symmetry and is characterized by a central scattering region about the origin and three escape channels, see {numref}`fig:henonHeiles_pes` below for details.
 
-In order to analyze the phase space of the H\'enon-Heiles Hamiltonian by means of the variable integration time LDs, we fix an energy $H = H_0$ of the system and choose an interaction region $\mathcal{R}$ defined in configuration space by a circle of radius $15$ centered at the origin. For our analysis we consider the following phase space slices:
+In order to analyze the phase space of the Hénon-Heiles Hamiltonian by means of the variable integration time LDs, we fix an energy $H = H_0$ of the system and choose an interaction region $\mathcal{R}$ defined in configuration space by a circle of radius $15$ centered at the origin. For our analysis we consider the following phase space slices:
 
 
 ```{math}
@@ -696,26 +696,26 @@ label: eq:psos
 ---
 name:
 ---
-Potential energy surface for the H\'enon-Heiles system.
+Potential energy surface for the Hénon-Heiles system.
 ```
 
 ```{figure} figures/hen_conts.png
 ---
 name: fig:henonHeiles_pes
 ---
-Potential energy surface projected onto XY plane for the H\'enon-Heiles system.
+Potential energy surface projected onto XY plane for the Hénon-Heiles system.
 ```
 
 <img src="figures/henonheiles_pot.png">
 <img src="figures/hen_conts.png">
 \label{fig:henonHeiles_pes}
-\caption{Potential energy surface for the H\'enon-Heiles system.}
+\caption{Potential energy surface for the Hénon-Heiles system.}
 
 ```{figure} figures/LDs_Henon_tau_50_x_0_E_1div12.png
 ---
 name:
 ---
-Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$
+Phase space structures of the Hénon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$
 ```
 
 ```{figure} figures/Mani_Henon_tau_50_x_0_E_1div12.png
@@ -729,7 +729,7 @@ Gradient of the LD function showing stable and unstable manifold intersections i
 ---
 name:
 ---
-Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. B) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$
+Phase space structures of the Hénon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. B) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$
 ```
 
 ```{figure} figures/Mani_Henon_tau_10_x_0_E_1div3.png
@@ -743,7 +743,7 @@ Gradient of the LD function showing stable and unstable manifold intersections i
 ---
 name:
 ---
-Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. C) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$
+Phase space structures of the Hénon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. C) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$
 ```
 
 ```{figure} figures/Mani_Henon_tau_10_y_0_E_1div3.png
@@ -760,7 +760,7 @@ Gradient of the LD function showing stable and unstable manifold intersections i
 <img src="figures/LDs_Henon_tau_10_y_0_E_1div3.png">
 <img src="figures/Mani_Henon_tau_10_y_0_E_1div3.png">
 \label{fig:henonHeiles_lds}
-\caption{Phase space structures of the H\'enon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$; C) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$; E) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$;. In the right panels we have extracted the invariant stable (blue) and unstable (red) manifolds from the gradient of LDs.}
+\caption{Phase space structures of the Hénon-Heiles Hamiltonian as revealed by the $p$-norm variable integration time LDs with $p = 1/2$. A) LDs computed for $\tau = 50$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/12$; C) LDs for $\tau = 10$ in the SOS $\mathcal{U}^{+}_{y,p_y}$ with energy $H = 1/3$; E) LDs for $\tau = 10$ in the SOS  $\mathcal{V}^{+}_{x,p_x}$ with energy $H = 1/3$;. In the right panels we have extracted the invariant stable (blue) and unstable (red) manifolds from the gradient of LDs.}
 
 ## Stochastic Lagrangian Descriptors
 
