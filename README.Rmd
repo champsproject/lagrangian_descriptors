@@ -4,7 +4,7 @@
 
 **Authors**
 
-Makrina Agaoglou, Broncio Aguilar-Sanjuan, Victor José García Garrido, Francisco González-Montoya, Matthaios Katsanikas, Vladimír Krajňák, Shibabrat Naik, Stephen Wiggins.
+Makrina Agaoglou, Broncio Aguilar-Sanjuan, Víctor José García Garrido, Francisco González-Montoya, Matthaios Katsanikas, Vladimír Krajňák, Shibabrat Naik, Stephen Wiggins.
 
 Welcome to the GitHub repository! 
 

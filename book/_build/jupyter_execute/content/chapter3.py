@@ -785,7 +785,7 @@ dX_{t} = b(X_{t},t)dt + \sigma (X_{t},t)dW_{t}, \quad t \in \mathbb{R},
 
 where $b(\cdot) \in C^{1}(\mathbb{R}^{n}\times \mathbb{R})$ is the deterministic part, $\sigma (\cdot) \in C^{1}(\mathbb{R}^{n}\times \mathbb{R})$ is the random forcing, $W_{t}$ is a Wiener process (also referred to as Brownian motion) whose definition we give later, and $X_{t}$ is the solution of the equation. All these functions take values in $\mathbb{R}^{n}$.
 
-As the notion of solution of a SDE is closely related with the Wiener process, we  state what is meant by $W(\cdot )$. This definition is given in {cite}`duan2015`, and this reference serves to provide the background for all of the notions in this section. Also, throughout we will use $\Omega$ to denote the probability space where the Wiener process is defined.
+As the notion of solution of a SDE is closely related with the Wiener process, we  state what is meant by $W(\cdot )$. This definition is given in {cite}`duan15`, and this reference serves to provide the background for all of the notions in this section. Also, throughout we will use $\Omega$ to denote the probability space where the Wiener process is defined.
 
 (def:Wiener)=
 __Definition__ _Wiener/Brownian process_
@@ -809,9 +809,7 @@ With the notation $(t_{2i-1},t_{2i})$ we refer to the interval of points between
 
 This method of Lagrangian descriptors  has been developed for deterministic differential equations whose temporal domain is $\mathbb{R}$. In this sense it is natural to work with two-sided solutions as well as two-sided Wiener processes. Henceforth, every Wiener process $W(\cdot )$ considered in the this article will be of this form.
 
-Given that any Wiener process $W(\cdot )$ is a stochastic process, by definition this is a family of random real variables $\lbrace W_{t}, t\in \mathbb{R} \rbrace$ in such a way that for each $\omega \in \Omega$ there exists a mapping
-$$ t \longmapsto W_{t}(\omega )$$
-known as the trajectory of a Wiener process.
+Given that any Wiener process $W(\cdot )$ is a stochastic process, by definition this is a family of random real variables $\lbrace W_{t}, t\in \mathbb{R} \rbrace$ in such a way that for each $\omega \in \Omega$ there exists a mapping, $ t \longmapsto W_{t}(\omega )$, known as the trajectory of a Wiener process.
 
 Analogously to the Wiener process, the solution $X_{t}$ of the SDE {eq}`eq:SDE` is also a stochastic process. In particular, it is a family of random variables $\lbrace X_{t}, t\in \mathbb{R} \rbrace$ such that for each $\omega \in \Omega$, the trajectory of $X_{t}$ satisfies
 
