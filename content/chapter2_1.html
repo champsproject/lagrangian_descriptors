@@ -32,7 +32,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="An Informal Introduction to Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory" href="chapter2_2.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="chapter1_2.html" />
+    <link rel="prev" title="Hamiltonian flows and symplectic maps" href="chapter1_2.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -85,8 +85,8 @@
   <li class="">
     <a href="chapter1_1.html">The Setting: Hamiltonian Dynamics on Phase Space</a>
   </li>
-  <li class="">	
-    <a href="chapter1_2.html">Hamiltonian flows and symplectic maps</a>	
+  <li class="">
+    <a href="chapter1_2.html">Hamiltonian flows and symplectic maps</a>
   </li>
 <li class="navbar-special">
 <p class="margin-caption">Chapter 2</p>
@@ -305,7 +305,7 @@
 <span id="sec-1dofsaddle"></span><h2>One Degree-of-Freedom  Hyperbolic Equilibrium Point<a class="headerlink" href="#one-degree-of-freedom-hyperbolic-equilibrium-point" title="Permalink to this headline">¶</a></h2>
 <p>The most simple Hamiltonian function with a hyperbolic equilibrium point is</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-0">
-<span class="eqno">(8)<a class="headerlink" href="#equation-content-chapter2-1-0" title="Permalink to this equation">¶</a></span>\[\begin{equation} 
+<span class="eqno">(19)<a class="headerlink" href="#equation-content-chapter2-1-0" title="Permalink to this equation">¶</a></span>\[\begin{equation} 
 H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambda &gt; 0,
 \end{equation}\]</div>
 <div class="figure align-default" id="vq1">
@@ -318,7 +318,7 @@ H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambd
 </div>
 <p>The equations of motion are</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-1">
-<span class="eqno">(9)<a class="headerlink" href="#equation-content-chapter2-1-1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(20)<a class="headerlink" href="#equation-content-chapter2-1-1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} =\lambda p_1  \nonumber \\
 \dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1.
 \end{eqnarray}\end{split}\]</div>
@@ -327,38 +327,38 @@ H = K_{1}(p_{1}) + V_{1}(q_{1})= \frac{\lambda}{2} (p^2_1 - q^2_1) ,\quad \lambd
 <p><strong>Showing the invariance of candidate sets.</strong></p>
 <p>Let us consider the line <span class="math notranslate nohighlight">\(q_1 = - p_1\)</span>. The Hamiltonian vector field evaluated on the line is tangent to the line.</p>
 <div class="math notranslate nohighlight" id="equation-eq-ws">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-ws" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq-ws" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; -\lambda q_1  \nonumber \\
 \dot{p_1} &amp;=&amp; -\lambda p_1.
 \label{eq:ws}
 \end{eqnarray}\end{split}\]</div>
 <p>A trajectory that starts on the line <span class="math notranslate nohighlight">\(q_1 = - p_1\)</span> remains on the line. This line is an invariant set under the flow.</p>
-<p>The solution of the system of differential Eq. <a class="reference internal" href="#equation-eq-ws">(10)</a> decay exponentially in time.</p>
+<p>The solution of the system of differential Eq. <a class="reference internal" href="#equation-eq-ws">(21)</a> decay exponentially in time.</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-2">
-<span class="eqno">(11)<a class="headerlink" href="#equation-content-chapter2-1-2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(22)<a class="headerlink" href="#equation-content-chapter2-1-2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 q_1(t) &amp;=&amp; q_1(0) e^{-\lambda t}  \nonumber\\
 p_1(t) &amp;=&amp; p_1(0) e^{-\lambda t}.
 \end{eqnarray}\end{split}\]</div>
 <p>Any trajectory that starts on <span class="math notranslate nohighlight">\(q_1 = - p_1\)</span> converges to the equilibrium point <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> in an infinite time. These properties motivate the definition of the stable manifold of the set <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. The stable manifold <span class="math notranslate nohighlight">\(W^s(\mathcal{M})\)</span> of the set <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is the set of points in the energy level set such that their corresponding trajectories converge to the set <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> when the time goes to infinity.</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-3">
-<span class="eqno">(12)<a class="headerlink" href="#equation-content-chapter2-1-3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(23)<a class="headerlink" href="#equation-content-chapter2-1-3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^s(\mathcal{M})=  \lbrace (q_1,p_1) | (q_1(t), p_1(t) ) \rightarrow \mathcal{M} , t \rightarrow + \infty \rbrace} = \lbrace  (q_1, p_1 )  |  q_1 = - p_1 \rbrace  
 \end{equation}\]</div>
 <p>Now, let us consider the trajectories that start on the line <span class="math notranslate nohighlight">\(q_1 = p_1\)</span>. Like in the previous case, the Hamiltonian vector field is tangent to the line,</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-4">
-<span class="eqno">(13)<a class="headerlink" href="#equation-content-chapter2-1-4" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(24)<a class="headerlink" href="#equation-content-chapter2-1-4" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; \lambda q_1  \nonumber\\
 \dot{p_1} &amp;=&amp; \lambda p_1.
 \end{eqnarray}\end{split}\]</div>
 <p>However, the vector field points away from <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. The trajectories that start on the line <span class="math notranslate nohighlight">\(q_1 = p_1\)</span> diverge from the equilibrium point <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-5">
-<span class="eqno">(14)<a class="headerlink" href="#equation-content-chapter2-1-5" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(25)<a class="headerlink" href="#equation-content-chapter2-1-5" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 q_1(t) &amp;=&amp; q_1(0) e^{\lambda t}  \nonumber\\
 p_1(t) &amp;=&amp; p_1(0) e^{\lambda t}.
 \end{eqnarray}\end{split}\]</div>
 <p>Analogously, these properties motivate the definition of the unstable manifold of the set <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. The unstable manifold <span class="math notranslate nohighlight">\(W^u(\mathcal{M})\)</span> of <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> is the set of points in the phase space such that their corresponding trajectories converge to the set <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> when the time goes to minus infinity.</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-6">
-<span class="eqno">(15)<a class="headerlink" href="#equation-content-chapter2-1-6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(26)<a class="headerlink" href="#equation-content-chapter2-1-6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^u(\mathcal{M})= \lbrace (q_1,p_1) | (q_1(t), p_1(t) ) \rightarrow \mathcal{M} , t \rightarrow - \infty  \rbrace =  \lbrace  (q_1, p_1 )  |  q_1 = p_1  \rbrace  }. 
 \end{equation}\]</div>
 <p>The existence of two special directions where the trajectories converge to the <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> in some direction and diverge from <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> in other one is the essence of the concept of hyperbolicity.</p>
@@ -367,7 +367,7 @@ p_1(t) &amp;=&amp; p_1(0) e^{\lambda t}.
 <span id="sec-2dofupo"></span><h2>Two Degrees-of-Freedom and the Hyperbolic Periodic Orbit<a class="headerlink" href="#two-degrees-of-freedom-and-the-hyperbolic-periodic-orbit" title="Permalink to this headline">¶</a></h2>
 <p>In this case, the Hamiltonian function for the 2-degree of freedom system is the sum of the Hamiltonian function of the 1-degree of freedom of the previous example plus the Hamiltonian of a harmonic oscillator (Section <a class="reference internal" href="chapter2_2.html#sec-kam"><span class="std std-ref">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</span></a> ). The total energy of the system is split between both DoF to yield:</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-7">
-<span class="eqno">(16)<a class="headerlink" href="#equation-content-chapter2-1-7" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(27)<a class="headerlink" href="#equation-content-chapter2-1-7" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
   &amp;=&amp; K_1(p_1) + V_1(q) +  K_2(p_2) + V_2(q_2) \\  
   &amp;=&amp; \frac{\lambda}{2} (p^2_1 - q^2_1) + \frac{\omega}{2} (p^2_2 + q^2_2),\quad \lambda, \omega &gt;0
@@ -382,7 +382,7 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
 </div>
 <p>Hamilton’s equations are</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-8">
-<span class="eqno">(17)<a class="headerlink" href="#equation-content-chapter2-1-8" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(28)<a class="headerlink" href="#equation-content-chapter2-1-8" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1  \\
 \dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1  \\
 \dot{q_2} &amp;=&amp; \frac{\partial H}{ \partial p_2} = \omega p_2 \\
@@ -407,17 +407,17 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
 <p>Again, the point in the phase space <span class="math notranslate nohighlight">\((q_1,q_2,p_1,p_2)=(0,0,0,0)\)</span> is a equilibrium point of the system at the energy <span class="math notranslate nohighlight">\(E=0\)</span>.  The equilibrium point has stable and unstable manifolds, similar to the 1-degree of freedom example above.</p>
 <p>For any <span class="math notranslate nohighlight">\(E_2&gt;0\)</span> and <span class="math notranslate nohighlight">\(E_1=0\)</span>, i.e <span class="math notranslate nohighlight">\(E=E_2\)</span>, a periodic orbit <span class="math notranslate nohighlight">\(\gamma\)</span> exists in the <span class="math notranslate nohighlight">\((q_2,p_2)\)</span> plane and this periodic orbit is unstable.</p>
 <div class="math notranslate nohighlight" id="equation-eq-nhim">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eq-nhim" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq-nhim" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{\gamma = \lbrace  (0,q_2, 0,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E  &gt; 0 \rbrace}.
 \label{eq:NHIM}
 \end{equation}\]</div>
 <p>In a similar way to the 1-degree of freedom case, we can find the stable and unstable manifolds of the periodic orbit <span class="math notranslate nohighlight">\(\gamma\)</span>. To find <span class="math notranslate nohighlight">\(W^u(\gamma)\)</span> and <span class="math notranslate nohighlight">\(W^s(\gamma)\)</span> in this two degree of freedom system, it is necessary to consider the composition of the oscillation in <span class="math notranslate nohighlight">\(q_2\)</span> direction and the motion along the stable and unstable manifolds associated to the 1-degree of freedom case studied before. The stable and unstable manifolds of <span class="math notranslate nohighlight">\(\gamma\)</span> are</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-9">
-<span class="eqno">(19)<a class="headerlink" href="#equation-content-chapter2-1-9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(30)<a class="headerlink" href="#equation-content-chapter2-1-9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^u(\gamma)= \lbrace  (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E &gt; 0,  q_1 = p_1 \rbrace }.
 \end{equation}\]</div>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-10">
-<span class="eqno">(20)<a class="headerlink" href="#equation-content-chapter2-1-10" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(31)<a class="headerlink" href="#equation-content-chapter2-1-10" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^s(\gamma)= \lbrace (q_1,q_2, p_1,p_2 )  |  \frac{\omega}{2} (p^2_2 + q^2_2) = E &gt; 0, q_1 = - p_1  \rbrace }.
 \end{equation}\]</div>
 </div>
@@ -425,13 +425,13 @@ H &amp;=&amp; K(p_{1},p_{2}) + V(q_{1},q_{2}) \\
 <span id="sec-3dofnhim"></span><h2>Three and More Degrees-of-Freedom and NHIMs<a class="headerlink" href="#three-and-more-degrees-of-freedom-and-nhims" title="Permalink to this headline">¶</a></h2>
 <p>Let us consider the most simple example with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom. The basic idea is the same as in the previous example with 2 degrees of freedom, where the dynamics of each degree of freedom is independent from the other degrees of freedom. In this case, the most simple Hamiltonian function of a <span class="math notranslate nohighlight">\(n\)</span> degree of freedom is</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-11">
-<span class="eqno">(21)<a class="headerlink" href="#equation-content-chapter2-1-11" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(32)<a class="headerlink" href="#equation-content-chapter2-1-11" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i),
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\lambda, \omega_i &gt;0\)</span>.</p>
 <p>The equation of motion are :</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-12">
-<span class="eqno">(22)<a class="headerlink" href="#equation-content-chapter2-1-12" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(33)<a class="headerlink" href="#equation-content-chapter2-1-12" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q_1} &amp;=&amp; \frac{\partial H}{ \partial p_1} = \lambda p_1\\
 \dot{p_1} &amp;=&amp; -\frac{\partial H}{ \partial q_1} = \lambda q_1\\
 \dot{q_i} &amp;=&amp; \frac{\partial H}{ \partial p_i} = \omega_i p_i\\
@@ -463,17 +463,17 @@ H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + 
 </div>
 <p>The NHIM and its stable and unstable manifolds can be found analogously to the  2 degree of freedom system case. If <span class="math notranslate nohighlight">\(q_1=p_1=0\)</span> then <span class="math notranslate nohighlight">\(\dot{q_1}=0\)</span> and <span class="math notranslate nohighlight">\(\dot{p_1}=0\)</span> and the system consists of <span class="math notranslate nohighlight">\(n-1\)</span> harmonic oscillators bounded by the fixed total energy. For <span class="math notranslate nohighlight">\(E=0\)</span>, <span class="math notranslate nohighlight">\(q_1,p_1=0\)</span> is an unstable equilibrium point and for <span class="math notranslate nohighlight">\(E&gt;0\)</span>, an invariant set that can be shown to be a sphere. The dimension of the sphere depends on the number of degrees of freedom with non-zero energy. This sphere is a manifold, it is invariant and normally hyperbolic, hence a NHIM. In general a NHIM does not have to be a sphere. If all degrees of freedom have non-zero energy, except for <span class="math notranslate nohighlight">\(q_1,p_1=0\)</span>, the NHIM is <span class="math notranslate nohighlight">\(2n-3\)</span> dimensional and its stable and unstable manifolds are dynamical barriers on the energy level set according to <a class="reference internal" href="#tab-dimensions"><span class="std std-numref">Table 1</span></a> .</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-13">
-<span class="eqno">(23)<a class="headerlink" href="#equation-content-chapter2-1-13" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(34)<a class="headerlink" href="#equation-content-chapter2-1-13" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ \Gamma = \lbrace  (0,q_2,...,q_n, 0,p_2,...,p_n ) | \sum_{i=2}^n \frac{\omega_i}{2} (p^2_i + q^2_i) = E  &gt; 0,\rbrace }
 \end{equation}\]</div>
 <p>Note that the NHIM is a generalization of the hyperbolic equilibrium point and hyperbolic periodic orbit from previous examples.</p>
 <p>The stable and unstable manifolds, <span class="math notranslate nohighlight">\(W^{u}(\Gamma)\)</span> and <span class="math notranslate nohighlight">\(W^{s}(\Gamma)\)</span>, are multidimensional cylinders that intersect in the multidimensional sphere <span class="math notranslate nohighlight">\(\Gamma\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-14">
-<span class="eqno">(24)<a class="headerlink" href="#equation-content-chapter2-1-14" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(35)<a class="headerlink" href="#equation-content-chapter2-1-14" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^u(\Gamma)= \lbrace  (q_1,q_2,...,q_n, p_1,p_2,...,p_n )  |    \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i) = E &gt; 0,  q_1 = p_1  \rbrace }.
 \end{equation}\]</div>
 <div class="math notranslate nohighlight" id="equation-content-chapter2-1-15">
-<span class="eqno">(25)<a class="headerlink" href="#equation-content-chapter2-1-15" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(36)<a class="headerlink" href="#equation-content-chapter2-1-15" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \displaystyle{ W^s(\Gamma)= \lbrace  (q_1,q_2,...,q_n, p_1,p_2,...,p_n )  |    \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + q^2_i)    = E &gt; 0,  q_1 = - p_1  \rbrace }.
 \end{equation}\]</div>
 <p>The general study  of NHIMs, including their characterization,  the nature of their  invariant manifolds, and their properties under perturbations for more general systems are discussed in the works by Fenichel <a class="bibtex reference internal" href="chapter2_2.html#fenichel1971" id="id12">[Fen71]</a><a class="bibtex reference internal" href="chapter2_2.html#fenichel1974" id="id13">[Fen74]</a><a class="bibtex reference internal" href="chapter2_2.html#fenichel1977" id="id14">[Fen77]</a> and more recent works <a class="bibtex reference internal" href="chapter2_2.html#wigginsbook1994" id="id15">[Wig94]</a><a class="bibtex reference internal" href="chapter2_2.html#eldering2013" id="id16">[Eld13]</a>.</p>
@@ -484,13 +484,13 @@ H = \frac{\lambda}{2} (p^2_1 - q^2_1)+ \sum^n_{i=2} \frac{\omega_i}{2} (p^2_i + 
 <p>The Lyapunov subcenter theorem <a class="bibtex reference internal" href="chapter2_2.html#liapounoff1907probleme" id="id17">[Lia07]</a> is a fundamental theorem in Hamiltonian mechanics that describes how index one saddle points of Hamilton’s equations give rise to periodic orbits, or ``NHIMs’’. Basic background on the topic can be found in <a class="bibtex reference internal" href="chapter2_2.html#moser1958generalization" id="id18">[Mos58]</a><a class="bibtex reference internal" href="chapter2_2.html#kelley1967liapounov" id="id19">[Kel67]</a><a class="bibtex reference internal" href="chapter2_2.html#moser1976periodic" id="id20">[Mos76]</a><a class="bibtex reference internal" href="chapter2_2.html#weinstein1973normal" id="id21">[Wei73]</a><a class="bibtex reference internal" href="chapter2_2.html#duistermaat1972periodic" id="id22">[Dui72]</a>.</p>
 <p>We will explain the ideas in the context of a two degree-of-freedom quadratic Hamiltonian, and then describe how they extend to more general settings.</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst1">
-<span class="eqno">(26)<a class="headerlink" href="#equation-eq-lst1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-lst1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad \lambda, \, \omega &gt;0, \quad (q_1, p_1, q_2, p_2) \in \mathbb{R}^4,
 \label{eq:LST1}
 \end{equation}\]</div>
 <p>with corresponding Hamilton’s equations:</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst2">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq-lst2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-lst2" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{eqnarray}
 \dot{q}_1 &amp; = &amp; \frac{\partial H}{\partial p_1} =  \lambda p_1,  \\
 \dot{p}_1 &amp; = &amp; - \frac{\partial H}{\partial q_1} =  \lambda q_1,  \\
 \dot{q}_2 &amp; = &amp; \frac{\partial H}{\partial p_2} =  \omega  p_2,  \\
@@ -498,24 +498,24 @@ H = \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2), \quad
 \label{eq:LST2}
 \end{eqnarray}\end{split}\]</div>
 <p>The point <span class="math notranslate nohighlight">\((q_1, p_1, q_2, p_2) = (0, 0, 0, 0)\)</span> is an equilibrium point of Hamilton’s equations, and the eigenvalues of the matrix associated with the linearization of Hamilton’s equations about this equilibrium point are
-<span class="math notranslate nohighlight">\(\pm \lambda, \, \pm i \omega\)</span>. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian <a class="reference internal" href="#equation-eq-lst1">(26)</a>  evaluated at the equilibrium point, is zero.</p>
+<span class="math notranslate nohighlight">\(\pm \lambda, \, \pm i \omega\)</span>. Hence, this equilibrium point is an index one saddle point. Note that the total energy of this equilibrium point, i.e. the value of the Hamiltonian <a class="reference internal" href="#equation-eq-lst1">(37)</a>  evaluated at the equilibrium point, is zero.</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst3">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq-lst3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-lst3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
  \frac{\lambda}{2} (p_1^2 - q_1^2) + \frac{\omega}{2} ( p_2^2 + q_2^2)=E &gt;0,
 \label{eq:LST3}
 \end{equation}\]</div>
 <p>We now want to show that for energies above the index one saddle, i.e. <span class="math notranslate nohighlight">\(E&gt;0\)</span>, there is a two dimensional invariant manifold of unstable periodic orbits.</p>
 <p>First, note that <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> is an invariant manifold for all values of <span class="math notranslate nohighlight">\(E\)</span>.  We can compute the intersection of this invariant manifold by substituting <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> into the energy equation to obtain:</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst4">
-<span class="eqno">(29)<a class="headerlink" href="#equation-eq-lst4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-lst4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
  \frac{\omega}{2} ( p_2^2 + q_2^2)=E &gt;0,
 \label{eq:LST4}
 \end{equation}\]</div>
-<p>which is a periodic orbit for each <span class="math notranslate nohighlight">\(E &gt; 0\)</span>. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit <a class="reference internal" href="#equation-eq-lst4">(29)</a> . This family of periodic orbits (“family” in terms of the energy <span class="math notranslate nohighlight">\(E&gt;0\)</span>, lies on the two dimensional invariant manifold <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span>. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is <em>not</em> isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.</p>
-<p>The Lyapunov subcenter theorem says that this result holds, for sufficiently small <span class="math notranslate nohighlight">\(E &gt; 0\)</span>, if higher  order terms are added to <a class="reference internal" href="#equation-eq-lst1">(26)</a> . All of these  periodic orbits are unstable since the dynamics normal to the Lyapunov subcenter manifold is exponentially growing and decaying, i.e. the Lyapunov subcenter manifold is a NHIM.</p>
+<p>which is a periodic orbit for each <span class="math notranslate nohighlight">\(E &gt; 0\)</span>. It is instructive to count the dimensions for intersecting sets. The phase space is four dimensional, the energy surface is three dimensional, and <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span> is two dimensional. A three dimensional surface intersects a two dimensional surface in a four dimensional space in a one dimensional set, which is the periodic orbit <a class="reference internal" href="#equation-eq-lst4">(40)</a> . This family of periodic orbits (“family” in terms of the energy <span class="math notranslate nohighlight">\(E&gt;0\)</span>, lies on the two dimensional invariant manifold <span class="math notranslate nohighlight">\(q_1 = p_1 =0\)</span>. This is the Lyapunov subcenter manifold. Note that the Lyapunov subcenter manifold is <em>not</em> isoenergetic. Each periodic orbit has a different energy, monotonically increasing from zero, which is the energy of the index one saddle point.</p>
+<p>The Lyapunov subcenter theorem says that this result holds, for sufficiently small <span class="math notranslate nohighlight">\(E &gt; 0\)</span>, if higher  order terms are added to <a class="reference internal" href="#equation-eq-lst1">(37)</a> . All of these  periodic orbits are unstable since the dynamics normal to the Lyapunov subcenter manifold is exponentially growing and decaying, i.e. the Lyapunov subcenter manifold is a NHIM.</p>
 <p>This set-up can be generalized to higher dimensions. The quadratic normal form associated to an index <span class="math notranslate nohighlight">\(n_s\)</span> saddle has the general form (assuming  that the <span class="math notranslate nohighlight">\(\lambda_i\)</span> are distinct and the  <span class="math notranslate nohighlight">\(\omega_i\)</span> are distinct):</p>
 <div class="math notranslate nohighlight" id="equation-eq-lst5">
-<span class="eqno">(30)<a class="headerlink" href="#equation-eq-lst5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-lst5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{\omega_{i+n_s}}{2} ( p_{i+n_s}^2 + q_{i+n_s}^2), 
 \label{eq:LST5}
 \end{equation}\]</div>
@@ -648,7 +648,7 @@ H =\sum_{i=1}^{n_s} \frac{\lambda_i}{2} (p_i^2 - q_i^2) + \sum_{i=1}^{n_c}\frac{
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="chapter1_2.html" title="previous page">&lt;no title&gt;</a>
+    <a class='left-prev' id="prev-link" href="chapter1_2.html" title="previous page">Hamiltonian flows and symplectic maps</a>
     <a class='right-next' id="next-link" href="chapter2_2.html" title="next page">An Informal Introduction to  Ideas Related to KAM (Kolmogorov-Arnold-Moser) Theory</a>
 
     </div>
