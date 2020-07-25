@@ -72,10 +72,12 @@ H(x, p_x) = \frac{\omega}{2} (p_x^2 + x^2), \quad \omega > 0
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = \omega p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -\omega x
  \end{align*}
+```
 
 # Integration parameters
 tau = 12
@@ -110,10 +112,12 @@ H(x, p_x) = \frac{\lambda}{2}( p_x^2 -  x^2 ), \quad \lambda > 0
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = -\lambda p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} = f_2(x, p_x) = \lambda x
  \end{align*}
+ ```
 
 # Integration parameters
 tau = 12
@@ -148,10 +152,12 @@ H(x, p_x) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} = f_2(x, p_x) = x - x^3
  \end{align*}
+```
 
 # Integration parameters
 tau = 12
@@ -188,11 +194,13 @@ H(x, p_x, t) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 
 _Vector field_ whith _time-dependent harmonic forcing_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} + + \eta(t) = f_2(x, p_x) = x - x^3 + \eta(t)
  \end{align*}
- 
+```
+
 where
 
 \begin{align*}
@@ -237,10 +245,12 @@ H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 + \frac{2}{3} x^3)
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x - x^2
  \end{align*}
+```
 
 # Integration parameters
 t0 = 0
@@ -280,10 +290,12 @@ H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 - \frac{1}{2} x^4)
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x + x^3
- \end{align*}
+\end{align*}
+```
 
 # Integration parameters
 t0 = 0
@@ -323,12 +335,14 @@ H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + x^2 y - \frac{1}{3} y^3
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} =  p_x \\
  \dot{y} &= \frac{\partial H}{\partial p_y} = p_y  \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} =  -x - 2 x y \\
  \dot{p}_y &= -\frac{\partial H}{\partial y} =  -x^2 -y + y^2 \\
- \end{align*}
+\end{align*}
+``` 
 
 #### Henon-Heiles
 
@@ -388,12 +402,14 @@ H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2}(y^2 - x^2)
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} =  p_x \\
  \dot{y} &= \frac{\partial H}{\partial p_y} = p_y  \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} =  x \\
  \dot{p}_y &= -\frac{\partial H}{\partial y} =  -y \\
- \end{align*}
+\end{align*}
+```
 
 # Integration parameters
 t0 = 0
@@ -471,10 +487,12 @@ _EXAMPLE_
 
 Suppose we have a 2D vector field of the form
 
+```{math}
 \begin{align*}
 f_1(x, y) &= \alpha y \\
 f_2(x, y) &= \beta \cdot cos(\gamma x^3)
 \end{align*}
+```
 
 <span style='color:blue'><b>FIRST</b></span> Define `my_vector_field` function
 
@@ -558,7 +576,7 @@ pylds.tools.draw_lagrangian_descriptor(LD_total, 'total', grid_parameters, tau, 
 
 ### Working with my own vector field: 2-DoF system
 
-Setting up the code to draw the LDs of your own 2-DoF system requires only _THREE_ simple steps
+Setting up the code to draw the LDs of your own 2-DoF system requires only _FOUR_ simple steps
 
 _EXAMPLE_ Here we chose a Hamiltonian system with a _Double well potential_
 
@@ -570,12 +588,14 @@ H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2}(y^2 - x^2 + \frac{
 
 _Vector field_
 
+```{math}
 \begin{align*}
  \dot{x} &= \frac{\partial H}{\partial p_x} =  p_x \\
  \dot{y} &= \frac{\partial H}{\partial p_y} = p_y  \\
  \dot{p}_x &= -\frac{\partial H}{\partial x} =  x - x^3 \\
  \dot{p}_y &= -\frac{\partial H}{\partial y} =  -y \\
- \end{align*}
+\end{align*}
+```
 
 <span style='color:blue'><b>FIRST</b></span> Define `my_vector_field` function
 
@@ -639,7 +659,8 @@ tau = 10
 p_value = 1/2
 
 # Mesh visualisation slice parameters
-H0 = 1 # Energy
+H0 = 1 # Energy level
+
 ax1_min,ax1_max = [-2, 2]
 ax2_min,ax2_max = [-2, 2]
 N1, N2 = [200, 200]

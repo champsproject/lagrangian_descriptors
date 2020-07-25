@@ -266,7 +266,7 @@ label:
 \mathcal{L}(\text{initial condition}) = \int_{t_0 - \tau}^{t_0 + \tau} \text{PositiveFunction} \, (\text{trajectory}) \; dt
 \end{equation}
 ```
-\noindent
+
 The positivity of the integrand is often imposed via an absolute value. In our discussion below we show that this is not necessary for the action.
 
 #### One Degree-of-Freedom Autonomous Hamiltonian Systems
@@ -1324,7 +1324,7 @@ $$= \left| e^{a_{1}t_{i}}\left( e^{a_{1}\Delta t} - 1 \right) \left[ x_{0} + \in
 $$= \left| e^{a_{1}t_{i}}\left( e^{a_{1}\Delta t} - 1 \right) \left[ x_{0} + 
 \int_{0}^{t_{i}}e^{-a_{1}s}b_{1}dW_{s}^{1} \right] + e^{a_{1}\Delta t}b_{1}dW_{t_{i}}^{1} \right|^{p} $$
 
-The last expression is obtained using Ito formula {eq}`eq:Ito` .
+The last expression is obtained using Itô formula {eq}`eq:Ito` .
 
 Moreover for large values of $t_{i}$ such that $e^{a_{1}t_{i}} \gg e^{a_{1}\Delta t}$ and taking into account that $dW_{t_{i}}^{1}$ is finite almost surely, we can consider the following approximation
 
@@ -1435,10 +1435,11 @@ Figure B) from  {cite}`balibrea2016lagrangian` showing two different experiments
 <img src="figures/fig1a.png">
 <img src="figures/fig1b.png">
 \label{fig:saddle}
-\caption{Figures from  {cite}`balibrea2016lagrangian` showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.}
+\caption{Figures from  {cite}`balibrea2016lagrangian` showing two different experiments representing contours of $MS_p$ for $p=0.1$ and $\tau=15$. The contours of $MS_p$ are computed on a 1200$\times$1200 points grid of initial conditions and the time step for integration of the vector field is chosen to be $\Delta t= 0.05$. The magenta colored point corresponds to the location of the stationary orbit for each experiment. The chosen parameters are $a_1 = a_2 = b_2 = 1$ and $b_1 = -1$.} 
 
 > __Remark__
-> Due to the properties of It\^{o} integrals, see for instance {cite}`duan15`, the components of the stationary orbit satisfy
+> Due to the properties of Itô integrals, see for instance {cite}`duan15`, the components of the stationary orbit satisfy
+
 
 ```{math}
 ---
