@@ -380,10 +380,11 @@ This is part of an ongoing software development project by the CHAMPS group.</p>
 H(x, p_x) = \frac{\omega}{2} (p_x^2 + x^2), \quad \omega &gt; 0
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = \omega p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -\omega x
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = \omega p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -\omega x
+ \end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -435,10 +436,11 @@ H(x, p_x) = \frac{\omega}{2} (p_x^2 + x^2), \quad \omega &gt; 0
 H(x, p_x) = \frac{\lambda}{2}( p_x^2 -  x^2 ), \quad \lambda &gt; 0
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = -\lambda p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = \lambda x
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = -\lambda p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = \lambda x
+ \end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -490,10 +492,11 @@ H(x, p_x) = \frac{\lambda}{2}( p_x^2 -  x^2 ), \quad \lambda &gt; 0
 H(x, p_x) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = x - x^3
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = x - x^3
+ \end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -548,10 +551,11 @@ H(x, p_x) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 H(x, p_x, t) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 \end{equation*}</p>
 <p><em>Vector field</em> whith <em>time-dependent harmonic forcing</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} + + \eta(t) = f_2(x, p_x) = x - x^3 + \eta(t)
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} + + \eta(t) = f_2(x, p_x) = x - x^3 + \eta(t)
+ \end{align*}\end{split}\]</div>
 <p>where</p>
 <p>\begin{align*}
 \eta(t) = A \cdot sin(\omega t)
@@ -612,10 +616,11 @@ H(x, p_x, t) = \frac{1}{2} (p_x^2 - x^2 + \frac{1}{2} x^4)
 H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 + \frac{2}{3} x^3)
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x - x^2
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x - x^2
+ \end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -672,10 +677,11 @@ H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 + \frac{2}{3} x^3)
 H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 - \frac{1}{2} x^4)
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x + x^3
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} = f_1(x, p_x) = p_x \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} = f_2(x, p_x) = -x + x^3
+\end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -733,12 +739,13 @@ H(x, p_x) = \frac{1}{2} (p_x^2 + x^2 - \frac{1}{2} x^4)
 H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + x^2 y - \frac{1}{3} y^3
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \
-\dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  -x - 2 x y \
-\dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -x^2 -y + y^2 \
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \\
+ \dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  -x - 2 x y \\
+ \dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -x^2 -y + y^2 \\
+\end{align*}\end{split}\]</div>
 <div class="section" id="henon-heiles">
 <h4>Henon-Heiles<a class="headerlink" href="#henon-heiles" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
@@ -820,12 +827,13 @@ H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + x^2 y - \frac{1}{3} y^3
 H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2}(y^2 - x^2)
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \
-\dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  x \
-\dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -y \
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \\
+ \dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  x \\
+ \dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -y \\
+\end{align*}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Integration parameters</span>
@@ -964,10 +972,11 @@ HamCenter1D(t, u, PARAMETERS=[1])
 <p>Setting up the code to draw the LDs of your own 1-DoF system requires only <em>THREE</em> simple steps</p>
 <p><em>EXAMPLE</em></p>
 <p>Suppose we have a 2D vector field of the form</p>
-<p>\begin{align*}
-f_1(x, y) &amp;= \alpha y \
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f_1(x, y) &amp;= \alpha y \\
 f_2(x, y) &amp;= \beta \cdot cos(\gamma x^3)
-\end{align*}</p>
+\end{align*}\end{split}\]</div>
 <p><span style='color:blue'><b>FIRST</b></span> Define <code class="docutils literal notranslate"><span class="pre">my_vector_field</span></code> function</p>
 <p>See how it’s done below</p>
 <div class="cell docutils container">
@@ -1089,19 +1098,20 @@ f_2(x, y) &amp;= \beta \cdot cos(\gamma x^3)
 </div>
 <div class="section" id="working-with-my-own-vector-field-2-dof-system">
 <h3>Working with my own vector field: 2-DoF system<a class="headerlink" href="#working-with-my-own-vector-field-2-dof-system" title="Permalink to this headline">¶</a></h3>
-<p>Setting up the code to draw the LDs of your own 2-DoF system requires only <em>THREE</em> simple steps</p>
+<p>Setting up the code to draw the LDs of your own 2-DoF system requires only <em>FOUR</em> simple steps</p>
 <p><em>EXAMPLE</em> Here we chose a Hamiltonian system with a <em>Double well potential</em></p>
 <p><em>Energy</em></p>
 <p>\begin{equation*}
 H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2}(y^2 - x^2 + \frac{1}{2} x^4)
 \end{equation*}</p>
 <p><em>Vector field</em></p>
-<p>\begin{align*}
-\dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \
-\dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \
-\dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  x - x^3 \
-\dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -y \
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+ \dot{x} &amp;= \frac{\partial H}{\partial p_x} =  p_x \\
+ \dot{y} &amp;= \frac{\partial H}{\partial p_y} = p_y  \\
+ \dot{p}_x &amp;= -\frac{\partial H}{\partial x} =  x - x^3 \\
+ \dot{p}_y &amp;= -\frac{\partial H}{\partial y} =  -y \\
+\end{align*}\end{split}\]</div>
 <p><span style='color:blue'><b>FIRST</b></span> Define <code class="docutils literal notranslate"><span class="pre">my_vector_field</span></code> function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1173,7 +1183,8 @@ H(x, p_x) = K + V = \frac{1}{2} (p_x^2 + p_y^2) + \frac{1}{2}(y^2 - x^2 + \frac{
 <span class="n">p_value</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 
 <span class="c1"># Mesh visualisation slice parameters</span>
-<span class="n">H0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Energy</span>
+<span class="n">H0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Energy level</span>
+
 <span class="n">ax1_min</span><span class="p">,</span><span class="n">ax1_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">ax2_min</span><span class="p">,</span><span class="n">ax2_max</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">N1</span><span class="p">,</span> <span class="n">N2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
