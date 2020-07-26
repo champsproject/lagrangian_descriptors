@@ -1,7 +1,7 @@
 #### Acknowledgments
 
 
-Funding for this book  was provided by the Chemistry and Mathematics in Phase Space (CHAMPS) project (<https://champsproject.com/>). This is a six year Programme Grant funded by the Engineering and Physical Sciences Research Council (EPSRC) led by the School of Mathematics at the University of Bristol, and in collaboration with the School of Chemistry at the University of Bristol, the School of Chemistry at Cardiff University, the School of Chemistry at Leeds University, and the Department of Mathematics at Imperial College.
+Funding for this book  was provided by the Chemistry and Mathematics in Phase Space (CHAMPS) project (<https://champsproject.com/>). This is a six year Programme Grant funded by the Engineering and Physical Sciences Research Council (EPSRC) led by the School of Mathematics at the University of Bristol, and in collaboration with the School of Chemistry at the University of Bristol, the School of Chemistry at Cardiff University, the School of Chemistry at Leeds University, and the Department of Mathematics at Imperial College. Funding from the US Office of Naval Research has also supported the efforts of Stephen Wiggins.
 
 We are extremely grateful to the project manager for CHAMPS, Ms. Eleanor Machin, who makes this collaboration involving 12 postdoctoral researchers, one PI, four co-Is, and a steady stream of visitors, work “as smooth as clockwork”, especially during the coronavirus lockdown period, in which this book was written.
 
